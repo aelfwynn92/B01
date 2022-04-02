@@ -1,0 +1,5 @@
+pres_part: *VAG*|*HAG*|*DAG*
+spl_pres: *BEP*|*DOP*|HVP*|*VBP*
+imp_pres: *BEI*|*DOI*|*HVI*|*VBI*
+pass_part: *VAN*|*HAN*|*DAN*
+perf_part: *VBN*|*HVN*|*BEN*|*DON*

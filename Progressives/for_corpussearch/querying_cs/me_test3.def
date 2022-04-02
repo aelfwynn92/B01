@@ -1,0 +1,5 @@
+be: *BEP*|*BED*|*BE*
+beperf: *BEN*
+auxperf: *HV*|*HVD*|*HVP*
+pres_part: *VAG*|*HAG*|*DAG*
+mod: *MD*

@@ -1,0 +1,5545 @@
+/*
+PREFACE:  
+Copyright 2010 Beth Randall
+Date:  Mon Mar 07 18:02:24 CET 2022
+
+command file:     1prog.c
+input file:       1prog.out
+output file:      ./1prog.cod
+
+definition file:  lex-all.def
+node: IP*
+coding_query:  
+1: { 
+    %presVAG: ((IP* idoms *BEP*) AND (IP* idoms *VAG*|*HAG*|*DAG*)) 
+    %pastVAG: ((IP* idoms *BED*) AND (IP* idoms *VAG*|*HAG*|*DAG*)) 
+    %futVAG: (((IP* idoms *MD*) AND (IP* idoms *BE*) AND (IP* idoms *VAG*|*HAG*|*DAG*))) 
+    %prsperfVAG: (((IP* idoms *HVP*) AND (IP* idoms *BEN*)) AND (IP* idoms *VAG*|*HAG*|*DAG*)) 
+    %pstperfVAG: (((IP* idoms *HVD*) AND (IP* idoms *BEN*)) AND (IP* idoms *VAG*|*HAG*|*DAG*)) 
+    %futperfVAG: (((IP* idoms *MD*) AND (IP* idoms *HV*)) AND (IP* idoms *BEN*)) AND (IP* idoms *VAG*|*HAG*|*DAG*) 
+    %impVAG: ((IP* idoms *BEI*) AND (IP* idoms *VAG*|*HAG*|*DAG*)) 
+    %infVAG: ((IP* idoms *BE*) AND (IP* idoms *VAG*|*HAG*|*DAG*)) 
+    %other1: ELSE 
+}
+2: { 
+    %CONJ: ((IP* idoms *VAG*|*DAG*|*HAG*) AND (*VAG*|*DAG*|*HAG* idoms CONJ)) 
+    %germanic: (*VAG*|*DAG*|*HAG* idoms a+genstonding|a-bydynge|abidand|abidyng|abidynge|abydande|abydinge|abydynge|abydyngge|adoynge|doand|Doand|doande|doyng|doynge|$doynge|wrangdoande|akinde|al-wealdent|allw+aldennd|Allw+aldennd|alwealdinde|weldinde|aleastinde|ay-lastande|Ay-lastande|euer-lastynge|euere-lastyng|euere-lastyngge|euerelastynge|euerelestyng|euerelestynge|euerlastand|euerlastande|euerlastend|euerlasting|euerlastinge|euerlastyng|Euerlastyng|euerlastynge|euerlastyngge|euerlestyng|eurelestinde|eurelestynde|euyr-lestyng|euyrlasting|euyrlastyng|euyrlesting|euyrlestyng|everelastynge|everlastinge|everlastynge|ilestende|inlastande|lastand|lastande|lastend|lastynge|leastinde|lestende|$lestende|lestinde|lestynde|ali+gtand|anbidende|onbodinde|anedande|answerand|answeryng|answerynge|aunswering|onsweryng|arisand|ariseand|arizinge|askand|askande|asking|askyng|askynge|axinge|axyng|axynge|b+arnende|b+arnennde|barnende|barninde|bearninde|bearninnde|beornind|beorninde|bernende|berninde|$berninde|bernynde|birnende|brennand|brennande|brennyng|$brennyng|brennynge|brennyngge|brinnande|brynand|brynnand|brynnande|brynnyng|byrnand|byrnande|bacbitand|bakbytyng|be+tenkyngge|bi+tenchand|bi-+tenchand|by+tenchand|by-+ten-chand|by-+tenchand|bearneacninde|ekand|befor-seyd|saiand|Saiand|sayand|sayande|sayeng|sayenge|saying|sayinge|sayng|saynge|sayyng|sayynge|seggende|segginde|seien|seiende|seieng|seiing|seing|seiynge|seyeng|seyenge|seying|seyinge|seyingge|seyyng|seyynge|zyinde|begynnynge|byginnand|bygynnyng|behaldande|beheldyng|beholdyng|beholdynge|behestyng|behotynge|bendand|ber|berande|berinde|beringe|berynge|beryngge|unberinde|berand|$berand|bering|beryng|besechinge|besechyng|besechynge|besechyngge|bisechand|bisekynge|bysechyng|betakenande|betende|beyng|beyngge|bi-stonding|biddinde|byddinde|byddyng|byddynge|biforegoyng|gan|gangand|goand|goenge|going|goyn|biggand|biggeand|bileuynge|birewsinde|birling|bitinde|bitynge|bitunde|blasyng|blasynge|blawende|blowyng|bledande|bledyng|blessynge|blyssyng|blikinde|blisceand|bliscing|blodlettinde|lettande|blowinde|bodiende|boryinde|bowand|bowing|bowynge|brekand|brekyn|brekynde|brekyng|breokinde|bryngand|bryngyng|bryngyngge|by-comyngge|bying|$byndyng|callyng|callynge|castand|castyng|castynge|kastand|kestand|chedyng|schedyng|sheding|chesyng|chiddyng|chidinde|chidynge|chydynge|cla+dinde|clappynge|clensig|clensing|cleopie|cleopiende|clepand|clepyng|clepynge|clippyng|cleuiinde|cleuiynde|cleuynge|cleuyngge|clyvynge|clowtyng|clymbande|cneolinde|kneleand|knelyng|knelynge|cominde|coming|commyng|commynge|comyde|comynde|comyng|comynge|comyngge|cuminde|cuming|komyng|conand|connynge|konnynge|kunnyng|kunnynge|onconnynde|vnkunnynge|coruinde|keoruinde|keruinde|kervyng|kervynge|creopinde|crepand|crepyng|crepynge|krepyng|crewlinde|cursing|cussinde|kissyngge|kyissyng|kyssyng|delende|demyng|derend|deriynde|dewand|dra+ginde|dradinde|dredand|dreding|dredyng|dredynge|dredyngge|drawyng|drawyngge|dreihninde|dremande|drinkende|drinkynge|drynkand|drynkyng|drynkynge|driuinde|droppand|droppyng|droppynge|druicninde|duellyng|duellynge|dwelland|dwellyng|dwellynge|dwallkennde|dyand|dyeand|ebbynge|ernand|erninde|rennand|rennynde|rennyng|rennynge|rennyngge|rynnand|rynnande|etand|etinge|etyng|euell-lyuyng|leeuynge|liffande|euere-wellyngge|falland|fallande|falling|fallyng|fallynge|fellyng|farende|farinde|faryng|farynge|safarinde|fastande|fastinde|fasting|fastyng|$fastyng|fastynge|$fastynge|fawnynge|fe+gtand|feghtand|feghtande|fei+gtyng|feightyng|fi+gtinge|fitand|fityng|fyghtyng|fyghtynge|fytyng|fedynge|feland|felyng|ferynge|fikelinde|fleand|fleande|fleonde|fleoinde|fleoninde|fleonninde|flihinde|flon|flowen|flying|ulyinde|fleotinde|fletende|fletynge|flowinde|flowyng|flowynge|flytand|foldynge|folewyng|follewyng|followynge|folouand|folowand|folowande|folowing|folowyng|folowynge|folwyng|folwynge|fuliende|for+getyng|uoryetinde|for-sakand|forsakinge|forsakyng|forsakynge|forbedyng|forgevynge|forgifand|forseande|forsweryng|fresyngge|fulfilland|fulfillynde|fullfillande|fylland|fyschyng|+garenande|+geinde|+geldyng|+geldynge|yeldynge|+gellynge|+geoninde|+geonyng|+geuand|+geuing|+geuyng|+geuynge|+gevyng|+gifand|+giuing|+gyuynge|+gyuyngge|+gyvyngge|govynge|gyvyng|yeuyng|yevynge|+gonge|+gurinde|gaderand|gaderyng|gederen|gederin|gederinde|galpyng|gangande|gangende|gapand|gapynge|gastyngge|gawrinde|getynge|gladand|gladeand|gladyngge|glediynde|gleaminde|gleowinde|glowennde|glowyng|glidende|glistende|glistinde|gllistinde|gnastyng|granand|$graninde|gronyng|gravynge|grennyng|gretand|gretyng|gretynge|growynde|growyng|growynge|grymmyng|gurdyngge|haffande|hauand|hauende|hauyng|hauynge|hauyngge|havand|havinge|havyng|havynge|haldande|heldand|heldande|heldyng|holdun|holdyng|holdynge|yheldand|halewende|halewinde|halowynge|halwende|halsinde|halsynge|hanging|hanginge|hangyn|hangyng|hangynge|honggyng|honginde|hongyng|hyngande|hynggyng|hatand|hatend|hatiende|hatynge|he+gand|heiende|hyeng|heeldyng|heeringe|heeryng|herand|herinde|hering|heryng|herynge|heryngge|heryyng|hyryng|hyrynge|helinge|helynge|helpinde|helpyng|helpynge|hercnede|heriand|Heriand|heriende|heryenge|hlystinde|hopand|hoppyngge|hopyng|hungerand|hweolinde|hwilinde|hydynge|ibreinde|ierniende|ierninde|inwuniende|wonand|woniand|wonyng|$wunende|wunende|wuni+gende|wuniende|wuniinde|kenning|kepand|keping|kepyng|kepynge|knauynge|knawande|knawynge|knowand|knowyng|knowynge|knowelechynge|knowlachyng|knowlechyng|ladand|ledand|ledyng|ledynge|laghyng|lahhinde|lahinde|lawhyng|langande|longeyng|lawand|lowand|lowyng|leesinge|lei+ginde|lig-ynge|ligge|liggende|ligginge|liggyng|liggynge|liyng|lyand|lyeng|lyenge|lyggyng|lyggynge|lying|lyyng|lyynge|lenynde|lenyng|lerand|lernyng|lernynge|lettynge|leueand|levynge|libbende|libbinde|libbynde|lifand|liuand|liueand|liuendes|liui+gende|liui+gendes|liuiand|liuiende|liuiendes|liuinde|lyfande|lyffand|lyffande|lyffynge|lyuand|lyuyng|lyuynge|lyvand|lyvyng|lyvynge|leuynge|li+gtenand|li+gtnynge|liftand|Liftand|lyftyng|liggand|lihinde|lihtinde|lihtinte|lityng|likinde|likynde|likyng|lykand|lykande|lykynde|lykynge|lokinde|lokyng|lokynge|lokyngge|lokkyng|longynge|louand|louiynde|louyng|louynge|louyngge|lovand|lovynge|lufand|lufande|luffande|luuewende|luuiende|lourinde|lowtyng|lutinde|lykyng|makand|Makand|makiinde|making|makying|makyng|makynge|meltand|melting|$menande|menende|metyng|metyngge|milciende|mislikyng|mornyng|mornynge|mornyngge|mournande|mysbeleeuynge|nei+ginge|nyghyng|nyghynge|niminde|on+tolyinde|on-+tolyinde|on-todelinde|onderuynge|onknowyng|unknowynge|onspekynde|specende|specinde|spekand|spekende|spekinde|spekinge|spekyng|spekynge|$sprecende|onzyginde|openand|ouereorninde|overthrowynge|owtkastyng|pleiing|pleinde|prekiinde|prikiende|prikyinde|pryckyng|pullyng|puttande|puttyng|puttyngge|pynand|pyping|quakynge|quakyngge|qwakyng|whakyng|que+dende|que+dinde|que+tende|que+tinde|quedinde|rarinde|$roryng|roryng|rorynge|rechyng|redande|redinge|redyng|redynge|rekenynge|reknyng|rentynge|restynge|resynge|revande|rewsende|rewsiende|riwsinde|ridend|ridinde|ridyng|ryddyng|rydyng|rydynge|risand|risindde|rising|risyng|rysande|rix-ende|rixende|rixinde|rixlende|rusand|ruysand|sauaand|saylyng|seyllynge|seylyng|schakinde|schakyng|schand|sechand|sechaund|secheand|sechende|sechinde|sechinge|sekand|sekande|sekyng|sekynge|schauynge|schetyng|schyttyng|schewand|schewande|schewyng|schewynge|schouyng|schowyng|shewand|shewyng|shewynge|schilinde|schiminde|schimminde|$schimminde|schinide|schininde|schining|schinyng|schonyng|schynnyng|schynyng|schynynge|scinende|shynyng|ssynynde|sclepinde|slapande|slapinde|slepand|slepande|slepende|slepinde|sleping|slepyng|slepynge|Slepynge|se+tinge|seand|seeinge|seingge|semand|semande|semynge|sendand|sendyng|sengeand|settand|settyng|sitande|sittand|Sittand|sittende|sittinde|sitting|sittinge|sittyng|sittynge|sittyngge|syttand|syttyng|$syttyng|syttynge|syttyngge|zittinde|zittynde|sewende|shryuand|sihinde|sillynge|sinbetende|sinbetinde|singende|singinde|syngand|syngyng|syngynge|syngyngge|sle+drende|sleand|slydyng|smakinde|smirkinde|smitende|smityng|smytand|smytyng|smytyngge|snakerinde|sorowand|sorwand|sorweand|sorwyng|sowkyng|sukand|sukinde|sparyng|sperclinde|speryng|spredand|spredyng|springing|springynge|sprinynge|spryngand|spryngynge|spryngynges|spynnande|standand|standande|standyng|stondand|stondinde|stonding|stondinge|stondyng|stondynge|stoondyng|staryng|stertynge|steruinde|sterynge|sturinde|sturunge|$sti+ginde|sti+ginde|stiynge|stikinde|stykynge|stinkende|stinking|stinkyng|stinnckennde|stinnkennde|styngynge|styngyngge|stynkand|stynkande|stynkinde|stynkynde|$stynkynde|stynkynge|stoppand|stormyng|strawyng|strenende|strengthyng|stridende|strikinde|sueriingge|sweryng|swerynge|swinkende|swinkinde|swochninde|swymmyng|sykyng|sykyngge|+tankand|+tankyng|+tankynge|+tonkyng|thankyng|thonkyng|thonkynge|+teinkinde|+ten-chinde|+tenchand|+tenchend|+tenchinde|+tenkinde|+tenkynde|+tenkyng|+tinking|+tynkand|thinkinge|thynkand|thynkande|thynkyng|thynkynge|+teotinde|+trestand|+tretyng|thretyng|+turchwuninde|+turh-wuniende|takand|takande|taking|takyn|takyng|Takyng|takynge|techand|teching|techyng|techynge|techyngge|tei+dinde|tei+tinde|telland|telling|tellyng|tellynge|to-comyngge|totinde|treodinde|trowand|trowande|trowynge|twiselende|understondinde|vnder-stondand|$vnderstandand|vnderstondeand|vndirstondinge|vndirstondyng|uneilinde|uoluellinde|vnwetyng|vnwytinge|vnwyttyng|vnwytyng|vnwytyngge|vp-berynde|vp-stei+geing|vparisand|w+andinde|wendand|wendyng|wagiende|wawyng|waissynge|waschynge|wakand|wakande|wakiende|wakinde|waking|wakynde|wakyng|wakynge|walkende|walkinde|walkinge|walkyng|walkynge|wallende|wallinde|wellinde|wanand|woninde|wanande|wandryngge|wantynge|waxand|waxande|wexand|wexande|wexynge|wecchinde|wedinde|weepyng|wepende|wepinde|weping|wepyng|wepynge|wepyngge|welcommynge|welcomyng|welfaryng|wenande|wenyng|Wenyng|wenynge|$wenynge|wenyngge|wer+ginde|werchende|werchinde|werkyng|wirchand|wirchaund|wircheand|wirkand|wirkyng|wirkynge|worching|worchyng|wurchende|wurchinde|werpinde|weruende|wetyngge|witan|witende|witinde|wittande|wittende|wittyng|witynge|wytyng|wytynge|weyng|whilende|whyrlyng|whyrlyng-wynde|wi+tdrawyng|wythdrawyng|willand|willyng|willynge|willyngge|wilynde|wyllynge|wyllyngge|wilnyng|wylnyng|wynynde|witholdynge|witnessynge|wytnessyng|wytnessynge|wonderyng|worshipyng|wurschepynge|wurschepyngge|wurschippyngge|wurshipynge|wowndyng|wrastlyng|wrekand|wrestyng|wringinde|wryngyng|wrytand|wrytynge|wysschinge) 
+    %romance: (*VAG*|*DAG*|*HAG* idoms a-cordyng|according|accordyng|accordynge|acordand|acording|acordyng|acordynge|$acordynge|a-greyng|a-noiand|anoiand|a-peryng|aperyng|appering|ablyng|abreggynge|accusyng|addyng|afermynge|affermande|alargyng|alegging|amblynge|amendand|amendyng|amendynge|apperyng|appreuyng|ascendinge|ascendyng|assending|assailyng|assentynge|baptisinge|baptisyng|baptisynge|beggand|betrayenge|bisegynge|blemysand|bobbyng|boiling|boyllynge|brayinde|cessynge|chalangand|chalenchyng|chargyng|charmeand|chastiand|chasyng|chaunging|chaungyng|chonginde|comaunding|comawndyng|comendinge|comendyng|commendynge|comfortand|comfortyng|confortyngge|comownyng|compellyng|compleynyng|comprehendyng|concernyng|conceyuyng|$conceyuyngge|conseyuyng|coniuryngge|consenntyng|consenting|consentinge|consentyng|consentynge|considering|consideryng|considerynge|consyderyng|consyderynge|constreinand|constreynynge|containing|contenyng|conteynyng|conteynynge|contunyng|contwnyng|contynowyng|contynuyng|convaying|copuland|costynge|couaytande|coueytinge|counsailynge|cownselyng|countynge|cowntynge|criand|criande|crienge|criing|criyng|cryand|cryeng|cryenge|crying|cryinge|cryyng|cryynge|cytyng|dalying|dampnyng|declaryng|defendyng|defendynge|delitande|departynge|departyngge|des-pisyng|despisyng|despisynge|despysyng|dispising|dispysand|descendand|descending|descendinge|descendynge|discending|discendinge|desirand|desiring|desiringe|desiryng|desirynge|desyrand|desyring|desyryng|Desyryng|desyryngge|destroyenge|distriynge|discordynge|discouerynge|discuryng|discryvyngge|disencresynge|dysencresynge|dispreisynge|disputyng|dysputyng|disseuerynge|doutand|doutande|dowtyng|dowtyngge|dutande|dressand|dressynge|duryng|euere-durynge|edifiand|edifyenge|enchewyng|enclynynge|encresyng|incresyng|incresynge|encumpassand|enformyng|enioyande|enioyng|entendande|intendand|entring|$entryng|entryngge|envirounyge|envirounynge|envyronynge|errynge|excedynge|excusyng|executynge|exhorting|exhortynge|expleyntyng|expounnynge|expounyng|expressyng|failand|failland|fallinde|fayland|fayllynge|faylyng|falsinde|flateryng|flaterynge|flecchyngge|florischyng|florisshing|floweryng|for-fetand|fructifiand|genderynge|glosyng|gouerande|gouernynde|gouernynge|gouernyngge|grauntynge|grawntyng|greuching|gruchande|gruchyng|grucinde|grutchyng|halyng|hastyng|hurtande|inbrasyng|ioiand|ioyand|ioyande|ioyeande|iugeand|joustenynge|langourande|languessande|langwyssande|manassyng|marchinge|marchynge|medlyng|merueilynge|meruelyng|merueylyng|merveylyng|mevyng|mevynge|mouyng|mouynge|meyntenyng|ministryng|mynystryng|mynystryngge|monyschyng|multipliand|musinge|noiand|noyande|norissinde|norissynde|norshyng|norysshynge|noting|obeschynge|obeyng|ocupying|ordande|ordeynynge|ouer-passande|partyng|passand|passande|passing|passyng|passynge|passyngge|payenge|payng|peesand|perischinge|perishyng|persuand|pursuand|pursuyng|pertenande|peruertyng|plesande|plesaund|plesyng|plesynge|pleysyng|pleysynge|porueynde|purueyng|poryngge|possessyng|praiand|praienge|prayand|prayande|prayenge|praying|prayinge|prayng|preiynge|preyeng|preying|preyingge|preyng|precheand|prechyng|preferryng|preising|preisynge|preysyng|preysynge|presentyng|presentynge|preseruyng|presing|pretending|pretendyng|preuyng|provyng|procurynge|promising|promittyng|prophecying|purchacynge|purgynge|purposing|purposyng|purposynge|puryfiyng|rampyng|rasyng|rauissand|rauysching|ravysand|rebukynge|receyvynge|resceyuynge|ressayvyng|recommendynge|reformyng|refreynyng|regnynde|regnyng|regnynge|rengninge|rehersing|rehersyng|rehersyngge|remembrynge|repentynge|replying|representyng|representynge|repreuyng|reprouaund|reproceand|repruceand|repruceing|requirynge|resortyng|returnyng|rewardyng|robbyng|russhynge|saluynge|sauyng|sauynge|scaldinde|scaldynge|schaldinde|sewyng|sewynge|$suwynge|suyng|suynge|stablissand|stru+ginde|supplauntynge|supportyng|supposing|supposyng|susteynyng|susteynyngge|sygnefyenge|tendynge|tochyng|touching|touchinge|touchyng|touchynge|touchyngge|towchyng|trailynge|translating|trasyng|trauelyng|traueylynge|traveillynge|tremblyng|tremelyng|tremlyngge|trespassand|trubland|usynge|vsyng|vsynge|varyenge|vironynde|waimentand|wastande|wastinde|wastyng|watyng|waytyng|waytynge|ymaginynge) 
+    %blended: (*VAG*|*DAG*|*HAG* idoms bulmyng|defouland|offerand|offerynge|offryng|taberyng|turnand|turneing|turnyng|turnynge|warnyng) 
+    %others: (*VAG*|*DAG*|*HAG* idoms anchiterrinde|beriing|blaberynge|chaterynge|cheueryngge|chiuerinde|fagyng|gryntyngge|hovynge|kenchinde|lackyng|lackynge|lakkyng|lakkynge|laysshyng|laysshynge|leitinde|$leitinde|leytyngge|rumiand|scheunchinde|schuderinde|smellinde|smellyng|smellynge|smyllyngge|smylinge|smylyng|snobbynge|sobbiende|sobbyng|sobbyngge|stumbland|talkyng|tariing|tariynge|tollinde|toterinde|toumblynge|trosting|trostyng|trustyng|tutelinde|vndurfonggyngge|wailyng|waylyng) 
+    %other2: ELSE 
+}
+3: { 
+    %1: (*VAG*|*DAG*|*HAG* idoms addyng|adoynge|doand|Doand|doande|doyng|doynge|$doynge|wrangdoande|akinde|al-wealdent|allw+aldennd|Allw+aldennd|alwealdinde|weldinde|aleastinde|ay-lastande|Ay-lastande|euer-lastynge|euere-lastyng|euere-lastyngge|euerelastynge|euerelestyng|euerelestynge|euerlastand|euerlastande|euerlastend|euerlasting|euerlastinge|euerlastyng|Euerlastyng|euerlastynge|euerlastyngge|euerlestyng|eurelestinde|eurelestynde|euyr-lestyng|euyrlasting|euyrlastyng|euyrlesting|euyrlestyng|everelastynge|everlastinge|everlastynge|ilestende|inlastande|lastand|lastande|lastend|lastynge|leastinde|lestende|$lestende|lestinde|lestynde|anedande|askand|askande|asking|askyng|askynge|axinge|axyng|axynge|b+arnende|b+arnennde|barnende|barninde|bearninde|bearninnde|beornind|beorninde|bernende|berninde|$berninde|bernynde|birnende|brennand|brennande|brennyng|$brennyng|brennynge|brennyngge|brinnande|brynand|brynnand|brynnande|brynnyng|byrnand|byrnande|bearneacninde|ekand|befor-seyd|saiand|Saiand|sayand|sayande|sayeng|sayenge|saying|sayinge|sayng|saynge|sayyng|sayynge|seggende|segginde|seien|seiende|seieng|seiing|seing|seiynge|seyeng|seyenge|seying|seyinge|seyingge|seyyng|seyynge|zyinde|beggand|bendand|ber|berande|berinde|beringe|berynge|beryngge|unberinde|berand|$berand|bering|beryng|betende|beyng|beyngge|biddinde|byddinde|byddyng|byddynge|biforegoyng|gan|gangand|goand|goenge|going|goyn|biggand|biggeand|birling|bitinde|bitynge|blasyng|blasynge|blawende|blowyng|bledande|bledyng|blessynge|blyssyng|blikinde|blisceand|bliscing|blodlettinde|lettande|blowinde|bobbyng|boiling|boyllynge|bowand|bowing|bowynge|brayinde|brekand|brekyn|brekynde|brekyng|breokinde|bryngand|bryngyng|bryngyngge|bulmyng|bying|$byndyng|callyng|callynge|castand|castyng|castynge|kastand|kestand|cessynge|chargyng|charmeand|chastiand|chasyng|chaunging|chaungyng|chonginde|chedyng|schedyng|sheding|chesyng|chiddyng|chidinde|chidynge|chydynge|cla+dinde|clappynge|clensig|clensing|cleopie|cleopiende|clepand|clepyng|clepynge|clippyng|clowtyng|clymbande|cneolinde|kneleand|knelyng|knelynge|cominde|coming|commyng|commynge|comyde|comynde|comyng|comynge|comyngge|cuminde|cuming|komyng|conand|connynge|konnynge|kunnyng|kunnynge|onconnynde|vnkunnynge|coruinde|keoruinde|keruinde|kervyng|kervynge|countynge|cowntynge|creopinde|crepand|crepyng|crepynge|krepyng|crewlinde|criand|criande|crienge|criing|criyng|cryand|cryeng|cryenge|crying|cryinge|cryyng|cryynge|cursing|cussinde|kissyngge|kyissyng|kyssyng|cytyng|delende|demyng|derend|deriynde|dewand|doutand|doutande|dowtyng|dowtyngge|dutande|dra+ginde|dradinde|dredand|dreding|dredyng|dredynge|dredyngge|drawyng|drawyngge|dreihninde|dremande|dressand|dressynge|drinkende|drinkynge|drynkand|drynkyng|drynkynge|driuinde|droppand|droppyng|droppynge|duellyng|duellynge|dwelland|dwellyng|dwellynge|duryng|euere-durynge|dwallkennde|dyand|dyeand|ebbynge|ernand|erninde|rennand|rennynde|rennyng|rennynge|rennyngge|rynnand|rynnande|etand|etinge|etyng|euell-lyuyng|leeuynge|liffande|euere-wellyngge|fagyng|failand|failland|fallinde|fayland|fayllynge|faylyng|falland|fallande|falling|fallyng|fallynge|fellyng|falsinde|farende|farinde|faryng|farynge|safarinde|fastande|fastinde|fasting|fastyng|$fastyng|fastynge|$fastynge|fawnynge|fe+gtand|feghtand|feghtande|fei+gtyng|feightyng|fi+gtinge|fitand|fityng|fyghtyng|fyghtynge|fytyng|fedynge|feland|felyng|ferynge|fleand|fleande|fleonde|fleoinde|fleoninde|fleonninde|flihinde|flon|flowen|flying|ulyinde|fleotinde|fletende|fletynge|flowinde|flowyng|flowynge|flytand|foldynge|fresyngge|fylland|fyschyng|+garenande|+geinde|+geldyng|+geldynge|yeldynge|+gellynge|+geoninde|+geonyng|+geuand|+geuing|+geuyng|+geuynge|+gevyng|+gifand|+giuing|+gyuynge|+gyuyngge|+gyvyngge|govynge|gyvyng|yeuyng|yevynge|+gonge|+gurinde|galpyng|gapand|gapynge|gastyngge|gawrinde|getynge|gladand|gladeand|gladyngge|glediynde|gleaminde|gleowinde|glowennde|glowyng|glidende|glistende|glistinde|gllistinde|glosyng|gnastyng|granand|$graninde|gronyng|grauntynge|grawntyng|gravynge|grennyng|gretand|gretyng|gretynge|greuching|gruchande|gruchyng|grucinde|grutchyng|growynde|growyng|growynge|grymmyng|gryntyngge|gurdyngge|haffande|hauand|hauende|hauyng|hauynge|hauyngge|havand|havinge|havyng|havynge|haldande|heldand|heldande|heldyng|holdun|holdyng|holdynge|yheldand|halsinde|halsynge|halyng|hanging|hanginge|hangyn|hangyng|hangynge|honggyng|honginde|hongyng|hyngande|hynggyng|hastyng|hatand|hatend|hatiende|hatynge|he+gand|heiende|hyeng|heeldyng|heeringe|heeryng|herand|herinde|hering|heryng|herynge|heryngge|heryyng|hyryng|hyrynge|helinge|helynge|helpinde|helpyng|helpynge|hlystinde|hovynge|hurtande|hweolinde|hwilinde|hydynge|ibreinde|inwuniende|wonand|woniand|wonyng|$wunende|wunende|wuni+gende|wuniende|wuniinde|ioiand|ioyand|ioyande|ioyeande|iugeand|joustenynge|kenchinde|kenning|kepand|keping|kepyng|kepynge|lackyng|lackynge|lakkyng|lakkynge|ladand|ledand|ledyng|ledynge|laghyng|lahhinde|lahinde|lawhyng|langande|longeyng|lawand|lowand|lowyng|laysshyng|laysshynge|leesinge|lei+ginde|lig-ynge|ligge|liggende|ligginge|liggyng|liggynge|liyng|lyand|lyeng|lyenge|lyggyng|lyggynge|lying|lyyng|lyynge|leitinde|$leitinde|leytyngge|lenynde|lenyng|lerand|lernyng|lernynge|lettynge|leuynge|liftand|Liftand|lyftyng|liggand|lihinde|lihtinde|lihtinte|lityng|likinde|likynde|likyng|lykand|lykande|lykynde|lykynge|lokinde|lokyng|lokynge|lokyngge|lokkyng|longynge|louand|louiynde|louyng|louynge|louyngge|lovand|lovynge|lufand|lufande|luffande|luuewende|luuiende|lourinde|lowtyng|lutinde|lykyng|marchinge|marchynge|meltand|melting|$menande|menende|metyng|metyngge|mevyng|mevynge|mouyng|mouynge|milciende|mornyng|mornynge|mornyngge|mournande|musinge|nei+ginge|nyghyng|nyghynge|niminde|noiand|noyande|noting|on+tolyinde|on-+tolyinde|onspekynde|specende|specinde|spekand|spekende|spekinde|spekinge|spekyng|spekynge|$sprecende|partyng|passand|passande|passing|passyng|passynge|passyngge|payenge|payng|peesand|pleiing|pleinde|plesande|plesaund|plesyng|plesynge|pleysyng|pleysynge|praiand|praienge|prayand|prayande|prayenge|praying|prayinge|prayng|preiynge|preyeng|preying|preyingge|preyng|precheand|prechyng|preising|preisynge|preysyng|preysynge|presing|preuyng|provyng|pullyng|puttande|puttyng|puttyngge|pynand|pyping|quakynge|quakyngge|qwakyng|whakyng|que+dende|que+dinde|que+tende|que+tinde|quedinde|rampyng|rarinde|$roryng|roryng|rorynge|rasyng|rechyng|redande|redinge|redyng|redynge|regnynde|regnyng|regnynge|rengninge|rentynge|restynge|resynge|revande|rewsende|rewsiende|riwsinde|ridend|ridinde|ridyng|ryddyng|rydyng|rydynge|risand|risindde|rising|risyng|rysande|rix-ende|rixende|rixinde|robbyng|rusand|ruysand|russhynge|sauaand|sauyng|sauynge|saylyng|seyllynge|seylyng|scaldinde|scaldynge|schaldinde|schakinde|schakyng|schand|sechand|sechaund|secheand|sechende|sechinde|sechinge|sekand|sekande|sekyng|sekynge|schauynge|schetyng|schyttyng|scheunchinde|schewand|schewande|schewyng|schewynge|schouyng|schowyng|shewand|shewyng|shewynge|schilinde|schiminde|schimminde|$schimminde|schinide|schininde|schining|schinyng|schonyng|schynnyng|schynyng|schynynge|scinende|shynyng|ssynynde|sclepinde|slapande|slapinde|slepand|slepande|slepende|slepinde|sleping|slepyng|slepynge|Slepynge|se+tinge|seand|seeinge|seingge|semand|semande|semynge|sendand|sendyng|sengeand|settand|settyng|sitande|sittand|Sittand|sittende|sittinde|sitting|sittinge|sittyng|sittynge|sittyngge|syttand|syttyng|$syttyng|syttynge|syttyngge|zittinde|zittynde|sewende|sewyng|sewynge|$suwynge|suyng|suynge|shryuand|sihinde|sillynge|singende|singinde|syngand|syngyng|syngynge|syngyngge|sleand|slydyng|smakinde|smellinde|smellyng|smellynge|smyllyngge|smirkinde|smitende|smityng|smytand|smytyng|smytyngge|smylinge|smylyng|snobbynge|sobbiende|sobbyng|sobbyngge|sounand|sounnynge|sowndyng|sownnande|sowkyng|sukand|sukinde|sparyng|speryng|spredand|spredyng|springing|springynge|sprinynge|spryngand|spryngynge|spryngynges|spynnande|standand|standande|standyng|stondand|stondinde|stonding|stondinge|stondyng|stondynge|stoondyng|staryng|stertynge|steruinde|sterynge|sturinde|sturunge|$sti+ginde|sti+ginde|stiynge|stikinde|stykynge|stinkende|stinking|stinkyng|stinnckennde|stinnkennde|styngynge|styngyngge|stynkand|stynkande|stynkinde|stynkynde|$stynkynde|stynkynge|stoppand|stormyng|strawyng|strenende|strengthyng|stridende|strikinde|stru+ginde|sueriingge|sweryng|swerynge|swinkende|swinkinde|swochninde|swymmyng|sykyng|sykyngge|+tankand|+tankyng|+tankynge|+tonkyng|thankyng|thonkyng|thonkynge|+teinkinde|+ten-chinde|+tenchand|+tenchend|+tenchinde|+tenkinde|+tenkynde|+tenkyng|+tinking|+tynkand|thinkinge|thynkand|thynkande|thynkyng|thynkynge|+teotinde|+trestand|+tretyng|thretyng|takand|takande|taking|takyn|takyng|Takyng|takynge|talkyng|techand|teching|techyng|techynge|techyngge|tei+dinde|tei+tinde|telland|telling|tellyng|tellynge|temptynge|tendynge|tochyng|touching|touchinge|touchyng|touchynge|touchyngge|towchyng|tollinde|totinde|trailynge|trasyng|treodinde|trosting|trostyng|trustyng|trowand|trowande|trowynge|turnand|turneing|turnyng|turnynge|uneilinde|w+andinde|wendand|wendyng|wagiende|wawyng|wailyng|waylyng|waissynge|waschynge|wakand|wakande|wakiende|wakinde|waking|wakynde|wakyng|wakynge|walkende|walkinde|walkinge|walkyng|walkynge|wallende|wallinde|wellinde|wanand|woninde|wanande|wandryngge|wantynge|warnyng|wastande|wastinde|wastyng|watyng|waytyng|waytynge|waxand|waxande|wexand|wexande|wexynge|wecchinde|wedinde|weepyng|wepende|wepinde|weping|wepyng|wepynge|wepyngge|wenande|wenyng|Wenyng|wenynge|$wenynge|wenyngge|werchende|werchinde|werkyng|wirchand|wirchaund|wircheand|wirkand|wirkyng|wirkynge|worching|worchyng|wurchende|wurchinde|werpinde|weruende|wetyngge|witan|witende|witinde|wittande|wittende|wittyng|witynge|wytyng|wytynge|weyng|whilende|whyrlyng|whyrlyng-wynde|willand|willyng|willynge|willyngge|wilynde|wyllynge|wyllyngge|wilnyng|wylnyng|wynynde|wowndyng|wrekand|wrestyng|wringinde|wryngyng|wrytand|wrytynge|wysschinge) 
+    %1half: (*VAG*|*DAG*|*HAG* idoms beriing|cleuiinde|cleuiynde|cleuynge|cleuyngge|clyvynge|errynge|heriand|Heriand|heriende|heryenge|hopand|hoppyngge|hopyng|knauynge|knawande|knawynge|knowand|knowyng|knowynge|leueand|levynge|libbende|libbinde|libbynde|lifand|liuand|liueand|liuendes|liui+gende|liui+gendes|liuiand|liuiende|liuiendes|liuinde|lyfande|lyffand|lyffande|lyffynge|lyuand|lyuyng|lyuynge|lyvand|lyvyng|lyvynge|li+gtenand|li+gtnynge|makand|Makand|makiinde|making|makying|makyng|makynge|medlyng|poryngge|prekiinde|prikiende|prikyinde|pryckyng|purgynge|rixlende|rumiand|servynge|usynge|vsyng|vsynge|wer+ginde|wrastlyng) 
+    %2: (*VAG*|*DAG*|*HAG* idoms a-bydynge|abidand|abidyng|abidynge|abydande|abydinge|abydynge|abydyngge|a-cordyng|according|accordyng|accordynge|acordand|acording|acordyng|acordynge|$acordynge|a-greyng|a-noiand|anoiand|a-peryng|aperyng|appering|ablyng|abreggynge|accusyng|afermynge|affermande|alargyng|alegging|ali+gtand|amblynge|amendand|amendyng|amendynge|anbidende|onbodinde|anchiterrinde|answerand|answeryng|answerynge|aunswering|onsweryng|apperyng|appreuyng|arisand|ariseand|arizinge|ascendinge|ascendyng|assending|assailyng|assentynge|bacbitand|bakbytyng|baptisinge|baptisyng|baptisynge|be+tenkyngge|bi+tenchand|bi-+tenchand|by+tenchand|by-+ten-chand|by-+tenchand|begynnynge|byginnand|bygynnyng|behaldande|beheldyng|beholdyng|beholdynge|behestyng|behotynge|besechinge|besechyng|besechynge|besechyngge|bisechand|bisekynge|bysechyng|betakenande|betrayenge|bi-stonding|bileuynge|birewsinde|bisegynge|bitunde|blaberynge|blemysand|bodiende|boryinde|by-comyngge|chalangand|chalenchyng|chaterynge|cheueryngge|chiuerinde|comaunding|comawndyng|comendinge|comendyng|commendynge|comfortand|comfortyng|confortyngge|comownyng|compellyng|compleynyng|concernyng|conceyuyng|$conceyuyngge|conseyuyng|coniuryngge|consenntyng|consenting|consentinge|consentyng|consentynge|constreinand|constreynynge|containing|contenyng|conteynyng|conteynynge|convaying|costynge|couaytande|coueytinge|counsailynge|cownselyng|dalying|dampnyng|declaryng|defendyng|defendynge|defouland|delitande|departynge|departyngge|des-pisyng|despisyng|despisynge|despysyng|dispising|dispysand|descendand|descending|descendinge|descendynge|discending|discendinge|desirand|desiring|desiringe|desiryng|desirynge|desyrand|desyring|desyryng|Desyryng|desyryngge|destroyenge|distriynge|discordynge|discryvyngge|dispreisynge|disputyng|dysputyng|druicninde|enchewyng|enclynynge|encresyng|incresyng|incresynge|enformyng|enioyande|enioyng|enquering|inquiring|inqwyryng|entendande|intendand|entring|$entryng|entryngge|excedynge|excusyng|exhorting|exhortynge|expleyntyng|expounnynge|expounyng|expressyng|fikelinde|flateryng|flaterynge|flecchyngge|florischyng|florisshing|floweryng|folewyng|follewyng|followynge|folouand|folowand|folowande|folowing|folowyng|folowynge|folwyng|folwynge|fuliende|for+getyng|uoryetinde|for-fetand|for-sakand|forsakinge|forsakyng|forsakynge|forbedyng|forgevynge|forgifand|forseande|forsweryng|fulfilland|fulfillynde|fullfillande|gaderand|gaderyng|gederen|gederin|gederinde|gangande|gangende|genderynge|gouerande|gouernynde|gouernynge|gouernyngge|halewende|halewinde|halowynge|halwende|hercnede|hungerand|ierniende|ierninde|inbrasyng|knowelechynge|knowlachyng|knowlechyng|langourande|languessande|langwyssande|manassyng|merueilynge|meruelyng|merueylyng|merveylyng|meyntenyng|mislikyng|monyschyng|norissinde|norissynde|norshyng|norysshynge|obeschynge|obeyng|offerand|offerynge|offryng|on-todelinde|onzyginde|openand|ordande|ordeynynge|owtkastyng|perischinge|perishyng|persuand|pursuand|pursuyng|pertenande|peruertyng|porueynde|purueyng|possessyng|preferryng|presentyng|presentynge|preseruyng|pretending|pretendyng|procurynge|promising|promittyng|purchacynge|purposing|purposyng|purposynge|rauissand|rauysching|ravysand|rebukynge|receyvynge|resceyuynge|ressayvyng|reformyng|refreynyng|rehersing|rehersyng|rehersyngge|rekenynge|reknyng|repentynge|replying|repreuyng|reprouaund|reproceand|repruceand|repruceing|resortyng|returnyng|rewardyng|saluynge|schuderinde|sinbetende|sinbetinde|sle+drende|snakerinde|sorowand|sorwand|sorweand|sorwyng|sperclinde|stablissand|stodying|studiyng|stumbland|sufferand|sufferande|sufferyng|sufferynge|suffrand|suffryng|suffrynge|suffryngge|supplauntynge|supportyng|supposing|supposyng|susteynyng|susteynyngge|+turchwuninde|+turh-wuniende|taberyng|tariing|tariynge|to-comyngge|toterinde|toumblynge|translating|trauelyng|traueylynge|traveillynge|tremblyng|tremelyng|tremlyngge|trespassand|trubland|trybuland|tutelinde|twiselende|uoluellinde|varyenge|vironynde|vnwetyng|vnwytinge|vnwyttyng|vnwytyng|vnwytyngge|vp-berynde|vp-stei+geing|vparisand|waimentand|welcommynge|welcomyng|welfaryng|wi+tdrawyng|wythdrawyng|witholdynge|witnessynge|wytnessyng|wytnessynge|wonderyng|worshipyng|wurschepynge|wurschepyngge|wurschippyngge|wurshipynge) 
+    %2half: (*VAG*|*DAG*|*HAG* idoms onknowyng|unknowynge|requirynge) 
+    %3: (*VAG*|*DAG*|*HAG* idoms a+genstonding|aperteynyng|comprehendyng|considering|consideryng|considerynge|consyderyng|consyderynge|contunyng|contwnyng|contynowyng|contynuyng|copuland|discouerynge|discuryng|disencresynge|dysencresynge|disseuerynge|edifiand|edifyenge|encumpassand|envirounyge|envirounynge|envyronynge|executynge|fructifiand|ministryng|mynystryng|mynystryngge|multipliand|mysbeleeuynge|ocupying|onderuynge|ouer-passande|ouereorninde|overthrowynge|prophecying|puryfiyng|recommendynge|remembrynge|representyng|representynge|sygnefyenge|understondinde|vnder-stondand|$vnderstandand|vnderstondeand|vndirstondinge|vndirstondyng|vndurfonggyngge|ymaginynge) 
+    %other3: ELSE 
+}
+4: { 
+    %transitive: ((IP* idoms *VAG*|*DAG*|*HAG*) AND (IP* idoms NP-OB1|NP-OB2)) 
+    %ambiguous: ((IP* idoms *VAG*|*DAG*|*HAG*) AND (*VAG*|*DAG*|*HAG* idoms discordynge|langande|longeyng|consenntyng|consenting|consentinge|consentyng|consentynge|a-noiand|anoiand|derend|deriynde|assentynge|sorowand|sorwand|sorweand|sorwyng|lackyng|lackynge|lakkyng|lakkynge|bileuynge|halewende|halewinde|halowynge|halwende|semand|semande|semynge|greuching|gruchande|gruchyng|grucinde|grutchyng|a-greyng|obeschynge|likinde|likynde|likyng|lykand|lykande|lykynde|lykynge|plesande|plesaund|plesyng|plesynge|pleysyng|pleysynge|a-cordyng|according|accordyng|accordynge|acordand|acording|acordyng|acordynge|$acordynge|wakand|wakande|wakiende|wakinde|waking|wakynde|wakyng|wakynge|pertain|aleastinde|ay-lastande|Ay-lastande|euer-lastynge|euere-lastyng|euere-lastyngge|euerelastynge|euerelestyng|euerelestynge|euerlastand|euerlastande|euerlastend|euerlasting|euerlastinge|euerlastyng|Euerlastyng|euerlastynge|euerlastyngge|euerlestyng|eurelestinde|eurelestynde|euyr-lestyng|euyrlasting|euyrlastyng|euyrlesting|euyrlestyng|everelastynge|everlastinge|everlastynge|ilestende|inlastande|lastand|lastande|lastend|lastynge|leastinde|lestende|$lestende|lestinde|lestynde|knauynge|knawande|knawynge|knowand|knowyng|knowynge) AND (IP* idoms !NP-OB1|NP-OB2)) 
+    %prep_intransitive: ((IP* idoms *VAG*|*DAG*|*HAG*) AND (IP* idoms PP) AND (IP* idoms !NP-OB1|NP-OB2)) 
+    %intransitive: ((IP* idoms *VAG*|*DAG*|*HAG*) AND (IP* idoms !NP-OB1|NP-OB2)) 
+    %other4: ELSE 
+}
+*/
+
+/~*
++ter he hadde ibe blaberynge and chaterynge, he took hym to silence.
+(CMAELR3-M23,32.159)
+*~/
+( (IP-SUB (CODING-IP-SUB %pstperfVAG:%CONJ:%2:%intransitive)
+	  (ADVP-LOC *T*-1)
+	  (NP-SBJ (PRO he))
+	  (HVD hadde)
+	  (BEN ibe)
+	  (VAG (VAG blaberynge) (CONJ and) (VAG chaterynge)))
+  (ID CMAELR3-M23,32.159))
+/~*
+And, +gif it be lykynde to +te, to commende +te grete excellence of virginite,
+let +tilke blessede mayden and moder in o syde, and +tilke diere deciple Ihon,
+a mayde also, in +tat o+ter syde of +te cros be ihad in here ymages, +tat +tu
+mowe +tenke her-by hou plesaunt to God is chastete bo+te of man and womman,
+which he halewode so preciously in his moder and his lieue deciple, seynt Ihon;
+(CMAELR3-M23,35.258)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%ambiguous)
+	  (NP-SBJ-1 (PRO it))
+	  (BEP be)
+	  (VAG lykynde)
+	  (PP (P to)
+	      (NP (PRO +te)))
+	  (, ,)
+	  (IP-INF-1 RMV:to_commende_+te...))
+  (ID CMAELR3-M23,35.258))
+/~*
+Wherfore, dire suster, +tat +te swete affeccioun of loue of swete Ihesu mowe
+wexe in +tyn herte, +tu most haue +tre maner meditacioun: +tat is to seyn of
++tyngges +tat ben apassed, of +tingges +tat be+t present, of +tyngges +tat
+be+t comyngge.
+(CMAELR3-M23,39.390)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ *T*-4)
+	  (BEP be+t)
+	  (VAG comyngge))
+  (ID CMAELR3-M23,39.390))
+/~*
+Bote for as muche as in +tis wrecchede lyf is no+tyng stable, no+tyng
+certaynly is abydyngge,
+(CMAELR3-M23,51.796)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%2:%prep_intransitive)
+	  (CONJ Bote)
+	  (PP (P for)
+	      (QP (ADVR as)
+		  (Q muche)
+		  (PP (P as)
+		      (CP-ADV (C 0)
+			      (IP-SUB RMV:in_+tis_wrecchede...)))))
+	  (, ,)
+	  (NP-SBJ (Q+N no+tyng))
+	  (ADVP (ADV certaynly))
+	  (BEP is)
+	  (VAG abydyngge)
+	  (. ,))
+  (ID CMAELR3-M23,51.796))
+/~*
+I was wandryngge aboute wit Caym acursed:
+(CMAELR3-M23,52.825)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (PRO I))
+	  (BED was)
+	  (VAG wandryngge)
+	  (RP aboute)
+	  (PP (P wit)
+	      (NP (NPR Caym)))
+	  (IP-PPL RMV:acursed...)
+	  (. :))
+  (ID CMAELR3-M23,52.825))
+/~*
++gif +tu were dowtyngge or flecchyngge, he ha+t confermed +te in good purpos.
+(CMAELR3-M23,54.894)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%CONJ:%1:%intransitive)
+	  (NP-SBJ (PRO +tu))
+	  (BED were)
+	  (VAG (VAG dowtyngge) (CONJ or) (VAG flecchyngge)))
+  (ID CMAELR3-M23,54.894))
+/~*
+How ofte, suster, whan +tu hast be asadded and dul or wery of +ty lyfe, ha+t
+he be a pytous confortour to +te; +gif +tu $were longynge in brennyngge loue
+after hym, ha+t ilept in-to +tyn herte; +gif +tu hast yrad or ystotid on holy
+scripture, ha+t yli+gted +ty soule wit li+gt of spiritual vnderstondynge?
+(CMAELR3-M23,54.895)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (PRO +tu))
+	  (BED $were)
+	  (VAG longynge)
+	  (PP (P in)
+	      (NP (VAG brennyngge) (N loue)))
+	  (PP (P after)
+	      (NP (PRO hym))))
+  (ID CMAELR3-M23,54.895))
+/~*
+ant +tenche+d mest in ouwer tiden of God, +tet ouwer +tochtes ne beon
+fleotinde +tenne.
+(CMANCRIW-1-M1,I.78.323)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ (PRO$ ouwer) (NS +tochtes))
+	  (NEG ne)
+	  (BEP beon)
+	  (VAG fleotinde)
+	  (ADVP-TMP (ADV +tenne)))
+  (ID CMANCRIW-1-M1,I.78.323))
+/~*
+& tei+gede for +ti an clod of eor+de to hire. as me de+d $to +te reo+der o+der
+to an o+der beast +tt is to reachinde Abuten.
+(CMANCRIW-1-M1,II.113.1407)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%other2:%other3:%intransitive)
+	  (NP-SBJ *T*-2)
+	  (BEP is)
+	  (VAG (VAG21 to) (VAG22 reachinde))
+	  (CODE <P_II.113>)
+	  (RP Abuten))
+  (ID CMANCRIW-1-M1,II.113.1407))
+/~*
+Achte +tinges nomeliche la+die+d us to waken. eauer $in $sum good. & beo
+wurchinde +tis scheorte lif +tis stronge lif. vre good +tt is swa +tunne. vre
+sunnen +tt beo+d swa monie. dea+d +tt we beo+d siker of & vnsiker hwenne. +te
+sterke dom of domesdei & se naru midalle +tt euch idel word bi+d +tear ibrocht
+for+d & idele +tochtes. +tt neren her i+tochte.
+(CMANCRIW-1-M1,II.115.1447)
+*~/
+
+( (IP-INF (CODING-IP-INF %infVAG:%germanic:%1:%intransitive)
+	  (TO *)
+	  (BE beo)
+	  (VAG wurchinde))
+  (ID CMANCRIW-1-M1,II.115.1447))
+/~*
+For +ti mine leoue sustren bi nicht ase nicht fuwel +tt ancre is to iefned.
+beo+d +georne sturinde.
+(CMANCRIW-1-M1,II.121.1529)
+*~/
+
+( (IP-IMP (CODING-IP-IMP %impVAG:%germanic:%1:%prep_intransitive)
+	  (PP (P For)
+	      (NP (D +ti)))
+	  (NP-VOC (PRO$ mine) (ADJ leoue) (NS sustren))
+	  (PP (P bi)
+	      (NP (N nicht)))
+	  (PP (P ase)
+	      (NP (N nicht)
+		  (N fuwel)
+		  (CP-REL (WNP-1 0)
+			  (C +tt)
+			  (IP-SUB RMV:ancre_is_to...))))
+	  (, .)
+	  (BEI beo+d)
+	  (ADVP (ADV +georne))
+	  (VAG sturinde)
+	  (. .))
+  (ID CMANCRIW-1-M1,II.121.1529))
+/~*
+& +tus inicht beo+d fleoinde & sechinde ouwer saule heouenliche fode.
+(CMANCRIW-1-M1,II.121.1532)
+*~/
+
+( (IP-IMP (CODING-IP-IMP %impVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ &)
+	  (ADVP (ADV +tus))
+	  (PP (P+N inicht))
+	  (BEI beo+d)
+	  (VAG fleoinde))
+  (ID CMANCRIW-1-M1,II.121.1532))
+/~*
+for semey sei+d audians. +tt is herinde.
+(CMANCRIW-1-M1,II.132.1751)
+*~/
+
+( (IP-MAT-PRN (CODING-IP-MAT-PRN %presVAG:%germanic:%1:%intransitive)
+	      (NP-SBJ (D +tt))
+	      (BEP is)
+	      (VAG herinde))
+  (ID CMANCRIW-1-M1,II.132.1751))
+/~*
+Micume & mi wununge +tach hit +tunche atter hit is halewinde.
+(CMANCRIW-1-M1,II.144.1937)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%2:%ambiguous)
+	  (NP-LFD (NP (PRO$+N Micume))
+		  (CONJP (CONJ &)
+			 (NP (PRO$ mi) (N wununge))))
+	  (PP (P +tach)
+	      (CP-ADV (C 0)
+		      (IP-SUB RMV:hit_+tunche_atter...)))
+	  (NP-SBJ-RSP (PRO hit))
+	  (BEP is)
+	  (VAG halewinde)
+	  (. .))
+  (ID CMANCRIW-1-M1,II.144.1937))
+/~*
+& in euchanes tail anblase bearninde.
+(CMANCRIW-1-M1,II.187.2648)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ &)
+	  (PP (P in)
+	      (NP (Q+ONE$ euchanes) (N tail)))
+	  (NP-SBJ (D+N anblase))
+	  (CODE <P_II.187>)
+	  (BEP *)
+	  (VAG bearninde)
+	  (. .))
+  (ID CMANCRIW-1-M1,II.187.2648))
+/~*
+$ha $beo+d her hweolinde as +tehweoles ouerturne+d
+(CMANCRIW-2-M1,II.262.284)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (PRO $ha))
+	  (BEP $beo+d)
+	  (CODE {TEXT:habeo+d})
+	  (ADVP-LOC (ADV her))
+	  (VAG hweolinde)
+	  (PP (P as)
+	      (CP-ADV (WADVP-1 0)
+		      (C 0)
+		      (IP-SUB RMV:*T*-1_+tehweoles_ouerturne+d...))))
+  (ID CMANCRIW-2-M1,II.262.284))
+/~*
+An dei as ha +treo weren ifolen onslepe. & lei bitwene +teos twa +te +tridde
++tt ich seide. com +te cwen of heouene & twa meidnes wi+d hire. +te an as
++tach hit were ber aletuarie. +te o+der of golt asticke.
+(CMANCRIW-2-M1,II.273.442)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%transitive)
+	  (NP-SBJ (PRO hit))
+	  (BED were)
+	  (VAG ber)
+	  (NP-OB1 (D+N aletuarie)))
+  (ID CMANCRIW-2-M1,II.273.442))
+/~*
++Teose maries hit sei+d. +teose bitternesses were cuminde to smiren ure lauerd.
+(CMANCRIW-2-M1,II.277.517)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ (D +Teose)
+		  (NPRS maries)
+		  (NP-PRN *ICH*-1))
+	  (IP-MAT-PRN RMV:hit_sei+d...)
+	  (, .)
+	  (NP-PRN-1 (D +teose) (NS bitternesses))
+	  (BED were)
+	  (VAG cuminde)
+	  (IP-INF-PRP RMV:to_smiren_ure...)
+	  (. .))
+  (ID CMANCRIW-2-M1,II.277.517))
+/~*
++teo beo+d cominde to smirien vre lauerd. +te me +tole+d for his luue.
+(CMANCRIW-2-M1,II.277.518)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ (D +teo)
+		  (CP-REL *ICH*-1))
+	  (BEP beo+d)
+	  (VAG cominde)
+	  (IP-INF-PRP RMV:to_smirien_vre...)
+	  (, .)
+	  (CP-REL-1 (WNP-2 0)
+		    (C +te)
+		    (IP-SUB RMV:*T*-2_me_+tole+d...))
+	  (. .))
+  (ID CMANCRIW-2-M1,II.277.518))
+/~*
+But sothly, if he passe the boundes of these forseide spaces, above or bynethe,
+thei seyn that the planete is "fallyng fro the ascendent."
+(CMASTRO-M3,671.C1.266)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (D the) (N planete))
+	  (BEP is)
+	  (" ")
+	  (VAG fallyng)
+	  (PP (P fro)
+	      (NP (D the) (N ascendent))))
+  (ID CMASTRO-M3,671.C1.266))
+/~*
+But understond wel that evermo generaly the houre inequal of the day with the
+houre inequal of the night contenen 30 degrees of the bordure, which bordure
+is evermo answeryng to the degrees of the equinoxial. Wherfore departe the
+arch of the day artificial in 12, and tak there the quantite of the houre
+inequale by day.
+(CMASTRO-M3,672.C2.344)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%2:%prep_intransitive)
+	  (NP-SBJ *T*-1)
+	  (BEP is)
+	  (ADVP-TMP (ADV evermo))
+	  (VAG answeryng)
+	  (PP (P to)
+	      (NP (D the)
+		  (NS degrees)
+		  (PP (P of)
+		      (NP (D the) (ADJ equinoxial))))))
+  (ID CMASTRO-M3,672.C2.344))
+/~*
+Vor huanne +ter is werre <slash> betuene tuaye men: hit yual+t ofte <slash>
++tet +ter bye+t moche uolke dyade <slash> +tet ne habbe+t nenne gelt. cherchen
+tobroke. tounes uorbernd. abbeyes. priories. bernes destrud <slash> and men
+<slash> and wyfmen <slash> and children deserited <slash> and y-exiled. and
+londes destrud. and to moche <slash> of o+tre harmes; +tet bye+t y-do <slash>
+be +te encheyson <slash> of +tan <slash> +tet hi bye+t yhealde <slash> uor te
+amendi <slash> +tet <slash> +tis purchace+t. and +te lhord <slash> and alle
++to <slash> +tet bye+t to ham helpinde. an ine zuyche nyede.
+(CMAYENBI-M2,30.489)
+*~/
+
+( (IP-SUB-13 (CODING-IP-SUB-13 %presVAG:%germanic:%1:%prep_intransitive)
+	     (NP-SBJ *T*-12)
+	     (BEP bye+t)
+	     (PP (P to)
+		 (NP (PRO ham)))
+	     (VAG helpinde))
+  (ID CMAYENBI-M2,30.489))
+/~*
+Alle o+tre +tinges bye+t chonginde <slash> ine eche manere of hare kende.
+(CMAYENBI-M2,104.2029)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%romance:%1:%prep_intransitive)
+	  (NP-SBJ (Q Alle) (OTHER o+tre) (NS +tinges))
+	  (BEP bye+t)
+	  (VAG chonginde)
+	  (, <slash>)
+	  (PP (P ine)
+	      (NP (Q eche)
+		  (N manere)
+		  (PP (P of)
+		      (NP (PRO$ hare) (N kende)))))
+	  (. .))
+  (ID CMAYENBI-M2,104.2029))
+/~*
+and +te more +tet he is norissinde: me zay+t +tet he is +te substancieler. and
++tere-uore +tet ine +tise breade is more uirtue <slash> and of guod <slash>
+and of norture <slash> +tanne me mo+ge +tenche <slash> o+ter zigge.
+(CMAYENBI-M2,113.2172)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%romance:%2:%intransitive)
+	  (NP-MSR *T*-2)
+	  (NP-SBJ (PRO he))
+	  (BEP is)
+	  (VAG norissinde))
+  (ID CMAYENBI-M2,113.2172))
+/~*
+Hi ne bye+t +tenchinde bote uor to uoluelle hire iornayes <slash> al huet hi
+come+t to hare eritage <slash> +tet is +te cite` of paradis <slash> +tet +te
+guode pilgrims zeche+t. ase zay+t zaynte paul +tet ne habbe+t <slash> ne
+nolle+t habbe +te eritage hier ine +tise wordle.
+(CMAYENBI-M2,254.2336)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (PRO Hi))
+	  (NEG ne)
+	  (BEP bye+t)
+	  (VAG +tenchinde)
+	  (PP (P bote)
+	      (IP-INF RMV:uor_to_uoluelle...))
+	  (, <slash>)
+	  (PP (P21 al)
+	      (P22 huet)
+	      (CP-ADV (C 0)
+		      (IP-SUB RMV:hi_come+t_to...)))
+	  (. .))
+  (ID CMAYENBI-M2,254.2336))
+/~*
+cominde +ti riche.
+(CMAYENBI-M2,262.2489)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%intransitive)
+	  (BEP *)
+	  (VAG cominde)
+	  (NP-SBJ (PRO$ +ti) (N riche))
+	  (. .))
+  (ID CMAYENBI-M2,262.2489))
+/~*
+Uor to sseawy +te lokynge of man wy+t-inne. +tellyche ane uorbysne <slash>
+oure lhord ihesu crist zay+t. '+Tis uorzo+te ywyte+t. +tet yef +te uader of
++te house wyste huyche time +te +tyef were comynde: uor-zo+te he wolde waky
+<slash> and nolde na+gt +tolye +tet me dolue his hous.'
+(CMAYENBI-M2,263.2509)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%intransitive)
+	  (NP-TMP *T*-1)
+	  (NP-SBJ (D +te) (N +tyef))
+	  (BED were)
+	  (VAG comynde))
+  (ID CMAYENBI-M2,263.2509))
+/~*
+Ri+gtnesse uorzo+te ssel zitte amydde <slash> +tet echen his o+gen yef+t.
+Hueruore: huyche time +te +tyef is comynde <slash> me not.
+(CMAYENBI-M2,264.2519)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%intransitive)
+	  (NP-TMP *T*-4)
+	  (NP-SBJ (D +te) (N +tyef))
+	  (BEP is)
+	  (VAG comynde))
+  (ID CMAYENBI-M2,264.2519))
+/~*
+and buo+te on+tolyinde.
+(CMAYENBI-M2,265.2560)
+*~/
+
+( (IP-MAT-SPE (CODING-IP-MAT-SPE %presVAG:%germanic:%1:%intransitive)
+	      (CONJ and)
+	      (NP-SBJ (Q buo+te))
+	      (BEP *)
+	      (VAG on+tolyinde)
+	      (. .))
+  (ID CMAYENBI-M2,265.2560))
+/~*
+Bi-fore +te werld er +tai semande,
+(CMBENRUL-M3,4.107)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%ambiguous)
+	  (PP (P Bi-fore)
+	      (NP (D +te) (N werld)))
+	  (BEP er)
+	  (NP-SBJ (PRO +tai))
+	  (VAG semande)
+	  (. ,))
+  (ID CMBENRUL-M3,4.107))
+/~*
+Ouir alle +tinges loke ye ne be noht gruchande of na +ting.
+(CMBENRUL-M3,29.958)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%romance:%1:%ambiguous)
+	  (NP-SBJ (PRO ye))
+	  (CODE <P_29>)
+	  (NEG ne)
+	  (BEP be)
+	  (NEG noht)
+	  (VAG gruchande)
+	  (PP (P of)
+	      (NP (Q na) (N +ting))))
+  (ID CMBENRUL-M3,29.958))
+/~*
+and so as iche of hem is lakkynge to othir, thei ne han no power to bryngen a
+good that is ful and absolut;
+(CMBOETH-M3,434.C2.247)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%others:%1:%ambiguous)
+	  (NP-SBJ (Q iche)
+		  (PP (P of)
+		      (NP (PRO hem))))
+	  (BEP is)
+	  (VAG lakkynge)
+	  (PP (P to)
+	      (NP (OTHER othir))))
+  (ID CMBOETH-M3,434.C2.247))
+/~*
+And the thinges eek that men wenen ne haven none soules, ne desire thei nat,
+iche of hem, by semblable resoun to kepyn that that is hirs that is to seyn,
+that is accordynge to hir nature in conservacioun of hir beynge and endurynge?
+(CMBOETH-M3,435.C2.295)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%romance:%2:%ambiguous)
+	  (NP-SBJ *T*-3)
+	  (BEP is)
+	  (VAG accordynge)
+	  (PP (P to)
+	      (NP (PRO$ hir) (N nature)))
+	  (PP (P in)
+	      (NP (N conservacioun)
+		  (PP (P of)
+		      (NP (PRO$ hir)
+			  (N beynge)
+			  (CONJP (CONJ and)
+				 (NX (N endurynge))))))))
+  (ID CMBOETH-M3,435.C2.295))
+/~*
+"Ne I ne trete not here now of willeful moevynges of the soule that is knowyng,
+but of the naturel entencioun of thinges, as thus: ryght as we swolwen the
+mete that we resseyven and ne thinke nat on it, and as we drawen our breeth in
+slepynge that we witen it nat while we slepyn.
+(CMBOETH-M3,436.C1.305)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1half:%ambiguous)
+	  (NP-SBJ *T*-1)
+	  (BEP is)
+	  (VAG knowyng))
+  (ID CMBOETH-M3,436.C1.305))
+/~*
+& +tey founden an olde Cyte al wasted & forlete, +tat nas +ter-in nor man ne
+woman, ne no thing dwellynge;
+(CMBRUT3-M3,8.182)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ-1 *exp*)
+	  (NEG+BED nas)
+	  (PP (ADV+P +ter-in))
+	  (NP-1 (NP (CONJ nor) (N man) (CONJ ne) (N woman))
+		(, ,)
+		(CONJP (CONJ ne)
+		       (NP (Q no) (N thing))))
+	  (VAG dwellynge))
+  (ID CMBRUT3-M3,8.182))
+/~*
+and +gaf ham an Ile al wildernesse, +tere +tat noman was duellyng, saf
+oneliche wilde bestes.
+(CMBRUT3-M3,28.811)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%intransitive)
+	  (ADVP-LOC *T*-1)
+	  (NP-SBJ (Q+N noman)
+		  (PP *ICH*-2))
+	  (BED was)
+	  (VAG duellyng)
+	  (, ,)
+	  (PP-2 (P saf)
+		(NP (FP oneliche) (ADJ wilde) (NS bestes))))
+  (ID CMBRUT3-M3,28.811))
+/~*
+Hit bifelle so +tat tydynges come to him oppon a day, +tat +te Kyng Rodrik of
+Gascoigne was comen into +tis lande wi+t an huge noumbre of peple, and was
+duellyng in Steynesmore.
+(CMBRUT3-M3,36.1110)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ *con*)
+	  (BED was)
+	  (VAG duellyng)
+	  (PP (P in)
+	      (NP (NPR Steynesmore))))
+  (ID CMBRUT3-M3,36.1110))
+/~*
+anone as +tis Octouian wiste +tat his lorde was duellyng at Rome, he seisede
+al +te lande into his honde,
+(CMBRUT3-M3,40.1244)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (PRO$ his) (N lorde))
+	  (BED was)
+	  (VAG duellyng)
+	  (PP (P at)
+	      (NP (NPR Rome))))
+  (ID CMBRUT3-M3,40.1244))
+/~*
+but she hade made priuely to God a vow of chastite, +tat here fader wiste it
+nou+gt, ne noman elles +tat was leuyng oppon er+te.
+(CMBRUT3-M3,43.1314)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%other2:%other3:%prep_intransitive)
+	  (NP-SBJ *T*-3)
+	  (BED was)
+	  (VAG leuyng)
+	  (PP (P oppon)
+	      (NP (NPR er+te))))
+  (ID CMBRUT3-M3,43.1314))
+/~*
+and by +te beem +tat stode towarde +te Est, is vnderstonde +tat +ge shul geten
+a sone +tat shal conquere al Fraunce and alle +te landes +tat be+t longeyng to
++te Kyng of Fraunce, +tat shal bene a wor+tier Kyng, and more of honoure: +tan
+euer was eny of his ancestres.
+(CMBRUT3-M3,64.1918)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%ambiguous)
+	  (NP-SBJ *T*-4)
+	  (BEP be+t)
+	  (VAG longeyng)
+	  (PP (P to)
+	      (NP (D +te)
+		  (N Kyng)
+		  (PP (P of)
+		      (NP (NPR Fraunce))))))
+  (ID CMBRUT3-M3,64.1918))
+/~*
+& in the same place +tai enterede Aurilambros, +te secunde +gere of his regne,
+wi+t al +te worship +tat myght bene longyng to soche a kyng, of whos soule God
+haue mercy!
+(CMBRUT3-M3,65.1937)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %futVAG:%other2:%other3:%prep_intransitive)
+	  (NP-SBJ *T*-1)
+	  (MD myght)
+	  (BE bene)
+	  (VAG longyng)
+	  (PP (P to)
+	      (NP (SUCH soche)
+		  (D a)
+		  (N kyng)
+		  (, ,)
+		  (CP-REL (WPP-2 (P of)
+				 (WNP (WPRO$ whos) (N soule)))
+			  (C 0)
+			  (IP-SUB RMV:*T*-2_God_haue...)))))
+  (ID CMBRUT3-M3,65.1937))
+/~*
+& +tai ordeynede ham +tiderward +tere +tat +te kyng was duellyng,
+(CMBRUT3-M3,69.2066)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%intransitive)
+	  (ADVP-LOC *T*-1)
+	  (NP-SBJ (D +te) (N kyng))
+	  (BED was)
+	  (CODE <P_69>)
+	  (VAG duellyng))
+  (ID CMBRUT3-M3,69.2066))
+/~*
+and +tere was also ano+ter hull ney+g, +tat +tere was oppon ano+tere fire
+brynnyng.
+(CMBRUT3-M3,84.2545)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ-3 (EX +tere))
+	  (BED was)
+	  (PP (P oppon)
+	      (NP *T*-2))
+	  (NP-3 (D+OTHER ano+tere) (N fire))
+	  (VAG brynnyng))
+  (ID CMBRUT3-M3,84.2545))
+/~*
+& wist +tat Arthure Was comyng.
+(CMBRUT3-M3,90.2714)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ (NPR Arthure))
+	  (BED Was)
+	  (VAG comyng))
+  (ID CMBRUT3-M3,90.2714))
+/~*
+but euer he was medlyng wi+t his owen peple,
+(CMBRUT3-M3,92.2806)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%romance:%1half:%prep_intransitive)
+	  (CONJ but)
+	  (ADVP-TMP (ADV euer))
+	  (NP-SBJ (PRO he))
+	  (BED was)
+	  (VAG medlyng)
+	  (PP (P wi+t)
+	      (NP (PRO$ his) (ADJ owen) (N peple)))
+	  (. ,))
+  (ID CMBRUT3-M3,92.2806))
+/~*
+and come into Northumberlond +tere +tat +te Saxones were duellyng;
+(CMBRUT3-M3,94.2845)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%intransitive)
+	  (ADVP-LOC *T*-1)
+	  (NP-SBJ (D +te) (NPRS Saxones))
+	  (BED were)
+	  (VAG duellyng))
+  (ID CMBRUT3-M3,94.2845))
+/~*
+And +tis lady was duellyng at a manere bisides +te forest +tere +tat +te Kyng
+wolde hunte,
+(CMBRUT3-M3,115.3482)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ And)
+	  (NP-SBJ (D +tis) (N lady))
+	  (BED was)
+	  (VAG duellyng)
+	  (PP (P at)
+	      (NP (D a)
+		  (N manere)
+		  (PP (P bisides)
+		      (CODE <P_115>)
+		      (NP (D +te) (N forest)))
+		  (CP-REL (WADVP-1 (ADV +tere))
+			  (C +tat)
+			  (IP-SUB RMV:*T*-1_+te_Kyng...))))
+	  (. ,))
+  (ID CMBRUT3-M3,115.3482))
+/~*
++te Erles and barouns, by here com-mune assent & conseile, senten into
+Normandy forto seche +to ij bre+tern Alurede & Edward, +tat were duellyng wi+t
++te duk Richard +tat Was here eme,
+(CMBRUT3-M3,126.3815)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ *T*-1)
+	  (BED were)
+	  (VAG duellyng)
+	  (PP (P wi+t)
+	      (NP (D +te)
+		  (N duk)
+		  (NP-PRN (NPR Richard))
+		  (CP-REL (WNP-2 0)
+			  (C +tat)
+			  (IP-SUB RMV:*T*-2_Was_here...)))))
+  (ID CMBRUT3-M3,126.3815))
+/~*
+and saide to him in +tis maner: "Sire Andrew," quod he, "+ge mow wel
+vnderstonde how +tat our Lord +te Kyng is ladde and misgouernede by miche
+false conseil, +trou+g Sir Hugh +te Spenser +te fader, & Sir Hugh +te sone, &
+Sir Iohn Erl of Arundel, and +trou+g Maistre Robert Baldok, a false pilede
+clerc, +tat is in +te Kyngus court duellyng; wherfore y praye +gow +tat +ge
+wil come wi+t vs, wi+t al +te power +tat +ge haue ordeynede, and helpe to
+destroie +te venyme of Engeland, and +te traitoures +tat bene +terin,
+(CMBRUT3-M3,218.3902)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ *T*-2)
+	  (BEP is)
+	  (PP (P in)
+	      (NP (NP-POS (D +te) (N$ Kyngus))
+		  (N court)))
+	  (VAG duellyng))
+  (ID CMBRUT3-M3,218.3902))
+/~*
+And fer+termore +te false traitour hade take a gret some of golde of Sir Iamys
+Douglas, forto bene a+geyns +te Kyng of Engeland, and to bene helpyng and
+holdyng wi+t +te Scottes; +trou+g whos tresoun +te Kyng of Engeland was
+scomfitede at Biheland er +tat he come +tider; wherfore +te Kyng was toward
+him ful wro+t, and lete priuely enquere in +te contre about, how hit was.
+(CMBRUT3-M3,226.4097)
+*~/
+
+( (IP-INF-PRP (CODING-IP-INF-PRP %infVAG:%CONJ:%1:%prep_intransitive)
+	      (TO to)
+	      (BE bene)
+	      (VAG (VAG helpyng) (CONJ and) (VAG holdyng))
+	      (PP (P wi+t)
+		  (NP (D +te) (NPRS Scottes))))
+  (ID CMBRUT3-M3,226.4097))
+/~*
+Whan he was confermed in his regne, he mad dew inquisicion of all hem +tat
+were consenting to his fader deth,
+(CMCAPCHR-M4,35.103)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%romance:%2:%ambiguous)
+	  (NP-SBJ *T*-1)
+	  (BED were)
+	  (VAG consenting)
+	  (PP (P to)
+	      (NP (NP-POS (PRO$ his) (N$ fader))
+		  (N deth))))
+  (ID CMCAPCHR-M4,35.103))
+/~*
+In his tyme Transamunde, kyng of Wandalis, sperd all +te cherchis in Affrik
++tat were not consenting to Arrius.
+(CMCAPCHR-M4,70.1138)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%romance:%2:%ambiguous)
+	  (NP-SBJ *T*-1)
+	  (BED were)
+	  (NEG not)
+	  (VAG consenting)
+	  (PP (P to)
+	      (NP (NPR Arrius))))
+  (ID CMCAPCHR-M4,70.1138))
+/~*
+In +tis tyme was Seynt Brandane leuyng in Scotlond,
+(CMCAPCHR-M4,72.1221)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%other2:%other3:%prep_intransitive)
+	  (PP (P In)
+	      (NP (D +tis) (N tyme)))
+	  (BED was)
+	  (NP-SBJ (NPR Seynt) (NPR Brandane))
+	  (VAG leuyng)
+	  (PP (P in)
+	      (NP (NPR Scotlond)))
+	  (. ,))
+  (ID CMCAPCHR-M4,72.1221))
+/~*
+The emperour was not consenting to +tat eleccion,
+(CMCAPCHR-M4,104.2240)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%romance:%2:%ambiguous)
+	  (NP-SBJ (D The) (N emperour))
+	  (BED was)
+	  (NEG not)
+	  (VAG consenting)
+	  (PP (P to)
+	      (NP (D +tat) (N eleccion)))
+	  (. ,))
+  (ID CMCAPCHR-M4,104.2240))
+/~*
+There was +te prouincial of +te ordre alegging for him her exempcion, who +tei
+were immediatly vndir +te pope, wherfor he appeled fro +te bischop,
+(CMCAPCHR-M4,130.3006)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%romance:%2:%transitive)
+	  (ADVP-LOC (ADV There))
+	  (BED was)
+	  (NP-SBJ (D +te)
+		  (N prouincial)
+		  (PP (P of)
+		      (NP (D +te) (N ordre))))
+	  (VAG alegging)
+	  (PP (P for)
+	      (NP (PRO him)))
+	  (NP-OB1 (NP (PRO$ her) (N exempcion))
+		  (, ,)
+		  (CONJP (CP-QUE-SUB (WADVP-1 (WADV who))
+				     (C 0)
+				     (IP-SUB RMV:*T*-1_+tei_were...))))
+	  (, ,)
+	  (CP-CAR (WPP-2 (WADV+P wherfor))
+		  (C 0)
+		  (IP-SUB RMV:*T*-2_he_appeled...))
+	  (. ,))
+  (ID CMCAPCHR-M4,130.3006))
+/~*
+In +tis tyme, aftir many tretis betwix +tis lond and Frauns, and no+ting +tat
++tei profered was acording to reson, +te kyng mad redy his schippis at
+Southampton to spede him to his conquest.
+(CMCAPCHR-M4,243.4037)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%romance:%2:%ambiguous)
+	  (NP-SBJ (Q+N no+ting)
+		  (CP-REL (WNP-1 0)
+			  (C +tat)
+			  (IP-SUB RMV:*T*-1_+tei_profered...)))
+	  (BED was)
+	  (VAG acording)
+	  (PP (P to)
+	      (NP (N reson))))
+  (ID CMCAPCHR-M4,243.4037))
+/~*
+For first +tou wote wel +tat when +tou were leuyng in +te comoun degree of
+Cristen mens leuyng in companie of +ti wordely freendes, it seme+t to me +tat
++te euerlasting loue of his Godheed, +torow +te whiche he mad +tee and wrou+gt
++tee when +tou were nou+gt, and si+ten bou+gt +tee wi+t +te prise of his
+precious blood when +tou were loste in Adam, mi+gt not suffre +tee be so fer
+fro him in forme and degree of leuyng.
+(CMCLOUD-M3,14.11)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%other2:%other3:%prep_intransitive)
+	  (NP-SBJ (PRO +tou))
+	  (BED were)
+	  (VAG leuyng)
+	  (PP (P in)
+	      (NP (D +te)
+		  (ADJ comoun)
+		  (N degree)
+		  (PP (P of)
+		      (NP (NP-POS (ADJ Cristen) (NS$ mens))
+			  (N leuyng)))))
+	  (PP (P in)
+	      (NP (N companie)
+		  (PP (P of)
+		      (NP (PRO$ +ti) (ADJ wordely) (NS freendes))))))
+  (ID CMCLOUD-M3,14.11))
+/~*
+In +tis tyme it is +tat a soule ha+t comprehendid, after +te lesson of Seynte
+Poule, wi+t alle seyntes - not fully, bot in maner and in partye, as it is
+acordyng vnto +tis werk - whiche is +te leng+te and +te breed, +te hei+gt and
++te depnes of Euerlastyng & Allouely, Almi+gty & Alle-witty God.
+(CMCLOUD-M3,75.307)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%romance:%2:%ambiguous)
+	  (ADVP *T*-2)
+	  (NP-SBJ (PRO it))
+	  (BEP is)
+	  (VAG acordyng)
+	  (PP (P vnto)
+	      (NP (D +tis) (N werk))))
+  (ID CMCLOUD-M3,75.307))
+/~*
+For what tyme +tat a soule dispose+t him effectuely to +tis werk, +tan as fast
+sodenly - vnwetyng him-self +tat worche+t - +te body, +tat parauenture bifore
+er he bygan was sumwhat heeldyng donwardes on o syde or on o+ter for ese of
++te flesche, by vertewe of +te spirit schal set it vpri+gt, folowyng in maner
+& in licnes bodely +te werk of +te spirit +tat is maad goostly.
+(CMCLOUD-M3,113.537)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ *T*-3)
+	  (ADVP (ADV parauenture))
+	  (PP (ADV bifore)
+	      (P er)
+	      (CP-ADV (C 0)
+		      (IP-SUB RMV:he_bygan...)))
+	  (BED was)
+	  (NP-MSR (Q+WPRO sumwhat))
+	  (VAG heeldyng)
+	  (ADVP-DIR (RP+WARD donwardes))
+	  (PP (PP (P on)
+		  (NP (ONE o) (N syde)))
+	      (CONJP (CONJ or)
+		     (PP (P on)
+			 (NP (OTHER o+ter)))))
+	  (PP (P for)
+	      (NP (N ese)
+		  (PP (P of)
+		      (NP (D +te) (N flesche))))))
+  (ID CMCLOUD-M3,113.537))
+/~*
+Sensualite is a mi+gte of oure soule, rechyng & regnyng in +te bodely wittes,
++torow +te whiche we haue bodely knowyng & felyng of alle bodely creatures,
+whe+ter +tei be likyng or gruchyng.
+(CMCLOUD-M3,118.603)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%CONJ:%1:%intransitive)
+	  (NP-SBJ (PRO +tei))
+	  (BEP be)
+	  (VAG (VAG likyng) (CONJ or) (VAG gruchyng)))
+  (ID CMCLOUD-M3,118.603))
+/~*
+And +gif +tee +tink +tat +tis maner of worching be not acordyng to +ti
+disposicion in body & in soule, +tou maist leue it, & take ano+ter sauely wi+t
+good goostly counseile wi+t-outyn blame.
+(CMCLOUD-M3,129.763)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%romance:%2:%ambiguous)
+	  (NP-SBJ (D +tis)
+		  (N maner)
+		  (PP (P of)
+		      (NP (N worching))))
+	  (BEP be)
+	  (NEG not)
+	  (VAG acordyng)
+	  (PP (P to)
+	      (NP (PRO$ +ti) (N disposicion)))
+	  (PP (PP (P in)
+		  (NP (N body)))
+	      (CONJP (CONJ &)
+		     (PP (P in)
+			 (NP (N soule))))))
+  (ID CMCLOUD-M3,129.763))
+/~*
+For parauenture +ter is som mater +ter-inne, in +te beginnyng or in +te middes,
++te whiche is hanging & not fully declarid +tere as it stonde+t.
+(CMCLOUD-M3,130.775)
+*~/
+
+( (IP-SUB-3 (CODING-IP-SUB-3 %presVAG:%germanic:%1:%intransitive)
+	    (NP-SBJ *T*-2)
+	    (BEP is)
+	    (VAG hanging)
+	    (IP-SUB-PRN=3 RMV:&_not_fully...)
+	    (ADVP-LOC (ADV +tere)
+		      (CP-REL (WADVP-4 0)
+			      (C as)
+			      (IP-SUB RMV:*T*-4_it_stonde+t...))))
+  (ID CMCLOUD-M3,130.775))
+/~*
+Bot +gif +tei wil wetyn more nere, lat hem loke +gif it be euermore presing in
++teire mynde more costumabely +ten is any o+ter of goostly excersise.
+(CMCLOUD-M3,131.792)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%romance:%1:%prep_intransitive)
+	  (NP-SBJ (PRO it))
+	  (BEP be)
+	  (ADVP-TMP (ADV euermore))
+	  (VAG presing)
+	  (PP (P in)
+	      (NP (PRO$ +teire) (N mynde)))
+	  (ADVP (QR more)
+		(ADV costumabely)
+		(PP (P +ten)
+		    (CP-CMP (WADVP-1 0)
+			    (C 0)
+			    (IP-SUB RMV:*T*-1_is_any...)))))
+  (ID CMCLOUD-M3,131.792))
+/~*
+and withouteforth shal be the world al brennynge.
+(CMCTPARS-M3,291.C1.119)
+*~/
+
+( (IP-MAT-SPE (CODING-IP-MAT-SPE %futVAG:%germanic:%1:%intransitive)
+	      (CONJ and)
+	      (ADVP-LOC (ADV+ADV withouteforth))
+	      (MD shal)
+	      (BE be)
+	      (NP-SBJ (D the) (N world))
+	      (ADVP (Q al))
+	      (VAG brennynge)
+	      (. .))
+  (ID CMCTPARS-M3,291.C1.119))
+/~*
+For +ter nys non in dampnacioun, +tat hys +tenchand on +te;
+(CMEARLPS-M2,5.188)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ *T*-2)
+	  (BEP hys)
+	  (VAG +tenchand)
+	  (PP (P on)
+	      (NP (PRO +te))))
+  (ID CMEARLPS-M2,5.188))
+/~*
+What +tynge ys man, +tat +tou ert +tenchand on hym? o+ter mannes sone, +tat ou
+visites hym?
+(CMEARLPS-M2,7.276)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (PRO +tou))
+	  (BEP ert)
+	  (VAG +tenchand)
+	  (PP (P on)
+	      (NP (PRO hym))))
+  (ID CMEARLPS-M2,7.276))
+/~*
+ne ich ne shal nou+gt be +tenchand on her names by my lippes.
+(CMEARLPS-M2,15.557)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %futVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ ne)
+	  (NP-SBJ (PRO ich))
+	  (NEG ne)
+	  (MD shal)
+	  (NEG nou+gt)
+	  (BE be)
+	  (VAG +tenchand)
+	  (PP (P on)
+	      (NP (PRO$ her) (NS names)))
+	  (PP (P by)
+	      (NP (PRO$ my) (NS lippes)))
+	  (. .))
+  (ID CMEARLPS-M2,15.557))
+/~*
++Te ry+gtfulnesses of our Lord $ben makand ioyful ry+gtlich +te hertes,
+(CMEARLPS-M2,21.825)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1half:%intransitive)
+	  (NP-SBJ (D +Te)
+		  (NS ry+gtfulnesses)
+		  (PP (P of)
+		      (NP (PRO$ our) (NPR Lord))))
+	  (BEP $ben)
+	  (VAG makand)
+	  (IP-SMC RMV:ioyful_ry+gtlich_+te...)
+	  (. ,))
+  (ID CMEARLPS-M2,21.825))
+/~*
+Be he +tenchand on al +ty sacrifice,
+(CMEARLPS-M2,22.855)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%prep_intransitive)
+	  (BEP Be)
+	  (NP-SBJ (PRO he))
+	  (VAG +tenchand)
+	  (PP (P on)
+	      (NP (Q al) (PRO$ +ty) (N sacrifice)))
+	  (. ,))
+  (ID CMEARLPS-M2,22.855))
+/~*
+and our Lordes aungel be constreinand hem.
+(CMEARLPS-M2,39.1672)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%romance:%2:%transitive)
+	  (CONJ and)
+	  (NP-SBJ (NP-POS (PRO$ our) (NPR$ Lordes))
+		  (N aungel))
+	  (BEP be)
+	  (VAG constreinand)
+	  (NP-OB1 (PRO hem))
+	  (. .))
+  (ID CMEARLPS-M2,39.1672))
+/~*
+And as hij were anoiand to me, y was clo+ted in penaunce.
+(CMEARLPS-M2,40.1697)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%romance:%2:%ambiguous)
+	  (NP-SBJ (PRO hij))
+	  (BED were)
+	  (VAG anoiand)
+	  (PP (P to)
+	      (NP (PRO me))))
+  (ID CMEARLPS-M2,40.1697))
+/~*
+for-+ty, Lord, y shal be +tenchand on +te, God, of +te $turning of folke of
++te londe of Jordan and of +te folke of +te littel hille of Hermon.
+(CMEARLPS-M2,51.2211)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %futVAG:%germanic:%1:%prep_intransitive)
+	  (PP (P+D for-+ty))
+	  (, ,)
+	  (NP-VOC (NPR Lord))
+	  (, ,)
+	  (NP-SBJ (PRO y))
+	  (MD shal)
+	  (BE be)
+	  (VAG +tenchand)
+	  (PP (P on)
+	      (NP (PRO +te)))
+	  (, ,)
+	  (NP-VOC (NPR God))
+	  (, ,)
+	  (PP (P of)
+	      (NP (D +te)
+		  (N $turning)
+		  (PP (PP (P of)
+			  (NP (N folke)
+			      (PP (P of)
+				  (NP (D +te)
+				      (N londe)
+				      (PP (P of)
+					  (NP (NPR Jordan)))))))
+		      (CONJP (CONJ and)
+			     (PP (P of)
+				 (NP (D +te)
+				     (N folke)
+				     (PP (P of)
+					 (NP (D +te)
+					     (ADJ littel)
+					     (N hille)
+					     (PP (P of)
+						 (NP (NPR Hermon)))))))))))
+	  (. .))
+  (ID CMEARLPS-M2,51.2211))
+/~*
+God loked fram heuen vp mennes sones, +tat he se, +gyf any be vnderstondeand
+o+ter sechand God.
+(CMEARLPS-M2,63.2758)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%CONJ:%1:%transitive)
+	  (NP-SBJ (Q any))
+	  (BEP be)
+	  (VAG (VAG vnderstondeand) (CONJ o+ter) (VAG sechand))
+	  (NP-OB1 (NPR God)))
+  (ID CMEARLPS-M2,63.2758))
+/~*
+and hij were derend to me in ire.
+(CMEARLPS-M2,64.2817)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%ambiguous)
+	  (CONJ and)
+	  (NP-SBJ (PRO hij))
+	  (BED were)
+	  (VAG derend)
+	  (PP (P to)
+	      (NP (PRO me)))
+	  (PP (P in)
+	      (NP (N ire)))
+	  (. .))
+  (ID CMEARLPS-M2,64.2817))
+/~*
+for many were fe+gtand o+gains me.
+(CMEARLPS-M2,66.2897)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ for)
+	  (NP-SBJ (Q many))
+	  (BED were)
+	  (VAG fe+gtand)
+	  (PP (P o+gains)
+	      (NP (PRO me)))
+	  (. .))
+  (ID CMEARLPS-M2,66.2897))
+/~*
+And man shal saie for-so+te, +Gyf frute be to +te ry+gtful, for-so+te God is
+iugeand hem in er+te.
+(CMEARLPS-M2,68.3006)
+*~/
+
+( (IP-MAT-SPE (CODING-IP-MAT-SPE %presVAG:%romance:%1:%transitive)
+	      (PP (P+N for-so+te))
+	      (NP-SBJ (NPR God))
+	      (BEP is)
+	      (VAG iugeand)
+	      (NP-OB1 (PRO hem))
+	      (PP (P in)
+		  (NP (NPR er+te))))
+  (ID CMEARLPS-M2,68.3006))
+/~*
+So was ich +tenchand on +te up my bedde,
+(CMEARLPS-M2,73.3206)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%prep_intransitive)
+	  (ADVP (ADV So))
+	  (BED was)
+	  (NP-SBJ (PRO ich))
+	  (VAG +tenchand)
+	  (PP (P on)
+	      (NP (PRO +te)))
+	  (PP (P up)
+	      (NP (PRO$ my) (N bedde)))
+	  (. ,))
+  (ID CMEARLPS-M2,73.3206))
+/~*
+ha +ge folk, where-to loke +ge in-to +te heuens ful of ioies? 17. +Te heuen in
+which it is wele likeand to God to wonen in it;
+(CMEARLPS-M2,78.3434)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%other2:%other3:%prep_intransitive)
+	  (NP-SBJ-3 (PRO it))
+	  (BEP is)
+	  (ADVP (ADV wele))
+	  (VAG likeand)
+	  (PP (P to)
+	      (NP (NPR God)))
+	  (IP-INF-3 RMV:to_wonen_in...))
+  (ID CMEARLPS-M2,78.3434))
+/~*
+Be +tou by-+tenchand of +ty gaderyng, +tat tou hate-dest fram +te bygynnyng.
+(CMEARLPS-M2,88.3869)
+*~/
+
+( (IP-IMP (CODING-IP-IMP %impVAG:%germanic:%2:%prep_intransitive)
+	  (BEI Be)
+	  (NP-SBJ (PRO +tou))
+	  (VAG by-+tenchand)
+	  (PP (P of)
+	      (NP (PRO$ +ty)
+		  (N gaderyng)
+		  (, ,)
+		  (CP-REL (WNP-1 0)
+			  (C +tat)
+			  (IP-SUB RMV:*T*-1_tou_hate-dest...))))
+	  (. .))
+  (ID CMEARLPS-M2,88.3869))
+/~*
+Be +to +tenchend on +tys +tynge;
+(CMEARLPS-M2,90.3918)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%prep_intransitive)
+	  (BEP Be)
+	  (NP-SBJ (D +to))
+	  (VAG +tenchend)
+	  (PP (P on)
+	      (NP (D +tys) (N +tynge)))
+	  (. ;))
+  (ID CMEARLPS-M2,90.3918))
+/~*
+be +tou +tenchand of +tyn repruces of hem +tat ben alday of +te vnwys.
+(CMEARLPS-M2,90.3932)
+*~/
+
+( (IP-IMP (CODING-IP-IMP %impVAG:%germanic:%1:%prep_intransitive)
+	  (BEI be)
+	  (NP-SBJ (PRO +tou))
+	  (VAG +tenchand)
+	  (PP (P of)
+	      (NP (PRO$ +tyn)
+		  (NS repruces)
+		  (PP (P of)
+		      (NP (PRO hem)
+			  (CP-REL (WNP-1 0)
+				  (C +tat)
+				  (IP-SUB RMV:*T*-1_ben_alday...))))))
+	  (. .))
+  (ID CMEARLPS-M2,90.3932))
+/~*
++Tou art ali+gtand wonderfullich of mounteines euer lastand;
+(CMEARLPS-M2,91.3983)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (PRO +Tou))
+	  (BEP art)
+	  (VAG ali+gtand)
+	  (ADVP (ADV wonderfullich))
+	  (PP (P of)
+	      (NP (NS mounteines)
+		  (RRC (ADVP-TMP (ADV euer))
+		       (VAG lastand))))
+	  (. ;))
+  (ID CMEARLPS-M2,91.3983))
+/~*
+ich was bi-+tenchand on God,
+(CMEARLPS-M2,92.4014)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%2:%prep_intransitive)
+	  (NP-SBJ (PRO ich))
+	  (BED was)
+	  (VAG bi-+tenchand)
+	  (PP (P on)
+	      (NP (NPR God)))
+	  (. ,))
+  (ID CMEARLPS-M2,92.4014))
+/~*
+Ich was bi-+tenchand of +te workes of our Lord;
+(CMEARLPS-M2,92.4035)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%2:%prep_intransitive)
+	  (NP-SBJ (PRO Ich))
+	  (BED was)
+	  (VAG bi-+tenchand)
+	  (PP (P of)
+	      (NP (D +te)
+		  (NS workes)
+		  (PP (P of)
+		      (NP (PRO$ our) (NPR Lord)))))
+	  (. ;))
+  (ID CMEARLPS-M2,92.4035))
+/~*
+for-+ty y shal be bi-+tenchand fram +te bi-gynnyng of +ti meruailes.
+(CMEARLPS-M2,92.4036)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %futVAG:%germanic:%2:%prep_intransitive)
+	  (PP (P+D for-+ty))
+	  (NP-SBJ (PRO y))
+	  (MD shal)
+	  (BE be)
+	  (VAG bi-+tenchand)
+	  (PP (P fram)
+	      (NP (D +te)
+		  (N bi-gynnyng)
+		  (PP (P of)
+		      (NP (PRO$ +ti) (NS meruailes)))))
+	  (. .))
+  (ID CMEARLPS-M2,92.4036))
+/~*
+and her maidens ne ben nou+gt sorweand.
+(CMEARLPS-M2,97.4246)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%2:%ambiguous)
+	  (CONJ and)
+	  (NP-SBJ (PRO$ her) (N maidens))
+	  (NEG ne)
+	  (BEP ben)
+	  (NEG nou+gt)
+	  (VAG sorweand)
+	  (. .))
+  (ID CMEARLPS-M2,97.4246))
+/~*
+As +te de-fouled wy+t syn+ges beand in her beriels, of whiche +tou art nou+gt
++tenchand no more, and ben put fram +tyn helpe. 6. Hij deden me in +te lowest
+$helle, in derknes, and in +te shadow of de+t.
+(CMEARLPS-M2,107.4672)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (PP *T*-1)
+	  (NP-SBJ (PRO +tou))
+	  (BEP art)
+	  (NEG nou+gt)
+	  (VAG +tenchand)
+	  (NP-MSR (QP (Q no) (QR more))))
+  (ID CMEARLPS-M2,107.4672))
+/~*
+Lord, be +tou bi-+tenchand of +te repruce of +ty seruaunt+g, which repruceing
+ich held in my bosom of many men; 50. +Te which +tyn enemys, Lord, reproced,
++tat reproued +te chaungeing of +ty prest a-noint wy+t creme.
+(CMEARLPS-M2,111.4845)
+*~/
+
+( (IP-IMP (CODING-IP-IMP %impVAG:%germanic:%2:%prep_intransitive)
+	  (NP-VOC (NPR Lord))
+	  (, ,)
+	  (BEI be)
+	  (NP-SBJ (PRO +tou))
+	  (VAG bi-+tenchand)
+	  (PP (P of)
+	      (NP (D +te)
+		  (N repruce)
+		  (PP (P of)
+		      (NP (PRO$ +ty) (NS seruaunt+g)))))
+	  (, ,)
+	  (CP-CAR (WNP-1 (WD which) (VAG repruceing))
+		  (C 0)
+		  (IP-SUB RMV:*T*-1_ich_held...))
+	  (, ;)
+	  (LS (NUM 50.))
+	  (CP-CAR (WNP-2 (D +Te) (WPRO which))
+		  (C 0)
+		  (IP-SUB RMV:*T*-2_+tyn_enemys...))
+	  (. .))
+  (ID CMEARLPS-M2,111.4845))
+/~*
+and hij shul ben wele likand, +tat hij tellen +te gode.
+(CMEARLPS-M2,114.4988)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %futVAG:%other2:%other3:%intransitive)
+	  (CONJ and)
+	  (NP-SBJ (PRO hij))
+	  (MD shul)
+	  (BE ben)
+	  (ADVP (ADV wele))
+	  (VAG likand)
+	  (, ,)
+	  (CP-ADV (C +tat)
+		  (IP-SUB RMV:hij_tellen_+te...))
+	  (. .))
+  (ID CMEARLPS-M2,114.4988))
+/~*
+Our Lord is doand mercies and iugement to alle +te suffrand wronge.
+(CMEARLPS-M2,123.5406)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%transitive)
+	  (NP-SBJ (PRO$ Our) (NPR Lord))
+	  (BEP is)
+	  (DAG doand)
+	  (NP-OB1 (NS mercies) (CONJ and) (N iugement))
+	  (PP (P to)
+	      (NP (Q alle)
+		  (D +te)
+		  (RRC (VAG suffrand)
+		       (NP-OB1 (N wronge)))))
+	  (. .))
+  (ID CMEARLPS-M2,123.5406))
+/~*
++Tou art bryngand for+te hay to meres and grasse to seruice of men; 16. +Tat
+tou brynge for+t brede of +ter+te, and wyn glade mannes hert.
+(CMEARLPS-M2,126.5485)
+*~/
+
+( (IP-MAT-1 (CODING-IP-MAT-1 %presVAG:%germanic:%1:%transitive)
+	    (NP-SBJ (PRO +Tou))
+	    (BEP art)
+	    (VAG bryngand)
+	    (ADVP-DIR (ADV for+te))
+	    (NP-OB1 (N hay))
+	    (PP (P to)
+		(NP (NS meres))))
+  (ID CMEARLPS-M2,126.5485))
+/~*
+He was by-+tenchand in +te world of his testament, and of his world +tat he
+sent into a +tousand kyndes. 8. Which worde he ordeined to Abraham and his
+o+te to Ysaac.
+(CMEARLPS-M2,127.5568)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%2:%prep_intransitive)
+	  (NP-SBJ (PRO He))
+	  (BED was)
+	  (VAG by-+tenchand)
+	  (PP (P in)
+	      (NP (D +te)
+		  (N world)
+		  (PP (PP (P of)
+			  (NP (PRO$ his) (N testament)))
+		      (, ,)
+		      (CONJP (CONJ and)
+			     (PP (P of)
+				 (NP (PRO$ his)
+				     (N world)
+				     (CP-REL (WNP-1 0)
+					     (C +tat)
+					     (IP-SUB RMV:*T*-1_he_sent...))))))))
+	  (, .)
+	  (LS (NUM 8.))
+	  (CP-CAR (WNP-2 (WD Which) (N worde))
+		  (C 0)
+		  (IP-SUB RMV:*T*-2_he_ordeined...))
+	  (. .))
+  (ID CMEARLPS-M2,127.5568))
+/~*
+For he was by+tenchand of his holy worde, +te which he had to Abraham, hys
+childe.
+(CMEARLPS-M2,129.5645)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%2:%prep_intransitive)
+	  (CONJ For)
+	  (NP-SBJ (PRO he))
+	  (BED was)
+	  (VAG by+tenchand)
+	  (PP (P of)
+	      (NP (PRO$ his)
+		  (ADJ holy)
+		  (N worde)
+		  (, ,)
+		  (CP-REL (WNP-1 (D +te) (WPRO which))
+			  (C 0)
+			  (IP-SUB RMV:*T*-1_he_had...))))
+	  (. .))
+  (ID CMEARLPS-M2,129.5645))
+/~*
+and hij were nou+gt +tenchand on +te multitude of +tyn mercy.
+(CMEARLPS-M2,130.5673)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ and)
+	  (NP-SBJ (PRO hij))
+	  (BED were)
+	  (NEG nou+gt)
+	  (VAG +tenchand)
+	  (PP (P on)
+	      (NP (D +te)
+		  (N multitude)
+		  (PP (P of)
+		      (NP (PRO$ +tyn) (N mercy)))))
+	  (. .))
+  (ID CMEARLPS-M2,130.5673))
+/~*
+And he was by-+ten-chand on hys testament,
+(CMEARLPS-M2,132.5771)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%2:%prep_intransitive)
+	  (CONJ And)
+	  (NP-SBJ (PRO he))
+	  (BED was)
+	  (VAG by-+ten-chand)
+	  (PP (P on)
+	      (NP (PRO$ hys) (N testament)))
+	  (. ,))
+  (ID CMEARLPS-M2,132.5771))
+/~*
+He shal be bi+tenchand in +te world of his testament;
+(CMEARLPS-M2,139.6078)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %futVAG:%germanic:%2:%prep_intransitive)
+	  (NP-SBJ (PRO He))
+	  (MD shal)
+	  (BE be)
+	  (VAG bi+tenchand)
+	  (PP (P in)
+	      (NP (D +te)
+		  (N world)
+		  (PP (P of)
+		      (NP (PRO$ his) (N testament)))))
+	  (. ;))
+  (ID CMEARLPS-M2,139.6078))
+/~*
+Our Lord was +tenchand on vs,
+(CMEARLPS-M2,142.6203)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (PRO$ Our) (NPR Lord))
+	  (BED was)
+	  (VAG +tenchand)
+	  (PP (P on)
+	      (NP (PRO vs)))
+	  (. ,))
+  (ID CMEARLPS-M2,142.6203))
+/~*
+Our Lord is kepand +te littel;
+(CMEARLPS-M2,142.6240)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%transitive)
+	  (NP-SBJ (PRO$ Our) (NPR Lord))
+	  (BEP is)
+	  (VAG kepand)
+	  (NP-OB1 (D +te) (ADJ littel))
+	  (. ;))
+  (ID CMEARLPS-M2,142.6240))
+/~*
+Y shal be +tenchand in +tyn ry+gtfulnesses,
+(CMEARLPS-M2,146.6421)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %futVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (PRO Y))
+	  (MD shal)
+	  (BE be)
+	  (VAG +tenchand)
+	  (PP (P in)
+	      (NP (PRO$ +tyn) (NS ry+gtfulnesses)))
+	  (. ,))
+  (ID CMEARLPS-M2,146.6421))
+/~*
+Be +to bi+tenchand on +ty worde to +ty seruaunt, in which +tou +gaf me hope.
+(CMEARLPS-M2,148.6534)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%2:%prep_intransitive)
+	  (BEP Be)
+	  (NP-SBJ (PRO +to))
+	  (VAG bi+tenchand)
+	  (PP (P on)
+	      (NP (PRO$ +ty)
+		  (N worde)
+		  (CP-REL *ICH*-1)))
+	  (PP (P to)
+	      (NP (PRO$ +ty) (N seruaunt)))
+	  (, ,)
+	  (CP-REL-1 (WPP-2 (P in)
+			   (WNP (WPRO which)))
+		    (C 0)
+		    (IP-SUB RMV:*T*-2_+tou_+gaf...))
+	  (. .))
+  (ID CMEARLPS-M2,148.6534))
+/~*
+Ich was, Lord, bi+tenchand on +ty iugement+g of +te world,
+(CMEARLPS-M2,148.6542)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%2:%prep_intransitive)
+	  (NP-SBJ (PRO Ich))
+	  (BED was)
+	  (, ,)
+	  (NP-VOC (NPR Lord))
+	  (, ,)
+	  (VAG bi+tenchand)
+	  (PP (P on)
+	      (NP (PRO$ +ty)
+		  (NS iugement+g)
+		  (PP (P of)
+		      (NP (D +te) (N world)))))
+	  (. ,))
+  (ID CMEARLPS-M2,148.6542))
+/~*
+Ich was, Lord, bi-+tenchand of +ty name in +te ni+gt,
+(CMEARLPS-M2,148.6549)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%2:%prep_intransitive)
+	  (NP-SBJ (PRO Ich))
+	  (BED was)
+	  (, ,)
+	  (NP-VOC (NPR Lord))
+	  (, ,)
+	  (VAG bi-+tenchand)
+	  (PP (P of)
+	      (NP (PRO$ +ty) (N name)))
+	  (PP (P in)
+	      (NP (D +te) (N ni+gt)))
+	  (. ,))
+  (ID CMEARLPS-M2,148.6549))
+/~*
+Ha +tou heuen, our fete wer stondand in +tin halles, whan we do wele. 3. +Te
+heuen +tat is edefied as cite, of wham takyng part is in +tat ich +ting.
+(CMEARLPS-M2,157.7000)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%prep_intransitive)
+	  (INTJ Ha)
+	  (NP-VOC (PRO +tou)
+		  (NPR heuen)
+		  (NP-PRN *ICH*-1))
+	  (, ,)
+	  (NP-SBJ (PRO$ our) (NS fete))
+	  (BED wer)
+	  (VAG stondand)
+	  (PP (P in)
+	      (NP (PRO$ +tin) (NS halles)))
+	  (, ,)
+	  (PP (P whan)
+	      (CP-ADV (C 0)
+		      (IP-SUB RMV:we_do_wele...)))
+	  (, .)
+	  (LS (NUM 3.))
+	  (NP-PRN-1 (D +Te)
+		    (NPR heuen)
+		    (CP-REL (WNP-2 0)
+			    (C +tat)
+			    (IP-SUB RMV:*T*-2_is_edefied...))
+		    (, ,)
+		    (CP-REL (WPP-3 (P of)
+				   (WNP (WPRO wham)))
+			    (C 0)
+			    (IP-SUB RMV:*T*-3_takyng_part...)))
+	  (. .))
+  (ID CMEARLPS-M2,157.7000))
+/~*
+He his ladand out cloudes of +te last ende of +ter+te,
+(CMEARLPS-M2,163.7263)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%transitive)
+	  (NP-SBJ (PRO He))
+	  (BEP his)
+	  (VAG ladand)
+	  (RP out)
+	  (NP-OB1 (NS cloudes))
+	  (PP (P of)
+	      (NP (D +te)
+		  (ADJ last)
+		  (N ende)
+		  (PP (P of)
+		      (NP (D+NPR +ter+te)))))
+	  (. ,))
+  (ID CMEARLPS-M2,163.7263))
+/~*
+And he +gaf her londe heritage, 23. Heritage to Israel, his seruaunt. 24. +Te
+which was bi-+tenchand on us in our mekenes, 25. And raunsouned vs fram our
+enemis; 26. +Te which +geue+t mete to ich flesshe.
+(CMEARLPS-M2,166.7306)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%2:%prep_intransitive)
+	  (NP-SBJ *T*-2)
+	  (BED was)
+	  (VAG bi-+tenchand)
+	  (PP (P on)
+	      (NP (PRO us)))
+	  (PP (P in)
+	      (NP (PRO$ our) (N mekenes))))
+  (ID CMEARLPS-M2,166.7306))
+/~*
+Yf y ne sett nou+gt for+te gode folk in +te biginnynge of my ioie. 9. Be +tou
+bi-+tenchand of wicked childer in +te daie of iugement of gode men; 10. +Te
+which wicked sain, For-do+t +te gode,
+(CMEARLPS-M2,167.7362)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%2:%prep_intransitive)
+	  (PP (P Yf)
+	      (CP-ADV (C 0)
+		      (IP-SUB RMV:y_ne_sett...)))
+	  (, .)
+	  (LS (NUM 9.))
+	  (BEP Be)
+	  (NP-SBJ (PRO +tou))
+	  (VAG bi-+tenchand)
+	  (PP (P of)
+	      (NP (ADJ wicked)
+		  (NS childer)
+		  (CP-REL *ICH*-1)))
+	  (PP (P in)
+	      (NP (D +te)
+		  (N daie)
+		  (PP (P of)
+		      (NP (N iugement)
+			  (PP (P of)
+			      (NP (ADJ gode) (NS men)))))))
+	  (, ;)
+	  (LS (NUM 10.))
+	  (CP-CAR-1 (WNP-2 (D +Te) (WD which) (ADJ wicked))
+		    (C 0)
+		    (IP-SUB RMV:*T*-2_sain_,...))
+	  (. ,))
+  (ID CMEARLPS-M2,167.7362))
+/~*
+Ich was bi-+tenchand of old daies,
+(CMEARLPS-M2,172.7578)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%2:%prep_intransitive)
+	  (NP-SBJ (PRO Ich))
+	  (BED was)
+	  (VAG bi-+tenchand)
+	  (PP (P of)
+	      (NP (ADJ old) (NS daies)))
+	  (. ,))
+  (ID CMEARLPS-M2,172.7578))
+/~*
+Our Lord is edifiand Ierusalem,
+(CMEARLPS-M2,176.7750)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%romance:%3:%transitive)
+	  (NP-SBJ (PRO$ Our) (NPR Lord))
+	  (BEP is)
+	  (VAG edifiand)
+	  (NP-OB1 (NPR Ierusalem))
+	  (. ,))
+  (ID CMEARLPS-M2,176.7750))
+/~*
+Our Lord is takand +te mild & lowand +te sin+gers vnto +ter+te.
+(CMEARLPS-M2,176.7757)
+*~/
+
+( (IP-MAT-1 (CODING-IP-MAT-1 %presVAG:%germanic:%1:%transitive)
+	    (NP-SBJ (PRO$ Our) (NPR Lord))
+	    (BEP is)
+	    (VAG takand)
+	    (NP-OB1 (D +te) (ADJ mild)))
+  (ID CMEARLPS-M2,176.7757))
+/~*
+For weleplesand it is to our Lord in his folk,
+(CMEARLPS-M2,178.7843)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%other2:%other3:%prep_intransitive)
+	  (CONJ For)
+	  (VAG weleplesand)
+	  (NP-SBJ (PRO it))
+	  (BEP is)
+	  (PP (P to)
+	      (NP (PRO$ our) (NPR Lord)))
+	  (PP (P in)
+	      (NP (PRO$ his) (N folk)))
+	  (. ,))
+  (ID CMEARLPS-M2,178.7843))
+/~*
+For sothe, if +tou take gud kepe how gret gude He has done +te on ilk a syde,
++tou sall fynd hym ocupiede aboute +ti profet, als He did nan o+ter thynge,
+bot anely ware entendande to +te and to +ti hele, als if He had forgetyn all
++tis worlde for to be anely intendand vn-to +te.
+(CMEDTHOR-M34,20.103)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%romance:%2:%prep_intransitive)
+	  (FP anely)
+	  (NP-SBJ *con*)
+	  (BED ware)
+	  (VAG entendande)
+	  (PP (PP (P to)
+		  (NP (PRO +te)))
+	      (CONJP (CONJ and)
+		     (PP (P to)
+			 (NP (PRO$ +ti) (N hele))))))
+  (ID CMEDTHOR-M34,20.103))
+/~*
+For sothe, if +tou take gud kepe how gret gude He has done +te on ilk a syde,
++tou sall fynd hym ocupiede aboute +ti profet, als He did nan o+ter thynge,
+bot anely ware entendande to +te and to +ti hele, als if He had forgetyn all
++tis worlde for to be anely intendand vn-to +te.
+(CMEDTHOR-M34,20.103)
+*~/
+
+( (IP-INF-PRP (CODING-IP-INF-PRP %infVAG:%romance:%2:%prep_intransitive)
+	      (FOR for)
+	      (TO to)
+	      (BE be)
+	      (FP anely)
+	      (VAG intendand)
+	      (PP (P vn-to)
+		  (NP (PRO +te))))
+  (ID CMEDTHOR-M34,20.103))
+/~*
+and thurgh His gudnes ilke a day ere all thynges waxande.
+(CMEDTHOR-M34,21.133)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ and)
+	  (PP (P thurgh)
+	      (NP (PRO$ His) (N gudnes)))
+	  (NP-TMP (Q ilke) (ONE a) (N day))
+	  (BEP ere)
+	  (NP-SBJ (Q all) (NS thynges))
+	  (VAG waxande)
+	  (. .))
+  (ID CMEDTHOR-M34,21.133))
+/~*
+The thre fyrste er pertenande to +te lufe of God, and the to+ter seuen to +te
+lufe of +ti-selfe and of thyne euen crystyn.
+(CMEDTHOR-M34,28.307)
+*~/
+
+( (IP-MAT-1 (CODING-IP-MAT-1 %presVAG:%romance:%2:%prep_intransitive)
+	    (NP-SBJ (D The) (NUM thre) (ADJ fyrste))
+	    (BEP er)
+	    (VAG pertenande)
+	    (PP (P to)
+		(NP (D +te)
+		    (N lufe)
+		    (PP (P of)
+			(NP (NPR God))))))
+  (ID CMEDTHOR-M34,28.307))
+/~*
+Thyse are +te seuen werkes of mercy +tat are langande to +te body.
+(CMEDTHOR-M34,30.359)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%ambiguous)
+	  (NP-SBJ *T*-1)
+	  (BEP are)
+	  (VAG langande)
+	  (PP (P to)
+	      (NP (D +te) (N body))))
+  (ID CMEDTHOR-M34,30.359))
+/~*
++Gif +tou take good hede hou gret good god ha+t don to +te on alle halue, +tou
+schalt fynden him ocupyed abouten +te as +tei he dude non o+tur +ting but were
+tendynge onliche to +te and to +tin hele;
+(CMEDVERN-M3,243.158)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%romance:%1:%prep_intransitive)
+	  (NP-SBJ *con*)
+	  (BED were)
+	  (VAG tendynge)
+	  (PP (FP onliche)
+	      (PP (P to)
+		  (NP (PRO +te)))
+	      (CONJP (CONJ and)
+		     (PP (P to)
+			 (NP (PRO$ +tin) (N hele))))))
+  (ID CMEDVERN-M3,243.158))
+/~*
+& were dwellyng +ter-Inne in fastinge and in preyeres, til +tei weore fuld of
++te holigost, as ur lord hedde comaunded hem.
+(CMEDVERN-M3,257.739)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ &)
+	  (NP-SBJ *con*)
+	  (BED were)
+	  (VAG dwellyng)
+	  (PP (ADV+P +ter-Inne))
+	  (PP (PP (P in)
+		  (NP (N fastinge)))
+	      (CONJP (CONJ and)
+		     (PP (P in)
+			 (NP (NS preyeres)))))
+	  (, ,)
+	  (PP (P til)
+	      (CP-ADV (C 0)
+		      (IP-SUB RMV:+tei_weore_fuld...)))
+	  (. .))
+  (ID CMEDVERN-M3,257.739))
+/~*
++Te fyfte thynge of +te Sex to knawe God Almyghten, are +te Seuen vertus +tat
+Haly Writte teches. Of whilke seuen, +te thre first +tat are hede thewes,
+teches vs how to hafe vs vn-to God Almyghtty; and +te foure teches vs swa for
+to lyffe +tat it be bathe lykande to Godd and to man.
+(CMGAYTRY-M34,10.128)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%ambiguous)
+	  (NP-SBJ (PRO it))
+	  (BEP be)
+	  (CONJ-6 bathe)
+	  (VAG lykande)
+	  (PP (CONJ *ICH*-6)
+	      (PP (P to)
+		  (NP (NPR Godd)))
+	      (CONJP (CONJ and)
+		     (PP (P to)
+			 (NP (N man))))))
+  (ID CMGAYTRY-M34,10.128))
+/~*
+Ande that same yere Thomas Aryndelle, the sone and ayre of the Erle of
+Arundelle, whiche +tat aftyr the dethe of hys fadyr was dwellyng in howshold
+with Syr John of Holon, Duke of Exceter, and holde at non reputacyon but in
+grete repreffe and dyspyte and moche dysseysse, prevely thorowe helpe of
+Wylliam Schotte, mercer of London, in a gromys wede he saylyd ovyr +t=e= see
+(CMGREGOR-M4,98.74)
+*~/
+
+( (IP-SUB-2 (CODING-IP-SUB-2 %pastVAG:%germanic:%1:%prep_intransitive)
+	    (NP-SBJ *T*-1)
+	    (PP (P aftyr)
+		(NP (D the)
+		    (N dethe)
+		    (PP (P of)
+			(NP (PRO$ hys) (N fadyr)))))
+	    (BED was)
+	    (VAG dwellyng)
+	    (PP (P in)
+		(NP (N howshold)))
+	    (PP (P with)
+		(NP (NPR Syr)
+		    (NPR John)
+		    (PP (P of)
+			(NP (NPR Holon)))
+		    (, ,)
+		    (NP-PRN (N Duke)
+			    (PP (P of)
+				(NP (NPR Exceter)))))))
+  (ID CMGREGOR-M4,98.74))
+/~*
+and the Countasse of Kentt was syttyng at hyr ryght fote of the quene undyr
+the tabylle,
+(CMGREGOR-M4,139.589)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ and)
+	  (NP-SBJ (D the)
+		  (N Countasse)
+		  (PP (P of)
+		      (NP (NPR Kentt))))
+	  (BED was)
+	  (VAG syttyng)
+	  (PP (P at)
+	      (NP (PRO$ hyr)
+		  (ADJ ryght)
+		  (N fote)
+		  (PP (P of)
+		      (NP (D the) (N quene)))))
+	  (PP (P undyr)
+	      (NP (D the) (N tabylle)))
+	  (. ,))
+  (ID CMGREGOR-M4,139.589))
+/~*
+And as they $were syttyng at mete the kynge kepte hys astate.
+(CMGREGOR-M4,168.959)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (PRO they))
+	  (BED $were)
+	  (VAG syttyng)
+	  (PP (P at)
+	      (NP (N mete))))
+  (ID CMGREGOR-M4,168.959))
+/~*
+Ande from that tyme unto the morowe viij of belle they were ever fyghtynge
+uppon London Brygge,
+(CMGREGOR-M4,193.1493)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ Ande)
+	  (NP-MSR (PP (P from)
+		      (NP (D that) (N tyme)))
+		  (PP (P unto)
+		      (NP (D the)
+			  (N morowe)
+			  (NP-TMP (NUM viij)
+				  (PP (P of)
+				      (NP (N belle)))))))
+	  (NP-SBJ (PRO they))
+	  (BED were)
+	  (ADVP-TMP (ADV ever))
+	  (VAG fyghtynge)
+	  (PP (P uppon)
+	      (NP (NPR London) (NPR Brygge)))
+	  (. ,))
+  (ID CMGREGOR-M4,193.1493))
+/~*
+for a very trewe man schulde with yn xxiiij howrys make opyn to be knowe alle
+suche fals hyd thyngys of felony or treson, yf he be nott consentynge unto the
+same felowschyppe, undyr payne of dethe;
+(CMGREGOR-M4,200.1629)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%romance:%2:%ambiguous)
+	  (NP-SBJ (PRO he))
+	  (BEP be)
+	  (NEG nott)
+	  (VAG consentynge)
+	  (PP (P unto)
+	      (NP (D the) (ADJ same) (N felowschyppe))))
+  (ID CMGREGOR-M4,200.1629))
+/~*
+bot both moste be fastynge.
+(CMGREGOR-M4,200.1634)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %futVAG:%germanic:%1:%intransitive)
+	  (CONJ bot)
+	  (NP-SBJ (Q both))
+	  (MD moste)
+	  (BE be)
+	  (VAG fastynge)
+	  (. .))
+  (ID CMGREGOR-M4,200.1634))
+/~*
+but he was not a-bydynge in no place passynge a monythe.
+(CMGREGOR-M4,201.1651)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%2:%prep_intransitive)
+	  (CONJ but)
+	  (NP-SBJ (PRO he))
+	  (BED was)
+	  (NEG not)
+	  (VAG a-bydynge)
+	  (PP (P in)
+	      (NP (Q no) (N place)))
+	  (IP-PPL RMV:passynge_a_monythe...)
+	  (. .))
+  (ID CMGREGOR-M4,201.1651))
+/~*
+Also alle that seson the Erle of Warwyke with sowdyers of Calysse were comynge
+unto the Duke of Yorke,
+(CMGREGOR-M4,205.1744)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%prep_intransitive)
+	  (ALSO Also)
+	  (NP-TMP (Q alle) (D that) (N seson))
+	  (NP-SBJ (D the)
+		  (N Erle)
+		  (PP (P of)
+		      (NP (NPR Warwyke)))
+		  (PP (P with)
+		      (NP (NS sowdyers)
+			  (PP (P of)
+			      (CODE <P_205>)
+			      (NP (NPR Calysse))))))
+	  (BED were)
+	  (VAG comynge)
+	  (PP (P unto)
+	      (NP (D the)
+		  (N Duke)
+		  (PP (P of)
+		      (NP (NPR Yorke)))))
+	  (. ,))
+  (ID CMGREGOR-M4,205.1744))
+/~*
+Ande the same day Androwe Throllope consayvyd that the Erle of Warwyke was
+goyng unto the Duke of Yorke and not unto the kynge,
+(CMGREGOR-M4,205.1749)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%other2:%other3:%prep_intransitive)
+	  (NP-SBJ (D the)
+		  (N Erle)
+		  (PP (P of)
+		      (NP (NPR Warwyke))))
+	  (BED was)
+	  (VAG goyng)
+	  (PP (PP (P unto)
+		  (NP (D the)
+		      (N Duke)
+		      (PP (P of)
+			  (NP (NPR Yorke)))))
+	      (CONJP (CONJ and)
+		     (PP (NEG not)
+			 (P unto)
+			 (NP (D the) (N kynge))))))
+  (ID CMGREGOR-M4,205.1749))
+/~*
+for the Lorde Rosse, the Lorde Clyfforde, the Baron of Grestocke, the Lorde
+Nevyle, the Lorde Latymer, were waytyng a-pon the Duke of $Execter to mete
+with hyr at Hulle.
+(CMGREGOR-M4,210.1882)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%romance:%1:%prep_intransitive)
+	  (CONJ for)
+	  (NP-SBJ (NP (D the)
+		      (N Lorde)
+		      (NP-PRN (NPR Rosse)))
+		  (, ,)
+		  (CONJP (NP (D the)
+			     (N Lorde)
+			     (NP-PRN (NPR Clyfforde))))
+		  (, ,)
+		  (CONJP (NP (D the)
+			     (CODE <P_210>)
+			     (N Baron)
+			     (PP (P of)
+				 (NP (NPR Grestocke)))))
+		  (, ,)
+		  (CONJP (NP (D the)
+			     (N Lorde)
+			     (NP-PRN (NPR Nevyle))))
+		  (, ,)
+		  (CONJP (NP (D the)
+			     (N Lorde)
+			     (NP-PRN (NPR Latymer)))))
+	  (, ,)
+	  (BED were)
+	  (VAG waytyng)
+	  (PP (P a-pon)
+	      (NP (D the)
+		  (N Duke)
+		  (PP (P of)
+		      (NP (NPR $Execter)))))
+	  (IP-INF-PRP RMV:to_mete_with...)
+	  (. .))
+  (ID CMGREGOR-M4,210.1882))
+/~*
+in so moche yf any man sayde, or tolde, or talkyd of suche gaderyng, he shulde
+be sehende,
+(CMGREGOR-M4,210.1886)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %futVAG:%other2:%other3:%prep_intransitive)
+	  (PP (P in)
+	      (NP (QP (ADVR so) (Q moche))))
+	  (PP (P yf)
+	      (CP-ADV (C 0)
+		      (IP-SUB RMV:any_man_sayde...)))
+	  (, ,)
+	  (NP-SBJ (PRO he))
+	  (MD shulde)
+	  (BE be)
+	  (VAG sehende)
+	  (. ,))
+  (ID CMGREGOR-M4,210.1886))
+/~*
+And ar the goners and borgeners couthe levylle hyr gonnys they were besely
+fyghtyng,
+(CMGREGOR-M4,213.1959)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ And)
+	  (PP (P ar)
+	      (CP-ADV (C 0)
+		      (IP-SUB RMV:the_goners_and...)))
+	  (NP-SBJ (PRO they))
+	  (BED were)
+	  (ADVP (ADV besely))
+	  (VAG fyghtyng)
+	  (. ,))
+  (ID CMGREGOR-M4,213.1959))
+/~*
+and many bot men were consenntyng unto hem,
+(CMGREGOR-M4,238.2600)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%romance:%2:%ambiguous)
+	  (CONJ and)
+	  (NP-SBJ (Q many) (N bot) (NS men))
+	  (BED were)
+	  (VAG consenntyng)
+	  (PP (P unto)
+	      (NP (PRO hem)))
+	  (. ,))
+  (ID CMGREGOR-M4,238.2600))
+/~*
+That same yere in the Lentyn, whyle men were at sarmonys the Sonday aftyr noon,
+a yong man that was watyng a pon a man of the kyngys house was soore vexyd and
+bound with the devylle.
+(CMGREGOR-M4,239.2626)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%romance:%1:%prep_intransitive)
+	  (NP-SBJ *T*-1)
+	  (BED was)
+	  (VAG watyng)
+	  (PP (P (P21 a) (P22 pon))
+	      (NP (D a)
+		  (N man)
+		  (PP (P of)
+		      (NP (NP-POS (D the) (N$ kyngys))
+			  (N house))))))
+  (ID CMGREGOR-M4,239.2626))
+/~*
+And +tanne sue it as myche as +tou may vndirstonde it bi grace and counceil
+and by Holi Writ, +tat it is accordynge to so+tfast vertu of discrecioun, and
+to +te liif of Crist.
+(CMHILTON-M34,13.82)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%romance:%2:%ambiguous)
+	  (NP-SBJ (PRO it))
+	  (BEP is)
+	  (VAG accordynge)
+	  (PP (PP (P to)
+		  (NP (ADJ so+tfast)
+		      (N vertu)
+		      (PP (P of)
+			  (NP (N discrecioun)))))
+	      (, ,)
+	      (CONJP (CONJ and)
+		     (PP (P to)
+			 (NP (D +te)
+			     (N liif)
+			     (PP (P of)
+				 (NP (NPR Crist))))))))
+  (ID CMHILTON-M34,13.82))
+/~*
+And +ten +tou schalt take a gobet of le+ter & make a rownde hole in +te myddel
+of +te le+ter aftur quantite of +te fyke so +tat it be fast sittynge bi-twexst
++te fyke & +te hol skyn.
+(CMHORSES-M3,111.255)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (PRO it))
+	  (BEP be)
+	  (ADVP (ADV fast))
+	  (VAG sittynge)
+	  (PP (P bi-twexst)
+	      (NP (NP (D +te) (N fyke))
+		  (CONJP (CONJ &)
+			 (NP (D +te) (ADJ hol) (N skyn))))))
+  (ID CMHORSES-M3,111.255))
+/~*
+ffor wite +tou forso+te +tat it falle+t +te not to kerue ne to brenne in
+stedes +ter veynes & synuus buth liggynge as in +te Ioyntes & o+ter stedes
++tat is good ynow+g bu+t to knowe.
+(CMHORSES-M3,123.362)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (ADVP-LOC *T*-2)
+	  (NP-SBJ (NS veynes) (CONJ &) (NS synuus))
+	  (BEP buth)
+	  (VAG liggynge)
+	  (PP (P as)
+	      (PP (P in)
+		  (NP (NP (D +te) (NS Ioyntes))
+		      (CONJP (CONJ &)
+			     (NP (OTHER o+ter) (NS stedes)))))))
+  (ID CMHORSES-M3,123.362))
+/~*
+Wes i +ton time as +te redunge telle+d. +te modi Maximien keiser i rome.
+heriende. & heiende hea+dene maumez. wi+d unimea+d muchel hird. & wi+d heh
+duhe+de.
+(CMJULIA-M1,95.8)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%CONJ:%1:%transitive)
+	  (BED Wes)
+	  (PP (P i)
+	      (NP (D +ton) (N time)))
+	  (PP-PRN (P as)
+		  (CP-ADV (WNP-1 0)
+			  (C 0)
+			  (IP-SUB RMV:*T*-1_+te_redunge...)))
+	  (, .)
+	  (NP-SBJ (D +te)
+		  (ADJ modi)
+		  (NPR Maximien)
+		  (NP-PRN (N keiser)))
+	  (PP (P i)
+	      (NP (NPR rome)))
+	  (, .)
+	  (VAG (VAG heriende) (, .) (CONJ &) (VAG heiende))
+	  (NP-OB1 (ADJ hea+dene) (NS maumez))
+	  (, .)
+	  (PP (PP (P wi+d)
+		  (NP (QP (ADV unimea+d) (Q muchel))
+		      (N hird)))
+	      (, .)
+	      (CONJP (CONJ &)
+		     (PP (P wi+d)
+			 (NP (ADJ heh) (N duhe+de)))))
+	  (. .))
+  (ID CMJULIA-M1,95.8))
+/~*
+Ah +te worldes wealdent +tt wiste sein iuhan his ewangeliste unhurt i +te ueat
+of wallinde eoli +ter he wes i-don in. +tt ase hal com up +trof; as he wes hal
+meiden. +te ilke liues lauerd. wiste him unwemmet. his brud of +te bres +tt
+wes wallinde. swa +tt ne +tuhte hit hire buten ase wlech weater al +tt ha
+felde.
+(CMJULIA-M1,105.158)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ *T*-4)
+	  (BED wes)
+	  (VAG wallinde))
+  (ID CMJULIA-M1,105.158))
+/~*
+and thare laughynge was lykynge to me.
+(CMJULNOR-M34,51.59)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%ambiguous)
+	  (CONJ and)
+	  (NP-SBJ (PRO$ thare) (N laughynge))
+	  (BED was)
+	  (VAG lykynge)
+	  (PP (P to)
+	      (NP (PRO me)))
+	  (. .))
+  (ID CMJULNOR-M34,51.59))
+/~*
+Neuerthelesse hym lykes that we laugh+g in comfortynge of vs, & er ioyande in
+god,
+(CMJULNOR-M34,51.63)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%romance:%1:%prep_intransitive)
+	  (NP-SBJ *con*)
+	  (BEP er)
+	  (VAG ioyande)
+	  (PP (P in)
+	      (NP (NPR god))))
+  (ID CMJULNOR-M34,51.63))
+/~*
+for blys es lastande withowtyn ende
+(CMJULNOR-M34,53.101)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%ambiguous)
+	  (CONJ for)
+	  (NP-SBJ (N blys))
+	  (BEP es)
+	  (VAG lastande)
+	  (PP (P withowtyn)
+	      (NP (N ende))))
+  (ID CMJULNOR-M34,53.101))
+/~*
+and payn es passande
+(CMJULNOR-M34,53.102)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%romance:%1:%intransitive)
+	  (CONJ and)
+	  (NP-SBJ (N payn))
+	  (BEP es)
+	  (VAG passande))
+  (ID CMJULNOR-M34,53.102))
+/~*
+I +tis burh wes wuniende a meiden swi+de +gung of +geres twa wone of $twenti;
+feier. & freolich o wlite & o westum ant +get. +tt is mare; wurh+d
+stea+deluest wi+dinnen of treowe bileaue. anes kinges cost hehte anlepi dohter
+icuret cleargesse Katerine inempnet.
+(CMKATHE-M1,18.20)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%prep_intransitive)
+	  (PP (P I)
+	      (NP (D +tis) (N burh)))
+	  (BED wes)
+	  (VAG wuniende)
+	  (NP-SBJ (D a)
+		  (N meiden)
+		  (ADJP (ADJP (ADVR swi+de)
+			      (ADJ +gung)
+			      (PP (P of)
+				  (NP (NS +geres))))
+			(ADJP (NP (NUM twa))
+			      (ADJ wone)
+			      (PP (P of)
+				  (NP (NUM $twenti))))
+			(, ;)
+			(CONJP (ADJP (ADJ feier)
+				     (, .)
+				     (CONJ &)
+				     (ADJ freolich)
+				     (PP (PP (P o)
+					     (NP (N wlite)))
+					 (CONJP (CONJ &)
+						(PP (P o)
+						    (NP (N westum)))))))
+			(CONJP (CONJ ant)
+			       (NP-PRN (ADV +get)
+				       (, .)
+				       (CP-FRL (WNP-1 0)
+					       (C +tt)
+					       (IP-SUB RMV:*T*-1_is_mare...)))
+			       (ADJP (ADJ stea+deluest)
+				     (ADVP-LOC (ADV wi+dinnen))
+				     (PP (P of)
+					 (NP (ADJ treowe) (N bileaue))))))
+		  (, .)
+		  (NP-PRN (NP-POS (ONE anes)
+				  (N$ kinges)
+				  (RRC (IP-SMC RMV:*_cost...)
+				       (VAN hehte)))
+			  (ADJ anlepi)
+			  (N dohter))
+		  (NP-PRN (VAN icuret)
+			  (N cleargesse)
+			  (RRC (IP-SMC RMV:*_Katerine...)
+			       (VAN inempnet))))
+	  (. .))
+  (ID CMKATHE-M1,18.20))
+/~*
+& al +tt ter-in is glistinde & gleaminde as hit were seoluer. o+der gold
+smeate.
+(CMKATHE-M1,39.327)
+*~/
+
+( (IP-MAT-SPE (CODING-IP-MAT-SPE %presVAG:%CONJ:%1:%prep_intransitive)
+	      (CONJ &)
+	      (NP-SBJ (Q al)
+		      (CP-REL (WNP-1 0)
+			      (C +tt)
+			      (IP-SUB RMV:*T*-1_ter-in_is...)))
+	      (BEP *)
+	      (VAG (VAG glistinde) (CONJ &) (VAG gleaminde))
+	      (PP (P as)
+		  (CP-ADV (C 0)
+			  (IP-SUB RMV:hit_were_seoluer...)))
+	      (. .))
+  (ID CMKATHE-M1,39.327))
+/~*
+For, whan +te ale was as fayr standyng vndyr berm as any man mygth se, sodenly
++te berm wold fallyn down +tat alle +te ale was lost euery brewyng aftyr o+ter,
++tat hir seruawntys weryn a-schamyd & wold not dwellyn wyth hir.
+(CMKEMPE-M4,10.159)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (D +te) (N ale))
+	  (BED was)
+	  (ADVP (ADVR as) (ADV fayr))
+	  (VAG standyng)
+	  (PP (P vndyr)
+	      (NP (N berm)))
+	  (PP-PRN (P as)
+		  (CP-ADV (WADVP-1 0)
+			  (C 0)
+			  (IP-SUB RMV:*T*-1_any_man...))))
+  (ID CMKEMPE-M4,10.159))
+/~*
++Tan was sche glad in hir consciens whan sche beleuyd +tat sche was $entryng
++te wey whech wold leden hir to +te place +tat sche most desyred.
+(CMKEMPE-M4,13.247)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%romance:%2:%transitive)
+	  (NP-SBJ (PRO sche))
+	  (BED was)
+	  (VAG $entryng)
+	  (NP-OB1 (D +te)
+		  (N wey)
+		  (CP-REL (WNP-1 (WPRO whech))
+			  (C 0)
+			  (IP-SUB RMV:*T*-1_wold_leden...))))
+  (ID CMKEMPE-M4,13.247))
+/~*
+It befel up-on a Fryday on Mydsomyr Evyn in rygth hot wedyr, as +tis creatur
+was komyng fro-+Gorke-ward beryng a botel wyth bere in hir hand & hir husbond
+a cake in hys bosom, he askyd hys wyfe +tis qwestyon,
+(CMKEMPE-M4,23.484)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (D +tis) (N creatur))
+	  (BED was)
+	  (VAG komyng)
+	  (PP (P+NPR+WARD fro-+Gorke-ward))
+	  (IP-PPL RMV:beryng_a_botel...))
+  (ID CMKEMPE-M4,23.484))
+/~*
+It wer vnpossibyl to +te to suffyr +te scornys & despytes +tat +tow schalt
+haue ne were only my grace supportyng +te. "
+(CMKEMPE-M4,29.648)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%romance:%2:%transitive)
+	  (NEG ne)
+	  (BED were)
+	  (NP-SBJ (FP only) (PRO$ my) (N grace))
+	  (VAG supportyng)
+	  (NP-OB1 (PRO +te)))
+  (ID CMKEMPE-M4,29.648))
+/~*
+for he had ben dwellyng long tyme wyth an ankyr, commensowr in dyuinyte & an
+holy man,
+(CMKEMPE-M4,33.721)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pstperfVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ for)
+	  (NP-SBJ (PRO he))
+	  (HVD had)
+	  (BEN ben)
+	  (VAG dwellyng)
+	  (NP-MSR (ADJ long) (N tyme))
+	  (PP (P wyth)
+	      (NP (D an)
+		  (N ankyr)
+		  (, ,)
+		  (NP-PRN (NP (N commensowr)
+			      (PP (P in)
+				  (NP (N dyuinyte))))
+			  (CONJP (CONJ &)
+				 (NP (D an) (ADJ holy) (N man))))))
+	  (. ,))
+  (ID CMKEMPE-M4,33.721))
+/~*
+& +gaf God preysyng & worshepyng +tat he +gaf +te Bysshop grace to don +tes
+good dedys wyth plentyuows wepyng, in so mych +tat alle +te Bysshopys meny wer
+gretly merveylyng what hyr eyled.
+(CMKEMPE-M4,34.763)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%romance:%2:%intransitive)
+	  (NP-SBJ (NP-POS (Q alle) (D +te) (N$ Bysshopys))
+		  (N meny))
+	  (BED wer)
+	  (ADVP (ADV gretly))
+	  (VAG merveylyng)
+	  (CP-QUE-SUB (WNP-1 (WPRO what))
+		      (C 0)
+		      (IP-SUB RMV:*T*-1_hyr_eyled...)))
+  (ID CMKEMPE-M4,34.763))
+/~*
+On a day long befor +tis tyme, whyl thys creatur was beryng chylder & sche was
+newly delyueryd of a chyld, owyr Lord Cryst Ihesu seyd to hir sche xuld no mor
+chyldren beryn,
+(CMKEMPE-M4,38.836)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%transitive)
+	  (NP-SBJ (D thys) (N creatur))
+	  (BED was)
+	  (VAG beryng)
+	  (NP-OB1 (NS chylder)))
+  (ID CMKEMPE-M4,38.836))
+/~*
+He +tat is euyr-mor dowtyng is lyke to +te flood of +te see, +te whech is
+mevyd & born a-bowte wyth +te wynd,
+(CMKEMPE-M4,42.923)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%romance:%1:%intransitive)
+	  (NP-SBJ *T*-1)
+	  (BEP is)
+	  (ADVP-TMP (ADV euyr-mor))
+	  (VAG dowtyng))
+  (ID CMKEMPE-M4,42.923))
+/~*
+On a day as +tis creatur was heryng hir Messe, a +gong man and a good prest
+heldyng up +te Sacrament in hys handys ouyr hys hed, +te Sacrament schok
+(CMKEMPE-M4,47.1038)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%transitive)
+	  (NP-SBJ (D +tis) (N creatur))
+	  (BED was)
+	  (VAG heryng)
+	  (NP-OB1 (PRO$ hir) (N Messe)))
+  (ID CMKEMPE-M4,47.1038))
+/~*
+hem alle for to wryten it xuld be lettyng perauentur of mor profyte.
+(CMKEMPE-M4,54.1220)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %futVAG:%other2:%other3:%prep_intransitive)
+	  (IP-INF-LFD RMV:hem_alle_for...)
+	  (NP-SBJ-RSP (PRO it))
+	  (MD xuld)
+	  (BE be)
+	  (VAG lettyng)
+	  (ADVP (ADV perauentur))
+	  (PP (P of)
+	      (NP (QR mor) (N profyte)))
+	  (. .))
+  (ID CMKEMPE-M4,54.1220))
+/~*
+Whan tyme cam +tat +tis creatur xuld vysiten +to holy placys wher owyr Lord
+was whyk & ded, as sche had be reuelacyon +gerys a-forn, sche preyd +te
+parysch preste of +te town +ter sche was dwellyng to sey for hir in +te pulpyt
++tat, yf any man er woman +tat cleymyd any dette of hir husbond or of hir +tei
+xuld come & speke wyth hir er sche went, & sche, wyth +te help of God, xulde
+makyn a-seth to ech of hem +tat +tei sehuldyn heldyn hem content.
+(CMKEMPE-M4,60.1342)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%intransitive)
+	  (ADVP *T*-5)
+	  (NP-SBJ (PRO sche))
+	  (BED was)
+	  (VAG dwellyng))
+  (ID CMKEMPE-M4,60.1342))
+/~*
+And in +te tyme whil +te pepil was gaderyng to-gedyr & +te Erchebischop takyn
+hys see, +te seyd creatur stod al behyndyn, makyng hir preyerys for help &
+socowr ageyn hir enmijs wyth hy deuocyon so long +tat sche meltyd al in-to
+teerys.
+(CMKEMPE-M4,124.2879)
+*~/
+
+( (IP-SUB-1 (CODING-IP-SUB-1 %pastVAG:%germanic:%2:%intransitive)
+	    (NP-SBJ (D +te) (N pepil))
+	    (BED was)
+	    (VAG gaderyng)
+	    (ADVP (ADV to-gedyr)))
+  (ID CMKEMPE-M4,124.2879))
+/~*
+And, as +tei wer goyng in her jurne, they wer takyn & arestyd, my man put in
+preson for hir,
+(CMKEMPE-M4,132.3058)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%other2:%other3:%prep_intransitive)
+	  (NP-SBJ (PRO +tei))
+	  (BED wer)
+	  (VAG goyng)
+	  (PP (P in)
+	      (NP (PRO$ her) (N jurne))))
+  (ID CMKEMPE-M4,132.3058))
+/~*
+And euery Good Friday in alle +te forseyd +gerys sche was wepyng & sobbyng v
+er vj owrys to-gedyr
+(CMKEMPE-M4,140.3246)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%CONJ:%1:%intransitive)
+	  (CONJ And)
+	  (NP-TMP (Q euery)
+		  (ADJ Good)
+		  (NPR Friday)
+		  (PP (P in)
+		      (NP (Q alle) (D +te) (VAN forseyd) (NS +gerys))))
+	  (NP-SBJ (PRO sche))
+	  (BED was)
+	  (VAG (VAG wepyng) (CONJ &) (VAG sobbyng))
+	  (NP-MSR (NUMP (NUM v) (CONJ er) (NUM vj))
+		  (NS owrys)
+		  (ADVP (ADV to-gedyr))))
+  (ID CMKEMPE-M4,140.3246))
+/~*
+& hys sekenes was long contunyng.
+(CMKEMPE-M4,147.3382)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%romance:%3:%intransitive)
+	  (CONJ &)
+	  (NP-SBJ (PRO$ hys) (N sekenes))
+	  (BED was)
+	  (NP-MSR (ADJ long))
+	  (VAG contunyng)
+	  (. .))
+  (ID CMKEMPE-M4,147.3382))
+/~*
++Tan he cam hom a-geyn in-to Lynne to hys maistyr wyth whech he had ben
+dwellyng be-for-tyme.
+(CMKEMPE-M4,222.3567)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pstperfVAG:%germanic:%1:%prep_intransitive)
+	  (PP *T*-1)
+	  (NP-SBJ (PRO he))
+	  (HVD had)
+	  (BEN ben)
+	  (VAG dwellyng)
+	  (NP-TMP (ADV+N be-for-tyme)))
+  (ID CMKEMPE-M4,222.3567))
+/~*
+Seo w+as sittende +at ures Drihtenes foten,
+(CMKENTHO-M1,134.8)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (D Seo))
+	  (BED w+as)
+	  (VAG sittende)
+	  (PP (P +at)
+	      (NP (NP-POS (PRO$ ures) (NPR$ Drihtenes))
+		  (NS foten)))
+	  (. ,))
+  (ID CMKENTHO-M1,134.8))
+/~*
+nalde he no. na for+ton uppon +ta muchele assa a+gc uppon +ta lutthle fole
++tat +get hit wes sukinde ne ber hit nes nefre nane bur+dene ne hit nes nefere
+ifuled of nane o+dre assa.
+(CMLAMBX1-MX1,5.38)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%intransitive)
+	  (ADVP-TMP (ADV +get))
+	  (NP-SBJ-RSP-1 (PRO hit))
+	  (BED wes)
+	  (VAG sukinde))
+  (ID CMLAMBX1-MX1,5.38))
+/~*
+and +ta scawede mihhal to sancte paul +ta wrecche sunfulle +te +ter were
+wuniende
+(CMLAMBX1-MX1,41.530)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ *T*-1)
+	  (ADVP-LOC (ADV +ter))
+	  (BED were)
+	  (VAG wuniende))
+  (ID CMLAMBX1-MX1,41.530))
+/~*
+and for+di heo bi+d wuniende inne +tisse pine.
+(CMLAMBX1-MX1,43.571)
+*~/
+
+( (IP-MAT-SPE (CODING-IP-MAT-SPE %presVAG:%germanic:%1:%prep_intransitive)
+	      (CONJ and)
+	      (PP (P+D for+di))
+	      (NP-SBJ (PRO heo))
+	      (BEP bi+d)
+	      (VAG wuniende)
+	      (PP (P inne)
+		  (NP (D +tisse) (N pine)))
+	      (. .))
+  (ID CMLAMBX1-MX1,43.571))
+/~*
++Dat halie hired cristes apostles weren wuniende edmodliche on heore ibeoden
+on ane upflore efter cristes upsti+ge onbodinde his bi-hates. +ta on +tisse
+deie +tet is pentecostes and wittesunnedeie on ure speche; com ferliche muchel
+swei of heofne and fulde al +ta upfleunge mid fure.
+(CMLAMBX1-MX1,89.739)
+*~/
+
+( (IP-MAT-SPE (CODING-IP-MAT-SPE %pastVAG:%germanic:%1:%prep_intransitive)
+	      (NP-SBJ (D +Dat)
+		      (ADJ halie)
+		      (N hired)
+		      (NP-PRN (NPR$ cristes) (NS apostles)))
+	      (BED weren)
+	      (VAG wuniende)
+	      (ADVP (ADV edmodliche))
+	      (PP (P on)
+		  (NP (PRO$ heore) (NS ibeoden)))
+	      (PP (P on)
+		  (NP (D ane) (ADJ+N upflore)))
+	      (PP (P efter)
+		  (NP (NPR$ cristes) (N upsti+ge)))
+	      (IP-PPL-SPE RMV:onbodinde_his_bi-hates...)
+	      (, .)
+	      (PP (P +ta)
+		  (CP-ADV (C 0)
+			  (IP-SUB RMV:on_+tisse_deie...)))
+	      (. .))
+  (ID CMLAMBX1-MX1,89.739))
+/~*
+Nu eft on +tisse deie +turh +tes halie gastes to-cume; weren alle ispechen
+a+gein inumen. and isome; for+don +tet cristes apostlas weren specende mid
+alle spechen. and ec +tet wunderluker for+don +tet +ta an of +ton apostlum
+bodeden mid ane speche; elche men wes i+tuht +tet +ta bodunge iherde; swilche
+heo spechen mid heore speche weren heo ebreisce. weren heo grekisce. o+der
+romenisce. o+der egiptisse. o+der of hwulche londe swa heo weren +tet +te lare
+iherden.
+(CMLAMBX1-MX1,93.823)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (NPR$ cristes) (NS apostlas))
+	  (BED weren)
+	  (VAG specende)
+	  (PP (P mid)
+	      (NP (Q alle) (NS spechen))))
+  (ID CMLAMBX1-MX1,93.823))
+/~*
+and for+don $wes +te halia gast on culfren onlicnesse bufan criste. for+don
++tet he wes dreihninde on +tissere worlde mid bilehwitnesse. and mid nane
+la+dnesse and mid sibsumnesse.
+(CMLAMBX1-MX1,95.835)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (PRO he))
+	  (BED wes)
+	  (VAG dreihninde)
+	  (PP (P on)
+	      (NP (D +tissere) (N worlde)))
+	  (PP (PP (P mid)
+		  (NP (N bilehwitnesse)))
+	      (, .)
+	      (CONJP (CONJ and)
+		     (PP (P mid)
+			 (NP (Q nane) (N la+dnesse))))
+	      (CONJP (CONJ and)
+		     (PP (P mid)
+			 (NP (N sibsumnesse))))))
+  (ID CMLAMBX1-MX1,95.835))
+/~*
++te halia gast wes ise+gen on fures heowe bufan +tam apostlas. for+don +te he
+dude +tet heo weren birnende on godes willan. and bodiende umbe godes riche.
+(CMLAMBX1-MX1,95.841)
+*~/
+
+( (IP-SUB-1 (CODING-IP-SUB-1 %pastVAG:%germanic:%1:%prep_intransitive)
+	    (NP-SBJ (PRO heo))
+	    (BED weren)
+	    (VAG birnende)
+	    (PP (P on)
+		(NP (NPR$ godes) (N willan))))
+  (ID CMLAMBX1-MX1,95.841))
+/~*
+$Nis na +te halia gast wuniende on his icunde. swa se he ise+gen wes; for+don
++tet he is unise+genlic. Ac for +tere itacnunge swa $we er seiden. +tet he wes
+ise+gen on culfre and on fure.
+(CMLAMBX1-MX1,97.859)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%prep_intransitive)
+	  (NEG+BEP $Nis)
+	  (CODE {TEXT:Ni})
+	  (NEG na)
+	  (NP-SBJ (D +te) (NPR halia) (NPR gast))
+	  (VAG wuniende)
+	  (PP (P on)
+	      (NP (PRO$ his) (N icunde)))
+	  (, .)
+	  (PP (ADV swa)
+	      (P se)
+	      (CP-ADV (WADVP-1 0)
+		      (C 0)
+		      (IP-SUB RMV:*T*-1_he_ise+gen...)))
+	  (, ;)
+	  (PP (P+D for+don)
+	      (CP-ADV (C +tet)
+		      (IP-SUB RMV:he_is_unise+genlic...)))
+	  (. .))
+  (ID CMLAMBX1-MX1,97.859))
+/~*
+o+der is halwende. +tet is +tet mon beo sari her on worlde for his sunnen.
+(CMLAMBX1-MX1,103.952)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%2:%ambiguous)
+	  (NP-SBJ (OTHER o+der))
+	  (BEP is)
+	  (VAG halwende)
+	  (, .)
+	  (IP-MAT-PRN RMV:+tet_is_+tet...)
+	  (. .))
+  (ID CMLAMBX1-MX1,103.952))
+/~*
++Da +te butan godes la+ge and godes isetnesse libbe+d; +ta beo+d butan gode
+efre wuniende.
+(CMLAMBX1-MX1,119.1162)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-LFD (D +Da)
+		  (CP-REL (WNP-1 0)
+			  (C +te)
+			  (IP-SUB RMV:*T*-1_butan_godes...)))
+	  (, ;)
+	  (NP-SBJ-RSP (PRO +ta))
+	  (BEP beo+d)
+	  (PP (P butan)
+	      (NP (NPR gode)))
+	  (ADVP-TMP (ADV efre))
+	  (VAG wuniende)
+	  (. .))
+  (ID CMLAMBX1-MX1,119.1162))
+/~*
+for such two brethirne as ys kynge Ban and kynge Bors ar nat lyvynge.
+Wherefore we muste nedis voyde or dye,
+(CMMALORY-M4,25.781)
+*~/
+
+( (IP-MAT-SPE (CODING-IP-MAT-SPE %presVAG:%germanic:%1half:%intransitive)
+	      (CONJ for)
+	      (NP-SBJ (SUCH such)
+		      (NUM two)
+		      (NS brethirne)
+		      (PP (P as)
+			  (CP-CMP (WNP-1 0)
+				  (C 0)
+				  (IP-SUB RMV:*T*-1_ys_kynge...))))
+	      (BEP ar)
+	      (NEG nat)
+	      (VAG lyvynge)
+	      (, .)
+	      (CP-CAR-SPE (WPP-2 (WADV+P Wherefore))
+			  (C 0)
+			  (IP-SUB RMV:*T*-2_we_muste...))
+	      (. ,))
+  (ID CMMALORY-M4,25.781))
+/~*
+and if they were longyng to you, there were no kynge undir hevyn that had
+suche eleven kyngis nother off suche worship. '
+(CMMALORY-M4,27.838)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%other2:%other3:%prep_intransitive)
+	  (NP-SBJ (PRO they))
+	  (BED were)
+	  (VAG longyng)
+	  (PP (P to)
+	      (NP (PRO you))))
+  (ID CMMALORY-M4,27.838))
+/~*
+So the meanwhyle that thys knyght was makynge hym redy to departe, there com
+into the courte the Lady of the Laake,
+(CMMALORY-M4,48.1575)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1half:%intransitive)
+	  (ADVP-TMP *T*-1)
+	  (NP-SBJ (D thys) (N knyght))
+	  (BED was)
+	  (VAG makynge)
+	  (IP-SMC RMV:hym_redy_to...))
+  (ID CMMALORY-M4,48.1575))
+/~*
+for thys lady was a lady that I was muche beholdynge to,
+(CMMALORY-M4,49.1604)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%2:%prep_intransitive)
+	  (NP-SBJ (PRO I))
+	  (BED was)
+	  (NP-MSR (Q muche))
+	  (VAG beholdynge)
+	  (PP (P to)
+	      (NP *T*-1)))
+  (ID CMMALORY-M4,49.1604))
+/~*
+The meanewhyle as thys was adoynge, in com Merlion to kynge Marke
+(CMMALORY-M4,54.1768)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ (D thys))
+	  (BED was)
+	  (VAG adoynge))
+  (ID CMMALORY-M4,54.1768))
+/~*
+and twenty of them rode tofore the lorde to warne the Lady de Vaunce that the
+kynge was commynge. '
+(CMMALORY-M4,55.1822)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ (D the) (N kynge))
+	  (BED was)
+	  (VAG commynge))
+  (ID CMMALORY-M4,55.1822))
+/~*
+'but much am I beholdynge unto them.'
+(CMMALORY-M4,56.1860)
+*~/
+
+( (IP-MAT-SPE (CODING-IP-MAT-SPE %presVAG:%germanic:%2:%prep_intransitive)
+	      (' ')
+	      (CONJ but)
+	      (NP-MSR (Q much))
+	      (BEP am)
+	      (NP-SBJ (PRO I))
+	      (VAG beholdynge)
+	      (PP (P unto)
+		  (NP (PRO them)))
+	      (. .)
+	      (' '))
+  (ID CMMALORY-M4,56.1860))
+/~*
+for I am muche beholdynge unto hym,
+(CMMALORY-M4,56.1867)
+*~/
+
+( (IP-MAT-SPE (CODING-IP-MAT-SPE %presVAG:%germanic:%2:%prep_intransitive)
+	      (CONJ for)
+	      (NP-SBJ (PRO I))
+	      (BEP am)
+	      (NP-MSR (Q muche))
+	      (VAG beholdynge)
+	      (PP (P unto)
+		  (NP (PRO hym)))
+	      (. ,))
+  (ID CMMALORY-M4,56.1867))
+/~*
+for much am I beholdynge unto hym.
+(CMMALORY-M4,59.1950)
+*~/
+
+( (IP-MAT-SPE (CODING-IP-MAT-SPE %presVAG:%germanic:%2:%prep_intransitive)
+	      (CONJ for)
+	      (NP-MSR (Q much))
+	      (BEP am)
+	      (NP-SBJ (PRO I))
+	      (VAG beholdynge)
+	      (PP (P unto)
+		  (NP (PRO hym)))
+	      (. .))
+  (ID CMMALORY-M4,59.1950))
+/~*
+for he ys the mervaylyste knyght that ys now lyvynge.
+(CMMALORY-M4,63.2096)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1half:%intransitive)
+	  (NP-SBJ *T*-1)
+	  (BEP ys)
+	  (ADVP-TMP (ADV now))
+	  (VAG lyvynge))
+  (ID CMMALORY-M4,63.2096))
+/~*
+and by adventure he com into the same foreste there he was takynge his slepe
+before;
+(CMMALORY-M4,189.2729)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%transitive)
+	  (ADVP-LOC *T*-1)
+	  (NP-SBJ (PRO he))
+	  (BED was)
+	  (VAG takynge)
+	  (NP-OB1 (PRO$ his) (N slepe))
+	  (ADVP-TMP (ADV before)))
+  (ID CMMALORY-M4,189.2729))
+/~*
+for of beaute` faylith you none as ony that ys now lyvynge.
+(CMMALORY-M4,627.3537)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1half:%intransitive)
+	  (NP-SBJ *T*-1)
+	  (BEP ys)
+	  (ADVP-TMP (ADV now))
+	  (VAG lyvynge))
+  (ID CMMALORY-M4,627.3537))
+/~*
+and founde an ermytage and an ermyte therein whych was goyng unto masse.
+(CMMALORY-M4,655.4432)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%other2:%other3:%prep_intransitive)
+	  (NP-SBJ *T*-3)
+	  (BED was)
+	  (VAG goyng)
+	  (PP (P unto)
+	      (NP (N masse))))
+  (ID CMMALORY-M4,655.4432))
+/~*
+for He hath caused you to have more worldly worship than ony knyght that ys
+now lyvynge.
+(CMMALORY-M4,655.4446)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1half:%intransitive)
+	  (NP-SBJ *T*-1)
+	  (BEP ys)
+	  (ADVP-TMP (ADV now))
+	  (VAG lyvynge))
+  (ID CMMALORY-M4,655.4446))
+/~*
+and if he can telle you no tydynges of hym, ryde streyte unto the castell of
+Carbonek where the Maymed Kyng ys lyyng,
+(CMMALORY-M4,659.4576)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%intransitive)
+	  (ADVP-LOC *T*-1)
+	  (NP-SBJ (D the) (VAN Maymed) (N Kyng))
+	  (BEP ys)
+	  (VAG lyyng))
+  (ID CMMALORY-M4,659.4576))
+/~*
+But in +tat cesoun +tat the bawme is growynge men put +tere to gode kepynge
++tat no man dar ben hardy to entre.
+(CMMANDEV-M3,32.795)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%intransitive)
+	  (ADVP-TMP *T*-1)
+	  (NP-SBJ (D the) (N bawme))
+	  (BEP is)
+	  (VAG growynge))
+  (ID CMMANDEV-M3,32.795))
+/~*
+Also in +tat Ile is the Mount Ethna +tat men clepen Mount Gybell & the wlcanes
++tat ben eueremore brennynge.
+(CMMANDEV-M3,36.890)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ *T*-2)
+	  (BEP ben)
+	  (ADVP-TMP (ADV eueremore))
+	  (VAG brennynge))
+  (ID CMMANDEV-M3,36.890))
+/~*
++Tere is the chirche of seynte kateryne in the whiche ben manye lampes
+brennynge
+(CMMANDEV-M3,38.965)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (PP *T*-1)
+	  (NP-SBJ-2 *exp*)
+	  (BEP ben)
+	  (NP-2 (Q manye) (NS lampes))
+	  (VAG brennynge))
+  (ID CMMANDEV-M3,38.965))
+/~*
+And the brondes +tat weren brennynge becomen red roseres
+(CMMANDEV-M3,46.1137)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ *T*-1)
+	  (BED weren)
+	  (VAG brennynge))
+  (ID CMMANDEV-M3,46.1137))
+/~*
+And vpon +tat roche was Iacob slepynge whan he saugh the aungeles gon vp &
+doun by a ladder & he seyde: VERE LOCUS ISTE SANCTUS EST & EGO IGNORABAM, +tat
+is to seyne: Forsothe this place is holy & I wiste it nought.
+(CMMANDEV-M3,56.1390)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ And)
+	  (PP (P vpon)
+	      (NP (D +tat) (N roche)))
+	  (BED was)
+	  (NP-SBJ (NPR Iacob))
+	  (VAG slepynge)
+	  (PP (P whan)
+	      (CP-ADV (C 0)
+		      (IP-SUB RMV:he_saugh_the...)))
+	  (. .))
+  (ID CMMANDEV-M3,56.1390))
+/~*
+for +tei mowe not lyve ne dure for the gret hete of the sonne, because +tat
+the water is euermore boyllynge for the gret hete.
+(CMMANDEV-M3,96.2319)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%romance:%1:%prep_intransitive)
+	  (NP-SBJ (D the) (N water))
+	  (BEP is)
+	  (ADVP-TMP (ADV euermore))
+	  (VAG boyllynge)
+	  (PP (P for)
+	      (NP (D the) (ADJ gret) (N hete))))
+  (ID CMMANDEV-M3,96.2319))
+/~*
+& here sleves ben hongyng doun to the feet;
+(CMMANDEV-M3,102.2477)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ &)
+	  (NP-SBJ (PRO$ here) (NS sleves))
+	  (BEP ben)
+	  (VAG hongyng)
+	  (PP (RP doun)
+	      (P to)
+	      (NP (D the) (CODE <P_102>) (NS feet)))
+	  (. ;))
+  (ID CMMANDEV-M3,102.2477))
+/~*
+And the arm & the hond +tat he putte in oure lordes syde whan he appered to
+him after his resurrexioun and seyde to him: NOLI ESSE INCREDULUS SED FIDELIS,
+is +git lyggynge in a vessell withouten the tombe.
+(CMMANDEV-M3,115.2821)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ And)
+	  (NP-SBJ (NP (D the) (N arm))
+		  (CONJP (CONJ &)
+			 (NP (D the) (N hond)))
+		  (CP-REL (WNP-1 0)
+			  (C +tat)
+			  (IP-SUB RMV:*T*-1_he_putte...)
+			  (CONJP (CONJ and)
+				 (IP-SUB RMV:*con*_seyde_to...))))
+	  (, ,)
+	  (BEP is)
+	  (ADVP-TMP (ADV +git))
+	  (VAG lyggynge)
+	  (PP (P in)
+	      (NP (D a) (N vessell)))
+	  (PP (P withouten)
+	      (NP (D the) (N tombe)))
+	  (. .))
+  (ID CMMANDEV-M3,115.2821))
+/~*
+And whan men gon be+gonde +to iourneys toward ynde & to the foreyn yles, all
+is envyronynge the roundnesse of the erthe & of the see vnder oure contrees on
+this half.
+(CMMANDEV-M3,122.2972)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%romance:%3:%transitive)
+	  (CONJ And)
+	  (PP (P whan)
+	      (CP-ADV (C 0)
+		      (IP-SUB RMV:men_gon_be+gonde...)))
+	  (, ,)
+	  (NP-SBJ (Q all))
+	  (BEP is)
+	  (VAG envyronynge)
+	  (NP-OB1 (D the)
+		  (N roundnesse)
+		  (PP (PP (P of)
+			  (NP (D the) (N erthe)))
+		      (CONJP (CONJ &)
+			     (PP (P of)
+				 (NP (D the) (N see))))))
+	  (PP (P vnder)
+	      (NP (PRO$ oure) (NS contrees)))
+	  (PP (P on)
+	      (NP (D this) (N half)))
+	  (. .))
+  (ID CMMANDEV-M3,122.2972))
+/~*
+for +tei ben descendynge toward the west betwene high toward the roundness of
+the world,
+(CMMANDEV-M3,124.3016)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%romance:%2:%prep_intransitive)
+	  (CONJ for)
+	  (NP-SBJ (PRO +tei))
+	  (BEP ben)
+	  (VAG descendynge)
+	  (PP (P toward)
+	      (NP (D the) (N west)))
+	  (PP (P betwene)
+	      (ADJP (ADJ high)))
+	  (PP (P toward)
+	      (NP (D the)
+		  (N roundness)
+		  (PP (P of)
+		      (NP (D the) (N world)))))
+	  (. ,))
+  (ID CMMANDEV-M3,124.3016))
+/~*
+Ich foulhet ifont $o $+te al-mihti fedres nome. & o +tes haligastes. wes i +te
+time liuiende $i $londe. +ta +tt eadie meiden margarete bi nome feht wi+d +te
+feond. & wi+d his eor+dliche limen. ouercom & acaste ham.
+(CMMARGA-M1,55.9)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1half:%prep_intransitive)
+	  (NP-SBJ (PRO Ich))
+	  (IP-PPL RMV:foulhet_ifont_$o...)
+	  (, .)
+	  (BED wes)
+	  (PP (P i)
+	      (NP (D +te) (N time)))
+	  (VAG liuiende)
+	  (PP (P $i)
+	      (NP (N $londe)
+		  (CODE {TEXT:ilonde})
+		  (, .)
+		  (CP-REL (WADVP-1 0)
+			  (C +ta)
+			  (IP-SUB RMV:*T*-1_+tt_eadie...))))
+	  (. .))
+  (ID CMMARGA-M1,55.9))
+/~*
+Now +ge schull knele adowne, and make your prayer to +tis holy apostoll, Seynt
+Andrew, +tat he be your mediator bytwyx God and you, prayng hym to +gyue you
+grace suche a lyfe to lede here, +tat hit be plesyng to hymselfe, and to our
+lady, and to all +te company of Heuen.
+(CMMIRK-M34,11.299)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%romance:%1:%ambiguous)
+	  (NP-SBJ (PRO hit))
+	  (BEP be)
+	  (VAG plesyng)
+	  (PP (PP (P to)
+		  (NP (PRO+N hymselfe)))
+	      (, ,)
+	      (CONJP (CONJ and)
+		     (PP (P to)
+			 (NP (PRO$ our) (NPR lady))))
+	      (, ,)
+	      (CONJP (CONJ and)
+		     (PP (P to)
+			 (NP (Q all)
+			     (D +te)
+			     (N company)
+			     (PP (P of)
+				 (NP (NPR Heuen))))))))
+  (ID CMMIRK-M34,11.299))
+/~*
+And for he was a +gere goyng and comyng to Rome, +terfor he made to sle all
++te chyldre +tat wern two +ger olde or within two.
+(CMMIRK-M34,36.1036)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%CONJ:%1:%intransitive)
+	  (NP-SBJ (PRO he))
+	  (BED was)
+	  (NP-MSR (D a) (N +gere))
+	  (VAG (VAG goyng)
+	       (CONJ and)
+	       (VAG comyng)
+	       (PP (P to)
+		   (NP (NPR Rome)))))
+  (ID CMMIRK-M34,36.1036))
+/~*
+Goddys owne seruandys, as +ge know well, +tys day ys called New-+gerus-day, as
+endyng of +te +ger +tat ys gon, and begynnyng of +te +gere +tat ys comyng.
+Wherfor, as I hope, +ge ben comen as +tys day to holy chyrch, forto contynue
+your seruice forth +tys +gere als well o+ter bettyr +tat comy+te, as +ge
+dyddyn +te +gere +tat ys gon, wythouten any new cownant makyng.
+(CMMIRK-M34,44.1284)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ *T*-4)
+	  (BEP ys)
+	  (VAG comyng))
+  (ID CMMIRK-M34,44.1284))
+/~*
+For ryght as a chyld wepyth for fere, when he segh +te +gerde come, and +get
+hath no stroke, ryght soo +te flesche of Cryst was aferde of +te strong
+passion +tat was comyng;
+(CMMIRK-M34,45.1304)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ *T*-2)
+	  (BED was)
+	  (VAG comyng))
+  (ID CMMIRK-M34,45.1304))
+/~*
+The thryd tyme was yn flagellacyon, when he was wyth fers knyghtes beten wyth
+scorges upon his bare body, +tat he was rennyng on blod all aboute.
+(CMMIRK-M34,45.1306)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (PRO he))
+	  (BED was)
+	  (VAG rennyng)
+	  (PP (P on)
+	      (NP (N blod)))
+	  (ADVP (Q all) (RP aboute)))
+  (ID CMMIRK-M34,45.1306))
+/~*
+And also for +te holy sacrament of weddyng ys moche defoulet by suche vanytes,
+scho layth hom downe +tes dayes +tat ben comyng, and yn +te Aduent, and also
+for new weddet +geuen hom to lykyng and lust of hor body, and +tenke all on
++te lyfe, and noght on +te deth.
+(CMMIRK-M34,63.1722)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ *T*-1)
+	  (BEP ben)
+	  (VAG comyng))
+  (ID CMMIRK-M34,63.1722))
+/~*
+I rede +ter wer two chapmen dwellyng bysyde +te cyte of Norwych. Of +te whech
+on was a good lyuer, and +tat o+ter a curset lyuer;
+(CMMIRK-M34,91.2434)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ-1 (EX +ter))
+	  (BED wer)
+	  (NP-1 (NUM two)
+		(N+NS chapmen)
+		(CP-REL *ICH*-2))
+	  (VAG dwellyng)
+	  (PP (P bysyde)
+	      (NP (D +te)
+		  (N cyte)
+		  (PP (P of)
+		      (NP (NPR Norwych)))))
+	  (, .)
+	  (CP-REL-2 (WPP-3 (P Of)
+			   (WNP (D +te) (WPRO whech)))
+		    (C 0)
+		    (IP-SUB RMV:*T*-3_on_was...)))
+  (ID CMMIRK-M34,91.2434))
+/~*
+and recchyth lytyll of +te lyfe +tat ys comyng,
+(CMMIRK-M34,113.3086)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ *T*-1)
+	  (BEP ys)
+	  (VAG comyng))
+  (ID CMMIRK-M34,113.3086))
+/~*
+These thingis weren don in Bethanye bi+gende Jordan, whare Joon was baptisyng.
+(CMNTEST-M3,1,20J.58)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%romance:%2:%intransitive)
+	  (ADVP-LOC *T*-1)
+	  (NP-SBJ (NPR Joon))
+	  (BED was)
+	  (VAG baptisyng))
+  (ID CMNTEST-M3,1,20J.58))
+/~*
+And Joon was baptisinge in Ennon, bisidis Salym,
+(CMNTEST-M3,3,20J.211)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%romance:%2:%prep_intransitive)
+	  (CONJ And)
+	  (NP-SBJ (NPR Joon))
+	  (BED was)
+	  (VAG baptisinge)
+	  (PP (P in)
+	      (NP (NPR Ennon)))
+	  (, ,)
+	  (PP (P bisidis)
+	      (NP (NPR Salym)))
+	  (. ,))
+  (ID CMNTEST-M3,3,20J.211))
+/~*
+and he that first cam doun in to the sisterne, aftir the mouynge of the watir,
+was maad hool of what euer sijknesse he was holdun.
+(CMNTEST-M3,5,1J.363)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (PP (P (CODE {of}))
+	      (NP *T*-3))
+	  (NP-SBJ (PRO he))
+	  (BED was)
+	  (VAG holdun))
+  (ID CMNTEST-M3,5,1J.363))
+/~*
+For Jhesus wiste fro the bigynnynge, which weren bileuynge, and who was to
+bitraye hym.
+(CMNTEST-M3,6,60J.560)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%2:%ambiguous)
+	  (NP-SBJ *T*-1)
+	  (BED weren)
+	  (VAG bileuynge))
+  (ID CMNTEST-M3,6,60J.560))
+/~*
+for Y do euermore tho thingis, that ben plesynge to hym.
+(CMNTEST-M3,8,20J.769)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%romance:%1:%ambiguous)
+	  (NP-SBJ *T*-1)
+	  (BEP ben)
+	  (VAG plesynge)
+	  (PP (P to)
+	      (NP (PRO hym))))
+  (ID CMNTEST-M3,8,20J.769))
+/~*
+And he wente eftsoone ouer Jordan, in to that place where Joon was firste
+baptisynge,
+(CMNTEST-M3,10,40J.1039)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%romance:%2:%intransitive)
+	  (ADVP-LOC *T*-1)
+	  (NP-SBJ (NPR Joon))
+	  (BED was)
+	  (ADVP-TMP (ADV firste))
+	  (VAG baptisynge))
+  (ID CMNTEST-M3,10,40J.1039))
+/~*
++Tet w+as on n+at & on swin swa +tet, on +ta tun +ta w+as tenn ploges o+der
+twelfe gangende, ne bel+af +t+ar noht an;
+(CMPETERB-M1,53.336)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%2:%prep_intransitive)
+	  (PP (P (CODE {on}))
+	      (NP *T*-1))
+	  (NP-SBJ-2 *exp*)
+	  (BED w+as)
+	  (NP-2 (NUMP (NUM tenn)
+		      (CONJP *ICH*-3))
+		(NS ploges)
+		(CONJP-3 (CONJ o+der) (NUM twelfe)))
+	  (VAG gangende))
+  (ID CMPETERB-M1,53.336))
+/~*
+and +tey took Bertari-cus his servaunt, +tat wist of +tis scapynge, and was
+assentynge +terto,
+(CMPOLYCH-M3,89.641)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%romance:%2:%ambiguous)
+	  (NP-SBJ *T*-1)
+	  (BED was)
+	  (VAG assentynge)
+	  (PP (ADV+P +terto)))
+  (ID CMPOLYCH-M3,89.641))
+/~*
++tey som men wil mene +tat he went to Rome to be +tere present, and to schewe
++tat his bookes were accordynge to +te loore of holy chirche, and +tat if +tey
+were nou+gt accordynge for to amende hym at +te pope his heste. But +tat he
+wente blynd aboute for to preche, +tat he was i-ladde by fraude of his man for
+to preche to stones as it were to men, +tat he herde +te voys of stones +tat
+answerede and seide Amen, +tat he wente +treis to Rome, +tat he fonde +tre R
+and +tre F i-write, and expowned what it was to mene, I fynde it nou+gt
+i-write in bookes of auctorite.
+(CMPOLYCH-M3,VI,221.1599)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%romance:%2:%ambiguous)
+	  (NP-SBJ (PRO$ his) (NS bookes))
+	  (BED were)
+	  (VAG accordynge)
+	  (PP (P to)
+	      (NP (D +te)
+		  (N loore)
+		  (PP (P of)
+		      (NP (ADJ holy) (NPR chirche))))))
+  (ID CMPOLYCH-M3,VI,221.1599))
+/~*
++tey som men wil mene +tat he went to Rome to be +tere present, and to schewe
++tat his bookes were accordynge to +te loore of holy chirche, and +tat if +tey
+were nou+gt accordynge for to amende hym at +te pope his heste. But +tat he
+wente blynd aboute for to preche, +tat he was i-ladde by fraude of his man for
+to preche to stones as it were to men, +tat he herde +te voys of stones +tat
+answerede and seide Amen, +tat he wente +treis to Rome, +tat he fonde +tre R
+and +tre F i-write, and expowned what it was to mene, I fynde it nou+gt
+i-write in bookes of auctorite.
+(CMPOLYCH-M3,VI,221.1599)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%romance:%2:%ambiguous)
+	  (NP-SBJ (PRO +tey))
+	  (BED were)
+	  (NEG nou+gt)
+	  (VAG accordynge))
+  (ID CMPOLYCH-M3,VI,221.1599))
+/~*
++tat swerde is +git kervynge in +te oon side,
+(CMPOLYCH-M3,VI,439.3225)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (D +tat) (N swerde))
+	  (BEP is)
+	  (ADVP (ADV +git))
+	  (VAG kervynge)
+	  (PP (P in)
+	      (NP (D +te) (ONE oon) (N side)))
+	  (. ,))
+  (ID CMPOLYCH-M3,VI,439.3225))
+/~*
+and was assentynge to Iohn for +giftes o+ter $for faire byhestes.
+(CMPOLYCH-M3,VIII,105.3689)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%romance:%2:%ambiguous)
+	  (CONJ and)
+	  (NP-SBJ *con*)
+	  (BED was)
+	  (VAG assentynge)
+	  (PP (P to)
+	      (NP (NPR Iohn)))
+	  (PP (PP (P for)
+		  (NP (NS +giftes)))
+	      (CONJP (CONJ o+ter)
+		     (PP (P $for)
+			 (NP (ADJ faire) (NS byhestes)))))
+	  (. .))
+  (ID CMPOLYCH-M3,VIII,105.3689))
+/~*
+and he seide, "The goddis of Sirie helpen hem, whiche goddis I schal plese
+with sacrifices, and thei schulen helpe me," whanne a+genward thei weren
+fallyng to him, and to al Israel.
+(CMPURVEY-M3,I,26.1288)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (ADVP (ADV+WARD a+genward))
+	  (NP-SBJ (PRO thei))
+	  (BED weren)
+	  (VAG fallyng)
+	  (PP (PP (P to)
+		  (NP (PRO him)))
+	      (, ,)
+	      (CONJP (CONJ and)
+		     (PP (P to)
+			 (NP (Q al) (NPR Israel))))))
+  (ID CMPURVEY-M3,I,26.1288))
+/~*
+he is not lyuyng that coude telle alle that I now leue vntolde <slash>
+(CMREYNAR-M4,7.32)
+*~/
+
+( (IP-MAT-SPE (CODING-IP-MAT-SPE %presVAG:%germanic:%1half:%intransitive)
+	      (NP-SBJ (PRO he)
+		      (CP-REL *ICH*-1))
+	      (BEP is)
+	      (NEG not)
+	      (VAG lyuyng)
+	      (CP-REL-SPE-1 (WNP-1 0)
+			    (C that)
+			    (IP-SUB RMV:*T*-1_coude_telle...))
+	      (. <slash>))
+  (ID CMREYNAR-M4,7.32))
+/~*
+Sanquine men and fleumatyk men owyn to bledyn abowtyn vndern, +tat they ben
+fastyng, and coleryk men fro an our afor vndern tyl noonn.
+(CMREYNES-M4,158.106)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ (PRO they))
+	  (BEP ben)
+	  (VAG fastyng))
+  (ID CMREYNES-M4,158.106))
+/~*
+And sythen, caste it abowte in +te hows $wheras $as dowys ben vsyng etc.
+(CMREYNES-M4,260.439)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%romance:%1half:%intransitive)
+	  (ADVP-LOC *T*-1)
+	  (NP-SBJ (NS dowys))
+	  (BEP ben)
+	  (VAG vsyng))
+  (ID CMREYNES-M4,260.439))
+/~*
+bot ay standand, sittand, gangand, or wirkand, es ay his lufe thynkand,
+(CMROLLEP-M24,61.9)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%intransitive)
+	  (CONJ bot)
+	  (ADVP-TMP (ADV ay))
+	  (IP-PPL RMV:standand_,_sittand...)
+	  (, ,)
+	  (BEP es)
+	  (ADVP-TMP (ADV ay))
+	  (NP-SBJ (PRO$ his) (N lufe))
+	  (VAG thynkand)
+	  (. ,))
+  (ID CMROLLEP-M24,61.9))
+/~*
+and oftsyth +tarof es dremande.
+(CMROLLEP-M24,61.10)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ and)
+	  (NP-SBJ *con*)
+	  (NP-TMP (ADV+N oftsyth))
+	  (PP (ADV+P +tarof))
+	  (BEP es)
+	  (VAG dremande)
+	  (. .))
+  (ID CMROLLEP-M24,61.10))
+/~*
+For ay, whils +ti hert es heldand til lufe any bodely thyng, +tou may not
+perfitely be coupuld with God.
+(CMROLLEP-M24,61.17)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%transitive)
+	  (NP-SBJ (PRO$ +ti) (N hert))
+	  (BEP es)
+	  (VAG heldand)
+	  (PP (P til)
+	      (NP (N lufe)))
+	  (NP-OB1 (Q any) (ADJ bodely) (N thyng)))
+  (ID CMROLLEP-M24,61.17))
+/~*
+For if +tow stabil +ti lufe, and be byrnande whils +tou lyfes here, withowten
+dowte +ti settel es ordaynde ful hegh in heven and joyful before Goddes face
+amang his haly aungels.
+(CMROLLEP-M24,62.31)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ *con*)
+	  (BEP be)
+	  (VAG byrnande)
+	  (PP (P whils)
+	      (CP-ADV (C 0)
+		      (IP-SUB RMV:+tou_lyfes_here...))))
+  (ID CMROLLEP-M24,62.31))
+/~*
+For al melody and al riches and delites, +tat al men in +tis world ken ordayne
+or thynk, sownes bot noy and anger til a mans hert +tat verraly es byrnand in
++te lufe of God;
+(CMROLLEP-M24,63.37)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ *T*-2)
+	  (ADVP (ADV verraly))
+	  (BEP es)
+	  (VAG byrnand)
+	  (PP (P in)
+	      (NP (D +te)
+		  (N lufe)
+		  (PP (P of)
+		      (NP (NPR God))))))
+  (ID CMROLLEP-M24,63.37))
+/~*
+I wil +tat +tow never be ydel, bot ay owther speke of God, or wirke som
+notabil warke, or thynk on hym principaly, +tat +ti thoght be ay havand hym in
+mynde.
+(CMROLLEP-M24,67.117)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%transitive)
+	  (NP-SBJ (PRO$ +ti) (N thoght))
+	  (BEP be)
+	  (ADVP-TMP (ADV ay))
+	  (HAG havand)
+	  (NP-OB1 (PRO hym))
+	  (PP (P in)
+	      (NP (N mynde))))
+  (ID CMROLLEP-M24,67.117))
+/~*
+And +tarfore all worldely solace +te behoves forsake, +tat +ti hert be
+heldande til na lufe of any creature, ne til na bysynes in erth, +tat +tou may
+be in sylence, be ay stabilly and stalwortly with +ti hert in Goddes lufe and
+hys drede.
+(CMROLLEP-M24,70.141)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (PRO$ +ti) (N hert))
+	  (BEP be)
+	  (VAG heldande)
+	  (PP (PP (P til)
+		  (NP (Q na)
+		      (N lufe)
+		      (PP (P of)
+			  (NP (Q any) (N creature)))))
+	      (, ,)
+	      (CONJP (CONJ ne)
+		     (PP (P til)
+			 (NP (Q na)
+			     (N bysynes)
+			     (PP (P in)
+				 (NP (N erth)))))))
+	  (, ,)
+	  (CP-ADV (C +tat)
+		  (IP-SUB RMV:+tou_may_be...)))
+  (ID CMROLLEP-M24,70.141))
+/~*
+Now I write a sang of lufe, +tat +tou sal delyte in when +tow ert lufand Jhesu
+Criste:
+(CMROLLEP-M24,70.145)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%transitive)
+	  (NP-SBJ (PRO +tow))
+	  (BEP ert)
+	  (VAG lufand)
+	  (NP-OB1 (NPR Jhesu) (NPR Criste)))
+  (ID CMROLLEP-M24,70.145))
+/~*
+For lufe es a wilful stiryng of owre thoght intil God, sa +tat it receyve na
+thyng +tat es agaynes +te lufe of Jhesu Crist, and +tarwith +tat it be lastand
+in swetnes of devocion;
+(CMROLLEP-M24,73.155)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%ambiguous)
+	  (PP *ICH*-2)
+	  (NP-SBJ (PRO it))
+	  (BEP be)
+	  (VAG lastand)
+	  (PP (P in)
+	      (NP (N swetnes)
+		  (PP (P of)
+		      (NP (N devocion))))))
+  (ID CMROLLEP-M24,73.155))
+/~*
+And +tat +tou may wynne til +te swetnes of Goddes lufe, I sett here thre
+degree of lufe, in +te whilk +tou be ay waxand.
+(CMROLLEP-M24,74.164)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (PP *T*-1)
+	  (NP-SBJ (PRO +tou))
+	  (BEP be)
+	  (ADVP-TMP (ADV ay))
+	  (VAG waxand))
+  (ID CMROLLEP-M24,74.164))
+/~*
+For al erthly lufe es passand,
+(CMROLLEP-M24,75.179)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%romance:%1:%intransitive)
+	  (CONJ For)
+	  (NP-SBJ (Q al) (ADJ erthly) (N lufe))
+	  (BEP es)
+	  (VAG passand)
+	  (. ,))
+  (ID CMROLLEP-M24,75.179))
+/~*
+for it sal be clensed, and made sa fre +tat +te lyst do na thyng bot +tat +tat
+es payng of God.
+(CMROLLEP-M24,75.190)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%romance:%1:%prep_intransitive)
+	  (NP-SBJ *T*-3)
+	  (BEP es)
+	  (VAG payng)
+	  (PP (P of)
+	      (NP (NPR God))))
+  (ID CMROLLEP-M24,75.190))
+/~*
+For he +tat es slaw in Goddes servyce may noght be byrnand in lufe, bot if he
+do al his myght and travell, nyght and day, to fulfill Goddes wille.
+(CMROLLEP-M24,78.241)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %futVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ For)
+	  (NP-SBJ (PRO he)
+		  (CP-REL (WNP-1 0)
+			  (C +tat)
+			  (IP-SUB RMV:*T*-1_es_slaw...)))
+	  (MD may)
+	  (NEG noght)
+	  (BE be)
+	  (VAG byrnand)
+	  (PP (P in)
+	      (NP (N lufe)))
+	  (, ,)
+	  (PP (P bot)
+	      (PP (P if)
+		  (CP-ADV (C 0)
+			  (IP-SUB RMV:he_do_al...))))
+	  (. .))
+  (ID CMROLLEP-M24,78.241))
+/~*
+bot ay it stirres hym to do some gode +tat myght be lykand til God, as in
+praying, or in wirkyng profitabel thynges, or in spekyng of Cristes passyon;
+and principally in thoght +tat +te mynde of Jhesu Criste passe noght fra his
+thoght.
+(CMROLLEP-M24,78.243)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %futVAG:%germanic:%1:%ambiguous)
+	  (NP-SBJ *T*-1)
+	  (MD myght)
+	  (BE be)
+	  (VAG lykand)
+	  (PP (P til)
+	      (NP (NPR God))))
+  (ID CMROLLEP-M24,78.243))
+/~*
++tan es it schame til +te, bot if +tou be als gode, or better, wi+tin in +ti
+sawle, als +tou ert semand at +te syght of men.
+(CMROLLEP-M24,93.493)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%ambiguous)
+	  (ADJP *T*-2)
+	  (NP-SBJ (PRO +tou))
+	  (BEP ert)
+	  (VAG semand)
+	  (PP (P at)
+	      (NP (D +te)
+		  (N syght)
+		  (PP (P of)
+		      (NP (NS men))))))
+  (ID CMROLLEP-M24,93.493))
+/~*
+For when +tou ert commen +tartill, +ti joy and desyre will ay be byrnand in
+Criste.
+(CMROLLEP-M24,95.524)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %futVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ For)
+	  (PP (P when)
+	      (CP-ADV (C 0)
+		      (IP-SUB RMV:+tou_ert_commen...)))
+	  (, ,)
+	  (NP-SBJ (PRO$ +ti)
+		  (N joy)
+		  (CONJP (CONJ and)
+			 (NX (N desyre))))
+	  (MD will)
+	  (ADVP-TMP (ADV ay))
+	  (BE be)
+	  (VAG byrnand)
+	  (PP (P in)
+	      (NP (NPR Criste)))
+	  (. .))
+  (ID CMROLLEP-M24,95.524))
+/~*
+$I wyll +tat +tou be ay clymbande tyll Jhesuwarde, and ekand +ti luf and +ti
+servys in hym; noght als foles doos:
+(CMROLLEP-M24,96.542)
+*~/
+
+( (IP-SUB-1 (CODING-IP-SUB-1 %presVAG:%germanic:%1:%prep_intransitive)
+	    (NP-SBJ (PRO +tou))
+	    (BEP be)
+	    (ADVP-TMP (ADV ay))
+	    (VAG clymbande)
+	    (PP (P tyll)
+		(NP (NPR+WARD Jhesuwarde))))
+  (ID CMROLLEP-M24,96.542))
+/~*
+bot for many +tat was byrnand at +te begynning and abyll til +te luf of Jhesu
+Criste, for owre mykel penans +tai have lettyd +tamself, and made +tam sa
+febel +tat +tai may noght lufe God as +tai sulde. In +te whilk luf +tat +tow
+wax ay mare and mare is my covaytyng and my amonestyng.
+(CMROLLEP-M24,96.546)
+*~/
+
+( (IP-SUB-3 (CODING-IP-SUB-3 %pastVAG:%germanic:%1:%prep_intransitive)
+	    (NP-SBJ *T*-2)
+	    (BED was)
+	    (VAG byrnand)
+	    (PP (P at)
+		(NP (D +te) (N begynning))))
+  (ID CMROLLEP-M24,96.546))
+/~*
+bot if +tou sett al +ti +toght how +tou may luf +ti spouse Jhesu Criste mare
++tan +tou has done, +tan dar I say +tat +ti mede es waxand and noght wanande.
+Wharfore, +tat +tou be ryght disposed, ba+t for +ti saule and +ti body, +tou
+sall understande fowre +tynges.
+(CMROLLEP-M24,96.548)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ (PRO$ +ti) (N mede))
+	  (BEP es)
+	  (VAG waxand))
+  (ID CMROLLEP-M24,96.548))
+/~*
+swa +te joy in +te syght of Jhesu in his godhede es swa mykel +tat +tai mond
+dye for joy, if it ne war his godenes, +tat will +tat his lovers be lyvand ay
+in blys, als his ryghtwysnes wil +tat al +tat lufed hym noght be ay lyvand in
+fyre +tat es horribel till any man at thynk,
+(CMROLLEP-M24,102.617)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1half:%prep_intransitive)
+	  (NP-SBJ (PRO$ his) (NS lovers))
+	  (BEP be)
+	  (VAG lyvand)
+	  (ADVP-TMP (ADV ay))
+	  (PP (P in)
+	      (NP (N blys))))
+  (ID CMROLLEP-M24,102.617))
+/~*
+swa +te joy in +te syght of Jhesu in his godhede es swa mykel +tat +tai mond
+dye for joy, if it ne war his godenes, +tat will +tat his lovers be lyvand ay
+in blys, als his ryghtwysnes wil +tat al +tat lufed hym noght be ay lyvand in
+fyre +tat es horribel till any man at thynk,
+(CMROLLEP-M24,102.617)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1half:%prep_intransitive)
+	  (NP-SBJ (Q al)
+		  (CP-REL (WNP-4 0)
+			  (C +tat)
+			  (IP-SUB RMV:*T*-4_lufed_hym...)))
+	  (BEP be)
+	  (ADVP-TMP (ADV ay))
+	  (VAG lyvand)
+	  (PP (P in)
+	      (NP (N fyre)
+		  (CP-REL (WNP-5 0)
+			  (C +tat)
+			  (IP-SUB RMV:*T*-5_es_horribel...)))))
+  (ID CMROLLEP-M24,102.617))
+/~*
+If +ti lufe be not byrnand in hym, litel es +ti delyte.
+(CMROLLEP-M24,103.642)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (PRO$ +ti) (N lufe))
+	  (BEP be)
+	  (NEG not)
+	  (VAG byrnand)
+	  (PP (P in)
+	      (NP (PRO hym))))
+  (ID CMROLLEP-M24,103.642))
+/~*
++Tan +ti sawle es Jhesu lufand, Jhesu thynkand, Jhesu desirand, anly in +te
+covayties of hym anedande, til hym syngand, of hym byrnand, in hym restand.
+(CMROLLEP-M24,105.678)
+*~/
+
+( (IP-MAT-1 (CODING-IP-MAT-1 %presVAG:%germanic:%1:%transitive)
+	    (ADVP-TMP (ADV +Tan))
+	    (NP-SBJ (PRO$ +ti) (N sawle))
+	    (BEP es)
+	    (NP-OB1 (NPR Jhesu))
+	    (VAG lufand))
+  (ID CMROLLEP-M24,105.678))
+/~*
+Bot +te sawle +tat es in +te thyrd degre es als byrnand fyre, and as +te
+nyghttyngale, +tat lufes sang and melody and fayles for mykel lufe; swa +tat
++te saule es anely comforted in lovying and lufyng of God, and til +te dede
+com es syngand gastly til Jhesu, and in Jhesu, and Jhesu, noght bodyly cryand
+wyth mouth --
+(CMROLLEP-M24,106.694)
+*~/
+
+( (IP-SUB-3 (CODING-IP-SUB-3 %presVAG:%germanic:%1:%prep_intransitive)
+	    (NP-SBJ *con*)
+	    (PP (P til)
+		(CP-ADV (C 0)
+			(IP-SUB RMV:+te_dede_com...)))
+	    (BEP es)
+	    (VAG syngand)
+	    (ADVP (ADV gastly))
+	    (PP (PP (P til)
+		    (NP (NPR Jhesu)))
+		(, ,)
+		(CONJP (CONJ and)
+		       (PP (P in)
+			   (NP (NPR Jhesu))))))
+  (ID CMROLLEP-M24,106.694))
+/~*
+it es wirkand som gude evermare.
+(CMROLLEP-M24,111.810)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%transitive)
+	  (NP-SBJ (PRO it))
+	  (BEP es)
+	  (VAG wirkand)
+	  (NP-OB1 (Q som) (N gude))
+	  (ADVP-TMP (ADV evermare))
+	  (. .))
+  (ID CMROLLEP-M24,111.810))
+/~*
+For a grete doctor says +tat +tai er Goddes trone, +tat dwelles still in a
+stede, and er noght abowte rennand, bot in swetnes of Cristes lufe er stabyld.
+(CMROLLEP-M24,116.907)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ *T*-2)
+	  (BEP er)
+	  (NEG noght)
+	  (RP abowte)
+	  (VAG rennand))
+  (ID CMROLLEP-M24,116.907))
+/~*
+For sittand am I in maste rest, and my hert maste upwarde.
+(CMROLLEP-M24,116.909)
+*~/
+
+( (IP-MAT-1 (CODING-IP-MAT-1 %presVAG:%germanic:%1:%prep_intransitive)
+	    (CONJ For)
+	    (VAG sittand)
+	    (BEP am)
+	    (NP-SBJ (PRO I))
+	    (PP (P in)
+		(NP (QS maste) (N rest))))
+  (ID CMROLLEP-M24,116.909))
+/~*
+And if it be swa +tat +tai be noght prayand with +te mowth, bot anely thynkand
+of God and of +te fairehede of aungels and haly sawles. +Tan may I say +tat
+contemplacion es a wonderful joy of Goddes luf, +te whilk joy es lovyng of God,
++tat may noght be talde;
+(CMROLLEP-M24,118.956)
+*~/
+
+( (IP-SUB-1 (CODING-IP-SUB-1 %presVAG:%romance:%1:%prep_intransitive)
+	    (NP-SBJ (PRO +tai))
+	    (BEP be)
+	    (NEG noght)
+	    (VAG prayand)
+	    (PP (P with)
+		(NP (D +te) (N mowth))))
+  (ID CMROLLEP-M24,118.956))
+/~*
+Sithen, when +tai have sufferd many temptacions, and foule noyes of thoghtes
++tat er ydel, and of vanitees, +te whilk wil comber +tam, +tat can noght
+destroy +tam, er passand away, he gars +tam geder til +tam +tair hert, and
+fest anely in hym;
+(CMROLLEP-M24,119.964)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%romance:%1:%intransitive)
+	  (NP-SBJ (ADJ foule)
+		  (NS noyes)
+		  (PP (PP (P of)
+			  (NP (NS thoghtes)
+			      (CP-REL (WNP-1 0)
+				      (C +tat)
+				      (IP-SUB RMV:*T*-1_er_ydel...))))
+		      (, ,)
+		      (CONJP (CONJ and)
+			     (PP (P of)
+				 (NP (NS vanitees)
+				     (, ,)
+				     (CP-REL (WNP-2 (D +te) (WPRO whilk))
+					     (C 0)
+					     (IP-SUB RMV:*T*-2_wil_comber...))
+				     (, ,)
+				     (CP-REL (WNP-3 0)
+					     (C +tat)
+					     (IP-SUB RMV:*T*-3_can_noght...)))))))
+	  (, ,)
+	  (BEP er)
+	  (VAG passand)
+	  (ADVP-DIR (ADV away)))
+  (ID CMROLLEP-M24,119.964))
+/~*
+Bot +tou sal witt, +tat na man hase perfite syght of heven whils +tai er
+lifand bodili here;
+(CMROLLEP-M24,119.972)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1half:%intransitive)
+	  (NP-SBJ (PRO +tai))
+	  (BEP er)
+	  (VAG lifand)
+	  (ADVP (ADV bodili))
+	  (ADVP-LOC (ADV here)))
+  (ID CMROLLEP-M24,119.972))
+/~*
+Aristotill sais +tat +te bees are feghtande agaynes hym +tat will drawe +taire
+hony fra thaym;
+(CMROLLTR-M24,8.237)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (D +te) (NS bees))
+	  (BEP are)
+	  (VAG feghtande)
+	  (PP (P agaynes)
+	      (NP (PRO hym)
+		  (CP-REL (WNP-1 0)
+			  (C +tat)
+			  (IP-SUB RMV:*T*-1_will_drawe...)))))
+  (ID CMROLLTR-M24,8.237))
+/~*
+bot if +tay be ay criande ef Godd with wordis of +taire mouthe, or elles in
+theire hertis by desyrand wordes, as if +tay said thus: 'A Lorde, brynge me to
+Thi blysse!' 'Lorde make me safe!' or swylke o+ter. The wordis ere gude,
+whe+ter +tay be sownned in +te mouthe, or ells fourmede in +te herte,
+(CMROLLTR-M24,37.768)
+*~/
+
+( (IP-SUB-1 (CODING-IP-SUB-1 %presVAG:%romance:%1:%prep_intransitive)
+	    (NP-SBJ (PRO +tay))
+	    (BEP be)
+	    (ADVP-TMP (ADV ay))
+	    (VAG criande)
+	    (PP (P ef)
+		(NP (NPR Godd)))
+	    (PP (P with)
+		(NP (NS wordis)
+		    (PP (P of)
+			(NP (PRO$ +taire) (N mouthe))))))
+  (ID CMROLLTR-M24,37.768))
+/~*
+Also the mynd of oure Lady Saynt Marie abowne all o+ter sayntes, for to see by
+gostely eghe +te abowndance of grace in hire haly saule, whene scho was here
+lyffand, +tat owre Lorde gafe hir allane, passande all o+ter creatours;
+(CMROLLTR-M24,39.811)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1half:%intransitive)
+	  (NP-SBJ (PRO scho))
+	  (BED was)
+	  (ADVP-LOC (ADV here))
+	  (VAG lyffand))
+  (ID CMROLLTR-M24,39.811))
+/~*
+ne suffire noghte thi herte fall fra +te desire as if +tou ware abydande or
+gapand after sum qwyent stirrynge, or sum wondirfull felynge vthire +tan +tou
+hase had.
+(CMROLLTR-M24,43.874)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%CONJ:%1:%prep_intransitive)
+	  (NP-SBJ (PRO +tou))
+	  (BED ware)
+	  (VAG (VAG abydande) (CONJ or) (VAG gapand))
+	  (PP (P after)
+	      (NP (NP (Q sum) (ADJ qwyent) (N stirrynge))
+		  (, ,)
+		  (CONJP (CONJ or)
+			 (NP (Q sum)
+			     (ADJ wondirfull)
+			     (N felynge)
+			     (ADJP (OTHER vthire))
+			     (PP (P +tan)
+				 (CP-CMP (WNP-1 0)
+					 (C 0)
+					 (IP-SUB RMV:*T*-1_+tou_hase...))))))))
+  (ID CMROLLTR-M24,43.874))
+/~*
+But here what Dauid +te prophete seys, +tat oure seyntes ben goyn avey:
+(CMROYAL-M34,251.184)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ (PRO$ oure) (NS seyntes))
+	  (BEP ben)
+	  (VAG goyn)
+	  (ADVP-DIR (ADV avey)))
+  (ID CMROYAL-M34,251.184))
+/~*
+This veniaunce is perishyng myn herte withowte hope of hele.
+(CMROYAL-M34,254.244)
+*~/
+
+( (IP-MAT-SPE (CODING-IP-MAT-SPE %presVAG:%romance:%2:%transitive)
+	      (NP-SBJ (D This) (N veniaunce))
+	      (BEP is)
+	      (VAG perishyng)
+	      (NP-OB1 (PRO$ myn) (N herte))
+	      (PP (P withowte)
+		  (NP (N hope)
+		      (PP (P of)
+			  (NP (N hele)))))
+	      (. .))
+  (ID CMROYAL-M34,254.244))
+/~*
+But he was so stynkyng in his leppur +tat no man my+gt soffyr +te stynche
+no+tyr abyde in his chambur,
+(CMSIEGE-M4,73.97)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%other2:%other3:%prep_intransitive)
+	  (CONJ But)
+	  (NP-SBJ (PRO he))
+	  (BED was)
+	  (ADVP (ADVR so)
+		(CP-DEG *ICH*-1))
+	  (VAG stynkyng)
+	  (PP (P in)
+	      (NP (PRO$ his) (N leppur)))
+	  (CP-DEG-1 (C +tat)
+		    (IP-SUB RMV:no_man_my+gt...))
+	  (. ,))
+  (ID CMSIEGE-M4,73.97))
+/~*
+Men +te waren $wunende on elche of +tese +trie times wisten gerne after ure
+lauerd ihesu cristes tocume alse we do+d. +te ben on +tesse +tre wuken; +te
+ben cleped aduent. +tat is seggen on englis ure louerd ihesu cristes tocume.
+(CMTRINIT-MX1,3.13)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ *T*-1)
+	  (BED waren)
+	  (VAG $wunende)
+	  (CODE {TEXT:wunede})
+	  (PP (P on)
+	      (NP (Q elche)
+		  (PP (P of)
+		      (NP (D +tese) (NUM +trie) (NS times))))))
+  (ID CMTRINIT-MX1,3.13))
+/~*
+and +tus que+d. Uigilate quia nescitis diem neque horam. +tat is be+d wakiende.
+and forlete+d gure synne. +tat ge ne ben ifunden on sunne. and swo forlorene.
+(CMTRINIT-MX1,5.40)
+*~/
+
+( (IP-IMP-SPE (CODING-IP-IMP-SPE %impVAG:%germanic:%1:%ambiguous)
+	      (BEI be+d)
+	      (VAG wakiende))
+  (ID CMTRINIT-MX1,5.40))
+/~*
+On +te niht and on +te time. +te ure lafdi seinte marie kennede of holie
+lichame ure louerd ihesu crist. were herdes wakiende bi side +te buregh and
+wittende here oref.
+(CMTRINIT-MX1,31.434)
+*~/
+
+( (IP-MAT-1 (CODING-IP-MAT-1 %pastVAG:%germanic:%1:%ambiguous)
+	    (PP (PP (P On)
+		    (NP (D +te) (N niht)))
+		(CONJP (CONJ and)
+		       (PP (P on)
+			   (NP (D +te) (N time))))
+		(, .)
+		(CP-REL (WADVP-2 0)
+			(C +te)
+			(IP-SUB RMV:*T*-2_ure_lafdi...)))
+	    (, .)
+	    (BED were)
+	    (NP-SBJ (NS herdes))
+	    (VAG wakiende)
+	    (PP (P (P21 bi) (P22 side))
+		(NP (D +te) (N buregh))))
+  (ID CMTRINIT-MX1,31.434))
+/~*
+Al mankin was wunende on muchele wowe. sum on +tisse worelde. and sum on helle
+pine. forte +tat ilke time; +tat ure louerd ihesu crist hem +tarof aredde. and
+turnede swo here wowe to wele. and here sor to muchele blisse.
+(CMTRINIT-MX1,33.446)
+*~/
+
+( (IP-MAT-1 (CODING-IP-MAT-1 %pastVAG:%germanic:%1:%prep_intransitive)
+	    (NP-SBJ (Q Al) (N+N mankin))
+	    (BED was)
+	    (VAG wunende)
+	    (PP (P on)
+		(NP (Q muchele) (N wowe)))
+	    (, .)
+	    (IP-MAT-PRN RMV:sum_on_+tisse...)
+	    (, .)
+	    (PP (P forte)
+		(NP (D +tat)
+		    (ADJ ilke)
+		    (N time)
+		    (, ;)
+		    (CP-REL (WNP-2 0)
+			    (C +tat)
+			    (IP-SUB RMV:*T*-2_ure_louerd...))))
+	    (. .))
+  (ID CMTRINIT-MX1,33.446))
+/~*
++tat israelisshe folc was walkende toward ierusalem on swinche. and on drede.
+and on wanrede
+(CMTRINIT-MX1,51.695)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (D +tat) (ADJ israelisshe) (N folc))
+	  (BED was)
+	  (VAG walkende)
+	  (PP (P toward)
+	      (NP (NPR ierusalem)))
+	  (PP (PP (P on)
+		  (NP (N swinche)))
+	      (, .)
+	      (CONJP (CONJ and)
+		     (PP (P on)
+			 (NP (N drede))))
+	      (, .)
+	      (CONJP (CONJ and)
+		     (PP (P on)
+			 (NP (N wanrede))))))
+  (ID CMTRINIT-MX1,51.695))
+/~*
+Ac efter +tan +te hie weren wuniende in ierusalem. and weren hole and sunde.
+and sikere of here giue. and hadden +te fulle of wurldes richeisse. +to hie
+forleten godes lore.
+(CMTRINIT-MX1,51.697)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (PRO hie))
+	  (BED weren)
+	  (VAG wuniende)
+	  (PP (P in)
+	      (NP (NPR ierusalem))))
+  (ID CMTRINIT-MX1,51.697))
+/~*
+and weren +terof wallinde on so+dere luue godes and mannen. swo +tat hie
+luueden gode more +tene hem seluen. and ech cristene man alse hem seluen.
+(CMTRINIT-MX1,119.1598)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ and)
+	  (NP-SBJ *con*)
+	  (BED weren)
+	  (PP (ADV+P +terof))
+	  (VAG wallinde)
+	  (PP (P on)
+	      (NP (ADJR so+dere)
+		  (N luue)
+		  (NP-COM (NPR$ godes) (CONJ and) (NS$ mannen))))
+	  (, .)
+	  (PP (P swo)
+	      (CP-ADV (C +tat)
+		      (IP-SUB RMV:hie_luueden_gode...)))
+	  (. .))
+  (ID CMTRINIT-MX1,119.1598))
+/~*
++De man is understondinde +te him seluen cnowe+d and gode leue+d.
+(CMTRINIT-MX1,121.1637)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%3:%intransitive)
+	  (NP-SBJ (D +De)
+		  (N man)
+		  (CP-REL *ICH*-1))
+	  (BEP is)
+	  (VAG understondinde)
+	  (CP-REL-1 (WNP-2 0)
+		    (C +te)
+		    (IP-SUB RMV:*T*-2_him_seluen...))
+	  (. .))
+  (ID CMTRINIT-MX1,121.1637))
+/~*
+and was +ter-one werchende. and farende. for to +tat he $com to +de ende +tat
+is eche lif.
+(CMTRINIT-MX1,131.1769)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%CONJ:%1:%prep_intransitive)
+	  (CONJ and)
+	  (NP-SBJ *con*)
+	  (BED was)
+	  (PP (ADV+P +ter-one))
+	  (VAG (VAG werchende) (, .) (CONJ and) (VAG farende))
+	  (, .)
+	  (PP (P (P21 for) (P22 to))
+	      (CP-ADV (C +tat)
+		      (IP-SUB RMV:he_$com_to...))
+	      (. .)))
+  (ID CMTRINIT-MX1,131.1769))
+/~*
+and on +tis reuliche wei hie weren walkinde forte +tat hie comen to +te
+lichamliche dea+de.
+(CMTRINIT-MX1,147.1969)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ and)
+	  (PP (P on)
+	      (NP (D +tis) (ADJ reuliche) (N wei)))
+	  (NP-SBJ (PRO hie))
+	  (BED weren)
+	  (VAG walkinde)
+	  (PP (P forte)
+	      (CP-ADV (C +tat)
+		      (IP-SUB RMV:hie_comen_to...)))
+	  (. .))
+  (ID CMTRINIT-MX1,147.1969))
+/~*
++De se is eure wagiende. and +tere fore unstedefast.
+(CMTRINIT-MX1,175.2384)
+*~/
+
+( (IP-MAT-1 (CODING-IP-MAT-1 %presVAG:%germanic:%1:%intransitive)
+	    (NP-SBJ (D +De) (N se))
+	    (BEP is)
+	    (ADVP-TMP (ADV eure))
+	    (VAG wagiende))
+  (ID CMTRINIT-MX1,175.2384))
+/~*
+and bitocne+d +te abroidene bureh +tat is in swo warliche stede; +tat noht ne
+mai +ter inne bileue. +tat muge ani wile ileste. +tat is +tis wrecche woreld.
++tat eure is wagiende noht fro stede to stede; ac fro time to time.
+(CMTRINIT-MX1,175.2385)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ *T*-5)
+	  (ADVP-TMP (ADV eure))
+	  (BEP is)
+	  (VAG wagiende)
+	  (PP (PP (NEG noht)
+		  (PP (P fro)
+		      (NP (N stede)))
+		  (PP (P to)
+		      (NP (N stede))))
+	      (, ;)
+	      (CONJP (CONJ ac)
+		     (PP (PP (P fro)
+			     (NP (N time)))
+			 (PP (P to)
+			     (NP (N time)))))))
+  (ID CMTRINIT-MX1,175.2385))
+/~*
+He is fleonde alse shadewe
+(CMTRINIT-MX1,175.2389)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (PRO He))
+	  (BEP is)
+	  (VAG fleonde)
+	  (PP (P alse)
+	      (NP (N shadewe))))
+  (ID CMTRINIT-MX1,175.2389))
+/~*
+To +geu ic clepi+ge iec +de bie+d wuni+gende mid +gemaneliche hlauerde gode,
+$and to ure lafdi sainte Marie.
+(CMVICES1-M1,21.230)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ *T*-2)
+	  (BEP bie+d)
+	  (VAG wuni+gende)
+	  (PP (P mid)
+	      (NP (ADJ +gemaneliche) (NPR hlauerde) (NPR gode))))
+  (ID CMVICES1-M1,21.230))
+/~*
+To alle +do hal+gen +de hier on liue waren iboren, and nu mid ure lauerde gode
+wuni+gende bie+d, ic clepie and bidde for +do muchele karite+d +de is an +geu,
++dat +gie +denchen an us +de bie+d hier on +dese arme liue, +dar +de wei is
+slider and we lihtliche to f+allen, and fele unwines, teforen and baften and
+on alche side.
+(CMVICES1-M1,21.232)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ *T*-1)
+	  (ADVP-TMP (ADV nu))
+	  (PP (P mid)
+	      (NP (PRO$ ure) (NPR lauerde) (NPR gode)))
+	  (VAG wuni+gende)
+	  (BEP bie+d))
+  (ID CMVICES1-M1,21.232))
+/~*
+He wisse+d +des mannes $i+dangc +de he $to $cum+d, o+der +durh hali+ge writes
+o+der +durh hali sermuns, +te he him +durh sume wise manne +de he is inne
+wuniende, sant.
+(CMVICES1-M1,35.420)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (PRO he))
+	  (BEP is)
+	  (PP (P inne)
+	      (NP *T*-4))
+	  (VAG wuniende))
+  (ID CMVICES1-M1,35.420))
+/~*
++Dus behet Crist +dat +te mann +de him wolde luui+gen and his wordes healden:
++tat he and his fader hine scolden luui+gen and mid him wuniende bien.
+(CMVICES1-M1,37.428)
+*~/
+
+( (IP-SUB=3 (CODING-IP-SUB=3 %infVAG:%germanic:%1:%prep_intransitive)
+	    (PP (P mid)
+		(NP (PRO him)))
+	    (VAG wuniende)
+	    (BE bien))
+  (ID CMVICES1-M1,37.428))
+/~*
++Gif +du wilt sikerliche wuni+gen on karite and on gode, +tanne do +du alswa
+we hit a boke finden iwriten, +tat is, +dat tu mid rihte +geleaue and mid
+faste hope and mid so+de luue bie werchinde +dat god +de +du iliefst.
+(CMVICES1-M1,39.444)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%transitive)
+	  (NP-SBJ (PRO tu))
+	  (PP (PP (P mid)
+		  (NP (ADJ rihte) (N +geleaue)))
+	      (CONJP (CONJ and)
+		     (PP (P mid)
+			 (NP (ADJ faste) (N hope))))
+	      (CONJP (CONJ and)
+		     (PP (P mid)
+			 (NP (ADJ so+de) (N luue)))))
+	  (BEP bie)
+	  (VAG werchinde)
+	  (NP-OB1 (D +dat)
+		  (N god)
+		  (CP-REL (WNP-3 0)
+			  (C +de)
+			  (IP-SUB RMV:*T*-3_+du_iliefst...))))
+  (ID CMVICES1-M1,39.444))
+/~*
+After +dan +de +dat hali writt sei+d: '+Du +de wunest on +d+are woreld, and
+art +dar inne ibunde mid huse and mid weddede wiue and mid childre, swa swa
++du wilt bien +gebore+gen, +du aust te fol+gin +dane $rihtwise and onfald Iob
+', +de was wuni+gende on +dare woreld mid wiue and mid children, and mid
+michelere heihte, +te was +gemanlich alle niedfullen, +de was iec fonded mid
+michele wele, and mid michelere nafte, and mid michel unh+ale, and mid mani+ge
+euele upbreides, ai+der of his a+gene wiue and ec of his auene frienden, of
+sibbe and of framde, and of +de selue dieule;
+(CMVICES1-M1,41.470)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ *T*-3)
+	  (BED was)
+	  (VAG wuni+gende)
+	  (PP (P on)
+	      (NP (D +dare) (N woreld)))
+	  (PP (PP (P mid)
+		  (NP (N wiue)))
+	      (CONJP (CONJ and)
+		     (PP (P mid)
+			 (NP (NS children))))
+	      (, ,)
+	      (CONJP (CONJ and)
+		     (PP (P mid)
+			 (NP (Q michelere)
+			     (N heihte)
+			     (, ,)
+			     (CP-REL (WNP-4 0)
+				     (C +te)
+				     (IP-SUB RMV:*T*-4_was_+gemanlich...)))))))
+  (ID CMVICES1-M1,41.470))
+/~*
+For +dare hali mihte +de carite+d is icleped, ic +de beseche and bidde +dat tu
++dese halwende lore on write sette, for +dan ic am michel +ten-chinde +dar
+hwile +de ic on +dese wrecche lichame am wuniende, and ofte for+gete +dat me
+god w+are te healden;
+(CMVICES1-M1,47.520)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ (PRO ic))
+	  (BEP am)
+	  (NP-MSR (Q michel))
+	  (VAG +ten-chinde)
+	  (NP-MSR (D +dar)
+		  (N hwile)
+		  (CP-REL (WNP-3 0)
+			  (C +de)
+			  (IP-SUB RMV:*T*-3_ic_on...))))
+  (ID CMVICES1-M1,47.520))
+/~*
+For +dare hali mihte +de carite+d is icleped, ic +de beseche and bidde +dat tu
++dese halwende lore on write sette, for +dan ic am michel +ten-chinde +dar
+hwile +de ic on +dese wrecche lichame am wuniende, and ofte for+gete +dat me
+god w+are te healden;
+(CMVICES1-M1,47.520)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-MSR *T*-3)
+	  (NP-SBJ (PRO ic))
+	  (PP (P on)
+	      (NP (D +dese) (ADJ wrecche) (N lichame)))
+	  (BEP am)
+	  (VAG wuniende))
+  (ID CMVICES1-M1,47.520))
+/~*
+and he +de is godes wis-dom, +durh hwam bie+d alle wittes and +alle wisdomes
+and alle tungen spekinde, he lai alswa +dat child +de nan god ne cann, ne
+speken ne mai, ne isien, ne him seluen wealden, +durh hwam alle earen
++gehiere+d, and alle menn hem seluen welden, and alle ei+gene isie+d.
+(CMVICES1-M1,51.551)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (PP *T*-2)
+	  (BEP bie+d)
+	  (NP-SBJ (NP (Q alle) (NS wittes))
+		  (CONJP (CONJ and)
+			 (NP (Q +alle) (NS wisdomes)))
+		  (CONJP (CONJ and)
+			 (NP (Q alle) (NS tungen))))
+	  (VAG spekinde))
+  (ID CMVICES1-M1,51.551))
+/~*
+Dies ilke hlauerd Iesus Crist, he was her on +dese liue wuni+gende +trie and
++trihti wintre and an half mang senfulle mannen, so+d godd, +de hie ne mihten
+isien, and so+d mann, +de hie isien mihten,
+(CMVICES1-M1,51.553)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-LFD (D Dies)
+		  (ADJ ilke)
+		  (NPR hlauerd)
+		  (NP-PRN (NPR Iesus) (NPR Crist)))
+	  (, ,)
+	  (NP-SBJ-RSP (PRO he)
+		      (NP-PRN *ICH*-2))
+	  (BED was)
+	  (ADVP-LOC (ADV her))
+	  (PP (P on)
+	      (NP (D +dese) (N liue)))
+	  (VAG wuni+gende)
+	  (NP-MSR (NUMP (NUMP (NUM +trie) (CONJ and) (NUM +trihti))
+			(CONJP *ICH*-1))
+		  (N wintre)
+		  (CONJP-1 (CONJ and)
+			   (NUMP (D an) (NUM half))))
+	  (PP (P mang)
+	      (NP (ADJ senfulle) (NS mannen)))
+	  (, ,)
+	  (NP-PRN-2 (NP (ADJ so+d)
+			(N godd)
+			(, ,)
+			(CP-REL (WNP-3 0)
+				(C +de)
+				(IP-SUB RMV:*T*-3_hie_ne...)))
+		    (, ,)
+		    (CONJP (CONJ and)
+			   (NP (ADJ so+d)
+			       (N mann)
+			       (, ,)
+			       (CP-REL (WNP-4 0)
+				       (C +de)
+				       (IP-SUB RMV:*T*-4_hie_isien...)))))
+	  (. ,))
+  (ID CMVICES1-M1,51.553))
+/~*
+On +da time +de hie was hier on liue libbende, hit was iwriten: Maledicta
+sterilis, que non peperit, '
+(CMVICES1-M1,55.594)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1half:%prep_intransitive)
+	  (PP (P (CODE {in}))
+	      (NP *T*-1))
+	  (NP-SBJ (PRO hie))
+	  (BED was)
+	  (ADVP-LOC (ADV hier))
+	  (PP (P on)
+	      (NP (N liue)))
+	  (VAG libbende))
+  (ID CMVICES1-M1,55.594))
+/~*
+and mid sume men hie is wunende,
+(CMVICES1-M1,57.614)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ and)
+	  (PP (P mid)
+	      (NP (Q sume) (NS men)))
+	  (NP-SBJ (PRO hie))
+	  (BEP is)
+	  (VAG wunende)
+	  (. ,))
+  (ID CMVICES1-M1,57.614))
+/~*
+and on swi+de feawe menn hie is rixende.
+(CMVICES1-M1,57.615)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ and)
+	  (PP (P on)
+	      (NP (QP (ADV swi+de) (Q feawe))
+		  (NS menn)))
+	  (NP-SBJ (PRO hie))
+	  (BEP is)
+	  (VAG rixende)
+	  (. .))
+  (ID CMVICES1-M1,57.615))
+/~*
+On +da manne +de hie is rixende, +tis $is +de tacne:
+(CMVICES1-M1,57.616)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (PP (P (CODE {on}))
+	      (NP *T*-1))
+	  (NP-SBJ (PRO hie))
+	  (BEP is)
+	  (VAG rixende))
+  (ID CMVICES1-M1,57.616))
+/~*
+For +dan +de we habbe+d hier te-foren writen +tat godes milsce last +auremo to
+alle +do mannen +de him bie+d dradinde, swa swa sainte Marie hire self ber+d
++gewitnesse, for +di, mid godes grace, ic +de wile seggen of his dr+adnesse,
+after +dan +de hali writes segge+d and us openie+d.
+(CMVICES1-M1,59.637)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%transitive)
+	  (NP-SBJ *T*-1)
+	  (NP-OB1 (PRO him))
+	  (BEP bie+d)
+	  (VAG dradinde))
+  (ID CMVICES1-M1,59.637))
+/~*
+Hit sei+d on +da hali goddspelle +tat an riche iungman cam to Crist be +do
+dai+gen +de he hier lichamliche was wuniende, and seide: Quid faciam, domine,
+ut habeam vitam eternam?
+(CMVICES1-M1,67.742)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (PP (P (CODE {be}))
+	      (NP *T*-1))
+	  (NP-SBJ (PRO he))
+	  (ADVP-LOC (ADV hier))
+	  (ADVP (ADV lichamliche))
+	  (BED was)
+	  (VAG wuniende))
+  (ID CMVICES1-M1,67.742))
+/~*
++Dese twa lif, hermite and ans+ate lif, +de we nu clepe+d anker, hie w+aren
+hwile ferr fram mannen wuniende,
+(CMVICES1-M1,73.830)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%intransitive)
+	  (NP-LFD (D +Dese)
+		  (NUM twa)
+		  (NS lif)
+		  (, ,)
+		  (NP-PRN (NP (N hermite))
+			  (CONJP (CONJ and)
+				 (NP (ADJ ans+ate)
+				     (N lif)
+				     (, ,)
+				     (CP-REL (WNP-1 0)
+					     (C +de)
+					     (IP-SUB RMV:we_nu_clepe+d...))))))
+	  (, ,)
+	  (NP-SBJ-RSP (PRO hie))
+	  (BED w+aren)
+	  (NP-TMP (N hwile))
+	  (ADJP-LOC (ADJ ferr)
+		    (PP (P fram)
+			(NP (NS mannen))))
+	  (VAG wuniende)
+	  (. ,))
+  (ID CMVICES1-M1,73.830))
+/~*
+'+Darhwile +de +du art mid +tine wi+derwine on +da wei+ge, bie him tei+tinde
++dat +de he wile hauen idon, l+aste he +de nime and bet+ache +de +de crauiere,
+and he se+d+den betache +de +de pineres and +de cwelleres!'
+(CMVICES1-M1,75.841)
+*~/
+
+( (IP-IMP-SPE (CODING-IP-IMP-SPE %impVAG:%germanic:%1:%transitive)
+	      (' ')
+	      (NP-MSR (D+N +Darhwile)
+		      (CP-REL (WNP-1 0)
+			      (C +de)
+			      (IP-SUB RMV:*T*-1_+du_art...)))
+	      (, ,)
+	      (BEI bie)
+	      (NP-OB2 (PRO him))
+	      (VAG tei+tinde)
+	      (NP-OB1 (D +dat)
+		      (CP-REL (WNP-2 0)
+			      (C +de)
+			      (IP-SUB RMV:*T*-2_he_wile...)))
+	      (, ,)
+	      (PP (P l+aste)
+		  (CP-ADV (C 0)
+			  (IP-SUB RMV:he_+de_nime...)))
+	      (. !)
+	      (' '))
+  (ID CMVICES1-M1,75.841))
+/~*
+and wite +du te so+de, bute +du him bie hier tei+dinde hwat swa hit +de ratt
+to donne: +danne +du cumst on +da heigere wei+ge, +danne +du art itwamd fram
++dine lichame, hit te wile betachen +de crauiere, +de +de wile crauen of
+elchere senne, and betellen riht after godes awene worde, +dat tu aust him to
+fol+gin to helle, for+dan +de +du art godd unhersum al swa he.
+(CMVICES1-M1,75.845)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%transitive)
+	  (NP-SBJ (PRO +du))
+	  (NP-OB2 (PRO him))
+	  (BEP bie)
+	  (ADVP-LOC (ADV hier))
+	  (VAG tei+dinde)
+	  (NP-OB1 (CP-FRL (WNP-1 (WPRO hwat) (ADV swa))
+			  (C 0)
+			  (IP-SUB RMV:hit_+de_ratt...))))
+  (ID CMVICES1-M1,75.845))
+/~*
+'Worldes eihte, +gif hie is swi+de rixinde to +deward, ne do +du naht +dine
+herte +derto,
+(CMVICES1-M1,75.848)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (PRO hie))
+	  (BEP is)
+	  (ADVP (ADV swi+de))
+	  (VAG rixinde)
+	  (PP (P to)
+	      (NP (PRO+WARD +deward))))
+  (ID CMVICES1-M1,75.848))
+/~*
+and beclep+d all +de wouh, and alle +de bie+d in +do hali huse wuniende;
+(CMVICES1-M1,95.1112)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ *T*-1)
+	  (BEP bie+d)
+	  (PP (P in)
+	      (NP (D +do) (ADJ hali) (N huse)))
+	  (VAG wuniende))
+  (ID CMVICES1-M1,95.1112))
+/~*
+For +di he bitt +dat pais bie ai+der on licame and on saule, and +dat +ties
+hali mihte sibsumnesse bie rix-ende on +geu ba+de;
+(CMVICES1-M1,95.1117)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (D +ties)
+		  (ADJ hali)
+		  (N mihte)
+		  (NP-PRN (N sibsumnesse)))
+	  (BEP bie)
+	  (VAG rix-ende)
+	  (PP (P on)
+	      (NP (PRO +geu)
+		  (QP (Q ba+de)))))
+  (ID CMVICES1-M1,95.1117))
+/~*
+Ic hit wat wel +dat godd ne mai bien wuni+gende on none saule +dat unfri+d is
+of sennes.
+(CMVICES1-M1,97.1147)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %futVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (NPR godd))
+	  (NEG ne)
+	  (MD mai)
+	  (BE bien)
+	  (VAG wuni+gende)
+	  (PP (P on)
+	      (NP (Q none)
+		  (N saule)
+		  (CP-REL (WNP-2 0)
+			  (C +dat)
+			  (IP-SUB RMV:*T*-2_unfri+d_is...)))))
+  (ID CMVICES1-M1,97.1147))
+/~*
++Gif ani cum+t and $bring+t tidinges of idelnesses, and is spekende sotwordes
++de ar+are+d up hleitres, none wunienge ne haue he mid +de, swa se +du luuest
+godd and sibsumnesse.
+(CMVICES1-M1,101.1202)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%transitive)
+	  (NP-SBJ *con*)
+	  (BEP is)
+	  (VAG spekende)
+	  (NP-OB1 (ADJ+NS sotwordes)
+		  (CP-REL (WNP-1 0)
+			  (C +de)
+			  (IP-SUB RMV:*T*-1_ar+are+d_up...))))
+  (ID CMVICES1-M1,101.1202))
+/~*
+Ne biest +du naht hier lange wuni+gende;
+(CMVICES1-M1,103.1236)
+*~/
+
+( (IP-MAT-SPE (CODING-IP-MAT-SPE %presVAG:%germanic:%1:%intransitive)
+	      (NEG Ne)
+	      (BEP biest)
+	      (NP-SBJ (PRO +du))
+	      (NEG naht)
+	      (ADVP-LOC (ADV hier))
+	      (NP-MSR (ADJ lange))
+	      (VAG wuni+gende)
+	      (. ;))
+  (ID CMVICES1-M1,103.1236))
+/~*
+For +di us mene+ge+d allre +tinge arst ure lauerde of +desre eadi mihte, +tat
+we scolden beon rewsende ure sennen, and swa hus lokin mid his fultume, +tat
+we eft ne befallen on senne.
+(CMVICES1-M1,121.1474)
+*~/
+
+( (IP-SUB-1 (CODING-IP-SUB-1 %futVAG:%germanic:%1:%transitive)
+	    (NP-SBJ (PRO we))
+	    (MD scolden)
+	    (BE beon)
+	    (VAG rewsende)
+	    (NP-OB1 (PRO$ ure) (NS sennen)))
+  (ID CMVICES1-M1,121.1474))
+/~*
+Mann +de wel wile bien riwsinde, ne rewe him nauht ane hise sennes, ac +get
++dat he for $his +gemelaste ne haf+d god +gedon on +da time +de he naure mo
+eft nacoure+d, and is for+d +gegan.
+(CMVICES1-M1,121.1482)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %futVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ *T*-2)
+	  (ADVP (ADV wel))
+	  (MD wile)
+	  (BE bien)
+	  (VAG riwsinde))
+  (ID CMVICES1-M1,121.1482))
+/~*
+and liht his mid +te so+de lihte, +tat ich naure ne bie slapinde on +dare
+saule dea+de, ne +dat +de dieueles mu+gen be+gelpen +tat hie hafden +de
+hei+gere hand ouer me. '
+(CMVICES1-M1,127.1558)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (PRO ich))
+	  (ADVP-TMP (ADV naure))
+	  (NEG ne)
+	  (BEP bie)
+	  (VAG slapinde)
+	  (PP (P on)
+	      (NP (NP-POS (D +dare) (N$ saule))
+		  (N dea+de))))
+  (ID CMVICES1-M1,127.1558))
+/~*
+He is iwis innocens, +tat is, uneilinde, +te nauer+gete him seluen ne eilede
+ne nan o+d+der.
+(CMVICES1-M1,133.1627)
+*~/
+
+( (IP-MAT-PRN (CODING-IP-MAT-PRN %presVAG:%germanic:%1:%intransitive)
+	      (NP-SBJ (D +tat))
+	      (BEP is)
+	      (, ,)
+	      (VAG uneilinde))
+  (ID CMVICES1-M1,133.1627))
+/~*
+HONESTAS is cleped an o+der mihte, +de is niedfull alche gode manne. +Tat is,
++dat he wor+dliche him loki mid alle hise lemes of his likame. Hise ei+gene,
++tat hie ne bien to swi+de gawrinde hider and +geond; +to earen, +dat hie
+bli+deliche ne hlesten ydelnesses, and +dare mide benime +dare saule gode
++tohtes of gode wordes to +geheren;
+(CMVICES1-M1,133.1640)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ (PRO hie))
+	  (NEG ne)
+	  (BEP bien)
+	  (ADVP (ADVR to) (ADV swi+de))
+	  (VAG gawrinde)
+	  (ADVP-DIR (ADV hider) (CONJ and) (ADV +geond)))
+  (ID CMVICES1-M1,133.1640))
+/~*
+Godd is haure fastinde.
+(CMVICES1-M1,137.1678)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ (NPR Godd))
+	  (BEP is)
+	  (ADVP-TMP (ADV haure))
+	  (VAG fastinde)
+	  (. .))
+  (ID CMVICES1-M1,137.1678))
+/~*
+For +dan +de gode mann is niht and dai+g +teinkinde hu he mu+ge gode icwemen,
+and him betst hersumen; alswa is +dies beswikene mann niht and dai+g
++teinkinde hwu he mu+ge fellen $his un+gesali beli mid swete metes and
+drenches.
+(CMVICES1-M1,137.1689)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %presVAG:%germanic:%1:%prep_intransitive)
+	  (PP (P For)
+	      (D +dan)
+	      (CP-ADV (C 0)
+		      (IP-SUB RMV:+de_gode_mann...)))
+	  (, ;)
+	  (ADVP (ADV alswa))
+	  (BEP is)
+	  (NP-SBJ (D +dies) (VAN beswikene) (N mann))
+	  (NP-TMP (N niht) (CONJ and) (N dai+g))
+	  (VAG +teinkinde)
+	  (CP-QUE-SUB (WADVP-3 (WADV hwu))
+		      (C 0)
+		      (IP-SUB RMV:*T*-3_he_mu+ge...))
+	  (. .))
+  (ID CMVICES1-M1,137.1689))
+/~*
+For +dan +de gode mann is niht and dai+g +teinkinde hu he mu+ge gode icwemen,
+and him betst hersumen; alswa is +dies beswikene mann niht and dai+g
++teinkinde hwu he mu+ge fellen $his un+gesali beli mid swete metes and
+drenches.
+(CMVICES1-M1,137.1689)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ (D +de) (ADJ gode) (N mann))
+	  (BEP is)
+	  (NP-TMP (N niht) (CONJ and) (N dai+g))
+	  (VAG +teinkinde)
+	  (CP-QUE-SUB (WADVP-1 (WADV hu))
+		      (C 0)
+		      (IP-SUB RMV:*T*-1_he_mu+ge...)))
+  (ID CMVICES1-M1,137.1689))
+/~*
+and +tench +dat +de fule wombe is crewlinde full of weormes, +te he was bewune
+to fellen mid gode metes and swete drenches,
+(CMVICES1-M1,139.1696)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%germanic:%1:%intransitive)
+	  (NP-SBJ (D +de)
+		  (ADJ fule)
+		  (N wombe)
+		  (CP-REL *ICH*-1))
+	  (BEP is)
+	  (VAG crewlinde)
+	  (ADJP-SPR (ADJ full)
+		    (PP (P of)
+			(NP (NS weormes))))
+	  (, ,)
+	  (CP-REL-1 (WNP-2 0)
+		    (C +te)
+		    (IP-SUB RMV:he_was_bewune...)))
+  (ID CMVICES1-M1,139.1696))
+/~*
+Hit sei+d in Vitas patrum +dat at sume sal waren +de hali faderes to-gedere
+igadered, and waren spekinde betwen hem on hwilliche wise me mihte rihtist and
+sikerest to gode cumen.
+(CMVICES1-M1,149.1842)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ *con*)
+	  (BED waren)
+	  (VAG spekinde)
+	  (PP (P betwen)
+	      (NP (PRO hem)))
+	  (CP-QUE-SUB (WPP-1 (P on)
+			     (WNP (WD hwilliche) (N wise)))
+		      (C 0)
+		      (IP-SUB RMV:*T*-1_me_mihte...)))
+  (ID CMVICES1-M1,149.1842))
+/~*
+The story of +tis gospel tellith how publicans and synful men weren comyng to
+Iesu to heren his lore,
+(CMWYCSER-M3,232.153)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (ADVP *T*-1)
+	  (NP-SBJ (NP (NS publicans))
+		  (CONJP (CONJ and)
+			 (NP (ADJ synful) (NS men))))
+	  (BED weren)
+	  (VAG comyng)
+	  (PP (P to)
+	      (NP (NPR Iesu)))
+	  (IP-INF-PRP RMV:to_heren_his...))
+  (ID CMWYCSER-M3,232.153))
+/~*
++Tese prelatys wolden fayn +tat al Godys lawe were hangyng on hem, for to
+spuyle +te peple;
+(CMWYCSER-M3,233.170)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (Q al) (NPR$ Godys) (N lawe))
+	  (BED were)
+	  (VAG hangyng)
+	  (PP (P on)
+	      (NP (PRO hem)))
+	  (, ,)
+	  (IP-INF-PRP RMV:for_to_spuyle...))
+  (ID CMWYCSER-M3,233.170))
+/~*
+And Iesus seyde to Symont 'Fro +tis tyme $schalt $tow be takyng men';
+(CMWYCSER-M3,240.324)
+*~/
+
+( (IP-MAT-SPE (CODING-IP-MAT-SPE %futVAG:%germanic:%1:%transitive)
+	      (PP (P Fro)
+		  (NP (D +tis) (N tyme)))
+	      (MD $schalt)
+	      (NP-SBJ (PRO $tow))
+	      (CODE {TEXT:schaltow})
+	      (BE be)
+	      (VAG takyng)
+	      (NP-OB1 (NS men)))
+  (ID CMWYCSER-M3,240.324))
+/~*
+And for a long tyme aftur he was eche day techyng in +te temple.
+(CMWYCSER-M3,261.649)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ And)
+	  (PP (P for)
+	      (NP (D a)
+		  (ADJ long)
+		  (N tyme)
+		  (ADVP-TMP (ADV aftur))))
+	  (NP-SBJ (PRO he))
+	  (BED was)
+	  (NP-TMP (Q eche) (N day))
+	  (VAG techyng)
+	  (PP (P in)
+	      (NP (D +te) (N temple)))
+	  (. .))
+  (ID CMWYCSER-M3,261.649))
+/~*
+To +te wit of allegoric bytokne+t +tis dede of Crist how he was wendyng to
+heuene, +tat ys clepyd Ierusaleem.
+(CMWYCSER-M3,275.901)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (ADVP *T*-1)
+	  (NP-SBJ (PRO he))
+	  (BED was)
+	  (VAG wendyng)
+	  (PP (P to)
+	      (NP (NPR heuene)
+		  (, ,)
+		  (CP-REL (WNP-2 0)
+			  (C +tat)
+			  (IP-SUB RMV:*T*-2_ys_clepyd...)))))
+  (ID CMWYCSER-M3,275.901))
+/~*
++Te story seith how in Galilee was dwellyng a lytyl kyng in +te citee of
+Capharnaum +tat hadde a sone ful syk of feuerys.
+(CMWYCSER-M3,305.1395)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (ADVP *T*-1)
+	  (PP (P in)
+	      (NP (NPR Galilee)))
+	  (BED was)
+	  (VAG dwellyng)
+	  (NP-SBJ (D a)
+		  (ADJ lytyl)
+		  (N kyng)
+		  (CP-REL *ICH*-2))
+	  (PP (P in)
+	      (NP (D +te)
+		  (N citee)
+		  (PP (P of)
+		      (NP (NPR Capharnaum)))))
+	  (CP-REL-2 (WNP-3 0)
+		    (C +tat)
+		    (IP-SUB RMV:*T*-3_hadde_a...)))
+  (ID CMWYCSER-M3,305.1395))
+/~*
+And so +tis man trowe+t in God bo+te wi+t vndurstondyng and wylle wi+t alle
++te meyne of his hows, whanne alle hise wyttes and hise streng+tes ben
+obeschynge to resoun when +tis feuere is +tus passyd.
+(CMWYCSER-M3,308.1450)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%romance:%2:%ambiguous)
+	  (NP-SBJ (Q alle)
+		  (PRO$ hise)
+		  (NS wyttes)
+		  (CONJP (CONJ and)
+			 (NX (PRO$ hise) (NS streng+tes))))
+	  (BEP ben)
+	  (VAG obeschynge)
+	  (PP (P to)
+	      (NP (N resoun)))
+	  (PP (P when)
+	      (CP-ADV (C 0)
+		      (IP-SUB RMV:+tis_feuere_is...))))
+  (ID CMWYCSER-M3,308.1450))
+/~*
+And, al +gif Iohn myhte haue seyd +tat he was cryinge, ne+teles he ches to
+speke more mekely,
+(CMWYCSER-M3,342.2061)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%romance:%1:%intransitive)
+	  (NP-SBJ (PRO he))
+	  (BED was)
+	  (VAG cryinge))
+  (ID CMWYCSER-M3,342.2061))
+/~*
+And so, al +gif prestis han power to relese synne as Cristes vikeres,
+ner+teles +tei han +tis power in as myche as +tei acorden wi+t Crist; so +tat,
++gif +teir keyes and Cristes wille be discordynge atwynne, +tei feynen hem
+falsely to assoylen and +tanne +tei nei+tur lowsen ne bynden, so +tat in eche
+sich worchyng +te godhede of Crist mut furst worche.
+(CMWYCSER-M3,346.2121)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %presVAG:%romance:%2:%ambiguous)
+	  (NP-SBJ (NP (PRO$ +teir) (NS keyes))
+		  (CONJP (CONJ and)
+			 (NP (NPR$ Cristes) (N wille))))
+	  (BEP be)
+	  (VAG discordynge)
+	  (PP (P+NUM atwynne)))
+  (ID CMWYCSER-M3,346.2121))
+/~*
+but hit seme+t +tat we may graunte +tat +tis dowue was +te Holy Gost, as we
+graunte +tat +tis persone was comynge down in +tis dowue.
+(CMWYCSER-M3,347.2148)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%prep_intransitive)
+	  (NP-SBJ (D +tis) (N persone))
+	  (BED was)
+	  (VAG comynge)
+	  (RP down)
+	  (PP (P in)
+	      (NP (D +tis) (N dowue))))
+  (ID CMWYCSER-M3,347.2148))
+/~*
+And so was hit syttyng Crist to teche +tis mekenesse.
+(CMWYCSER-M3,350.2200)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %pastVAG:%germanic:%1:%intransitive)
+	  (CONJ And)
+	  (ADVP (ADV so))
+	  (BED was)
+	  (NP-SBJ-1 (PRO hit))
+	  (VAG syttyng)
+	  (IP-INF-1 RMV:Crist_to_teche...)
+	  (. .))
+  (ID CMWYCSER-M3,350.2200))
+/~*
+And, as men seyn comunly, +te feend bar hym ouer Ierusaleem, as Crist were
+fleyng in +te eyr,
+(CMWYCSER-M3,397.3090)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%other2:%other3:%prep_intransitive)
+	  (NP-SBJ (NPR Crist))
+	  (BED were)
+	  (VAG fleyng)
+	  (PP (P in)
+	      (NP (D +te) (N eyr))))
+  (ID CMWYCSER-M3,397.3090))
+/~*
++Te story tellu+t how Iesu was castyng owt a feend of a man,
+(CMWYCSER-M3,407.3246)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%germanic:%1:%transitive)
+	  (ADVP *T*-1)
+	  (NP-SBJ (NPR Iesu))
+	  (BED was)
+	  (VAG castyng)
+	  (RP owt)
+	  (NP-OB1 (D a) (N feend))
+	  (PP (P of)
+	      (NP (D a) (N man))))
+  (ID CMWYCSER-M3,407.3246))
+/~*
+Bre+tren, we schulen be wytynge +tat our is now us to ryse fro sleepe,
+(CMWYCSER-M3,476.3594)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %futVAG:%germanic:%1:%intransitive)
+	  (NP-VOC (NS Bre+tren))
+	  (, ,)
+	  (CODE <font>)
+	  (NP-SBJ (PRO we))
+	  (MD schulen)
+	  (BE be)
+	  (VAG wytynge)
+	  (CP-THT (C 0)
+		  (IP-SUB RMV:+tat_our_*ICH*-1...))
+	  (. ,))
+  (ID CMWYCSER-M3,476.3594))
+/~*
++Gif Petre in his lif was passynge o+tre apostlis, +tat weron his felowis in
+pouerte and mekenesse and in trauele for +te chyrche, +tanne he mut haue a
+successour contrarye to hym in alle +tes +tre.
+(CMWYCSER-M3,524.3747)
+*~/
+
+( (IP-SUB (CODING-IP-SUB %pastVAG:%romance:%1:%transitive)
+	  (NP-SBJ (NPR Petre))
+	  (PP (P in)
+	      (NP (PRO$ his) (N lif)))
+	  (BED was)
+	  (VAG passynge)
+	  (NP-OB1 (OTHER o+tre)
+		  (NS apostlis)
+		  (, ,)
+		  (CP-REL (WNP-1 0)
+			  (C +tat)
+			  (IP-SUB RMV:*T*-1_weron_his...))))
+  (ID CMWYCSER-M3,524.3747))
+/~*
+For alle +tes foure newe ordris moten be lernyng al +ter lif of +te rewle +tat
++tei han foundon, bysyde +te rewle +tat Crist +gaf;
+(CMWYCSER-M3,588.3768)
+*~/
+
+( (IP-MAT (CODING-IP-MAT %futVAG:%germanic:%1:%prep_intransitive)
+	  (CONJ For)
+	  (NP-SBJ (Q alle) (D +tes) (NUM foure) (ADJ newe) (NS ordris))
+	  (MD moten)
+	  (BE be)
+	  (VAG lernyng)
+	  (NP-TMP (Q al) (PRO$ +ter) (N lif))
+	  (PP (P of)
+	      (NP (D +te)
+		  (N rewle)
+		  (CP-REL (WNP-1 0)
+			  (C +tat)
+			  (IP-SUB RMV:*T*-1_+tei_han...))))
+	  (, ,)
+	  (PP (P bysyde)
+	      (NP (D +te)
+		  (N rewle)
+		  (CP-REL (WNP-2 0)
+			  (C +tat)
+			  (IP-SUB RMV:*T*-2_Crist_+gaf...))))
+	  (. ;))
+  (ID CMWYCSER-M3,588.3768))
+/~*
+And Poul sei+t to Tymothe of +tes veyne newe ordris +tat +tei ben euermore
+lernyng, and neuere comynge to fruyt +terof.
+(CMWYCSER-M3,588.3771)
+*~/
+
+( (IP-SUB-1 (CODING-IP-SUB-1 %presVAG:%germanic:%1:%intransitive)
+	    (NP-SBJ (PRO +tei))
+	    (BEP ben)
+	    (ADVP-TMP (ADV euermore))
+	    (VAG lernyng))
+  (ID CMWYCSER-M3,588.3771))
+/*
+FOOTER
+  source file, hits/tokens/total
+  1prog.out		322/322/322
+*/
+/*
+SUMMARY:  
+source files, hits/tokens/total
+  1prog.out		322/322/322
+whole search, hits/tokens/total
+			322/322/322
+*/

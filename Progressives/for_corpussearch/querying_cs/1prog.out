@@ -1,0 +1,6977 @@
+/*
+PREFACE:  
+Copyright 2010 Beth Randall
+Date:  Mon Mar 07 17:59:15 CET 2022
+
+command file:     1prog.q
+output file:      ./1prog.out
+
+remark:  
+definition file:  me_test3.def
+node:   IP*
+query:  ((IP* iDoms  *BEP*|*BED*|*BE*|*BEN*) 
+  AND  (IP* iDoms  *VAG*|*HAG*|*DAG*))  
+*/
+/*
+HEADER:
+source file:  cmaelr3-m23.psd
+*/
+
+/~*
++ter he hadde ibe blaberynge and chaterynge, he took hym to silence.
+(CMAELR3-M23,32.159)
+*~/
+/*
+9 IP-SUB:  9 IP-SUB, 17 BEN, 19 VAG
+*/
+( (9 IP-SUB (10 ADVP-LOC *T*-1)
+	    (12 NP-SBJ (13 PRO he))
+	    (15 HVD hadde)
+	    (17 BEN ibe)
+	    (19 VAG (20 VAG blaberynge) (22 CONJ and) (24 VAG chaterynge)))
+  (44 ID CMAELR3-M23,32.159)) 
+
+
+/~*
+And, +gif it be lykynde to +te, to commende +te grete excellence of virginite,
+let +tilke blessede mayden and moder in o syde, and +tilke diere deciple Ihon,
+a mayde also, in +tat o+ter syde of +te cros be ihad in here ymages, +tat +tu
+mowe +tenke her-by hou plesaunt to God is chastete bo+te of man and womman,
+which he halewode so preciously in his moder and his lieue deciple, seynt Ihon;
+(CMAELR3-M23,35.258)
+*~/
+/*
+12 IP-SUB:  12 IP-SUB, 16 BEP, 18 VAG
+*/
+( (12 IP-SUB (13 NP-SBJ-1 (14 PRO it))
+	     (16 BEP be)
+	     (18 VAG lykynde)
+	     (20 PP (21 P to)
+		    (23 NP (24 PRO +te)))
+	     (26 , ,)
+	     (28 IP-INF-1 RMV:to_commende_+te...))
+  (231 ID CMAELR3-M23,35.258)) 
+
+
+/~*
+Wherfore, dire suster, +tat +te swete affeccioun of loue of swete Ihesu mowe
+wexe in +tyn herte, +tu most haue +tre maner meditacioun: +tat is to seyn of
++tyngges +tat ben apassed, of +tingges +tat be+t present, of +tyngges +tat
+be+t comyngge.
+(CMAELR3-M23,39.390)
+*~/
+/*
+141 IP-SUB:  141 IP-SUB, 144 BEP, 146 VAG
+*/
+( (141 IP-SUB (142 NP-SBJ *T*-4)
+	      (144 BEP be+t)
+	      (146 VAG comyngge))
+  (150 ID CMAELR3-M23,39.390)) 
+
+
+/~*
+Bote for as muche as in +tis wrecchede lyf is no+tyng stable, no+tyng
+certaynly is abydyngge,
+(CMAELR3-M23,51.796)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 47 BEP, 49 VAG
+*/
+( (1 IP-MAT (2 CONJ Bote)
+	    (4 PP (5 P for)
+		  (7 QP (8 ADVR as)
+			(10 Q muche)
+			(12 PP (13 P as)
+			       (15 CP-ADV (16 C 0)
+					  (18 IP-SUB RMV:in_+tis_wrecchede...)))))
+	    (39 , ,)
+	    (41 NP-SBJ (42 Q+N no+tyng))
+	    (44 ADVP (45 ADV certaynly))
+	    (47 BEP is)
+	    (49 VAG abydyngge)
+	    (51 . ,))
+  (53 ID CMAELR3-M23,51.796)) 
+
+
+/~*
+I was wandryngge aboute wit Caym acursed:
+(CMAELR3-M23,52.825)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 5 BED, 7 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 PRO I))
+	    (5 BED was)
+	    (7 VAG wandryngge)
+	    (9 RP aboute)
+	    (11 PP (12 P wit)
+		   (14 NP (15 NPR Caym)))
+	    (17 IP-PPL RMV:acursed...)
+	    (20 . :))
+  (22 ID CMAELR3-M23,52.825)) 
+
+
+/~*
++gif +tu were dowtyngge or flecchyngge, he ha+t confermed +te in good purpos.
+(CMAELR3-M23,54.894)
+*~/
+/*
+8 IP-SUB:  8 IP-SUB, 12 BED, 14 VAG
+*/
+( (8 IP-SUB (9 NP-SBJ (10 PRO +tu))
+	    (12 BED were)
+	    (14 VAG (15 VAG dowtyngge) (17 CONJ or) (19 VAG flecchyngge)))
+  (43 ID CMAELR3-M23,54.894)) 
+
+
+/~*
+How ofte, suster, whan +tu hast be asadded and dul or wery of +ty lyfe, ha+t
+he be a pytous confortour to +te; +gif +tu $were longynge in brennyngge loue
+after hym, ha+t ilept in-to +tyn herte; +gif +tu hast yrad or ystotid on holy
+scripture, ha+t yli+gted +ty soule wit li+gt of spiritual vnderstondynge?
+(CMAELR3-M23,54.895)
+*~/
+/*
+85 IP-SUB:  85 IP-SUB, 89 BED, 91 VAG
+*/
+( (85 IP-SUB (86 NP-SBJ (87 PRO +tu))
+	     (89 BED $were)
+	     (91 VAG longynge)
+	     (93 PP (94 P in)
+		    (96 NP (97 VAG brennyngge) (99 N loue)))
+	     (101 PP (102 P after)
+		     (104 NP (105 PRO hym))))
+  (178 ID CMAELR3-M23,54.895)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmaelr3-m23.psd	7/7/1049
+*/
+/*
+HEADER:
+source file:  cmaelr4-m4.psd
+*/
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmaelr4-m4.psd	0/0/768
+*/
+/*
+HEADER:
+source file:  cmancriw-1-m1.psd
+*/
+
+/~*
+ant +tenche+d mest in ouwer tiden of God, +tet ouwer +tochtes ne beon
+fleotinde +tenne.
+(CMANCRIW-1-M1,I.78.323)
+*~/
+/*
+28 IP-SUB:  28 IP-SUB, 36 BEP, 38 VAG
+*/
+( (28 IP-SUB (29 NP-SBJ (30 PRO$ ouwer) (32 NS +tochtes))
+	     (34 NEG ne)
+	     (36 BEP beon)
+	     (38 VAG fleotinde)
+	     (40 ADVP-TMP (41 ADV +tenne)))
+  (45 ID CMANCRIW-1-M1,I.78.323)) 
+
+
+/~*
+& tei+gede for +ti an clod of eor+de to hire. as me de+d $to +te reo+der o+der
+to an o+der beast +tt is to reachinde Abuten.
+(CMANCRIW-1-M1,II.113.1407)
+*~/
+/*
+76 IP-SUB:  76 IP-SUB, 79 BEP, 81 VAG
+*/
+( (76 IP-SUB (77 NP-SBJ *T*-2)
+	     (79 BEP is)
+	     (81 VAG (82 VAG21 to) (84 VAG22 reachinde))
+	     (86 CODE <P_II.113>)
+	     (88 RP Abuten))
+  (92 ID CMANCRIW-1-M1,II.113.1407)) 
+
+
+/~*
+Achte +tinges nomeliche la+die+d us to waken. eauer $in $sum good. & beo
+wurchinde +tis scheorte lif +tis stronge lif. vre good +tt is swa +tunne. vre
+sunnen +tt beo+d swa monie. dea+d +tt we beo+d siker of & vnsiker hwenne. +te
+sterke dom of domesdei & se naru midalle +tt euch idel word bi+d +tear ibrocht
+for+d & idele +tochtes. +tt neren her i+tochte.
+(CMANCRIW-1-M1,II.115.1447)
+*~/
+/*
+43 IP-INF:  43 IP-INF, 46 BE, 48 VAG
+*/
+( (43 IP-INF (44 TO *)
+	     (46 BE beo)
+	     (48 VAG wurchinde))
+  (231 ID CMANCRIW-1-M1,II.115.1447)) 
+
+
+/~*
+For +ti mine leoue sustren bi nicht ase nicht fuwel +tt ancre is to iefned.
+beo+d +georne sturinde.
+(CMANCRIW-1-M1,II.121.1529)
+*~/
+/*
+1 IP-IMP:  1 IP-IMP, 49 BEI, 54 VAG
+*/
+( (1 IP-IMP (2 PP (3 P For)
+		  (5 NP (6 D +ti)))
+	    (8 NP-VOC (9 PRO$ mine) (11 ADJ leoue) (13 NS sustren))
+	    (15 PP (16 P bi)
+		   (18 NP (19 N nicht)))
+	    (21 PP (22 P ase)
+		   (24 NP (25 N nicht)
+			  (27 N fuwel)
+			  (29 CP-REL (30 WNP-1 0)
+				     (32 C +tt)
+				     (34 IP-SUB RMV:ancre_is_to...))))
+	    (47 , .)
+	    (49 BEI beo+d)
+	    (51 ADVP (52 ADV +georne))
+	    (54 VAG sturinde)
+	    (56 . .))
+  (58 ID CMANCRIW-1-M1,II.121.1529)) 
+
+
+/~*
+& +tus inicht beo+d fleoinde & sechinde ouwer saule heouenliche fode.
+(CMANCRIW-1-M1,II.121.1532)
+*~/
+/*
+2 IP-IMP:  2 IP-IMP, 11 BEI, 13 VAG
+*/
+( (2 IP-IMP (3 CONJ &)
+	    (5 ADVP (6 ADV +tus))
+	    (8 PP (9 P+N inicht))
+	    (11 BEI beo+d)
+	    (13 VAG fleoinde))
+  (33 ID CMANCRIW-1-M1,II.121.1532)) 
+
+
+/~*
+for semey sei+d audians. +tt is herinde.
+(CMANCRIW-1-M1,II.132.1751)
+*~/
+/*
+15 IP-MAT-PRN:  15 IP-MAT-PRN, 19 BEP, 21 VAG
+*/
+( (15 IP-MAT-PRN (16 NP-SBJ (17 D +tt))
+		 (19 BEP is)
+		 (21 VAG herinde))
+  (25 ID CMANCRIW-1-M1,II.132.1751)) 
+
+
+/~*
+Micume & mi wununge +tach hit +tunche atter hit is halewinde.
+(CMANCRIW-1-M1,II.144.1937)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 32 BEP, 34 VAG
+*/
+( (1 IP-MAT (2 NP-LFD (3 NP (4 PRO$+N Micume))
+		      (6 CONJP (7 CONJ &)
+			       (9 NP (10 PRO$ mi) (12 N wununge))))
+	    (14 PP (15 P +tach)
+		   (17 CP-ADV (18 C 0)
+			      (20 IP-SUB RMV:hit_+tunche_atter...)))
+	    (29 NP-SBJ-RSP (30 PRO hit))
+	    (32 BEP is)
+	    (34 VAG halewinde)
+	    (36 . .))
+  (38 ID CMANCRIW-1-M1,II.144.1937)) 
+
+
+/~*
+& in euchanes tail anblase bearninde.
+(CMANCRIW-1-M1,II.187.2648)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 17 BEP, 19 VAG
+*/
+( (1 IP-MAT (2 CONJ &)
+	    (4 PP (5 P in)
+		  (7 NP (8 Q+ONE$ euchanes) (10 N tail)))
+	    (12 NP-SBJ (13 D+N anblase))
+	    (15 CODE <P_II.187>)
+	    (17 BEP *)
+	    (19 VAG bearninde)
+	    (21 . .))
+  (23 ID CMANCRIW-1-M1,II.187.2648)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmancriw-1-m1.psd	8/8/3558
+*/
+/*
+HEADER:
+source file:  cmancriw-2-m1.psd
+*/
+
+/~*
+$ha $beo+d her hweolinde as +tehweoles ouerturne+d
+(CMANCRIW-2-M1,II.262.284)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 5 BEP, 12 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 PRO $ha))
+	    (5 BEP $beo+d)
+	    (7 CODE {TEXT:habeo+d})
+	    (9 ADVP-LOC (10 ADV her))
+	    (12 VAG hweolinde)
+	    (14 PP (15 P as)
+		   (17 CP-ADV (18 WADVP-1 0)
+			      (20 C 0)
+			      (22 IP-SUB RMV:*T*-1_+tehweoles_ouerturne+d...))))
+  (30 ID CMANCRIW-2-M1,II.262.284)) 
+
+
+/~*
+An dei as ha +treo weren ifolen onslepe. & lei bitwene +teos twa +te +tridde
++tt ich seide. com +te cwen of heouene & twa meidnes wi+d hire. +te an as
++tach hit were ber aletuarie. +te o+der of golt asticke.
+(CMANCRIW-2-M1,II.273.442)
+*~/
+/*
+111 IP-SUB:  111 IP-SUB, 115 BED, 117 VAG
+*/
+( (111 IP-SUB (112 NP-SBJ (113 PRO hit))
+	      (115 BED were)
+	      (117 VAG ber)
+	      (119 NP-OB1 (120 D+N aletuarie)))
+  (141 ID CMANCRIW-2-M1,II.273.442)) 
+
+
+/~*
++Teose maries hit sei+d. +teose bitternesses were cuminde to smiren ure lauerd.
+(CMANCRIW-2-M1,II.277.517)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 22 BED, 24 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 D +Teose)
+		      (5 NPRS maries)
+		      (7 NP-PRN *ICH*-1))
+	    (9 IP-MAT-PRN RMV:hit_sei+d...)
+	    (15 , .)
+	    (17 NP-PRN-1 (18 D +teose) (20 NS bitternesses))
+	    (22 BED were)
+	    (24 VAG cuminde)
+	    (26 IP-INF-PRP RMV:to_smiren_ure...)
+	    (36 . .))
+  (38 ID CMANCRIW-2-M1,II.277.517)) 
+
+
+/~*
++teo beo+d cominde to smirien vre lauerd. +te me +tole+d for his luue.
+(CMANCRIW-2-M1,II.277.518)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 7 BEP, 9 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 D +teo)
+		      (5 CP-REL *ICH*-1))
+	    (7 BEP beo+d)
+	    (9 VAG cominde)
+	    (11 IP-INF-PRP RMV:to_smirien_vre...)
+	    (21 , .)
+	    (23 CP-REL-1 (24 WNP-2 0)
+			 (26 C +te)
+			 (28 IP-SUB RMV:*T*-2_me_+tole+d...))
+	    (44 . .))
+  (46 ID CMANCRIW-2-M1,II.277.518)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmancriw-2-m1.psd	4/4/1163
+*/
+/*
+HEADER:
+source file:  cmastro-m3.psd
+*/
+
+/~*
+But sothly, if he passe the boundes of these forseide spaces, above or bynethe,
+thei seyn that the planete is "fallyng fro the ascendent."
+(CMASTRO-M3,671.C1.266)
+*~/
+/*
+55 IP-SUB:  55 IP-SUB, 61 BEP, 65 VAG
+*/
+( (55 IP-SUB (56 NP-SBJ (57 D the) (59 N planete))
+	     (61 BEP is)
+	     (63 " ")
+	     (65 VAG fallyng)
+	     (67 PP (68 P fro)
+		    (70 NP (71 D the) (73 N ascendent))))
+  (79 ID CMASTRO-M3,671.C1.266)) 
+
+
+/~*
+But understond wel that evermo generaly the houre inequal of the day with the
+houre inequal of the night contenen 30 degrees of the bordure, which bordure
+is evermo answeryng to the degrees of the equinoxial. Wherfore departe the
+arch of the day artificial in 12, and tak there the quantite of the houre
+inequale by day.
+(CMASTRO-M3,672.C2.344)
+*~/
+/*
+79 IP-SUB:  79 IP-SUB, 82 BEP, 87 VAG
+*/
+( (79 IP-SUB (80 NP-SBJ *T*-1)
+	     (82 BEP is)
+	     (84 ADVP-TMP (85 ADV evermo))
+	     (87 VAG answeryng)
+	     (89 PP (90 P to)
+		    (92 NP (93 D the)
+			   (95 NS degrees)
+			   (97 PP (98 P of)
+				  (100 NP (101 D the) (103 ADJ equinoxial))))))
+  (178 ID CMASTRO-M3,672.C2.344)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmastro-m3.psd	2/2/404
+*/
+/*
+HEADER:
+source file:  cmayenbi-m2.psd
+*/
+
+/~*
+Vor huanne +ter is werre <slash> betuene tuaye men: hit yual+t ofte <slash>
++tet +ter bye+t moche uolke dyade <slash> +tet ne habbe+t nenne gelt. cherchen
+tobroke. tounes uorbernd. abbeyes. priories. bernes destrud <slash> and men
+<slash> and wyfmen <slash> and children deserited <slash> and y-exiled. and
+londes destrud. and to moche <slash> of o+tre harmes; +tet bye+t y-do <slash>
+be +te encheyson <slash> of +tan <slash> +tet hi bye+t yhealde <slash> uor te
+amendi <slash> +tet <slash> +tis purchace+t. and +te lhord <slash> and alle
++to <slash> +tet bye+t to ham helpinde. an ine zuyche nyede.
+(CMAYENBI-M2,30.489)
+*~/
+/*
+284 IP-SUB-13:  284 IP-SUB-13, 287 BEP, 295 VAG
+*/
+( (284 IP-SUB-13 (285 NP-SBJ *T*-12)
+		 (287 BEP bye+t)
+		 (289 PP (290 P to)
+			 (292 NP (293 PRO ham)))
+		 (295 VAG helpinde))
+  (313 ID CMAYENBI-M2,30.489)) 
+
+
+/~*
+Alle o+tre +tinges bye+t chonginde <slash> ine eche manere of hare kende.
+(CMAYENBI-M2,104.2029)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 9 BEP, 11 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 Q Alle) (5 OTHER o+tre) (7 NS +tinges))
+	    (9 BEP bye+t)
+	    (11 VAG chonginde)
+	    (13 , <slash>)
+	    (15 PP (16 P ine)
+		   (18 NP (19 Q eche)
+			  (21 N manere)
+			  (23 PP (24 P of)
+				 (26 NP (27 PRO$ hare) (29 N kende)))))
+	    (31 . .))
+  (33 ID CMAYENBI-M2,104.2029)) 
+
+
+/~*
+and +te more +tet he is norissinde: me zay+t +tet he is +te substancieler. and
++tere-uore +tet ine +tise breade is more uirtue <slash> and of guod <slash>
+and of norture <slash> +tanne me mo+ge +tenche <slash> o+ter zigge.
+(CMAYENBI-M2,113.2172)
+*~/
+/*
+15 IP-SUB:  15 IP-SUB, 21 BEP, 23 VAG
+*/
+( (15 IP-SUB (16 NP-MSR *T*-2)
+	     (18 NP-SBJ (19 PRO he))
+	     (21 BEP is)
+	     (23 VAG norissinde))
+  (129 ID CMAYENBI-M2,113.2172)) 
+
+
+/~*
+Hi ne bye+t +tenchinde bote uor to uoluelle hire iornayes <slash> al huet hi
+come+t to hare eritage <slash> +tet is +te cite` of paradis <slash> +tet +te
+guode pilgrims zeche+t. ase zay+t zaynte paul +tet ne habbe+t <slash> ne
+nolle+t habbe +te eritage hier ine +tise wordle.
+(CMAYENBI-M2,254.2336)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 7 BEP, 9 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 PRO Hi))
+	    (5 NEG ne)
+	    (7 BEP bye+t)
+	    (9 VAG +tenchinde)
+	    (11 PP (12 P bote)
+		   (14 IP-INF RMV:uor_to_uoluelle...))
+	    (26 , <slash>)
+	    (28 PP (29 P21 al)
+		   (31 P22 huet)
+		   (33 CP-ADV (34 C 0)
+			      (36 IP-SUB RMV:hi_come+t_to...)))
+	    (153 . .))
+  (155 ID CMAYENBI-M2,254.2336)) 
+
+
+/~*
+cominde +ti riche.
+(CMAYENBI-M2,262.2489)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 2 BEP, 4 VAG
+*/
+( (1 IP-MAT (2 BEP *)
+	    (4 VAG cominde)
+	    (6 NP-SBJ (7 PRO$ +ti) (9 N riche))
+	    (11 . .))
+  (13 ID CMAYENBI-M2,262.2489)) 
+
+
+/~*
+Uor to sseawy +te lokynge of man wy+t-inne. +tellyche ane uorbysne <slash>
+oure lhord ihesu crist zay+t. '+Tis uorzo+te ywyte+t. +tet yef +te uader of
++te house wyste huyche time +te +tyef were comynde: uor-zo+te he wolde waky
+<slash> and nolde na+gt +tolye +tet me dolue his hous.'
+(CMAYENBI-M2,263.2509)
+*~/
+/*
+98 IP-SUB:  98 IP-SUB, 106 BED, 108 VAG
+*/
+( (98 IP-SUB (99 NP-TMP *T*-1)
+	     (101 NP-SBJ (102 D +te) (104 N +tyef))
+	     (106 BED were)
+	     (108 VAG comynde))
+  (154 ID CMAYENBI-M2,263.2509)) 
+
+
+/~*
+Ri+gtnesse uorzo+te ssel zitte amydde <slash> +tet echen his o+gen yef+t.
+Hueruore: huyche time +te +tyef is comynde <slash> me not.
+(CMAYENBI-M2,264.2519)
+*~/
+/*
+58 IP-SUB:  58 IP-SUB, 66 BEP, 68 VAG
+*/
+( (58 IP-SUB (59 NP-TMP *T*-4)
+	     (61 NP-SBJ (62 D +te) (64 N +tyef))
+	     (66 BEP is)
+	     (68 VAG comynde))
+  (79 ID CMAYENBI-M2,264.2519)) 
+
+
+/~*
+and buo+te on+tolyinde.
+(CMAYENBI-M2,265.2560)
+*~/
+/*
+1 IP-MAT-SPE:  1 IP-MAT-SPE, 7 BEP, 9 VAG
+*/
+( (1 IP-MAT-SPE (2 CONJ and)
+		(4 NP-SBJ (5 Q buo+te))
+		(7 BEP *)
+		(9 VAG on+tolyinde)
+		(11 . .))
+  (13 ID CMAYENBI-M2,265.2560)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmayenbi-m2.psd	8/8/2755
+*/
+/*
+HEADER:
+source file:  cmbenrul-m3.psd
+*/
+
+/~*
+Bi-fore +te werld er +tai semande,
+(CMBENRUL-M3,4.107)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 10 BEP, 15 VAG
+*/
+( (1 IP-MAT (2 PP (3 P Bi-fore)
+		  (5 NP (6 D +te) (8 N werld)))
+	    (10 BEP er)
+	    (12 NP-SBJ (13 PRO +tai))
+	    (15 VAG semande)
+	    (17 . ,))
+  (19 ID CMBENRUL-M3,4.107)) 
+
+
+/~*
+Ouir alle +tinges loke ye ne be noht gruchande of na +ting.
+(CMBENRUL-M3,29.958)
+*~/
+/*
+15 IP-SUB:  15 IP-SUB, 23 BEP, 27 VAG
+*/
+( (15 IP-SUB (16 NP-SBJ (17 PRO ye))
+	     (19 CODE <P_29>)
+	     (21 NEG ne)
+	     (23 BEP be)
+	     (25 NEG noht)
+	     (27 VAG gruchande)
+	     (29 PP (30 P of)
+		    (32 NP (33 Q na) (35 N +ting))))
+  (39 ID CMBENRUL-M3,29.958)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmbenrul-m3.psd	2/2/1454
+*/
+/*
+HEADER:
+source file:  cmboeth-m3.psd
+*/
+
+/~*
+and so as iche of hem is lakkynge to othir, thei ne han no power to bryngen a
+good that is ful and absolut;
+(CMBOETH-M3,434.C2.247)
+*~/
+/*
+13 IP-SUB:  13 IP-SUB, 23 BEP, 25 VAG
+*/
+( (13 IP-SUB (14 NP-SBJ (15 Q iche)
+			(17 PP (18 P of)
+			       (20 NP (21 PRO hem))))
+	     (23 BEP is)
+	     (25 VAG lakkynge)
+	     (27 PP (28 P to)
+		    (30 NP (31 OTHER othir))))
+  (76 ID CMBOETH-M3,434.C2.247)) 
+
+
+/~*
+And the thinges eek that men wenen ne haven none soules, ne desire thei nat,
+iche of hem, by semblable resoun to kepyn that that is hirs that is to seyn,
+that is accordynge to hir nature in conservacioun of hir beynge and endurynge?
+(CMBOETH-M3,435.C2.295)
+*~/
+/*
+113 IP-SUB:  113 IP-SUB, 116 BEP, 118 VAG
+*/
+( (113 IP-SUB (114 NP-SBJ *T*-3)
+	      (116 BEP is)
+	      (118 VAG accordynge)
+	      (120 PP (121 P to)
+		      (123 NP (124 PRO$ hir) (126 N nature)))
+	      (128 PP (129 P in)
+		      (131 NP (132 N conservacioun)
+			      (134 PP (135 P of)
+				      (137 NP (138 PRO$ hir)
+					      (140 N beynge)
+					      (142 CONJP (143 CONJ and)
+							 (145 NX (146 N endurynge))))))))
+  (154 ID CMBOETH-M3,435.C2.295)) 
+
+
+/~*
+"Ne I ne trete not here now of willeful moevynges of the soule that is knowyng,
+but of the naturel entencioun of thinges, as thus: ryght as we swolwen the
+mete that we resseyven and ne thinke nat on it, and as we drawen our breeth in
+slepynge that we witen it nat while we slepyn.
+(CMBOETH-M3,436.C1.305)
+*~/
+/*
+43 IP-SUB:  43 IP-SUB, 46 BEP, 48 VAG
+*/
+( (43 IP-SUB (44 NP-SBJ *T*-1)
+	     (46 BEP is)
+	     (48 VAG knowyng))
+  (199 ID CMBOETH-M3,436.C1.305)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmboeth-m3.psd	3/3/564
+*/
+/*
+HEADER:
+source file:  cmbrut3-m3.psd
+*/
+
+/~*
+& +tey founden an olde Cyte al wasted & forlete, +tat nas +ter-in nor man ne
+woman, ne no thing dwellynge;
+(CMBRUT3-M3,8.182)
+*~/
+/*
+31 IP-SUB:  31 IP-SUB, 34 NEG+BED, 59 VAG
+*/
+( (31 IP-SUB (32 NP-SBJ-1 *exp*)
+	     (34 NEG+BED nas)
+	     (36 PP (37 ADV+P +ter-in))
+	     (39 NP-1 (40 NP (41 CONJ nor) (43 N man) (45 CONJ ne) (47 N woman))
+		      (49 , ,)
+		      (51 CONJP (52 CONJ ne)
+				(54 NP (55 Q no) (57 N thing))))
+	     (59 VAG dwellynge))
+  (63 ID CMBRUT3-M3,8.182)) 
+
+
+/~*
+and +gaf ham an Ile al wildernesse, +tere +tat noman was duellyng, saf
+oneliche wilde bestes.
+(CMBRUT3-M3,28.811)
+*~/
+/*
+29 IP-SUB:  29 IP-SUB, 37 BED, 39 VAG
+*/
+( (29 IP-SUB (30 ADVP-LOC *T*-1)
+	     (32 NP-SBJ (33 Q+N noman)
+			(35 PP *ICH*-2))
+	     (37 BED was)
+	     (39 VAG duellyng)
+	     (41 , ,)
+	     (43 PP-2 (44 P saf)
+		      (46 NP (47 FP oneliche) (49 ADJ wilde) (51 NS bestes))))
+  (55 ID CMBRUT3-M3,28.811)) 
+
+
+/~*
+Hit bifelle so +tat tydynges come to him oppon a day, +tat +te Kyng Rodrik of
+Gascoigne was comen into +tis lande wi+t an huge noumbre of peple, and was
+duellyng in Steynesmore.
+(CMBRUT3-M3,36.1110)
+*~/
+/*
+89 IP-SUB:  89 IP-SUB, 92 BED, 94 VAG
+*/
+( (89 IP-SUB (90 NP-SBJ *con*)
+	     (92 BED was)
+	     (94 VAG duellyng)
+	     (96 PP (97 P in)
+		    (99 NP (100 NPR Steynesmore))))
+  (104 ID CMBRUT3-M3,36.1110)) 
+
+
+/~*
+anone as +tis Octouian wiste +tat his lorde was duellyng at Rome, he seisede
+al +te lande into his honde,
+(CMBRUT3-M3,40.1244)
+*~/
+/*
+22 IP-SUB:  22 IP-SUB, 28 BED, 30 VAG
+*/
+( (22 IP-SUB (23 NP-SBJ (24 PRO$ his) (26 N lorde))
+	     (28 BED was)
+	     (30 VAG duellyng)
+	     (32 PP (33 P at)
+		    (35 NP (36 NPR Rome))))
+  (62 ID CMBRUT3-M3,40.1244)) 
+
+
+/~*
+but she hade made priuely to God a vow of chastite, +tat here fader wiste it
+nou+gt, ne noman elles +tat was leuyng oppon er+te.
+(CMBRUT3-M3,43.1314)
+*~/
+/*
+69 IP-SUB:  69 IP-SUB, 72 BED, 74 VAG
+*/
+( (69 IP-SUB (70 NP-SBJ *T*-3)
+	     (72 BED was)
+	     (74 VAG leuyng)
+	     (76 PP (77 P oppon)
+		    (79 NP (80 NPR er+te))))
+  (84 ID CMBRUT3-M3,43.1314)) 
+
+
+/~*
+and by +te beem +tat stode towarde +te Est, is vnderstonde +tat +ge shul geten
+a sone +tat shal conquere al Fraunce and alle +te landes +tat be+t longeyng to
++te Kyng of Fraunce, +tat shal bene a wor+tier Kyng, and more of honoure: +tan
+euer was eny of his ancestres.
+(CMBRUT3-M3,64.1918)
+*~/
+/*
+87 IP-SUB:  87 IP-SUB, 90 BEP, 92 VAG
+*/
+( (87 IP-SUB (88 NP-SBJ *T*-4)
+	     (90 BEP be+t)
+	     (92 VAG longeyng)
+	     (94 PP (95 P to)
+		    (97 NP (98 D +te)
+			   (100 N Kyng)
+			   (102 PP (103 P of)
+				   (105 NP (106 NPR Fraunce))))))
+  (177 ID CMBRUT3-M3,64.1918)) 
+
+
+/~*
+& in the same place +tai enterede Aurilambros, +te secunde +gere of his regne,
+wi+t al +te worship +tat myght bene longyng to soche a kyng, of whos soule God
+haue mercy!
+(CMBRUT3-M3,65.1937)
+*~/
+/*
+56 IP-SUB:  56 IP-SUB, 61 BE, 63 VAG
+*/
+( (56 IP-SUB (57 NP-SBJ *T*-1)
+	     (59 MD myght)
+	     (61 BE bene)
+	     (63 VAG longyng)
+	     (65 PP (66 P to)
+		    (68 NP (69 SUCH soche)
+			   (71 D a)
+			   (73 N kyng)
+			   (75 , ,)
+			   (77 CP-REL (78 WPP-2 (79 P of)
+						(81 WNP (82 WPRO$ whos) (84 N soule)))
+				      (86 C 0)
+				      (88 IP-SUB RMV:*T*-2_God_haue...)))))
+  (101 ID CMBRUT3-M3,65.1937)) 
+
+
+/~*
+& +tai ordeynede ham +tiderward +tere +tat +te kyng was duellyng,
+(CMBRUT3-M3,69.2066)
+*~/
+/*
+21 IP-SUB:  21 IP-SUB, 29 BED, 33 VAG
+*/
+( (21 IP-SUB (22 ADVP-LOC *T*-1)
+	     (24 NP-SBJ (25 D +te) (27 N kyng))
+	     (29 BED was)
+	     (31 CODE <P_69>)
+	     (33 VAG duellyng))
+  (37 ID CMBRUT3-M3,69.2066)) 
+
+
+/~*
+and +tere was also ano+ter hull ney+g, +tat +tere was oppon ano+tere fire
+brynnyng.
+(CMBRUT3-M3,84.2545)
+*~/
+/*
+26 IP-SUB:  26 IP-SUB, 30 BED, 42 VAG
+*/
+( (26 IP-SUB (27 NP-SBJ-3 (28 EX +tere))
+	     (30 BED was)
+	     (32 PP (33 P oppon)
+		    (35 NP *T*-2))
+	     (37 NP-3 (38 D+OTHER ano+tere) (40 N fire))
+	     (42 VAG brynnyng))
+  (46 ID CMBRUT3-M3,84.2545)) 
+
+
+/~*
+& wist +tat Arthure Was comyng.
+(CMBRUT3-M3,90.2714)
+*~/
+/*
+11 IP-SUB:  11 IP-SUB, 15 BED, 17 VAG
+*/
+( (11 IP-SUB (12 NP-SBJ (13 NPR Arthure))
+	     (15 BED Was)
+	     (17 VAG comyng))
+  (21 ID CMBRUT3-M3,90.2714)) 
+
+
+/~*
+but euer he was medlyng wi+t his owen peple,
+(CMBRUT3-M3,92.2806)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 10 BED, 12 VAG
+*/
+( (1 IP-MAT (2 CONJ but)
+	    (4 ADVP-TMP (5 ADV euer))
+	    (7 NP-SBJ (8 PRO he))
+	    (10 BED was)
+	    (12 VAG medlyng)
+	    (14 PP (15 P wi+t)
+		   (17 NP (18 PRO$ his) (20 ADJ owen) (22 N peple)))
+	    (24 . ,))
+  (26 ID CMBRUT3-M3,92.2806)) 
+
+
+/~*
+and come into Northumberlond +tere +tat +te Saxones were duellyng;
+(CMBRUT3-M3,94.2845)
+*~/
+/*
+20 IP-SUB:  20 IP-SUB, 28 BED, 30 VAG
+*/
+( (20 IP-SUB (21 ADVP-LOC *T*-1)
+	     (23 NP-SBJ (24 D +te) (26 NPRS Saxones))
+	     (28 BED were)
+	     (30 VAG duellyng))
+  (34 ID CMBRUT3-M3,94.2845)) 
+
+
+/~*
+And +tis lady was duellyng at a manere bisides +te forest +tere +tat +te Kyng
+wolde hunte,
+(CMBRUT3-M3,115.3482)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 9 BED, 11 VAG
+*/
+( (1 IP-MAT (2 CONJ And)
+	    (4 NP-SBJ (5 D +tis) (7 N lady))
+	    (9 BED was)
+	    (11 VAG duellyng)
+	    (13 PP (14 P at)
+		   (16 NP (17 D a)
+			  (19 N manere)
+			  (21 PP (22 P bisides)
+				 (24 CODE <P_115>)
+				 (26 NP (27 D +te) (29 N forest)))
+			  (31 CP-REL (32 WADVP-1 (33 ADV +tere))
+				     (35 C +tat)
+				     (37 IP-SUB RMV:*T*-1_+te_Kyng...))))
+	    (49 . ,))
+  (51 ID CMBRUT3-M3,115.3482)) 
+
+
+/~*
++te Erles and barouns, by here com-mune assent & conseile, senten into
+Normandy forto seche +to ij bre+tern Alurede & Edward, +tat were duellyng wi+t
++te duk Richard +tat Was here eme,
+(CMBRUT3-M3,126.3815)
+*~/
+/*
+67 IP-SUB:  67 IP-SUB, 70 BED, 72 VAG
+*/
+( (67 IP-SUB (68 NP-SBJ *T*-1)
+	     (70 BED were)
+	     (72 VAG duellyng)
+	     (74 PP (75 P wi+t)
+		    (77 NP (78 D +te)
+			   (80 N duk)
+			   (82 NP-PRN (83 NPR Richard))
+			   (85 CP-REL (86 WNP-2 0)
+				      (88 C +tat)
+				      (90 IP-SUB RMV:*T*-2_Was_here...)))))
+  (102 ID CMBRUT3-M3,126.3815)) 
+
+
+/~*
+and saide to him in +tis maner: "Sire Andrew," quod he, "+ge mow wel
+vnderstonde how +tat our Lord +te Kyng is ladde and misgouernede by miche
+false conseil, +trou+g Sir Hugh +te Spenser +te fader, & Sir Hugh +te sone, &
+Sir Iohn Erl of Arundel, and +trou+g Maistre Robert Baldok, a false pilede
+clerc, +tat is in +te Kyngus court duellyng; wherfore y praye +gow +tat +ge
+wil come wi+t vs, wi+t al +te power +tat +ge haue ordeynede, and helpe to
+destroie +te venyme of Engeland, and +te traitoures +tat bene +terin,
+(CMBRUT3-M3,218.3902)
+*~/
+/*
+182 IP-SUB:  182 IP-SUB, 185 BEP, 198 VAG
+*/
+( (182 IP-SUB (183 NP-SBJ *T*-2)
+	      (185 BEP is)
+	      (187 PP (188 P in)
+		      (190 NP (191 NP-POS (192 D +te) (194 N$ Kyngus))
+			      (196 N court)))
+	      (198 VAG duellyng))
+  (314 ID CMBRUT3-M3,218.3902)) 
+
+
+/~*
+And fer+termore +te false traitour hade take a gret some of golde of Sir Iamys
+Douglas, forto bene a+geyns +te Kyng of Engeland, and to bene helpyng and
+holdyng wi+t +te Scottes; +trou+g whos tresoun +te Kyng of Engeland was
+scomfitede at Biheland er +tat he come +tider; wherfore +te Kyng was toward
+him ful wro+t, and lete priuely enquere in +te contre about, how hit was.
+(CMBRUT3-M3,226.4097)
+*~/
+/*
+70 IP-INF-PRP:  70 IP-INF-PRP, 73 BE, 75 VAG
+*/
+( (70 IP-INF-PRP (71 TO to)
+		 (73 BE bene)
+		 (75 VAG (76 VAG helpyng) (78 CONJ and) (80 VAG holdyng))
+		 (82 PP (83 P wi+t)
+			(85 NP (86 D +te) (88 NPRS Scottes))))
+  (221 ID CMBRUT3-M3,226.4097)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmbrut3-m3.psd	16/16/4117
+*/
+/*
+HEADER:
+source file:  cmcapchr-m4.psd
+*/
+
+/~*
+Whan he was confermed in his regne, he mad dew inquisicion of all hem +tat
+were consenting to his fader deth,
+(CMCAPCHR-M4,35.103)
+*~/
+/*
+49 IP-SUB:  49 IP-SUB, 52 BED, 54 VAG
+*/
+( (49 IP-SUB (50 NP-SBJ *T*-1)
+	     (52 BED were)
+	     (54 VAG consenting)
+	     (56 PP (57 P to)
+		    (59 NP (60 NP-POS (61 PRO$ his) (63 N$ fader))
+			   (65 N deth))))
+  (69 ID CMCAPCHR-M4,35.103)) 
+
+
+/~*
+In his tyme Transamunde, kyng of Wandalis, sperd all +te cherchis in Affrik
++tat were not consenting to Arrius.
+(CMCAPCHR-M4,70.1138)
+*~/
+/*
+46 IP-SUB:  46 IP-SUB, 49 BED, 53 VAG
+*/
+( (46 IP-SUB (47 NP-SBJ *T*-1)
+	     (49 BED were)
+	     (51 NEG not)
+	     (53 VAG consenting)
+	     (55 PP (56 P to)
+		    (58 NP (59 NPR Arrius))))
+  (63 ID CMCAPCHR-M4,70.1138)) 
+
+
+/~*
+In +tis tyme was Seynt Brandane leuyng in Scotlond,
+(CMCAPCHR-M4,72.1221)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 10 BED, 17 VAG
+*/
+( (1 IP-MAT (2 PP (3 P In)
+		  (5 NP (6 D +tis) (8 N tyme)))
+	    (10 BED was)
+	    (12 NP-SBJ (13 NPR Seynt) (15 NPR Brandane))
+	    (17 VAG leuyng)
+	    (19 PP (20 P in)
+		   (22 NP (23 NPR Scotlond)))
+	    (25 . ,))
+  (27 ID CMCAPCHR-M4,72.1221)) 
+
+
+/~*
+The emperour was not consenting to +tat eleccion,
+(CMCAPCHR-M4,104.2240)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 7 BED, 11 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 D The) (5 N emperour))
+	    (7 BED was)
+	    (9 NEG not)
+	    (11 VAG consenting)
+	    (13 PP (14 P to)
+		   (16 NP (17 D +tat) (19 N eleccion)))
+	    (21 . ,))
+  (23 ID CMCAPCHR-M4,104.2240)) 
+
+
+/~*
+There was +te prouincial of +te ordre alegging for him her exempcion, who +tei
+were immediatly vndir +te pope, wherfor he appeled fro +te bischop,
+(CMCAPCHR-M4,130.3006)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 5 BED, 20 VAG
+*/
+( (1 IP-MAT (2 ADVP-LOC (3 ADV There))
+	    (5 BED was)
+	    (7 NP-SBJ (8 D +te)
+		      (10 N prouincial)
+		      (12 PP (13 P of)
+			     (15 NP (16 D +te) (18 N ordre))))
+	    (20 VAG alegging)
+	    (22 PP (23 P for)
+		   (25 NP (26 PRO him)))
+	    (28 NP-OB1 (29 NP (30 PRO$ her) (32 N exempcion))
+		       (34 , ,)
+		       (36 CONJP (37 CP-QUE-SUB (38 WADVP-1 (39 WADV who))
+						(41 C 0)
+						(43 IP-SUB RMV:*T*-1_+tei_were...))))
+	    (62 , ,)
+	    (64 CP-CAR (65 WPP-2 (66 WADV+P wherfor))
+		       (68 C 0)
+		       (70 IP-SUB RMV:*T*-2_he_appeled...))
+	    (86 . ,))
+  (88 ID CMCAPCHR-M4,130.3006)) 
+
+
+/~*
+In +tis tyme, aftir many tretis betwix +tis lond and Frauns, and no+ting +tat
++tei profered was acording to reson, +te kyng mad redy his schippis at
+Southampton to spede him to his conquest.
+(CMCAPCHR-M4,243.4037)
+*~/
+/*
+44 IP-SUB:  44 IP-SUB, 61 BED, 63 VAG
+*/
+( (44 IP-SUB (45 NP-SBJ (46 Q+N no+ting)
+			(48 CP-REL (49 WNP-1 0)
+				   (51 C +tat)
+				   (53 IP-SUB RMV:*T*-1_+tei_profered...)))
+	     (61 BED was)
+	     (63 VAG acording)
+	     (65 PP (66 P to)
+		    (68 NP (69 N reson))))
+  (113 ID CMCAPCHR-M4,243.4037)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmcapchr-m4.psd	6/6/4176
+*/
+/*
+HEADER:
+source file:  cmcapser-m4.psd
+*/
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmcapser-m4.psd	0/0/91
+*/
+/*
+HEADER:
+source file:  cmcloud-m3.psd
+*/
+
+/~*
+For first +tou wote wel +tat when +tou were leuyng in +te comoun degree of
+Cristen mens leuyng in companie of +ti wordely freendes, it seme+t to me +tat
++te euerlasting loue of his Godheed, +torow +te whiche he mad +tee and wrou+gt
++tee when +tou were nou+gt, and si+ten bou+gt +tee wi+t +te prise of his
+precious blood when +tou were loste in Adam, mi+gt not suffre +tee be so fer
+fro him in forme and degree of leuyng.
+(CMCLOUD-M3,14.11)
+*~/
+/*
+25 IP-SUB:  25 IP-SUB, 29 BED, 31 VAG
+*/
+( (25 IP-SUB (26 NP-SBJ (27 PRO +tou))
+	     (29 BED were)
+	     (31 VAG leuyng)
+	     (33 PP (34 P in)
+		    (36 NP (37 D +te)
+			   (39 ADJ comoun)
+			   (41 N degree)
+			   (43 PP (44 P of)
+				  (46 NP (47 NP-POS (48 ADJ Cristen) (50 NS$ mens))
+					 (52 N leuyng)))))
+	     (54 PP (55 P in)
+		    (57 NP (58 N companie)
+			   (60 PP (61 P of)
+				  (63 NP (64 PRO$ +ti) (66 ADJ wordely) (68 NS freendes))))))
+  (257 ID CMCLOUD-M3,14.11)) 
+
+
+/~*
+In +tis tyme it is +tat a soule ha+t comprehendid, after +te lesson of Seynte
+Poule, wi+t alle seyntes - not fully, bot in maner and in partye, as it is
+acordyng vnto +tis werk - whiche is +te leng+te and +te breed, +te hei+gt and
++te depnes of Euerlastyng & Allouely, Almi+gty & Alle-witty God.
+(CMCLOUD-M3,75.307)
+*~/
+/*
+99 IP-SUB:  99 IP-SUB, 105 BEP, 107 VAG
+*/
+( (99 IP-SUB (100 ADVP *T*-2)
+	     (102 NP-SBJ (103 PRO it))
+	     (105 BEP is)
+	     (107 VAG acordyng)
+	     (109 PP (110 P vnto)
+		     (112 NP (113 D +tis) (115 N werk))))
+  (188 ID CMCLOUD-M3,75.307)) 
+
+
+/~*
+For what tyme +tat a soule dispose+t him effectuely to +tis werk, +tan as fast
+sodenly - vnwetyng him-self +tat worche+t - +te body, +tat parauenture bifore
+er he bygan was sumwhat heeldyng donwardes on o syde or on o+ter for ese of
++te flesche, by vertewe of +te spirit schal set it vpri+gt, folowyng in maner
+& in licnes bodely +te werk of +te spirit +tat is maad goostly.
+(CMCLOUD-M3,113.537)
+*~/
+/*
+82 IP-SUB:  82 IP-SUB, 102 BED, 107 VAG
+*/
+( (82 IP-SUB (83 NP-SBJ *T*-3)
+	     (85 ADVP (86 ADV parauenture))
+	     (88 PP (89 ADV bifore)
+		    (91 P er)
+		    (93 CP-ADV (94 C 0)
+			       (96 IP-SUB RMV:he_bygan...)))
+	     (102 BED was)
+	     (104 NP-MSR (105 Q+WPRO sumwhat))
+	     (107 VAG heeldyng)
+	     (109 ADVP-DIR (110 RP+WARD donwardes))
+	     (112 PP (113 PP (114 P on)
+			     (116 NP (117 ONE o) (119 N syde)))
+		     (121 CONJP (122 CONJ or)
+				(124 PP (125 P on)
+					(127 NP (128 OTHER o+ter)))))
+	     (130 PP (131 P for)
+		     (133 NP (134 N ese)
+			     (136 PP (137 P of)
+				     (139 NP (140 D +te) (142 N flesche))))))
+  (225 ID CMCLOUD-M3,113.537)) 
+
+
+/~*
+Sensualite is a mi+gte of oure soule, rechyng & regnyng in +te bodely wittes,
++torow +te whiche we haue bodely knowyng & felyng of alle bodely creatures,
+whe+ter +tei be likyng or gruchyng.
+(CMCLOUD-M3,118.603)
+*~/
+/*
+91 IP-SUB:  91 IP-SUB, 95 BEP, 97 VAG
+*/
+( (91 IP-SUB (92 NP-SBJ (93 PRO +tei))
+	     (95 BEP be)
+	     (97 VAG (98 VAG likyng) (100 CONJ or) (102 VAG gruchyng)))
+  (106 ID CMCLOUD-M3,118.603)) 
+
+
+/~*
+And +gif +tee +tink +tat +tis maner of worching be not acordyng to +ti
+disposicion in body & in soule, +tou maist leue it, & take ano+ter sauely wi+t
+good goostly counseile wi+t-outyn blame.
+(CMCLOUD-M3,129.763)
+*~/
+/*
+22 IP-SUB:  22 IP-SUB, 34 BEP, 38 VAG
+*/
+( (22 IP-SUB (23 NP-SBJ (24 D +tis)
+			(26 N maner)
+			(28 PP (29 P of)
+			       (31 NP (32 N worching))))
+	     (34 BEP be)
+	     (36 NEG not)
+	     (38 VAG acordyng)
+	     (40 PP (41 P to)
+		    (43 NP (44 PRO$ +ti) (46 N disposicion)))
+	     (48 PP (49 PP (50 P in)
+			   (52 NP (53 N body)))
+		    (55 CONJP (56 CONJ &)
+			      (58 PP (59 P in)
+				     (61 NP (62 N soule))))))
+  (108 ID CMCLOUD-M3,129.763)) 
+
+
+/~*
+For parauenture +ter is som mater +ter-inne, in +te beginnyng or in +te middes,
++te whiche is hanging & not fully declarid +tere as it stonde+t.
+(CMCLOUD-M3,130.775)
+*~/
+/*
+52 IP-SUB-3:  52 IP-SUB-3, 55 BEP, 57 VAG
+*/
+( (52 IP-SUB-3 (53 NP-SBJ *T*-2)
+	       (55 BEP is)
+	       (57 VAG hanging)
+	       (59 IP-SUB-PRN=3 RMV:&_not_fully...)
+	       (69 ADVP-LOC (70 ADV +tere)
+			    (72 CP-REL (73 WADVP-4 0)
+				       (75 C as)
+				       (77 IP-SUB RMV:*T*-4_it_stonde+t...))))
+  (87 ID CMCLOUD-M3,130.775)) 
+
+
+/~*
+Bot +gif +tei wil wetyn more nere, lat hem loke +gif it be euermore presing in
++teire mynde more costumabely +ten is any o+ter of goostly excersise.
+(CMCLOUD-M3,131.792)
+*~/
+/*
+38 IP-SUB:  38 IP-SUB, 42 BEP, 47 VAG
+*/
+( (38 IP-SUB (39 NP-SBJ (40 PRO it))
+	     (42 BEP be)
+	     (44 ADVP-TMP (45 ADV euermore))
+	     (47 VAG presing)
+	     (49 PP (50 P in)
+		    (52 NP (53 PRO$ +teire) (55 N mynde)))
+	     (57 ADVP (58 QR more)
+		      (60 ADV costumabely)
+		      (62 PP (63 P +ten)
+			     (65 CP-CMP (66 WADVP-1 0)
+					(68 C 0)
+					(70 IP-SUB RMV:*T*-1_is_any...)))))
+  (90 ID CMCLOUD-M3,131.792)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmcloud-m3.psd	7/7/814
+*/
+/*
+HEADER:
+source file:  cmctmeli-m3.psd
+*/
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmctmeli-m3.psd	0/0/861
+*/
+/*
+HEADER:
+source file:  cmctpars-m3.psd
+*/
+
+/~*
+and withouteforth shal be the world al brennynge.
+(CMCTPARS-M3,291.C1.119)
+*~/
+/*
+1 IP-MAT-SPE:  1 IP-MAT-SPE, 9 BE, 19 VAG
+*/
+( (1 IP-MAT-SPE (2 CONJ and)
+		(4 ADVP-LOC (5 ADV+ADV withouteforth))
+		(7 MD shal)
+		(9 BE be)
+		(11 NP-SBJ (12 D the) (14 N world))
+		(16 ADVP (17 Q al))
+		(19 VAG brennynge)
+		(21 . .))
+  (23 ID CMCTPARS-M3,291.C1.119)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmctpars-m3.psd	1/1/1667
+*/
+/*
+HEADER:
+source file:  cmearlps-m2.psd
+*/
+
+/~*
+For +ter nys non in dampnacioun, +tat hys +tenchand on +te;
+(CMEARLPS-M2,5.188)
+*~/
+/*
+25 IP-SUB:  25 IP-SUB, 28 BEP, 30 VAG
+*/
+( (25 IP-SUB (26 NP-SBJ *T*-2)
+	     (28 BEP hys)
+	     (30 VAG +tenchand)
+	     (32 PP (33 P on)
+		    (35 NP (36 PRO +te))))
+  (40 ID CMEARLPS-M2,5.188)) 
+
+
+/~*
+What +tynge ys man, +tat +tou ert +tenchand on hym? o+ter mannes sone, +tat ou
+visites hym?
+(CMEARLPS-M2,7.276)
+*~/
+/*
+21 IP-SUB:  21 IP-SUB, 25 BEP, 27 VAG
+*/
+( (21 IP-SUB (22 NP-SBJ (23 PRO +tou))
+	     (25 BEP ert)
+	     (27 VAG +tenchand)
+	     (29 PP (30 P on)
+		    (32 NP (33 PRO hym))))
+  (62 ID CMEARLPS-M2,7.276)) 
+
+
+/~*
+ne ich ne shal nou+gt be +tenchand on her names by my lippes.
+(CMEARLPS-M2,15.557)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 13 BE, 15 VAG
+*/
+( (1 IP-MAT (2 CONJ ne)
+	    (4 NP-SBJ (5 PRO ich))
+	    (7 NEG ne)
+	    (9 MD shal)
+	    (11 NEG nou+gt)
+	    (13 BE be)
+	    (15 VAG +tenchand)
+	    (17 PP (18 P on)
+		   (20 NP (21 PRO$ her) (23 NS names)))
+	    (25 PP (26 P by)
+		   (28 NP (29 PRO$ my) (31 NS lippes)))
+	    (33 . .))
+  (35 ID CMEARLPS-M2,15.557)) 
+
+
+/~*
++Te ry+gtfulnesses of our Lord $ben makand ioyful ry+gtlich +te hertes,
+(CMEARLPS-M2,21.825)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 15 BEP, 17 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 D +Te)
+		      (5 NS ry+gtfulnesses)
+		      (7 PP (8 P of)
+			    (10 NP (11 PRO$ our) (13 NPR Lord))))
+	    (15 BEP $ben)
+	    (17 VAG makand)
+	    (19 IP-SMC RMV:ioyful_ry+gtlich_+te...)
+	    (31 . ,))
+  (33 ID CMEARLPS-M2,21.825)) 
+
+
+/~*
+Be he +tenchand on al +ty sacrifice,
+(CMEARLPS-M2,22.855)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 2 BEP, 7 VAG
+*/
+( (1 IP-MAT (2 BEP Be)
+	    (4 NP-SBJ (5 PRO he))
+	    (7 VAG +tenchand)
+	    (9 PP (10 P on)
+		  (12 NP (13 Q al) (15 PRO$ +ty) (17 N sacrifice)))
+	    (19 . ,))
+  (21 ID CMEARLPS-M2,22.855)) 
+
+
+/~*
+and our Lordes aungel be constreinand hem.
+(CMEARLPS-M2,39.1672)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 12 BEP, 14 VAG
+*/
+( (1 IP-MAT (2 CONJ and)
+	    (4 NP-SBJ (5 NP-POS (6 PRO$ our) (8 NPR$ Lordes))
+		      (10 N aungel))
+	    (12 BEP be)
+	    (14 VAG constreinand)
+	    (16 NP-OB1 (17 PRO hem))
+	    (19 . .))
+  (21 ID CMEARLPS-M2,39.1672)) 
+
+
+/~*
+And as hij were anoiand to me, y was clo+ted in penaunce.
+(CMEARLPS-M2,40.1697)
+*~/
+/*
+10 IP-SUB:  10 IP-SUB, 14 BED, 16 VAG
+*/
+( (10 IP-SUB (11 NP-SBJ (12 PRO hij))
+	     (14 BED were)
+	     (16 VAG anoiand)
+	     (18 PP (19 P to)
+		    (21 NP (22 PRO me))))
+  (41 ID CMEARLPS-M2,40.1697)) 
+
+
+/~*
+for-+ty, Lord, y shal be +tenchand on +te, God, of +te $turning of folke of
++te londe of Jordan and of +te folke of +te littel hille of Hermon.
+(CMEARLPS-M2,51.2211)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 17 BE, 19 VAG
+*/
+( (1 IP-MAT (2 PP (3 P+D for-+ty))
+	    (5 , ,)
+	    (7 NP-VOC (8 NPR Lord))
+	    (10 , ,)
+	    (12 NP-SBJ (13 PRO y))
+	    (15 MD shal)
+	    (17 BE be)
+	    (19 VAG +tenchand)
+	    (21 PP (22 P on)
+		   (24 NP (25 PRO +te)))
+	    (27 , ,)
+	    (29 NP-VOC (30 NPR God))
+	    (32 , ,)
+	    (34 PP (35 P of)
+		   (37 NP (38 D +te)
+			  (40 N $turning)
+			  (42 PP (43 PP (44 P of)
+					(46 NP (47 N folke)
+					       (49 PP (50 P of)
+						      (52 NP (53 D +te)
+							     (55 N londe)
+							     (57 PP (58 P of)
+								    (60 NP (61 NPR Jordan)))))))
+				 (63 CONJP (64 CONJ and)
+					   (66 PP (67 P of)
+						  (69 NP (70 D +te)
+							 (72 N folke)
+							 (74 PP (75 P of)
+								(77 NP (78 D +te)
+								       (80 ADJ littel)
+								       (82 N hille)
+								       (84 PP (85 P of)
+									      (87 NP (88 NPR Hermon)))))))))))
+	    (90 . .))
+  (92 ID CMEARLPS-M2,51.2211)) 
+
+
+/~*
+God loked fram heuen vp mennes sones, +tat he se, +gyf any be vnderstondeand
+o+ter sechand God.
+(CMEARLPS-M2,63.2758)
+*~/
+/*
+39 IP-SUB:  39 IP-SUB, 43 BEP, 45 VAG
+*/
+( (39 IP-SUB (40 NP-SBJ (41 Q any))
+	     (43 BEP be)
+	     (45 VAG (46 VAG vnderstondeand) (48 CONJ o+ter) (50 VAG sechand))
+	     (52 NP-OB1 (53 NPR God)))
+  (57 ID CMEARLPS-M2,63.2758)) 
+
+
+/~*
+and hij were derend to me in ire.
+(CMEARLPS-M2,64.2817)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 7 BED, 9 VAG
+*/
+( (1 IP-MAT (2 CONJ and)
+	    (4 NP-SBJ (5 PRO hij))
+	    (7 BED were)
+	    (9 VAG derend)
+	    (11 PP (12 P to)
+		   (14 NP (15 PRO me)))
+	    (17 PP (18 P in)
+		   (20 NP (21 N ire)))
+	    (23 . .))
+  (25 ID CMEARLPS-M2,64.2817)) 
+
+
+/~*
+for many were fe+gtand o+gains me.
+(CMEARLPS-M2,66.2897)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 7 BED, 9 VAG
+*/
+( (1 IP-MAT (2 CONJ for)
+	    (4 NP-SBJ (5 Q many))
+	    (7 BED were)
+	    (9 VAG fe+gtand)
+	    (11 PP (12 P o+gains)
+		   (14 NP (15 PRO me)))
+	    (17 . .))
+  (19 ID CMEARLPS-M2,66.2897)) 
+
+
+/~*
+And man shal saie for-so+te, +Gyf frute be to +te ry+gtful, for-so+te God is
+iugeand hem in er+te.
+(CMEARLPS-M2,68.3006)
+*~/
+/*
+38 IP-MAT-SPE:  38 IP-MAT-SPE, 45 BEP, 47 VAG
+*/
+( (38 IP-MAT-SPE (39 PP (40 P+N for-so+te))
+		 (42 NP-SBJ (43 NPR God))
+		 (45 BEP is)
+		 (47 VAG iugeand)
+		 (49 NP-OB1 (50 PRO hem))
+		 (52 PP (53 P in)
+			(55 NP (56 NPR er+te))))
+  (60 ID CMEARLPS-M2,68.3006)) 
+
+
+/~*
+So was ich +tenchand on +te up my bedde,
+(CMEARLPS-M2,73.3206)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 5 BED, 10 VAG
+*/
+( (1 IP-MAT (2 ADVP (3 ADV So))
+	    (5 BED was)
+	    (7 NP-SBJ (8 PRO ich))
+	    (10 VAG +tenchand)
+	    (12 PP (13 P on)
+		   (15 NP (16 PRO +te)))
+	    (18 PP (19 P up)
+		   (21 NP (22 PRO$ my) (24 N bedde)))
+	    (26 . ,))
+  (28 ID CMEARLPS-M2,73.3206)) 
+
+
+/~*
+ha +ge folk, where-to loke +ge in-to +te heuens ful of ioies? 17. +Te heuen in
+which it is wele likeand to God to wonen in it;
+(CMEARLPS-M2,78.3434)
+*~/
+/*
+58 IP-SUB:  58 IP-SUB, 62 BEP, 67 VAG
+*/
+( (58 IP-SUB (59 NP-SBJ-3 (60 PRO it))
+	     (62 BEP is)
+	     (64 ADVP (65 ADV wele))
+	     (67 VAG likeand)
+	     (69 PP (70 P to)
+		    (72 NP (73 NPR God)))
+	     (75 IP-INF-3 RMV:to_wonen_in...))
+  (88 ID CMEARLPS-M2,78.3434)) 
+
+
+/~*
+Be +tou by-+tenchand of +ty gaderyng, +tat tou hate-dest fram +te bygynnyng.
+(CMEARLPS-M2,88.3869)
+*~/
+/*
+1 IP-IMP:  1 IP-IMP, 2 BEI, 7 VAG
+*/
+( (1 IP-IMP (2 BEI Be)
+	    (4 NP-SBJ (5 PRO +tou))
+	    (7 VAG by-+tenchand)
+	    (9 PP (10 P of)
+		  (12 NP (13 PRO$ +ty)
+			 (15 N gaderyng)
+			 (17 , ,)
+			 (19 CP-REL (20 WNP-1 0)
+				    (22 C +tat)
+				    (24 IP-SUB RMV:*T*-1_tou_hate-dest...))))
+	    (40 . .))
+  (42 ID CMEARLPS-M2,88.3869)) 
+
+
+/~*
+Be +to +tenchend on +tys +tynge;
+(CMEARLPS-M2,90.3918)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 2 BEP, 7 VAG
+*/
+( (1 IP-MAT (2 BEP Be)
+	    (4 NP-SBJ (5 D +to))
+	    (7 VAG +tenchend)
+	    (9 PP (10 P on)
+		  (12 NP (13 D +tys) (15 N +tynge)))
+	    (17 . ;))
+  (19 ID CMEARLPS-M2,90.3918)) 
+
+
+/~*
+be +tou +tenchand of +tyn repruces of hem +tat ben alday of +te vnwys.
+(CMEARLPS-M2,90.3932)
+*~/
+/*
+1 IP-IMP:  1 IP-IMP, 2 BEI, 7 VAG
+*/
+( (1 IP-IMP (2 BEI be)
+	    (4 NP-SBJ (5 PRO +tou))
+	    (7 VAG +tenchand)
+	    (9 PP (10 P of)
+		  (12 NP (13 PRO$ +tyn)
+			 (15 NS repruces)
+			 (17 PP (18 P of)
+				(20 NP (21 PRO hem)
+				       (23 CP-REL (24 WNP-1 0)
+						  (26 C +tat)
+						  (28 IP-SUB RMV:*T*-1_ben_alday...))))))
+	    (44 . .))
+  (46 ID CMEARLPS-M2,90.3932)) 
+
+
+/~*
++Tou art ali+gtand wonderfullich of mounteines euer lastand;
+(CMEARLPS-M2,91.3983)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 5 BEP, 7 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 PRO +Tou))
+	    (5 BEP art)
+	    (7 VAG ali+gtand)
+	    (9 ADVP (10 ADV wonderfullich))
+	    (12 PP (13 P of)
+		   (15 NP (16 NS mounteines)
+			  (18 RRC (19 ADVP-TMP (20 ADV euer))
+				  (22 VAG lastand))))
+	    (24 . ;))
+  (26 ID CMEARLPS-M2,91.3983)) 
+
+
+/~*
+ich was bi-+tenchand on God,
+(CMEARLPS-M2,92.4014)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 5 BED, 7 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 PRO ich))
+	    (5 BED was)
+	    (7 VAG bi-+tenchand)
+	    (9 PP (10 P on)
+		  (12 NP (13 NPR God)))
+	    (15 . ,))
+  (17 ID CMEARLPS-M2,92.4014)) 
+
+
+/~*
+Ich was bi-+tenchand of +te workes of our Lord;
+(CMEARLPS-M2,92.4035)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 5 BED, 7 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 PRO Ich))
+	    (5 BED was)
+	    (7 VAG bi-+tenchand)
+	    (9 PP (10 P of)
+		  (12 NP (13 D +te)
+			 (15 NS workes)
+			 (17 PP (18 P of)
+				(20 NP (21 PRO$ our) (23 NPR Lord)))))
+	    (25 . ;))
+  (27 ID CMEARLPS-M2,92.4035)) 
+
+
+/~*
+for-+ty y shal be bi-+tenchand fram +te bi-gynnyng of +ti meruailes.
+(CMEARLPS-M2,92.4036)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 10 BE, 12 VAG
+*/
+( (1 IP-MAT (2 PP (3 P+D for-+ty))
+	    (5 NP-SBJ (6 PRO y))
+	    (8 MD shal)
+	    (10 BE be)
+	    (12 VAG bi-+tenchand)
+	    (14 PP (15 P fram)
+		   (17 NP (18 D +te)
+			  (20 N bi-gynnyng)
+			  (22 PP (23 P of)
+				 (25 NP (26 PRO$ +ti) (28 NS meruailes)))))
+	    (30 . .))
+  (32 ID CMEARLPS-M2,92.4036)) 
+
+
+/~*
+and her maidens ne ben nou+gt sorweand.
+(CMEARLPS-M2,97.4246)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 11 BEP, 15 VAG
+*/
+( (1 IP-MAT (2 CONJ and)
+	    (4 NP-SBJ (5 PRO$ her) (7 N maidens))
+	    (9 NEG ne)
+	    (11 BEP ben)
+	    (13 NEG nou+gt)
+	    (15 VAG sorweand)
+	    (17 . .))
+  (19 ID CMEARLPS-M2,97.4246)) 
+
+
+/~*
+As +te de-fouled wy+t syn+ges beand in her beriels, of whiche +tou art nou+gt
++tenchand no more, and ben put fram +tyn helpe. 6. Hij deden me in +te lowest
+$helle, in derknes, and in +te shadow of de+t.
+(CMEARLPS-M2,107.4672)
+*~/
+/*
+39 IP-SUB:  39 IP-SUB, 45 BEP, 49 VAG
+*/
+( (39 IP-SUB (40 PP *T*-1)
+	     (42 NP-SBJ (43 PRO +tou))
+	     (45 BEP art)
+	     (47 NEG nou+gt)
+	     (49 VAG +tenchand)
+	     (51 NP-MSR (52 QP (53 Q no) (55 QR more))))
+  (131 ID CMEARLPS-M2,107.4672)) 
+
+
+/~*
+Lord, be +tou bi-+tenchand of +te repruce of +ty seruaunt+g, which repruceing
+ich held in my bosom of many men; 50. +Te which +tyn enemys, Lord, reproced,
++tat reproued +te chaungeing of +ty prest a-noint wy+t creme.
+(CMEARLPS-M2,111.4845)
+*~/
+/*
+1 IP-IMP:  1 IP-IMP, 7 BEI, 12 VAG
+*/
+( (1 IP-IMP (2 NP-VOC (3 NPR Lord))
+	    (5 , ,)
+	    (7 BEI be)
+	    (9 NP-SBJ (10 PRO +tou))
+	    (12 VAG bi-+tenchand)
+	    (14 PP (15 P of)
+		   (17 NP (18 D +te)
+			  (20 N repruce)
+			  (22 PP (23 P of)
+				 (25 NP (26 PRO$ +ty) (28 NS seruaunt+g)))))
+	    (30 , ,)
+	    (32 CP-CAR (33 WNP-1 (34 WD which) (36 VAG repruceing))
+		       (38 C 0)
+		       (40 IP-SUB RMV:*T*-1_ich_held...))
+	    (64 , ;)
+	    (66 LS (67 NUM 50.))
+	    (69 CP-CAR (70 WNP-2 (71 D +Te) (73 WPRO which))
+		       (75 C 0)
+		       (77 IP-SUB RMV:*T*-2_+tyn_enemys...))
+	    (130 . .))
+  (132 ID CMEARLPS-M2,111.4845)) 
+
+
+/~*
+and hij shul ben wele likand, +tat hij tellen +te gode.
+(CMEARLPS-M2,114.4988)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 9 BE, 14 VAG
+*/
+( (1 IP-MAT (2 CONJ and)
+	    (4 NP-SBJ (5 PRO hij))
+	    (7 MD shul)
+	    (9 BE ben)
+	    (11 ADVP (12 ADV wele))
+	    (14 VAG likand)
+	    (16 , ,)
+	    (18 CP-ADV (19 C +tat)
+		       (21 IP-SUB RMV:hij_tellen_+te...))
+	    (32 . .))
+  (34 ID CMEARLPS-M2,114.4988)) 
+
+
+/~*
+Our Lord is doand mercies and iugement to alle +te suffrand wronge.
+(CMEARLPS-M2,123.5406)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 7 BEP, 9 DAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 PRO$ Our) (5 NPR Lord))
+	    (7 BEP is)
+	    (9 DAG doand)
+	    (11 NP-OB1 (12 NS mercies) (14 CONJ and) (16 N iugement))
+	    (18 PP (19 P to)
+		   (21 NP (22 Q alle)
+			  (24 D +te)
+			  (26 RRC (27 VAG suffrand)
+				  (29 NP-OB1 (30 N wronge)))))
+	    (32 . .))
+  (34 ID CMEARLPS-M2,123.5406)) 
+
+
+/~*
++Tou art bryngand for+te hay to meres and grasse to seruice of men; 16. +Tat
+tou brynge for+t brede of +ter+te, and wyn glade mannes hert.
+(CMEARLPS-M2,126.5485)
+*~/
+/*
+2 IP-MAT-1:  2 IP-MAT-1, 6 BEP, 8 VAG
+*/
+( (2 IP-MAT-1 (3 NP-SBJ (4 PRO +Tou))
+	      (6 BEP art)
+	      (8 VAG bryngand)
+	      (10 ADVP-DIR (11 ADV for+te))
+	      (13 NP-OB1 (14 N hay))
+	      (16 PP (17 P to)
+		     (19 NP (20 NS meres))))
+  (88 ID CMEARLPS-M2,126.5485)) 
+
+
+/~*
+He was by-+tenchand in +te world of his testament, and of his world +tat he
+sent into a +tousand kyndes. 8. Which worde he ordeined to Abraham and his
+o+te to Ysaac.
+(CMEARLPS-M2,127.5568)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 5 BED, 7 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 PRO He))
+	    (5 BED was)
+	    (7 VAG by-+tenchand)
+	    (9 PP (10 P in)
+		  (12 NP (13 D +te)
+			 (15 N world)
+			 (17 PP (18 PP (19 P of)
+				       (21 NP (22 PRO$ his) (24 N testament)))
+				(26 , ,)
+				(28 CONJP (29 CONJ and)
+					  (31 PP (32 P of)
+						 (34 NP (35 PRO$ his)
+							(37 N world)
+							(39 CP-REL (40 WNP-1 0)
+								   (42 C +tat)
+								   (44 IP-SUB RMV:*T*-1_he_sent...))))))))
+	    (63 , .)
+	    (65 LS (66 NUM 8.))
+	    (68 CP-CAR (69 WNP-2 (70 WD Which) (72 N worde))
+		       (74 C 0)
+		       (76 IP-SUB RMV:*T*-2_he_ordeined...))
+	    (106 . .))
+  (108 ID CMEARLPS-M2,127.5568)) 
+
+
+/~*
+For he was by+tenchand of his holy worde, +te which he had to Abraham, hys
+childe.
+(CMEARLPS-M2,129.5645)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 7 BED, 9 VAG
+*/
+( (1 IP-MAT (2 CONJ For)
+	    (4 NP-SBJ (5 PRO he))
+	    (7 BED was)
+	    (9 VAG by+tenchand)
+	    (11 PP (12 P of)
+		   (14 NP (15 PRO$ his)
+			  (17 ADJ holy)
+			  (19 N worde)
+			  (21 , ,)
+			  (23 CP-REL (24 WNP-1 (25 D +te) (27 WPRO which))
+				     (29 C 0)
+				     (31 IP-SUB RMV:*T*-1_he_had...))))
+	    (52 . .))
+  (54 ID CMEARLPS-M2,129.5645)) 
+
+
+/~*
+and hij were nou+gt +tenchand on +te multitude of +tyn mercy.
+(CMEARLPS-M2,130.5673)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 7 BED, 11 VAG
+*/
+( (1 IP-MAT (2 CONJ and)
+	    (4 NP-SBJ (5 PRO hij))
+	    (7 BED were)
+	    (9 NEG nou+gt)
+	    (11 VAG +tenchand)
+	    (13 PP (14 P on)
+		   (16 NP (17 D +te)
+			  (19 N multitude)
+			  (21 PP (22 P of)
+				 (24 NP (25 PRO$ +tyn) (27 N mercy)))))
+	    (29 . .))
+  (31 ID CMEARLPS-M2,130.5673)) 
+
+
+/~*
+And he was by-+ten-chand on hys testament,
+(CMEARLPS-M2,132.5771)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 7 BED, 9 VAG
+*/
+( (1 IP-MAT (2 CONJ And)
+	    (4 NP-SBJ (5 PRO he))
+	    (7 BED was)
+	    (9 VAG by-+ten-chand)
+	    (11 PP (12 P on)
+		   (14 NP (15 PRO$ hys) (17 N testament)))
+	    (19 . ,))
+  (21 ID CMEARLPS-M2,132.5771)) 
+
+
+/~*
+He shal be bi+tenchand in +te world of his testament;
+(CMEARLPS-M2,139.6078)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 7 BE, 9 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 PRO He))
+	    (5 MD shal)
+	    (7 BE be)
+	    (9 VAG bi+tenchand)
+	    (11 PP (12 P in)
+		   (14 NP (15 D +te)
+			  (17 N world)
+			  (19 PP (20 P of)
+				 (22 NP (23 PRO$ his) (25 N testament)))))
+	    (27 . ;))
+  (29 ID CMEARLPS-M2,139.6078)) 
+
+
+/~*
+Our Lord was +tenchand on vs,
+(CMEARLPS-M2,142.6203)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 7 BED, 9 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 PRO$ Our) (5 NPR Lord))
+	    (7 BED was)
+	    (9 VAG +tenchand)
+	    (11 PP (12 P on)
+		   (14 NP (15 PRO vs)))
+	    (17 . ,))
+  (19 ID CMEARLPS-M2,142.6203)) 
+
+
+/~*
+Our Lord is kepand +te littel;
+(CMEARLPS-M2,142.6240)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 7 BEP, 9 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 PRO$ Our) (5 NPR Lord))
+	    (7 BEP is)
+	    (9 VAG kepand)
+	    (11 NP-OB1 (12 D +te) (14 ADJ littel))
+	    (16 . ;))
+  (18 ID CMEARLPS-M2,142.6240)) 
+
+
+/~*
+Y shal be +tenchand in +tyn ry+gtfulnesses,
+(CMEARLPS-M2,146.6421)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 7 BE, 9 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 PRO Y))
+	    (5 MD shal)
+	    (7 BE be)
+	    (9 VAG +tenchand)
+	    (11 PP (12 P in)
+		   (14 NP (15 PRO$ +tyn) (17 NS ry+gtfulnesses)))
+	    (19 . ,))
+  (21 ID CMEARLPS-M2,146.6421)) 
+
+
+/~*
+Be +to bi+tenchand on +ty worde to +ty seruaunt, in which +tou +gaf me hope.
+(CMEARLPS-M2,148.6534)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 2 BEP, 7 VAG
+*/
+( (1 IP-MAT (2 BEP Be)
+	    (4 NP-SBJ (5 PRO +to))
+	    (7 VAG bi+tenchand)
+	    (9 PP (10 P on)
+		  (12 NP (13 PRO$ +ty)
+			 (15 N worde)
+			 (17 CP-REL *ICH*-1)))
+	    (19 PP (20 P to)
+		   (22 NP (23 PRO$ +ty) (25 N seruaunt)))
+	    (27 , ,)
+	    (29 CP-REL-1 (30 WPP-2 (31 P in)
+				   (33 WNP (34 WPRO which)))
+			 (36 C 0)
+			 (38 IP-SUB RMV:*T*-2_+tou_+gaf...))
+	    (52 . .))
+  (54 ID CMEARLPS-M2,148.6534)) 
+
+
+/~*
+Ich was, Lord, bi+tenchand on +ty iugement+g of +te world,
+(CMEARLPS-M2,148.6542)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 5 BED, 14 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 PRO Ich))
+	    (5 BED was)
+	    (7 , ,)
+	    (9 NP-VOC (10 NPR Lord))
+	    (12 , ,)
+	    (14 VAG bi+tenchand)
+	    (16 PP (17 P on)
+		   (19 NP (20 PRO$ +ty)
+			  (22 NS iugement+g)
+			  (24 PP (25 P of)
+				 (27 NP (28 D +te) (30 N world)))))
+	    (32 . ,))
+  (34 ID CMEARLPS-M2,148.6542)) 
+
+
+/~*
+Ich was, Lord, bi-+tenchand of +ty name in +te ni+gt,
+(CMEARLPS-M2,148.6549)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 5 BED, 14 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 PRO Ich))
+	    (5 BED was)
+	    (7 , ,)
+	    (9 NP-VOC (10 NPR Lord))
+	    (12 , ,)
+	    (14 VAG bi-+tenchand)
+	    (16 PP (17 P of)
+		   (19 NP (20 PRO$ +ty) (22 N name)))
+	    (24 PP (25 P in)
+		   (27 NP (28 D +te) (30 N ni+gt)))
+	    (32 . ,))
+  (34 ID CMEARLPS-M2,148.6549)) 
+
+
+/~*
+Ha +tou heuen, our fete wer stondand in +tin halles, whan we do wele. 3. +Te
+heuen +tat is edefied as cite, of wham takyng part is in +tat ich +ting.
+(CMEARLPS-M2,157.7000)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 18 BED, 20 VAG
+*/
+( (1 IP-MAT (2 INTJ Ha)
+	    (4 NP-VOC (5 PRO +tou)
+		      (7 NPR heuen)
+		      (9 NP-PRN *ICH*-1))
+	    (11 , ,)
+	    (13 NP-SBJ (14 PRO$ our) (16 NS fete))
+	    (18 BED wer)
+	    (20 VAG stondand)
+	    (22 PP (23 P in)
+		   (25 NP (26 PRO$ +tin) (28 NS halles)))
+	    (30 , ,)
+	    (32 PP (33 P whan)
+		   (35 CP-ADV (36 C 0)
+			      (38 IP-SUB RMV:we_do_wele...)))
+	    (46 , .)
+	    (48 LS (49 NUM 3.))
+	    (51 NP-PRN-1 (52 D +Te)
+			 (54 NPR heuen)
+			 (56 CP-REL (57 WNP-2 0)
+				    (59 C +tat)
+				    (61 IP-SUB RMV:*T*-2_is_edefied...))
+			 (74 , ,)
+			 (76 CP-REL (77 WPP-3 (78 P of)
+					      (80 WNP (81 WPRO wham)))
+				    (83 C 0)
+				    (85 IP-SUB RMV:*T*-3_takyng_part...)))
+	    (106 . .))
+  (108 ID CMEARLPS-M2,157.7000)) 
+
+
+/~*
+He his ladand out cloudes of +te last ende of +ter+te,
+(CMEARLPS-M2,163.7263)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 5 BEP, 7 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 PRO He))
+	    (5 BEP his)
+	    (7 VAG ladand)
+	    (9 RP out)
+	    (11 NP-OB1 (12 NS cloudes))
+	    (14 PP (15 P of)
+		   (17 NP (18 D +te)
+			  (20 ADJ last)
+			  (22 N ende)
+			  (24 PP (25 P of)
+				 (27 NP (28 D+NPR +ter+te)))))
+	    (30 . ,))
+  (32 ID CMEARLPS-M2,163.7263)) 
+
+
+/~*
+And he +gaf her londe heritage, 23. Heritage to Israel, his seruaunt. 24. +Te
+which was bi-+tenchand on us in our mekenes, 25. And raunsouned vs fram our
+enemis; 26. +Te which +geue+t mete to ich flesshe.
+(CMEARLPS-M2,166.7306)
+*~/
+/*
+56 IP-SUB:  56 IP-SUB, 59 BED, 61 VAG
+*/
+( (56 IP-SUB (57 NP-SBJ *T*-2)
+	     (59 BED was)
+	     (61 VAG bi-+tenchand)
+	     (63 PP (64 P on)
+		    (66 NP (67 PRO us)))
+	     (69 PP (70 P in)
+		    (72 NP (73 PRO$ our) (75 N mekenes))))
+  (134 ID CMEARLPS-M2,166.7306)) 
+
+
+/~*
+Yf y ne sett nou+gt for+te gode folk in +te biginnynge of my ioie. 9. Be +tou
+bi-+tenchand of wicked childer in +te daie of iugement of gode men; 10. +Te
+which wicked sain, For-do+t +te gode,
+(CMEARLPS-M2,167.7362)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 47 BEP, 52 VAG
+*/
+( (1 IP-MAT (2 PP (3 P Yf)
+		  (5 CP-ADV (6 C 0)
+			    (8 IP-SUB RMV:y_ne_sett...)))
+	    (42 , .)
+	    (44 LS (45 NUM 9.))
+	    (47 BEP Be)
+	    (49 NP-SBJ (50 PRO +tou))
+	    (52 VAG bi-+tenchand)
+	    (54 PP (55 P of)
+		   (57 NP (58 ADJ wicked)
+			  (60 NS childer)
+			  (62 CP-REL *ICH*-1)))
+	    (64 PP (65 P in)
+		   (67 NP (68 D +te)
+			  (70 N daie)
+			  (72 PP (73 P of)
+				 (75 NP (76 N iugement)
+					(78 PP (79 P of)
+					       (81 NP (82 ADJ gode) (84 NS men)))))))
+	    (86 , ;)
+	    (88 LS (89 NUM 10.))
+	    (91 CP-CAR-1 (92 WNP-2 (93 D +Te) (95 WD which) (97 ADJ wicked))
+			 (99 C 0)
+			 (101 IP-SUB RMV:*T*-2_sain_,...))
+	    (116 . ,))
+  (118 ID CMEARLPS-M2,167.7362)) 
+
+
+/~*
+Ich was bi-+tenchand of old daies,
+(CMEARLPS-M2,172.7578)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 5 BED, 7 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 PRO Ich))
+	    (5 BED was)
+	    (7 VAG bi-+tenchand)
+	    (9 PP (10 P of)
+		  (12 NP (13 ADJ old) (15 NS daies)))
+	    (17 . ,))
+  (19 ID CMEARLPS-M2,172.7578)) 
+
+
+/~*
+Our Lord is edifiand Ierusalem,
+(CMEARLPS-M2,176.7750)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 7 BEP, 9 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 PRO$ Our) (5 NPR Lord))
+	    (7 BEP is)
+	    (9 VAG edifiand)
+	    (11 NP-OB1 (12 NPR Ierusalem))
+	    (14 . ,))
+  (16 ID CMEARLPS-M2,176.7750)) 
+
+
+/~*
+Our Lord is takand +te mild & lowand +te sin+gers vnto +ter+te.
+(CMEARLPS-M2,176.7757)
+*~/
+/*
+2 IP-MAT-1:  2 IP-MAT-1, 8 BEP, 10 VAG
+*/
+( (2 IP-MAT-1 (3 NP-SBJ (4 PRO$ Our) (6 NPR Lord))
+	      (8 BEP is)
+	      (10 VAG takand)
+	      (12 NP-OB1 (13 D +te) (15 ADJ mild)))
+  (36 ID CMEARLPS-M2,176.7757)) 
+
+
+/~*
+For weleplesand it is to our Lord in his folk,
+(CMEARLPS-M2,178.7843)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 9 BEP, 4 VAG
+*/
+( (1 IP-MAT (2 CONJ For)
+	    (4 VAG weleplesand)
+	    (6 NP-SBJ (7 PRO it))
+	    (9 BEP is)
+	    (11 PP (12 P to)
+		   (14 NP (15 PRO$ our) (17 NPR Lord)))
+	    (19 PP (20 P in)
+		   (22 NP (23 PRO$ his) (25 N folk)))
+	    (27 . ,))
+  (29 ID CMEARLPS-M2,178.7843)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmearlps-m2.psd	46/46/7869
+*/
+/*
+HEADER:
+source file:  cmedmund-m4.psd
+*/
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmedmund-m4.psd	0/0/299
+*/
+/*
+HEADER:
+source file:  cmedthor-m34.psd
+*/
+
+/~*
+For sothe, if +tou take gud kepe how gret gude He has done +te on ilk a syde,
++tou sall fynd hym ocupiede aboute +ti profet, als He did nan o+ter thynge,
+bot anely ware entendande to +te and to +ti hele, als if He had forgetyn all
++tis worlde for to be anely intendand vn-to +te.
+(CMEDTHOR-M34,20.103)
+*~/
+/*
+111 IP-SUB:  111 IP-SUB, 116 BED, 118 VAG
+164 IP-INF-PRP:  164 IP-INF-PRP, 169 BE, 173 VAG
+*/
+( (111 IP-SUB (112 FP anely)
+	      (114 NP-SBJ *con*)
+	      (116 BED ware)
+	      (118 VAG entendande)
+	      (120 PP (121 PP (122 P to)
+			      (124 NP (125 PRO +te)))
+		      (127 CONJP (128 CONJ and)
+				 (130 PP (131 P to)
+					 (133 NP (134 PRO$ +ti) (136 N hele))))))
+  (183 ID CMEDTHOR-M34,20.103)) 
+
+( (164 IP-INF-PRP (165 FOR for)
+		  (167 TO to)
+		  (169 BE be)
+		  (171 FP anely)
+		  (173 VAG intendand)
+		  (175 PP (176 P vn-to)
+			  (178 NP (179 PRO +te))))
+  (183 ID CMEDTHOR-M34,20.103)) 
+
+
+/~*
+and thurgh His gudnes ilke a day ere all thynges waxande.
+(CMEDTHOR-M34,21.133)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 19 BEP, 26 VAG
+*/
+( (1 IP-MAT (2 CONJ and)
+	    (4 PP (5 P thurgh)
+		  (7 NP (8 PRO$ His) (10 N gudnes)))
+	    (12 NP-TMP (13 Q ilke) (15 ONE a) (17 N day))
+	    (19 BEP ere)
+	    (21 NP-SBJ (22 Q all) (24 NS thynges))
+	    (26 VAG waxande)
+	    (28 . .))
+  (30 ID CMEDTHOR-M34,21.133)) 
+
+
+/~*
+The thre fyrste er pertenande to +te lufe of God, and the to+ter seuen to +te
+lufe of +ti-selfe and of thyne euen crystyn.
+(CMEDTHOR-M34,28.307)
+*~/
+/*
+2 IP-MAT-1:  2 IP-MAT-1, 10 BEP, 12 VAG
+*/
+( (2 IP-MAT-1 (3 NP-SBJ (4 D The) (6 NUM thre) (8 ADJ fyrste))
+	      (10 BEP er)
+	      (12 VAG pertenande)
+	      (14 PP (15 P to)
+		     (17 NP (18 D +te)
+			    (20 N lufe)
+			    (22 PP (23 P of)
+				   (25 NP (26 NPR God))))))
+  (71 ID CMEDTHOR-M34,28.307)) 
+
+
+/~*
+Thyse are +te seuen werkes of mercy +tat are langande to +te body.
+(CMEDTHOR-M34,30.359)
+*~/
+/*
+25 IP-SUB:  25 IP-SUB, 28 BEP, 30 VAG
+*/
+( (25 IP-SUB (26 NP-SBJ *T*-1)
+	     (28 BEP are)
+	     (30 VAG langande)
+	     (32 PP (33 P to)
+		    (35 NP (36 D +te) (38 N body))))
+  (42 ID CMEDTHOR-M34,30.359)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmedthor-m34.psd	5/4/792
+*/
+/*
+HEADER:
+source file:  cmedvern-m3.psd
+*/
+
+/~*
++Gif +tou take good hede hou gret good god ha+t don to +te on alle halue, +tou
+schalt fynden him ocupyed abouten +te as +tei he dude non o+tur +ting but were
+tendynge onliche to +te and to +tin hele;
+(CMEDVERN-M3,243.158)
+*~/
+/*
+101 IP-SUB:  101 IP-SUB, 104 BED, 106 VAG
+*/
+( (101 IP-SUB (102 NP-SBJ *con*)
+	      (104 BED were)
+	      (106 VAG tendynge)
+	      (108 PP (109 FP onliche)
+		      (111 PP (112 P to)
+			      (114 NP (115 PRO +te)))
+		      (117 CONJP (118 CONJ and)
+				 (120 PP (121 P to)
+					 (123 NP (124 PRO$ +tin) (126 N hele))))))
+  (130 ID CMEDVERN-M3,243.158)) 
+
+
+/~*
+& were dwellyng +ter-Inne in fastinge and in preyeres, til +tei weore fuld of
++te holigost, as ur lord hedde comaunded hem.
+(CMEDVERN-M3,257.739)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 6 BED, 8 VAG
+*/
+( (1 IP-MAT (2 CONJ &)
+	    (4 NP-SBJ *con*)
+	    (6 BED were)
+	    (8 VAG dwellyng)
+	    (10 PP (11 ADV+P +ter-Inne))
+	    (13 PP (14 PP (15 P in)
+			  (17 NP (18 N fastinge)))
+		   (20 CONJP (21 CONJ and)
+			     (23 PP (24 P in)
+				    (26 NP (27 NS preyeres)))))
+	    (29 , ,)
+	    (31 PP (32 P til)
+		   (34 CP-ADV (35 C 0)
+			      (37 IP-SUB RMV:+tei_weore_fuld...)))
+	    (78 . .))
+  (80 ID CMEDVERN-M3,257.739)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmedvern-m3.psd	2/2/930
+*/
+/*
+HEADER:
+source file:  cmequato-m3.psd
+*/
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmequato-m3.psd	0/0/341
+*/
+/*
+HEADER:
+source file:  cmfitzja-m4.psd
+*/
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmfitzja-m4.psd	0/0/225
+*/
+/*
+HEADER:
+source file:  cmgaytry-m34.psd
+*/
+
+/~*
++Te fyfte thynge of +te Sex to knawe God Almyghten, are +te Seuen vertus +tat
+Haly Writte teches. Of whilke seuen, +te thre first +tat are hede thewes,
+teches vs how to hafe vs vn-to God Almyghtty; and +te foure teches vs swa for
+to lyffe +tat it be bathe lykande to Godd and to man.
+(CMGAYTRY-M34,10.128)
+*~/
+/*
+158 IP-SUB:  158 IP-SUB, 162 BEP, 166 VAG
+*/
+( (158 IP-SUB (159 NP-SBJ (160 PRO it))
+	      (162 BEP be)
+	      (164 CONJ-6 bathe)
+	      (166 VAG lykande)
+	      (168 PP (169 CONJ *ICH*-6)
+		      (171 PP (172 P to)
+			      (174 NP (175 NPR Godd)))
+		      (177 CONJP (178 CONJ and)
+				 (180 PP (181 P to)
+					 (183 NP (184 N man))))))
+  (188 ID CMGAYTRY-M34,10.128)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmgaytry-m34.psd	1/1/199
+*/
+/*
+HEADER:
+source file:  cmgregor-m4.psd
+*/
+
+/~*
+Ande that same yere Thomas Aryndelle, the sone and ayre of the Erle of
+Arundelle, whiche +tat aftyr the dethe of hys fadyr was dwellyng in howshold
+with Syr John of Holon, Duke of Exceter, and holde at non reputacyon but in
+grete repreffe and dyspyte and moche dysseysse, prevely thorowe helpe of
+Wylliam Schotte, mercer of London, in a gromys wede he saylyd ovyr +t=e= see
+(CMGREGOR-M4,98.74)
+*~/
+/*
+52 IP-SUB-2:  52 IP-SUB-2, 71 BED, 73 VAG
+*/
+( (52 IP-SUB-2 (53 NP-SBJ *T*-1)
+	       (55 PP (56 P aftyr)
+		      (58 NP (59 D the)
+			     (61 N dethe)
+			     (63 PP (64 P of)
+				    (66 NP (67 PRO$ hys) (69 N fadyr)))))
+	       (71 BED was)
+	       (73 VAG dwellyng)
+	       (75 PP (76 P in)
+		      (78 NP (79 N howshold)))
+	       (81 PP (82 P with)
+		      (84 NP (85 NPR Syr)
+			     (87 NPR John)
+			     (89 PP (90 P of)
+				    (92 NP (93 NPR Holon)))
+			     (95 , ,)
+			     (97 NP-PRN (98 N Duke)
+					(100 PP (101 P of)
+						(103 NP (104 NPR Exceter)))))))
+  (203 ID CMGREGOR-M4,98.74)) 
+
+
+/~*
+and the Countasse of Kentt was syttyng at hyr ryght fote of the quene undyr
+the tabylle,
+(CMGREGOR-M4,139.589)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 15 BED, 17 VAG
+*/
+( (1 IP-MAT (2 CONJ and)
+	    (4 NP-SBJ (5 D the)
+		      (7 N Countasse)
+		      (9 PP (10 P of)
+			    (12 NP (13 NPR Kentt))))
+	    (15 BED was)
+	    (17 VAG syttyng)
+	    (19 PP (20 P at)
+		   (22 NP (23 PRO$ hyr)
+			  (25 ADJ ryght)
+			  (27 N fote)
+			  (29 PP (30 P of)
+				 (32 NP (33 D the) (35 N quene)))))
+	    (37 PP (38 P undyr)
+		   (40 NP (41 D the) (43 N tabylle)))
+	    (45 . ,))
+  (47 ID CMGREGOR-M4,139.589)) 
+
+
+/~*
+And as they $were syttyng at mete the kynge kepte hys astate.
+(CMGREGOR-M4,168.959)
+*~/
+/*
+10 IP-SUB:  10 IP-SUB, 14 BED, 16 VAG
+*/
+( (10 IP-SUB (11 NP-SBJ (12 PRO they))
+	     (14 BED $were)
+	     (16 VAG syttyng)
+	     (18 PP (19 P at)
+		    (21 NP (22 N mete))))
+  (38 ID CMGREGOR-M4,168.959)) 
+
+
+/~*
+Ande from that tyme unto the morowe viij of belle they were ever fyghtynge
+uppon London Brygge,
+(CMGREGOR-M4,193.1493)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 33 BED, 38 VAG
+*/
+( (1 IP-MAT (2 CONJ Ande)
+	    (4 NP-MSR (5 PP (6 P from)
+			    (8 NP (9 D that) (11 N tyme)))
+		      (13 PP (14 P unto)
+			     (16 NP (17 D the)
+				    (19 N morowe)
+				    (21 NP-TMP (22 NUM viij)
+					       (24 PP (25 P of)
+						      (27 NP (28 N belle)))))))
+	    (30 NP-SBJ (31 PRO they))
+	    (33 BED were)
+	    (35 ADVP-TMP (36 ADV ever))
+	    (38 VAG fyghtynge)
+	    (40 PP (41 P uppon)
+		   (43 NP (44 NPR London) (46 NPR Brygge)))
+	    (48 . ,))
+  (50 ID CMGREGOR-M4,193.1493)) 
+
+
+/~*
+for a very trewe man schulde with yn xxiiij howrys make opyn to be knowe alle
+suche fals hyd thyngys of felony or treson, yf he be nott consentynge unto the
+same felowschyppe, undyr payne of dethe;
+(CMGREGOR-M4,200.1629)
+*~/
+/*
+67 IP-SUB:  67 IP-SUB, 71 BEP, 75 VAG
+*/
+( (67 IP-SUB (68 NP-SBJ (69 PRO he))
+	     (71 BEP be)
+	     (73 NEG nott)
+	     (75 VAG consentynge)
+	     (77 PP (78 P unto)
+		    (80 NP (81 D the) (83 ADJ same) (85 N felowschyppe))))
+  (103 ID CMGREGOR-M4,200.1629)) 
+
+
+/~*
+bot both moste be fastynge.
+(CMGREGOR-M4,200.1634)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 9 BE, 11 VAG
+*/
+( (1 IP-MAT (2 CONJ bot)
+	    (4 NP-SBJ (5 Q both))
+	    (7 MD moste)
+	    (9 BE be)
+	    (11 VAG fastynge)
+	    (13 . .))
+  (15 ID CMGREGOR-M4,200.1634)) 
+
+
+/~*
+but he was not a-bydynge in no place passynge a monythe.
+(CMGREGOR-M4,201.1651)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 7 BED, 11 VAG
+*/
+( (1 IP-MAT (2 CONJ but)
+	    (4 NP-SBJ (5 PRO he))
+	    (7 BED was)
+	    (9 NEG not)
+	    (11 VAG a-bydynge)
+	    (13 PP (14 P in)
+		   (16 NP (17 Q no) (19 N place)))
+	    (21 IP-PPL RMV:passynge_a_monythe...)
+	    (29 . .))
+  (31 ID CMGREGOR-M4,201.1651)) 
+
+
+/~*
+Also alle that seson the Erle of Warwyke with sowdyers of Calysse were comynge
+unto the Duke of Yorke,
+(CMGREGOR-M4,205.1744)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 36 BED, 38 VAG
+*/
+( (1 IP-MAT (2 ALSO Also)
+	    (4 NP-TMP (5 Q alle) (7 D that) (9 N seson))
+	    (11 NP-SBJ (12 D the)
+		       (14 N Erle)
+		       (16 PP (17 P of)
+			      (19 NP (20 NPR Warwyke)))
+		       (22 PP (23 P with)
+			      (25 NP (26 NS sowdyers)
+				     (28 PP (29 P of)
+					    (31 CODE <P_205>)
+					    (33 NP (34 NPR Calysse))))))
+	    (36 BED were)
+	    (38 VAG comynge)
+	    (40 PP (41 P unto)
+		   (43 NP (44 D the)
+			  (46 N Duke)
+			  (48 PP (49 P of)
+				 (51 NP (52 NPR Yorke)))))
+	    (54 . ,))
+  (56 ID CMGREGOR-M4,205.1744)) 
+
+
+/~*
+Ande the same day Androwe Throllope consayvyd that the Erle of Warwyke was
+goyng unto the Duke of Yorke and not unto the kynge,
+(CMGREGOR-M4,205.1749)
+*~/
+/*
+21 IP-SUB:  21 IP-SUB, 33 BED, 35 VAG
+*/
+( (21 IP-SUB (22 NP-SBJ (23 D the)
+			(25 N Erle)
+			(27 PP (28 P of)
+			       (30 NP (31 NPR Warwyke))))
+	     (33 BED was)
+	     (35 VAG goyng)
+	     (37 PP (38 PP (39 P unto)
+			   (41 NP (42 D the)
+				  (44 N Duke)
+				  (46 PP (47 P of)
+					 (49 NP (50 NPR Yorke)))))
+		    (52 CONJP (53 CONJ and)
+			      (55 PP (56 NEG not)
+				     (58 P unto)
+				     (60 NP (61 D the) (63 N kynge))))))
+  (67 ID CMGREGOR-M4,205.1749)) 
+
+
+/~*
+for the Lorde Rosse, the Lorde Clyfforde, the Baron of Grestocke, the Lorde
+Nevyle, the Lorde Latymer, were waytyng a-pon the Duke of $Execter to mete
+with hyr at Hulle.
+(CMGREGOR-M4,210.1882)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 64 BED, 66 VAG
+*/
+( (1 IP-MAT (2 CONJ for)
+	    (4 NP-SBJ (5 NP (6 D the)
+			    (8 N Lorde)
+			    (10 NP-PRN (11 NPR Rosse)))
+		      (13 , ,)
+		      (15 CONJP (16 NP (17 D the)
+				       (19 N Lorde)
+				       (21 NP-PRN (22 NPR Clyfforde))))
+		      (24 , ,)
+		      (26 CONJP (27 NP (28 D the)
+				       (30 CODE <P_210>)
+				       (32 N Baron)
+				       (34 PP (35 P of)
+					      (37 NP (38 NPR Grestocke)))))
+		      (40 , ,)
+		      (42 CONJP (43 NP (44 D the)
+				       (46 N Lorde)
+				       (48 NP-PRN (49 NPR Nevyle))))
+		      (51 , ,)
+		      (53 CONJP (54 NP (55 D the)
+				       (57 N Lorde)
+				       (59 NP-PRN (60 NPR Latymer)))))
+	    (62 , ,)
+	    (64 BED were)
+	    (66 VAG waytyng)
+	    (68 PP (69 P a-pon)
+		   (71 NP (72 D the)
+			  (74 N Duke)
+			  (76 PP (77 P of)
+				 (79 NP (80 NPR $Execter)))))
+	    (82 IP-INF-PRP RMV:to_mete_with...)
+	    (99 . .))
+  (101 ID CMGREGOR-M4,210.1882)) 
+
+
+/~*
+in so moche yf any man sayde, or tolde, or talkyd of suche gaderyng, he shulde
+be sehende,
+(CMGREGOR-M4,210.1886)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 53 BE, 55 VAG
+*/
+( (1 IP-MAT (2 PP (3 P in)
+		  (5 NP (6 QP (7 ADVR so) (9 Q moche))))
+	    (11 PP (12 P yf)
+		   (14 CP-ADV (15 C 0)
+			      (17 IP-SUB RMV:any_man_sayde...)))
+	    (46 , ,)
+	    (48 NP-SBJ (49 PRO he))
+	    (51 MD shulde)
+	    (53 BE be)
+	    (55 VAG sehende)
+	    (57 . ,))
+  (59 ID CMGREGOR-M4,210.1886)) 
+
+
+/~*
+And ar the goners and borgeners couthe levylle hyr gonnys they were besely
+fyghtyng,
+(CMGREGOR-M4,213.1959)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 34 BED, 39 VAG
+*/
+( (1 IP-MAT (2 CONJ And)
+	    (4 PP (5 P ar)
+		  (7 CP-ADV (8 C 0)
+			    (10 IP-SUB RMV:the_goners_and...)))
+	    (31 NP-SBJ (32 PRO they))
+	    (34 BED were)
+	    (36 ADVP (37 ADV besely))
+	    (39 VAG fyghtyng)
+	    (41 . ,))
+  (43 ID CMGREGOR-M4,213.1959)) 
+
+
+/~*
+and many bot men were consenntyng unto hem,
+(CMGREGOR-M4,238.2600)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 11 BED, 13 VAG
+*/
+( (1 IP-MAT (2 CONJ and)
+	    (4 NP-SBJ (5 Q many) (7 N bot) (9 NS men))
+	    (11 BED were)
+	    (13 VAG consenntyng)
+	    (15 PP (16 P unto)
+		   (18 NP (19 PRO hem)))
+	    (21 . ,))
+  (23 ID CMGREGOR-M4,238.2600)) 
+
+
+/~*
+That same yere in the Lentyn, whyle men were at sarmonys the Sonday aftyr noon,
+a yong man that was watyng a pon a man of the kyngys house was soore vexyd and
+bound with the devylle.
+(CMGREGOR-M4,239.2626)
+*~/
+/*
+62 IP-SUB:  62 IP-SUB, 65 BED, 67 VAG
+*/
+( (62 IP-SUB (63 NP-SBJ *T*-1)
+	     (65 BED was)
+	     (67 VAG watyng)
+	     (69 PP (70 P (71 P21 a) (73 P22 pon))
+		    (75 NP (76 D a)
+			   (78 N man)
+			   (80 PP (81 P of)
+				  (83 NP (84 NP-POS (85 D the) (87 N$ kyngys))
+					 (89 N house))))))
+  (113 ID CMGREGOR-M4,239.2626)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmgregor-m4.psd	14/14/2632
+*/
+/*
+HEADER:
+source file:  cmhali-m1.psd
+*/
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmhali-m1.psd		0/0/501
+*/
+/*
+HEADER:
+source file:  cmhilton-m34.psd
+*/
+
+/~*
+And +tanne sue it as myche as +tou may vndirstonde it bi grace and counceil
+and by Holi Writ, +tat it is accordynge to so+tfast vertu of discrecioun, and
+to +te liif of Crist.
+(CMHILTON-M34,13.82)
+*~/
+/*
+62 IP-SUB:  62 IP-SUB, 66 BEP, 68 VAG
+*/
+( (62 IP-SUB (63 NP-SBJ (64 PRO it))
+	     (66 BEP is)
+	     (68 VAG accordynge)
+	     (70 PP (71 PP (72 P to)
+			   (74 NP (75 ADJ so+tfast)
+				  (77 N vertu)
+				  (79 PP (80 P of)
+					 (82 NP (83 N discrecioun)))))
+		    (85 , ,)
+		    (87 CONJP (88 CONJ and)
+			      (90 PP (91 P to)
+				     (93 NP (94 D +te)
+					    (96 N liif)
+					    (98 PP (99 P of)
+						   (101 NP (102 NPR Crist))))))))
+  (106 ID CMHILTON-M34,13.82)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmhilton-m34.psd	1/1/215
+*/
+/*
+HEADER:
+source file:  cmhorses-m3.psd
+*/
+
+/~*
+And +ten +tou schalt take a gobet of le+ter & make a rownde hole in +te myddel
+of +te le+ter aftur quantite of +te fyke so +tat it be fast sittynge bi-twexst
++te fyke & +te hol skyn.
+(CMHORSES-M3,111.255)
+*~/
+/*
+75 IP-SUB:  75 IP-SUB, 79 BEP, 84 VAG
+*/
+( (75 IP-SUB (76 NP-SBJ (77 PRO it))
+	     (79 BEP be)
+	     (81 ADVP (82 ADV fast))
+	     (84 VAG sittynge)
+	     (86 PP (87 P bi-twexst)
+		    (89 NP (90 NP (91 D +te) (93 N fyke))
+			   (95 CONJP (96 CONJ &)
+				     (98 NP (99 D +te) (101 ADJ hol) (103 N skyn))))))
+  (107 ID CMHORSES-M3,111.255)) 
+
+
+/~*
+ffor wite +tou forso+te +tat it falle+t +te not to kerue ne to brenne in
+stedes +ter veynes & synuus buth liggynge as in +te Ioyntes & o+ter stedes
++tat is good ynow+g bu+t to knowe.
+(CMHORSES-M3,123.362)
+*~/
+/*
+50 IP-SUB:  50 IP-SUB, 60 BEP, 62 VAG
+*/
+( (50 IP-SUB (51 ADVP-LOC *T*-2)
+	     (53 NP-SBJ (54 NS veynes) (56 CONJ &) (58 NS synuus))
+	     (60 BEP buth)
+	     (62 VAG liggynge)
+	     (64 PP (65 P as)
+		    (67 PP (68 P in)
+			   (70 NP (71 NP (72 D +te) (74 NS Ioyntes))
+				  (76 CONJP (77 CONJ &)
+					    (79 NP (80 OTHER o+ter) (82 NS stedes)))))))
+  (111 ID CMHORSES-M3,123.362)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmhorses-m3.psd	2/2/420
+*/
+/*
+HEADER:
+source file:  cminnoce-m4.psd
+*/
+/*
+FOOTER
+  source file, hits/tokens/total
+  cminnoce-m4.psd	0/0/209
+*/
+/*
+HEADER:
+source file:  cmjulia-m1.psd
+*/
+
+/~*
+Wes i +ton time as +te redunge telle+d. +te modi Maximien keiser i rome.
+heriende. & heiende hea+dene maumez. wi+d unimea+d muchel hird. & wi+d heh
+duhe+de.
+(CMJULIA-M1,95.8)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 2 BED, 50 VAG
+*/
+( (1 IP-MAT (2 BED Wes)
+	    (4 PP (5 P i)
+		  (7 NP (8 D +ton) (10 N time)))
+	    (12 PP-PRN (13 P as)
+		       (15 CP-ADV (16 WNP-1 0)
+				  (18 C 0)
+				  (20 IP-SUB RMV:*T*-1_+te_redunge...)))
+	    (30 , .)
+	    (32 NP-SBJ (33 D +te)
+		       (35 ADJ modi)
+		       (37 NPR Maximien)
+		       (39 NP-PRN (40 N keiser)))
+	    (42 PP (43 P i)
+		   (45 NP (46 NPR rome)))
+	    (48 , .)
+	    (50 VAG (51 VAG heriende) (53 , .) (55 CONJ &) (57 VAG heiende))
+	    (59 NP-OB1 (60 ADJ hea+dene) (62 NS maumez))
+	    (64 , .)
+	    (66 PP (67 PP (68 P wi+d)
+			  (70 NP (71 QP (72 ADV unimea+d) (74 Q muchel))
+				 (76 N hird)))
+		   (78 , .)
+		   (80 CONJP (81 CONJ &)
+			     (83 PP (84 P wi+d)
+				    (86 NP (87 ADJ heh) (89 N duhe+de)))))
+	    (91 . .))
+  (93 ID CMJULIA-M1,95.8)) 
+
+
+/~*
+Ah +te worldes wealdent +tt wiste sein iuhan his ewangeliste unhurt i +te ueat
+of wallinde eoli +ter he wes i-don in. +tt ase hal com up +trof; as he wes hal
+meiden. +te ilke liues lauerd. wiste him unwemmet. his brud of +te bres +tt
+wes wallinde. swa +tt ne +tuhte hit hire buten ase wlech weater al +tt ha
+felde.
+(CMJULIA-M1,105.158)
+*~/
+/*
+154 IP-SUB:  154 IP-SUB, 157 BED, 159 VAG
+*/
+( (154 IP-SUB (155 NP-SBJ *T*-4)
+	      (157 BED wes)
+	      (159 VAG wallinde))
+  (210 ID CMJULIA-M1,105.158)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmjulia-m1.psd	2/2/566
+*/
+/*
+HEADER:
+source file:  cmjulnor-m34.psd
+*/
+
+/~*
+and thare laughynge was lykynge to me.
+(CMJULNOR-M34,51.59)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 9 BED, 11 VAG
+*/
+( (1 IP-MAT (2 CONJ and)
+	    (4 NP-SBJ (5 PRO$ thare) (7 N laughynge))
+	    (9 BED was)
+	    (11 VAG lykynge)
+	    (13 PP (14 P to)
+		   (16 NP (17 PRO me)))
+	    (19 . .))
+  (21 ID CMJULNOR-M34,51.59)) 
+
+
+/~*
+Neuerthelesse hym lykes that we laugh+g in comfortynge of vs, & er ioyande in
+god,
+(CMJULNOR-M34,51.63)
+*~/
+/*
+39 IP-SUB:  39 IP-SUB, 42 BEP, 44 VAG
+*/
+( (39 IP-SUB (40 NP-SBJ *con*)
+	     (42 BEP er)
+	     (44 VAG ioyande)
+	     (46 PP (47 P in)
+		    (49 NP (50 NPR god))))
+  (54 ID CMJULNOR-M34,51.63)) 
+
+
+/~*
+for blys es lastande withowtyn ende
+(CMJULNOR-M34,53.101)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 7 BEP, 9 VAG
+*/
+( (1 IP-MAT (2 CONJ for)
+	    (4 NP-SBJ (5 N blys))
+	    (7 BEP es)
+	    (9 VAG lastande)
+	    (11 PP (12 P withowtyn)
+		   (14 NP (15 N ende))))
+  (17 ID CMJULNOR-M34,53.101)) 
+
+
+/~*
+and payn es passande
+(CMJULNOR-M34,53.102)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 7 BEP, 9 VAG
+*/
+( (1 IP-MAT (2 CONJ and)
+	    (4 NP-SBJ (5 N payn))
+	    (7 BEP es)
+	    (9 VAG passande))
+  (11 ID CMJULNOR-M34,53.102)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmjulnor-m34.psd	4/4/336
+*/
+/*
+HEADER:
+source file:  cmkathe-m1.psd
+*/
+
+/~*
+I +tis burh wes wuniende a meiden swi+de +gung of +geres twa wone of $twenti;
+feier. & freolich o wlite & o westum ant +get. +tt is mare; wurh+d
+stea+deluest wi+dinnen of treowe bileaue. anes kinges cost hehte anlepi dohter
+icuret cleargesse Katerine inempnet.
+(CMKATHE-M1,18.20)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 10 BED, 12 VAG
+*/
+( (1 IP-MAT (2 PP (3 P I)
+		  (5 NP (6 D +tis) (8 N burh)))
+	    (10 BED wes)
+	    (12 VAG wuniende)
+	    (14 NP-SBJ (15 D a)
+		       (17 N meiden)
+		       (19 ADJP (20 ADJP (21 ADVR swi+de)
+					 (23 ADJ +gung)
+					 (25 PP (26 P of)
+						(28 NP (29 NS +geres))))
+				(31 ADJP (32 NP (33 NUM twa))
+					 (35 ADJ wone)
+					 (37 PP (38 P of)
+						(40 NP (41 NUM $twenti))))
+				(43 , ;)
+				(45 CONJP (46 ADJP (47 ADJ feier)
+						   (49 , .)
+						   (51 CONJ &)
+						   (53 ADJ freolich)
+						   (55 PP (56 PP (57 P o)
+								 (59 NP (60 N wlite)))
+							  (62 CONJP (63 CONJ &)
+								    (65 PP (66 P o)
+									   (68 NP (69 N westum)))))))
+				(71 CONJP (72 CONJ ant)
+					  (74 NP-PRN (75 ADV +get)
+						     (77 , .)
+						     (79 CP-FRL (80 WNP-1 0)
+								(82 C +tt)
+								(84 IP-SUB RMV:*T*-1_is_mare...)))
+					  (97 ADJP (98 ADJ stea+deluest)
+						   (100 ADVP-LOC (101 ADV wi+dinnen))
+						   (103 PP (104 P of)
+							   (106 NP (107 ADJ treowe) (109 N bileaue))))))
+		       (111 , .)
+		       (113 NP-PRN (114 NP-POS (115 ONE anes)
+					       (117 N$ kinges)
+					       (119 RRC (120 IP-SMC RMV:*_cost...)
+							(126 VAN hehte)))
+				   (128 ADJ anlepi)
+				   (130 N dohter))
+		       (132 NP-PRN (133 VAN icuret)
+				   (135 N cleargesse)
+				   (137 RRC (138 IP-SMC RMV:*_Katerine...)
+					    (144 VAN inempnet))))
+	    (146 . .))
+  (148 ID CMKATHE-M1,18.20)) 
+
+
+/~*
+& al +tt ter-in is glistinde & gleaminde as hit were seoluer. o+der gold
+smeate.
+(CMKATHE-M1,39.327)
+*~/
+/*
+1 IP-MAT-SPE:  1 IP-MAT-SPE, 20 BEP, 22 VAG
+*/
+( (1 IP-MAT-SPE (2 CONJ &)
+		(4 NP-SBJ (5 Q al)
+			  (7 CP-REL (8 WNP-1 0)
+				    (10 C +tt)
+				    (12 IP-SUB RMV:*T*-1_ter-in_is...)))
+		(20 BEP *)
+		(22 VAG (23 VAG glistinde) (25 CONJ &) (27 VAG gleaminde))
+		(29 PP (30 P as)
+		       (32 CP-ADV (33 C 0)
+				  (35 IP-SUB RMV:hit_were_seoluer...)))
+		(56 . .))
+  (58 ID CMKATHE-M1,39.327)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmkathe-m1.psd	2/2/538
+*/
+/*
+HEADER:
+source file:  cmkempe-m4.psd
+*/
+
+/~*
+For, whan +te ale was as fayr standyng vndyr berm as any man mygth se, sodenly
++te berm wold fallyn down +tat alle +te ale was lost euery brewyng aftyr o+ter,
++tat hir seruawntys weryn a-schamyd & wold not dwellyn wyth hir.
+(CMKEMPE-M4,10.159)
+*~/
+/*
+12 IP-SUB:  12 IP-SUB, 18 BED, 25 VAG
+*/
+( (12 IP-SUB (13 NP-SBJ (14 D +te) (16 N ale))
+	     (18 BED was)
+	     (20 ADVP (21 ADVR as) (23 ADV fayr))
+	     (25 VAG standyng)
+	     (27 PP (28 P vndyr)
+		    (30 NP (31 N berm)))
+	     (33 PP-PRN (34 P as)
+			(36 CP-ADV (37 WADVP-1 0)
+				   (39 C 0)
+				   (41 IP-SUB RMV:*T*-1_any_man...))))
+  (135 ID CMKEMPE-M4,10.159)) 
+
+
+/~*
++Tan was sche glad in hir consciens whan sche beleuyd +tat sche was $entryng
++te wey whech wold leden hir to +te place +tat sche most desyred.
+(CMKEMPE-M4,13.247)
+*~/
+/*
+36 IP-SUB:  36 IP-SUB, 40 BED, 42 VAG
+*/
+( (36 IP-SUB (37 NP-SBJ (38 PRO sche))
+	     (40 BED was)
+	     (42 VAG $entryng)
+	     (44 NP-OB1 (45 D +te)
+			(47 N wey)
+			(49 CP-REL (50 WNP-1 (51 WPRO whech))
+				   (53 C 0)
+				   (55 IP-SUB RMV:*T*-1_wold_leden...))))
+  (91 ID CMKEMPE-M4,13.247)) 
+
+
+/~*
+It befel up-on a Fryday on Mydsomyr Evyn in rygth hot wedyr, as +tis creatur
+was komyng fro-+Gorke-ward beryng a botel wyth bere in hir hand & hir husbond
+a cake in hys bosom, he askyd hys wyfe +tis qwestyon,
+(CMKEMPE-M4,23.484)
+*~/
+/*
+42 IP-SUB:  42 IP-SUB, 48 BED, 50 VAG
+*/
+( (42 IP-SUB (43 NP-SBJ (44 D +tis) (46 N creatur))
+	     (48 BED was)
+	     (50 VAG komyng)
+	     (52 PP (53 P+NPR+WARD fro-+Gorke-ward))
+	     (55 IP-PPL RMV:beryng_a_botel...))
+  (123 ID CMKEMPE-M4,23.484)) 
+
+
+/~*
+It wer vnpossibyl to +te to suffyr +te scornys & despytes +tat +tow schalt
+haue ne were only my grace supportyng +te. "
+(CMKEMPE-M4,29.648)
+*~/
+/*
+48 IP-SUB:  48 IP-SUB, 51 BED, 60 VAG
+*/
+( (48 IP-SUB (49 NEG ne)
+	     (51 BED were)
+	     (53 NP-SBJ (54 FP only) (56 PRO$ my) (58 N grace))
+	     (60 VAG supportyng)
+	     (62 NP-OB1 (63 PRO +te)))
+  (69 ID CMKEMPE-M4,29.648)) 
+
+
+/~*
+for he had ben dwellyng long tyme wyth an ankyr, commensowr in dyuinyte & an
+holy man,
+(CMKEMPE-M4,33.721)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 9 BEN, 11 VAG
+*/
+( (1 IP-MAT (2 CONJ for)
+	    (4 NP-SBJ (5 PRO he))
+	    (7 HVD had)
+	    (9 BEN ben)
+	    (11 VAG dwellyng)
+	    (13 NP-MSR (14 ADJ long) (16 N tyme))
+	    (18 PP (19 P wyth)
+		   (21 NP (22 D an)
+			  (24 N ankyr)
+			  (26 , ,)
+			  (28 NP-PRN (29 NP (30 N commensowr)
+					    (32 PP (33 P in)
+						   (35 NP (36 N dyuinyte))))
+				     (38 CONJP (39 CONJ &)
+					       (41 NP (42 D an) (44 ADJ holy) (46 N man))))))
+	    (48 . ,))
+  (50 ID CMKEMPE-M4,33.721)) 
+
+
+/~*
+& +gaf God preysyng & worshepyng +tat he +gaf +te Bysshop grace to don +tes
+good dedys wyth plentyuows wepyng, in so mych +tat alle +te Bysshopys meny wer
+gretly merveylyng what hyr eyled.
+(CMKEMPE-M4,34.763)
+*~/
+/*
+68 IP-SUB:  68 IP-SUB, 79 BED, 84 VAG
+*/
+( (68 IP-SUB (69 NP-SBJ (70 NP-POS (71 Q alle) (73 D +te) (75 N$ Bysshopys))
+			(77 N meny))
+	     (79 BED wer)
+	     (81 ADVP (82 ADV gretly))
+	     (84 VAG merveylyng)
+	     (86 CP-QUE-SUB (87 WNP-1 (88 WPRO what))
+			    (90 C 0)
+			    (92 IP-SUB RMV:*T*-1_hyr_eyled...)))
+  (102 ID CMKEMPE-M4,34.763)) 
+
+
+/~*
+On a day long befor +tis tyme, whyl thys creatur was beryng chylder & sche was
+newly delyueryd of a chyld, owyr Lord Cryst Ihesu seyd to hir sche xuld no mor
+chyldren beryn,
+(CMKEMPE-M4,38.836)
+*~/
+/*
+30 IP-SUB:  30 IP-SUB, 36 BED, 38 VAG
+*/
+( (30 IP-SUB (31 NP-SBJ (32 D thys) (34 N creatur))
+	     (36 BED was)
+	     (38 VAG beryng)
+	     (40 NP-OB1 (41 NS chylder)))
+  (106 ID CMKEMPE-M4,38.836)) 
+
+
+/~*
+He +tat is euyr-mor dowtyng is lyke to +te flood of +te see, +te whech is
+mevyd & born a-bowte wyth +te wynd,
+(CMKEMPE-M4,42.923)
+*~/
+/*
+10 IP-SUB:  10 IP-SUB, 13 BEP, 18 VAG
+*/
+( (10 IP-SUB (11 NP-SBJ *T*-1)
+	     (13 BEP is)
+	     (15 ADVP-TMP (16 ADV euyr-mor))
+	     (18 VAG dowtyng))
+  (75 ID CMKEMPE-M4,42.923)) 
+
+
+/~*
+On a day as +tis creatur was heryng hir Messe, a +gong man and a good prest
+heldyng up +te Sacrament in hys handys ouyr hys hed, +te Sacrament schok
+(CMKEMPE-M4,47.1038)
+*~/
+/*
+16 IP-SUB:  16 IP-SUB, 22 BED, 24 VAG
+*/
+( (16 IP-SUB (17 NP-SBJ (18 D +tis) (20 N creatur))
+	     (22 BED was)
+	     (24 VAG heryng)
+	     (26 NP-OB1 (27 PRO$ hir) (29 N Messe)))
+  (86 ID CMKEMPE-M4,47.1038)) 
+
+
+/~*
+hem alle for to wryten it xuld be lettyng perauentur of mor profyte.
+(CMKEMPE-M4,54.1220)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 20 BE, 22 VAG
+*/
+( (1 IP-MAT (2 IP-INF-LFD RMV:hem_alle_for...)
+	    (15 NP-SBJ-RSP (16 PRO it))
+	    (18 MD xuld)
+	    (20 BE be)
+	    (22 VAG lettyng)
+	    (24 ADVP (25 ADV perauentur))
+	    (27 PP (28 P of)
+		   (30 NP (31 QR mor) (33 N profyte)))
+	    (35 . .))
+  (37 ID CMKEMPE-M4,54.1220)) 
+
+
+/~*
+Whan tyme cam +tat +tis creatur xuld vysiten +to holy placys wher owyr Lord
+was whyk & ded, as sche had be reuelacyon +gerys a-forn, sche preyd +te
+parysch preste of +te town +ter sche was dwellyng to sey for hir in +te pulpyt
++tat, yf any man er woman +tat cleymyd any dette of hir husbond or of hir +tei
+xuld come & speke wyth hir er sche went, & sche, wyth +te help of God, xulde
+makyn a-seth to ech of hem +tat +tei sehuldyn heldyn hem content.
+(CMKEMPE-M4,60.1342)
+*~/
+/*
+121 IP-SUB:  121 IP-SUB, 127 BED, 129 VAG
+*/
+( (121 IP-SUB (122 ADVP *T*-5)
+	      (124 NP-SBJ (125 PRO sche))
+	      (127 BED was)
+	      (129 VAG dwellyng))
+  (303 ID CMKEMPE-M4,60.1342)) 
+
+
+/~*
+And in +te tyme whil +te pepil was gaderyng to-gedyr & +te Erchebischop takyn
+hys see, +te seyd creatur stod al behyndyn, makyng hir preyerys for help &
+socowr ageyn hir enmijs wyth hy deuocyon so long +tat sche meltyd al in-to
+teerys.
+(CMKEMPE-M4,124.2879)
+*~/
+/*
+19 IP-SUB-1:  19 IP-SUB-1, 25 BED, 27 VAG
+*/
+( (19 IP-SUB-1 (20 NP-SBJ (21 D +te) (23 N pepil))
+	       (25 BED was)
+	       (27 VAG gaderyng)
+	       (29 ADVP (30 ADV to-gedyr)))
+  (125 ID CMKEMPE-M4,124.2879)) 
+
+
+/~*
+And, as +tei wer goyng in her jurne, they wer takyn & arestyd, my man put in
+preson for hir,
+(CMKEMPE-M4,132.3058)
+*~/
+/*
+14 IP-SUB:  14 IP-SUB, 18 BED, 20 VAG
+*/
+( (14 IP-SUB (15 NP-SBJ (16 PRO +tei))
+	     (18 BED wer)
+	     (20 VAG goyng)
+	     (22 PP (23 P in)
+		    (25 NP (26 PRO$ her) (28 N jurne))))
+  (68 ID CMKEMPE-M4,132.3058)) 
+
+
+/~*
+And euery Good Friday in alle +te forseyd +gerys sche was wepyng & sobbyng v
+er vj owrys to-gedyr
+(CMKEMPE-M4,140.3246)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 26 BED, 28 VAG
+*/
+( (1 IP-MAT (2 CONJ And)
+	    (4 NP-TMP (5 Q euery)
+		      (7 ADJ Good)
+		      (9 NPR Friday)
+		      (11 PP (12 P in)
+			     (14 NP (15 Q alle) (17 D +te) (19 VAN forseyd) (21 NS +gerys))))
+	    (23 NP-SBJ (24 PRO sche))
+	    (26 BED was)
+	    (28 VAG (29 VAG wepyng) (31 CONJ &) (33 VAG sobbyng))
+	    (35 NP-MSR (36 NUMP (37 NUM v) (39 CONJ er) (41 NUM vj))
+		       (43 NS owrys)
+		       (45 ADVP (46 ADV to-gedyr))))
+  (48 ID CMKEMPE-M4,140.3246)) 
+
+
+/~*
+& hys sekenes was long contunyng.
+(CMKEMPE-M4,147.3382)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 9 BED, 14 VAG
+*/
+( (1 IP-MAT (2 CONJ &)
+	    (4 NP-SBJ (5 PRO$ hys) (7 N sekenes))
+	    (9 BED was)
+	    (11 NP-MSR (12 ADJ long))
+	    (14 VAG contunyng)
+	    (16 . .))
+  (18 ID CMKEMPE-M4,147.3382)) 
+
+
+/~*
++Tan he cam hom a-geyn in-to Lynne to hys maistyr wyth whech he had ben
+dwellyng be-for-tyme.
+(CMKEMPE-M4,222.3567)
+*~/
+/*
+39 IP-SUB:  39 IP-SUB, 47 BEN, 49 VAG
+*/
+( (39 IP-SUB (40 PP *T*-1)
+	     (42 NP-SBJ (43 PRO he))
+	     (45 HVD had)
+	     (47 BEN ben)
+	     (49 VAG dwellyng)
+	     (51 NP-TMP (52 ADV+N be-for-tyme)))
+  (56 ID CMKEMPE-M4,222.3567)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmkempe-m4.psd	16/16/3835
+*/
+/*
+HEADER:
+source file:  cmkentho-m1.psd
+*/
+
+/~*
+Seo w+as sittende +at ures Drihtenes foten,
+(CMKENTHO-M1,134.8)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 5 BED, 7 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 D Seo))
+	    (5 BED w+as)
+	    (7 VAG sittende)
+	    (9 PP (10 P +at)
+		  (12 NP (13 NP-POS (14 PRO$ ures) (16 NPR$ Drihtenes))
+			 (18 NS foten)))
+	    (20 . ,))
+  (22 ID CMKENTHO-M1,134.8)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmkentho-m1.psd	1/1/298
+*/
+/*
+HEADER:
+source file:  cmkentse-m2.psd
+*/
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmkentse-m2.psd	0/0/226
+*/
+/*
+HEADER:
+source file:  cmlamb1-m1.psd
+*/
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmlamb1-m1.psd	0/0/522
+*/
+/*
+HEADER:
+source file:  cmlambx1-mx1.psd
+*/
+
+/~*
+nalde he no. na for+ton uppon +ta muchele assa a+gc uppon +ta lutthle fole
++tat +get hit wes sukinde ne ber hit nes nefre nane bur+dene ne hit nes nefere
+ifuled of nane o+dre assa.
+(CMLAMBX1-MX1,5.38)
+*~/
+/*
+47 IP-SUB:  47 IP-SUB, 54 BED, 56 VAG
+*/
+( (47 IP-SUB (48 ADVP-TMP (49 ADV +get))
+	     (51 NP-SBJ-RSP-1 (52 PRO hit))
+	     (54 BED wes)
+	     (56 VAG sukinde))
+  (103 ID CMLAMBX1-MX1,5.38)) 
+
+
+/~*
+and +ta scawede mihhal to sancte paul +ta wrecche sunfulle +te +ter were
+wuniende
+(CMLAMBX1-MX1,41.530)
+*~/
+/*
+33 IP-SUB:  33 IP-SUB, 39 BED, 41 VAG
+*/
+( (33 IP-SUB (34 NP-SBJ *T*-1)
+	     (36 ADVP-LOC (37 ADV +ter))
+	     (39 BED were)
+	     (41 VAG wuniende))
+  (43 ID CMLAMBX1-MX1,41.530)) 
+
+
+/~*
+and for+di heo bi+d wuniende inne +tisse pine.
+(CMLAMBX1-MX1,43.571)
+*~/
+/*
+1 IP-MAT-SPE:  1 IP-MAT-SPE, 10 BEP, 12 VAG
+*/
+( (1 IP-MAT-SPE (2 CONJ and)
+		(4 PP (5 P+D for+di))
+		(7 NP-SBJ (8 PRO heo))
+		(10 BEP bi+d)
+		(12 VAG wuniende)
+		(14 PP (15 P inne)
+		       (17 NP (18 D +tisse) (20 N pine)))
+		(22 . .))
+  (24 ID CMLAMBX1-MX1,43.571)) 
+
+
+/~*
++Dat halie hired cristes apostles weren wuniende edmodliche on heore ibeoden
+on ane upflore efter cristes upsti+ge onbodinde his bi-hates. +ta on +tisse
+deie +tet is pentecostes and wittesunnedeie on ure speche; com ferliche muchel
+swei of heofne and fulde al +ta upfleunge mid fure.
+(CMLAMBX1-MX1,89.739)
+*~/
+/*
+1 IP-MAT-SPE:  1 IP-MAT-SPE, 14 BED, 16 VAG
+*/
+( (1 IP-MAT-SPE (2 NP-SBJ (3 D +Dat)
+			  (5 ADJ halie)
+			  (7 N hired)
+			  (9 NP-PRN (10 NPR$ cristes) (12 NS apostles)))
+		(14 BED weren)
+		(16 VAG wuniende)
+		(18 ADVP (19 ADV edmodliche))
+		(21 PP (22 P on)
+		       (24 NP (25 PRO$ heore) (27 NS ibeoden)))
+		(29 PP (30 P on)
+		       (32 NP (33 D ane) (35 ADJ+N upflore)))
+		(37 PP (38 P efter)
+		       (40 NP (41 NPR$ cristes) (43 N upsti+ge)))
+		(45 IP-PPL-SPE RMV:onbodinde_his_bi-hates...)
+		(53 , .)
+		(55 PP (56 P +ta)
+		       (58 CP-ADV (59 C 0)
+				  (61 IP-SUB RMV:on_+tisse_deie...)))
+		(134 . .))
+  (136 ID CMLAMBX1-MX1,89.739)) 
+
+
+/~*
+Nu eft on +tisse deie +turh +tes halie gastes to-cume; weren alle ispechen
+a+gein inumen. and isome; for+don +tet cristes apostlas weren specende mid
+alle spechen. and ec +tet wunderluker for+don +tet +ta an of +ton apostlum
+bodeden mid ane speche; elche men wes i+tuht +tet +ta bodunge iherde; swilche
+heo spechen mid heore speche weren heo ebreisce. weren heo grekisce. o+der
+romenisce. o+der egiptisse. o+der of hwulche londe swa heo weren +tet +te lare
+iherden.
+(CMLAMBX1-MX1,93.823)
+*~/
+/*
+59 IP-SUB:  59 IP-SUB, 65 BED, 67 VAG
+*/
+( (59 IP-SUB (60 NP-SBJ (61 NPR$ cristes) (63 NS apostlas))
+	     (65 BED weren)
+	     (67 VAG specende)
+	     (69 PP (70 P mid)
+		    (72 NP (73 Q alle) (75 NS spechen))))
+  (263 ID CMLAMBX1-MX1,93.823)) 
+
+
+/~*
+and for+don $wes +te halia gast on culfren onlicnesse bufan criste. for+don
++tet he wes dreihninde on +tissere worlde mid bilehwitnesse. and mid nane
+la+dnesse and mid sibsumnesse.
+(CMLAMBX1-MX1,95.835)
+*~/
+/*
+38 IP-SUB:  38 IP-SUB, 42 BED, 44 VAG
+*/
+( (38 IP-SUB (39 NP-SBJ (40 PRO he))
+	     (42 BED wes)
+	     (44 VAG dreihninde)
+	     (46 PP (47 P on)
+		    (49 NP (50 D +tissere) (52 N worlde)))
+	     (54 PP (55 PP (56 P mid)
+			   (58 NP (59 N bilehwitnesse)))
+		    (61 , .)
+		    (63 CONJP (64 CONJ and)
+			      (66 PP (67 P mid)
+				     (69 NP (70 Q nane) (72 N la+dnesse))))
+		    (74 CONJP (75 CONJ and)
+			      (77 PP (78 P mid)
+				     (80 NP (81 N sibsumnesse))))))
+  (85 ID CMLAMBX1-MX1,95.835)) 
+
+
+/~*
++te halia gast wes ise+gen on fures heowe bufan +tam apostlas. for+don +te he
+dude +tet heo weren birnende on godes willan. and bodiende umbe godes riche.
+(CMLAMBX1-MX1,95.841)
+*~/
+/*
+47 IP-SUB-1:  47 IP-SUB-1, 51 BED, 53 VAG
+*/
+( (47 IP-SUB-1 (48 NP-SBJ (49 PRO heo))
+	       (51 BED weren)
+	       (53 VAG birnende)
+	       (55 PP (56 P on)
+		      (58 NP (59 NPR$ godes) (61 N willan))))
+  (81 ID CMLAMBX1-MX1,95.841)) 
+
+
+/~*
+$Nis na +te halia gast wuniende on his icunde. swa se he ise+gen wes; for+don
++tet he is unise+genlic. Ac for +tere itacnunge swa $we er seiden. +tet he wes
+ise+gen on culfre and on fure.
+(CMLAMBX1-MX1,97.859)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 2 NEG+BEP, 15 VAG
+*/
+( (1 IP-MAT (2 NEG+BEP $Nis)
+	    (4 CODE {TEXT:Ni})
+	    (6 NEG na)
+	    (8 NP-SBJ (9 D +te) (11 NPR halia) (13 NPR gast))
+	    (15 VAG wuniende)
+	    (17 PP (18 P on)
+		   (20 NP (21 PRO$ his) (23 N icunde)))
+	    (25 , .)
+	    (27 PP (28 ADV swa)
+		   (30 P se)
+		   (32 CP-ADV (33 WADVP-1 0)
+			      (35 C 0)
+			      (37 IP-SUB RMV:*T*-1_he_ise+gen...)))
+	    (47 , ;)
+	    (49 PP (50 P+D for+don)
+		   (52 CP-ADV (53 C +tet)
+			      (55 IP-SUB RMV:he_is_unise+genlic...)))
+	    (127 . .))
+  (129 ID CMLAMBX1-MX1,97.859)) 
+
+
+/~*
+o+der is halwende. +tet is +tet mon beo sari her on worlde for his sunnen.
+(CMLAMBX1-MX1,103.952)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 5 BEP, 7 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 OTHER o+der))
+	    (5 BEP is)
+	    (7 VAG halwende)
+	    (9 , .)
+	    (11 IP-MAT-PRN RMV:+tet_is_+tet...)
+	    (46 . .))
+  (48 ID CMLAMBX1-MX1,103.952)) 
+
+
+/~*
++Da +te butan godes la+ge and godes isetnesse libbe+d; +ta beo+d butan gode
+efre wuniende.
+(CMLAMBX1-MX1,119.1162)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 37 BEP, 48 VAG
+*/
+( (1 IP-MAT (2 NP-LFD (3 D +Da)
+		      (5 CP-REL (6 WNP-1 0)
+				(8 C +te)
+				(10 IP-SUB RMV:*T*-1_butan_godes...)))
+	    (32 , ;)
+	    (34 NP-SBJ-RSP (35 PRO +ta))
+	    (37 BEP beo+d)
+	    (39 PP (40 P butan)
+		   (42 NP (43 NPR gode)))
+	    (45 ADVP-TMP (46 ADV efre))
+	    (48 VAG wuniende)
+	    (50 . .))
+  (52 ID CMLAMBX1-MX1,119.1162)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmlambx1-mx1.psd	10/10/1407
+*/
+/*
+HEADER:
+source file:  cmmalory-m4.psd
+*/
+
+/~*
+for such two brethirne as ys kynge Ban and kynge Bors ar nat lyvynge.
+Wherefore we muste nedis voyde or dye,
+(CMMALORY-M4,25.781)
+*~/
+/*
+1 IP-MAT-SPE:  1 IP-MAT-SPE, 38 BEP, 42 VAG
+*/
+( (1 IP-MAT-SPE (2 CONJ for)
+		(4 NP-SBJ (5 SUCH such)
+			  (7 NUM two)
+			  (9 NS brethirne)
+			  (11 PP (12 P as)
+				 (14 CP-CMP (15 WNP-1 0)
+					    (17 C 0)
+					    (19 IP-SUB RMV:*T*-1_ys_kynge...))))
+		(38 BEP ar)
+		(40 NEG nat)
+		(42 VAG lyvynge)
+		(44 , .)
+		(46 CP-CAR-SPE (47 WPP-2 (48 WADV+P Wherefore))
+			       (50 C 0)
+			       (52 IP-SUB RMV:*T*-2_we_muste...))
+		(70 . ,))
+  (72 ID CMMALORY-M4,25.781)) 
+
+
+/~*
+and if they were longyng to you, there were no kynge undir hevyn that had
+suche eleven kyngis nother off suche worship. '
+(CMMALORY-M4,27.838)
+*~/
+/*
+10 IP-SUB:  10 IP-SUB, 14 BED, 16 VAG
+*/
+( (10 IP-SUB (11 NP-SBJ (12 PRO they))
+	     (14 BED were)
+	     (16 VAG longyng)
+	     (18 PP (19 P to)
+		    (21 NP (22 PRO you))))
+  (78 ID CMMALORY-M4,27.838)) 
+
+
+/~*
+So the meanwhyle that thys knyght was makynge hym redy to departe, there com
+into the courte the Lady of the Laake,
+(CMMALORY-M4,48.1575)
+*~/
+/*
+15 IP-SUB:  15 IP-SUB, 23 BED, 25 VAG
+*/
+( (15 IP-SUB (16 ADVP-TMP *T*-1)
+	     (18 NP-SBJ (19 D thys) (21 N knyght))
+	     (23 BED was)
+	     (25 VAG makynge)
+	     (27 IP-SMC RMV:hym_redy_to...))
+  (69 ID CMMALORY-M4,48.1575)) 
+
+
+/~*
+for thys lady was a lady that I was muche beholdynge to,
+(CMMALORY-M4,49.1604)
+*~/
+/*
+21 IP-SUB:  21 IP-SUB, 25 BED, 30 VAG
+*/
+( (21 IP-SUB (22 NP-SBJ (23 PRO I))
+	     (25 BED was)
+	     (27 NP-MSR (28 Q muche))
+	     (30 VAG beholdynge)
+	     (32 PP (33 P to)
+		    (35 NP *T*-1)))
+  (39 ID CMMALORY-M4,49.1604)) 
+
+
+/~*
+The meanewhyle as thys was adoynge, in com Merlion to kynge Marke
+(CMMALORY-M4,54.1768)
+*~/
+/*
+13 IP-SUB:  13 IP-SUB, 17 BED, 19 VAG
+*/
+( (13 IP-SUB (14 NP-SBJ (15 D thys))
+	     (17 BED was)
+	     (19 VAG adoynge))
+  (38 ID CMMALORY-M4,54.1768)) 
+
+
+/~*
+and twenty of them rode tofore the lorde to warne the Lady de Vaunce that the
+kynge was commynge. '
+(CMMALORY-M4,55.1822)
+*~/
+/*
+40 IP-SUB:  40 IP-SUB, 46 BED, 48 VAG
+*/
+( (40 IP-SUB (41 NP-SBJ (42 D the) (44 N kynge))
+	     (46 BED was)
+	     (48 VAG commynge))
+  (54 ID CMMALORY-M4,55.1822)) 
+
+
+/~*
+'but much am I beholdynge unto them.'
+(CMMALORY-M4,56.1860)
+*~/
+/*
+1 IP-MAT-SPE:  1 IP-MAT-SPE, 9 BEP, 14 VAG
+*/
+( (1 IP-MAT-SPE (2 ' ')
+		(4 CONJ but)
+		(6 NP-MSR (7 Q much))
+		(9 BEP am)
+		(11 NP-SBJ (12 PRO I))
+		(14 VAG beholdynge)
+		(16 PP (17 P unto)
+		       (19 NP (20 PRO them)))
+		(22 . .)
+		(24 ' '))
+  (26 ID CMMALORY-M4,56.1860)) 
+
+
+/~*
+for I am muche beholdynge unto hym,
+(CMMALORY-M4,56.1867)
+*~/
+/*
+1 IP-MAT-SPE:  1 IP-MAT-SPE, 7 BEP, 12 VAG
+*/
+( (1 IP-MAT-SPE (2 CONJ for)
+		(4 NP-SBJ (5 PRO I))
+		(7 BEP am)
+		(9 NP-MSR (10 Q muche))
+		(12 VAG beholdynge)
+		(14 PP (15 P unto)
+		       (17 NP (18 PRO hym)))
+		(20 . ,))
+  (22 ID CMMALORY-M4,56.1867)) 
+
+
+/~*
+for much am I beholdynge unto hym.
+(CMMALORY-M4,59.1950)
+*~/
+/*
+1 IP-MAT-SPE:  1 IP-MAT-SPE, 7 BEP, 12 VAG
+*/
+( (1 IP-MAT-SPE (2 CONJ for)
+		(4 NP-MSR (5 Q much))
+		(7 BEP am)
+		(9 NP-SBJ (10 PRO I))
+		(12 VAG beholdynge)
+		(14 PP (15 P unto)
+		       (17 NP (18 PRO hym)))
+		(20 . .))
+  (22 ID CMMALORY-M4,59.1950)) 
+
+
+/~*
+for he ys the mervaylyste knyght that ys now lyvynge.
+(CMMALORY-M4,63.2096)
+*~/
+/*
+21 IP-SUB:  21 IP-SUB, 24 BEP, 29 VAG
+*/
+( (21 IP-SUB (22 NP-SBJ *T*-1)
+	     (24 BEP ys)
+	     (26 ADVP-TMP (27 ADV now))
+	     (29 VAG lyvynge))
+  (33 ID CMMALORY-M4,63.2096)) 
+
+
+/~*
+and by adventure he com into the same foreste there he was takynge his slepe
+before;
+(CMMALORY-M4,189.2729)
+*~/
+/*
+31 IP-SUB:  31 IP-SUB, 37 BED, 39 VAG
+*/
+( (31 IP-SUB (32 ADVP-LOC *T*-1)
+	     (34 NP-SBJ (35 PRO he))
+	     (37 BED was)
+	     (39 VAG takynge)
+	     (41 NP-OB1 (42 PRO$ his) (44 N slepe))
+	     (46 ADVP-TMP (47 ADV before)))
+  (51 ID CMMALORY-M4,189.2729)) 
+
+
+/~*
+for of beaute` faylith you none as ony that ys now lyvynge.
+(CMMALORY-M4,627.3537)
+*~/
+/*
+29 IP-SUB:  29 IP-SUB, 32 BEP, 37 VAG
+*/
+( (29 IP-SUB (30 NP-SBJ *T*-1)
+	     (32 BEP ys)
+	     (34 ADVP-TMP (35 ADV now))
+	     (37 VAG lyvynge))
+  (41 ID CMMALORY-M4,627.3537)) 
+
+
+/~*
+and founde an ermytage and an ermyte therein whych was goyng unto masse.
+(CMMALORY-M4,655.4432)
+*~/
+/*
+34 IP-SUB:  34 IP-SUB, 37 BED, 39 VAG
+*/
+( (34 IP-SUB (35 NP-SBJ *T*-3)
+	     (37 BED was)
+	     (39 VAG goyng)
+	     (41 PP (42 P unto)
+		    (44 NP (45 N masse))))
+  (49 ID CMMALORY-M4,655.4432)) 
+
+
+/~*
+for He hath caused you to have more worldly worship than ony knyght that ys
+now lyvynge.
+(CMMALORY-M4,655.4446)
+*~/
+/*
+39 IP-SUB:  39 IP-SUB, 42 BEP, 47 VAG
+*/
+( (39 IP-SUB (40 NP-SBJ *T*-1)
+	     (42 BEP ys)
+	     (44 ADVP-TMP (45 ADV now))
+	     (47 VAG lyvynge))
+  (51 ID CMMALORY-M4,655.4446)) 
+
+
+/~*
+and if he can telle you no tydynges of hym, ryde streyte unto the castell of
+Carbonek where the Maymed Kyng ys lyyng,
+(CMMALORY-M4,659.4576)
+*~/
+/*
+58 IP-SUB:  58 IP-SUB, 68 BEP, 70 VAG
+*/
+( (58 IP-SUB (59 ADVP-LOC *T*-1)
+	     (61 NP-SBJ (62 D the) (64 VAN Maymed) (66 N Kyng))
+	     (68 BEP ys)
+	     (70 VAG lyyng))
+  (74 ID CMMALORY-M4,659.4576)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmmalory-m4.psd	15/15/4971
+*/
+/*
+HEADER:
+source file:  cmmandev-m3.psd
+*/
+
+/~*
+But in +tat cesoun +tat the bawme is growynge men put +tere to gode kepynge
++tat no man dar ben hardy to entre.
+(CMMANDEV-M3,32.795)
+*~/
+/*
+17 IP-SUB:  17 IP-SUB, 25 BEP, 27 VAG
+*/
+( (17 IP-SUB (18 ADVP-TMP *T*-1)
+	     (20 NP-SBJ (21 D the) (23 N bawme))
+	     (25 BEP is)
+	     (27 VAG growynge))
+  (68 ID CMMANDEV-M3,32.795)) 
+
+
+/~*
+Also in +tat Ile is the Mount Ethna +tat men clepen Mount Gybell & the wlcanes
++tat ben eueremore brennynge.
+(CMMANDEV-M3,36.890)
+*~/
+/*
+55 IP-SUB:  55 IP-SUB, 58 BEP, 63 VAG
+*/
+( (55 IP-SUB (56 NP-SBJ *T*-2)
+	     (58 BEP ben)
+	     (60 ADVP-TMP (61 ADV eueremore))
+	     (63 VAG brennynge))
+  (67 ID CMMANDEV-M3,36.890)) 
+
+
+/~*
++Tere is the chirche of seynte kateryne in the whiche ben manye lampes
+brennynge
+(CMMANDEV-M3,38.965)
+*~/
+/*
+31 IP-SUB:  31 IP-SUB, 36 BEP, 43 VAG
+*/
+( (31 IP-SUB (32 PP *T*-1)
+	     (34 NP-SBJ-2 *exp*)
+	     (36 BEP ben)
+	     (38 NP-2 (39 Q manye) (41 NS lampes))
+	     (43 VAG brennynge))
+  (45 ID CMMANDEV-M3,38.965)) 
+
+
+/~*
+And the brondes +tat weren brennynge becomen red roseres
+(CMMANDEV-M3,46.1137)
+*~/
+/*
+14 IP-SUB:  14 IP-SUB, 17 BED, 19 VAG
+*/
+( (14 IP-SUB (15 NP-SBJ *T*-1)
+	     (17 BED weren)
+	     (19 VAG brennynge))
+  (28 ID CMMANDEV-M3,46.1137)) 
+
+
+/~*
+And vpon +tat roche was Iacob slepynge whan he saugh the aungeles gon vp &
+doun by a ladder & he seyde: VERE LOCUS ISTE SANCTUS EST & EGO IGNORABAM, +tat
+is to seyne: Forsothe this place is holy & I wiste it nought.
+(CMMANDEV-M3,56.1390)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 12 BED, 17 VAG
+*/
+( (1 IP-MAT (2 CONJ And)
+	    (4 PP (5 P vpon)
+		  (7 NP (8 D +tat) (10 N roche)))
+	    (12 BED was)
+	    (14 NP-SBJ (15 NPR Iacob))
+	    (17 VAG slepynge)
+	    (19 PP (20 P whan)
+		   (22 CP-ADV (23 C 0)
+			      (25 IP-SUB RMV:he_saugh_the...)))
+	    (128 . .))
+  (130 ID CMMANDEV-M3,56.1390)) 
+
+
+/~*
+for +tei mowe not lyve ne dure for the gret hete of the sonne, because +tat
+the water is euermore boyllynge for the gret hete.
+(CMMANDEV-M3,96.2319)
+*~/
+/*
+44 IP-SUB:  44 IP-SUB, 50 BEP, 55 VAG
+*/
+( (44 IP-SUB (45 NP-SBJ (46 D the) (48 N water))
+	     (50 BEP is)
+	     (52 ADVP-TMP (53 ADV euermore))
+	     (55 VAG boyllynge)
+	     (57 PP (58 P for)
+		    (60 NP (61 D the) (63 ADJ gret) (65 N hete))))
+  (69 ID CMMANDEV-M3,96.2319)) 
+
+
+/~*
+& here sleves ben hongyng doun to the feet;
+(CMMANDEV-M3,102.2477)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 9 BEP, 11 VAG
+*/
+( (1 IP-MAT (2 CONJ &)
+	    (4 NP-SBJ (5 PRO$ here) (7 NS sleves))
+	    (9 BEP ben)
+	    (11 VAG hongyng)
+	    (13 PP (14 RP doun)
+		   (16 P to)
+		   (18 NP (19 D the) (21 CODE <P_102>) (23 NS feet)))
+	    (25 . ;))
+  (27 ID CMMANDEV-M3,102.2477)) 
+
+
+/~*
+And the arm & the hond +tat he putte in oure lordes syde whan he appered to
+him after his resurrexioun and seyde to him: NOLI ESSE INCREDULUS SED FIDELIS,
+is +git lyggynge in a vessell withouten the tombe.
+(CMMANDEV-M3,115.2821)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 100 BEP, 105 VAG
+*/
+( (1 IP-MAT (2 CONJ And)
+	    (4 NP-SBJ (5 NP (6 D the) (8 N arm))
+		      (10 CONJP (11 CONJ &)
+				(13 NP (14 D the) (16 N hond)))
+		      (18 CP-REL (19 WNP-1 0)
+				 (21 C +tat)
+				 (23 IP-SUB RMV:*T*-1_he_putte...)
+				 (70 CONJP (71 CONJ and)
+					   (73 IP-SUB RMV:*con*_seyde_to...))))
+	    (98 , ,)
+	    (100 BEP is)
+	    (102 ADVP-TMP (103 ADV +git))
+	    (105 VAG lyggynge)
+	    (107 PP (108 P in)
+		    (110 NP (111 D a) (113 N vessell)))
+	    (115 PP (116 P withouten)
+		    (118 NP (119 D the) (121 N tombe)))
+	    (123 . .))
+  (125 ID CMMANDEV-M3,115.2821)) 
+
+
+/~*
+And whan men gon be+gonde +to iourneys toward ynde & to the foreyn yles, all
+is envyronynge the roundnesse of the erthe & of the see vnder oure contrees on
+this half.
+(CMMANDEV-M3,122.2972)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 49 BEP, 51 VAG
+*/
+( (1 IP-MAT (2 CONJ And)
+	    (4 PP (5 P whan)
+		  (7 CP-ADV (8 C 0)
+			    (10 IP-SUB RMV:men_gon_be+gonde...)))
+	    (44 , ,)
+	    (46 NP-SBJ (47 Q all))
+	    (49 BEP is)
+	    (51 VAG envyronynge)
+	    (53 NP-OB1 (54 D the)
+		       (56 N roundnesse)
+		       (58 PP (59 PP (60 P of)
+				     (62 NP (63 D the) (65 N erthe)))
+			      (67 CONJP (68 CONJ &)
+					(70 PP (71 P of)
+					       (73 NP (74 D the) (76 N see))))))
+	    (78 PP (79 P vnder)
+		   (81 NP (82 PRO$ oure) (84 NS contrees)))
+	    (86 PP (87 P on)
+		   (89 NP (90 D this) (92 N half)))
+	    (94 . .))
+  (96 ID CMMANDEV-M3,122.2972)) 
+
+
+/~*
+for +tei ben descendynge toward the west betwene high toward the roundness of
+the world,
+(CMMANDEV-M3,124.3016)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 7 BEP, 9 VAG
+*/
+( (1 IP-MAT (2 CONJ for)
+	    (4 NP-SBJ (5 PRO +tei))
+	    (7 BEP ben)
+	    (9 VAG descendynge)
+	    (11 PP (12 P toward)
+		   (14 NP (15 D the) (17 N west)))
+	    (19 PP (20 P betwene)
+		   (22 ADJP (23 ADJ high)))
+	    (25 PP (26 P toward)
+		   (28 NP (29 D the)
+			  (31 N roundness)
+			  (33 PP (34 P of)
+				 (36 NP (37 D the) (39 N world)))))
+	    (41 . ,))
+  (43 ID CMMANDEV-M3,124.3016)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmmandev-m3.psd	10/10/3316
+*/
+/*
+HEADER:
+source file:  cmmarga-m1.psd
+*/
+
+/~*
+Ich foulhet ifont $o $+te al-mihti fedres nome. & o +tes haligastes. wes i +te
+time liuiende $i $londe. +ta +tt eadie meiden margarete bi nome feht wi+d +te
+feond. & wi+d his eor+dliche limen. ouercom & acaste ham.
+(CMMARGA-M1,55.9)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 43 BED, 53 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 PRO Ich))
+	    (5 IP-PPL RMV:foulhet_ifont_$o...)
+	    (41 , .)
+	    (43 BED wes)
+	    (45 PP (46 P i)
+		   (48 NP (49 D +te) (51 N time)))
+	    (53 VAG liuiende)
+	    (55 PP (56 P $i)
+		   (58 NP (59 N $londe)
+			  (61 CODE {TEXT:ilonde})
+			  (63 , .)
+			  (65 CP-REL (66 WADVP-1 0)
+				     (68 C +ta)
+				     (70 IP-SUB RMV:*T*-1_+tt_eadie...))))
+	    (136 . .))
+  (138 ID CMMARGA-M1,55.9)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmmarga-m1.psd	1/1/627
+*/
+/*
+HEADER:
+source file:  cmmirk-m34.psd
+*/
+
+/~*
+Now +ge schull knele adowne, and make your prayer to +tis holy apostoll, Seynt
+Andrew, +tat he be your mediator bytwyx God and you, prayng hym to +gyue you
+grace suche a lyfe to lede here, +tat hit be plesyng to hymselfe, and to our
+lady, and to all +te company of Heuen.
+(CMMIRK-M34,11.299)
+*~/
+/*
+116 IP-SUB:  116 IP-SUB, 120 BEP, 122 VAG
+*/
+( (116 IP-SUB (117 NP-SBJ (118 PRO hit))
+	      (120 BEP be)
+	      (122 VAG plesyng)
+	      (124 PP (125 PP (126 P to)
+			      (128 NP (129 PRO+N hymselfe)))
+		      (131 , ,)
+		      (133 CONJP (134 CONJ and)
+				 (136 PP (137 P to)
+					 (139 NP (140 PRO$ our) (142 NPR lady))))
+		      (144 , ,)
+		      (146 CONJP (147 CONJ and)
+				 (149 PP (150 P to)
+					 (152 NP (153 Q all)
+						 (155 D +te)
+						 (157 N company)
+						 (159 PP (160 P of)
+							 (162 NP (163 NPR Heuen))))))))
+  (167 ID CMMIRK-M34,11.299)) 
+
+
+/~*
+And for he was a +gere goyng and comyng to Rome, +terfor he made to sle all
++te chyldre +tat wern two +ger olde or within two.
+(CMMIRK-M34,36.1036)
+*~/
+/*
+10 IP-SUB:  10 IP-SUB, 14 BED, 21 VAG
+*/
+( (10 IP-SUB (11 NP-SBJ (12 PRO he))
+	     (14 BED was)
+	     (16 NP-MSR (17 D a) (19 N +gere))
+	     (21 VAG (22 VAG goyng)
+		     (24 CONJ and)
+		     (26 VAG comyng)
+		     (28 PP (29 P to)
+			    (31 NP (32 NPR Rome)))))
+  (88 ID CMMIRK-M34,36.1036)) 
+
+
+/~*
+Goddys owne seruandys, as +ge know well, +tys day ys called New-+gerus-day, as
+endyng of +te +ger +tat ys gon, and begynnyng of +te +gere +tat ys comyng.
+Wherfor, as I hope, +ge ben comen as +tys day to holy chyrch, forto contynue
+your seruice forth +tys +gere als well o+ter bettyr +tat comy+te, as +ge
+dyddyn +te +gere +tat ys gon, wythouten any new cownant makyng.
+(CMMIRK-M34,44.1284)
+*~/
+/*
+97 IP-SUB:  97 IP-SUB, 100 BEP, 102 VAG
+*/
+( (97 IP-SUB (98 NP-SBJ *T*-4)
+	     (100 BEP ys)
+	     (102 VAG comyng))
+  (255 ID CMMIRK-M34,44.1284)) 
+
+
+/~*
+For ryght as a chyld wepyth for fere, when he segh +te +gerde come, and +get
+hath no stroke, ryght soo +te flesche of Cryst was aferde of +te strong
+passion +tat was comyng;
+(CMMIRK-M34,45.1304)
+*~/
+/*
+107 IP-SUB:  107 IP-SUB, 110 BED, 112 VAG
+*/
+( (107 IP-SUB (108 NP-SBJ *T*-2)
+	      (110 BED was)
+	      (112 VAG comyng))
+  (116 ID CMMIRK-M34,45.1304)) 
+
+
+/~*
+The thryd tyme was yn flagellacyon, when he was wyth fers knyghtes beten wyth
+scorges upon his bare body, +tat he was rennyng on blod all aboute.
+(CMMIRK-M34,45.1306)
+*~/
+/*
+62 IP-SUB:  62 IP-SUB, 66 BED, 68 VAG
+*/
+( (62 IP-SUB (63 NP-SBJ (64 PRO he))
+	     (66 BED was)
+	     (68 VAG rennyng)
+	     (70 PP (71 P on)
+		    (73 NP (74 N blod)))
+	     (76 ADVP (77 Q all) (79 RP aboute)))
+  (83 ID CMMIRK-M34,45.1306)) 
+
+
+/~*
+And also for +te holy sacrament of weddyng ys moche defoulet by suche vanytes,
+scho layth hom downe +tes dayes +tat ben comyng, and yn +te Aduent, and also
+for new weddet +geuen hom to lykyng and lust of hor body, and +tenke all on
++te lyfe, and noght on +te deth.
+(CMMIRK-M34,63.1722)
+*~/
+/*
+64 IP-SUB:  64 IP-SUB, 67 BEP, 69 VAG
+*/
+( (64 IP-SUB (65 NP-SBJ *T*-1)
+	     (67 BEP ben)
+	     (69 VAG comyng))
+  (164 ID CMMIRK-M34,63.1722)) 
+
+
+/~*
+I rede +ter wer two chapmen dwellyng bysyde +te cyte of Norwych. Of +te whech
+on was a good lyuer, and +tat o+ter a curset lyuer;
+(CMMIRK-M34,91.2434)
+*~/
+/*
+10 IP-SUB:  10 IP-SUB, 14 BED, 23 VAG
+*/
+( (10 IP-SUB (11 NP-SBJ-1 (12 EX +ter))
+	     (14 BED wer)
+	     (16 NP-1 (17 NUM two)
+		      (19 N+NS chapmen)
+		      (21 CP-REL *ICH*-2))
+	     (23 VAG dwellyng)
+	     (25 PP (26 P bysyde)
+		    (28 NP (29 D +te)
+			   (31 N cyte)
+			   (33 PP (34 P of)
+				  (36 NP (37 NPR Norwych)))))
+	     (39 , .)
+	     (41 CP-REL-2 (42 WPP-3 (43 P Of)
+				    (45 WNP (46 D +te) (48 WPRO whech)))
+			  (50 C 0)
+			  (52 IP-SUB RMV:*T*-3_on_was...)))
+  (88 ID CMMIRK-M34,91.2434)) 
+
+
+/~*
+and recchyth lytyll of +te lyfe +tat ys comyng,
+(CMMIRK-M34,113.3086)
+*~/
+/*
+24 IP-SUB:  24 IP-SUB, 27 BEP, 29 VAG
+*/
+( (24 IP-SUB (25 NP-SBJ *T*-1)
+	     (27 BEP ys)
+	     (29 VAG comyng))
+  (33 ID CMMIRK-M34,113.3086)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmmirk-m34.psd	8/8/3685
+*/
+/*
+HEADER:
+source file:  cmntest-m3.psd
+*/
+
+/~*
+These thingis weren don in Bethanye bi+gende Jordan, whare Joon was baptisyng.
+(CMNTEST-M3,1,20J.58)
+*~/
+/*
+31 IP-SUB:  31 IP-SUB, 37 BED, 39 VAG
+*/
+( (31 IP-SUB (32 ADVP-LOC *T*-1)
+	     (34 NP-SBJ (35 NPR Joon))
+	     (37 BED was)
+	     (39 VAG baptisyng))
+  (43 ID CMNTEST-M3,1,20J.58)) 
+
+
+/~*
+And Joon was baptisinge in Ennon, bisidis Salym,
+(CMNTEST-M3,3,20J.211)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 7 BED, 9 VAG
+*/
+( (1 IP-MAT (2 CONJ And)
+	    (4 NP-SBJ (5 NPR Joon))
+	    (7 BED was)
+	    (9 VAG baptisinge)
+	    (11 PP (12 P in)
+		   (14 NP (15 NPR Ennon)))
+	    (17 , ,)
+	    (19 PP (20 P bisidis)
+		   (22 NP (23 NPR Salym)))
+	    (25 . ,))
+  (27 ID CMNTEST-M3,3,20J.211)) 
+
+
+/~*
+and he that first cam doun in to the sisterne, aftir the mouynge of the watir,
+was maad hool of what euer sijknesse he was holdun.
+(CMNTEST-M3,5,1J.363)
+*~/
+/*
+76 IP-SUB:  76 IP-SUB, 86 BED, 88 VAG
+*/
+( (76 IP-SUB (77 PP (78 P (79 CODE {of}))
+		    (81 NP *T*-3))
+	     (83 NP-SBJ (84 PRO he))
+	     (86 BED was)
+	     (88 VAG holdun))
+  (92 ID CMNTEST-M3,5,1J.363)) 
+
+
+/~*
+For Jhesus wiste fro the bigynnynge, which weren bileuynge, and who was to
+bitraye hym.
+(CMNTEST-M3,6,60J.560)
+*~/
+/*
+26 IP-SUB:  26 IP-SUB, 29 BED, 31 VAG
+*/
+( (26 IP-SUB (27 NP-SBJ *T*-1)
+	     (29 BED weren)
+	     (31 VAG bileuynge))
+  (59 ID CMNTEST-M3,6,60J.560)) 
+
+
+/~*
+for Y do euermore tho thingis, that ben plesynge to hym.
+(CMNTEST-M3,8,20J.769)
+*~/
+/*
+24 IP-SUB:  24 IP-SUB, 27 BEP, 29 VAG
+*/
+( (24 IP-SUB (25 NP-SBJ *T*-1)
+	     (27 BEP ben)
+	     (29 VAG plesynge)
+	     (31 PP (32 P to)
+		    (34 NP (35 PRO hym))))
+  (39 ID CMNTEST-M3,8,20J.769)) 
+
+
+/~*
+And he wente eftsoone ouer Jordan, in to that place where Joon was firste
+baptisynge,
+(CMNTEST-M3,10,40J.1039)
+*~/
+/*
+36 IP-SUB:  36 IP-SUB, 42 BED, 47 VAG
+*/
+( (36 IP-SUB (37 ADVP-LOC *T*-1)
+	     (39 NP-SBJ (40 NPR Joon))
+	     (42 BED was)
+	     (44 ADVP-TMP (45 ADV firste))
+	     (47 VAG baptisynge))
+  (51 ID CMNTEST-M3,10,40J.1039)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmntest-m3.psd	6/6/1149
+*/
+/*
+HEADER:
+source file:  cmorm-m1.psd
+*/
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmorm-m1.psd		0/0/2637
+*/
+/*
+HEADER:
+source file:  cmotest-m3.psd
+*/
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmotest-m3.psd	0/0/809
+*/
+/*
+HEADER:
+source file:  cmpeterb-m1.psd
+*/
+
+/~*
++Tet w+as on n+at & on swin swa +tet, on +ta tun +ta w+as tenn ploges o+der
+twelfe gangende, ne bel+af +t+ar noht an;
+(CMPETERB-M1,53.336)
+*~/
+/*
+46 IP-SUB:  46 IP-SUB, 55 BED, 70 VAG
+*/
+( (46 IP-SUB (47 PP (48 P (49 CODE {on}))
+		    (51 NP *T*-1))
+	     (53 NP-SBJ-2 *exp*)
+	     (55 BED w+as)
+	     (57 NP-2 (58 NUMP (59 NUM tenn)
+			       (61 CONJP *ICH*-3))
+		      (63 NS ploges)
+		      (65 CONJP-3 (66 CONJ o+der) (68 NUM twelfe)))
+	     (70 VAG gangende))
+  (88 ID CMPETERB-M1,53.336)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmpeterb-m1.psd	1/1/647
+*/
+/*
+HEADER:
+source file:  cmpolych-m3.psd
+*/
+
+/~*
+and +tey took Bertari-cus his servaunt, +tat wist of +tis scapynge, and was
+assentynge +terto,
+(CMPOLYCH-M3,89.641)
+*~/
+/*
+43 IP-SUB:  43 IP-SUB, 46 BED, 48 VAG
+*/
+( (43 IP-SUB (44 NP-SBJ *T*-1)
+	     (46 BED was)
+	     (48 VAG assentynge)
+	     (50 PP (51 ADV+P +terto)))
+  (55 ID CMPOLYCH-M3,89.641)) 
+
+
+/~*
++tey som men wil mene +tat he went to Rome to be +tere present, and to schewe
++tat his bookes were accordynge to +te loore of holy chirche, and +tat if +tey
+were nou+gt accordynge for to amende hym at +te pope his heste. But +tat he
+wente blynd aboute for to preche, +tat he was i-ladde by fraude of his man for
+to preche to stones as it were to men, +tat he herde +te voys of stones +tat
+answerede and seide Amen, +tat he wente +treis to Rome, +tat he fonde +tre R
+and +tre F i-write, and expowned what it was to mene, I fynde it nou+gt
+i-write in bookes of auctorite.
+(CMPOLYCH-M3,VI,221.1599)
+*~/
+/*
+59 IP-SUB:  59 IP-SUB, 65 BED, 67 VAG
+99 IP-SUB:  99 IP-SUB, 103 BED, 107 VAG
+*/
+( (59 IP-SUB (60 NP-SBJ (61 PRO$ his) (63 NS bookes))
+	     (65 BED were)
+	     (67 VAG accordynge)
+	     (69 PP (70 P to)
+		    (72 NP (73 D +te)
+			   (75 N loore)
+			   (77 PP (78 P of)
+				  (80 NP (81 ADJ holy) (83 NPR chirche))))))
+  (372 ID CMPOLYCH-M3,VI,221.1599)) 
+
+( (99 IP-SUB (100 NP-SBJ (101 PRO +tey))
+	     (103 BED were)
+	     (105 NEG nou+gt)
+	     (107 VAG accordynge))
+  (372 ID CMPOLYCH-M3,VI,221.1599)) 
+
+
+/~*
++tat swerde is +git kervynge in +te oon side,
+(CMPOLYCH-M3,VI,439.3225)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 7 BEP, 12 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 D +tat) (5 N swerde))
+	    (7 BEP is)
+	    (9 ADVP (10 ADV +git))
+	    (12 VAG kervynge)
+	    (14 PP (15 P in)
+		   (17 NP (18 D +te) (20 ONE oon) (22 N side)))
+	    (24 . ,))
+  (26 ID CMPOLYCH-M3,VI,439.3225)) 
+
+
+/~*
+and was assentynge to Iohn for +giftes o+ter $for faire byhestes.
+(CMPOLYCH-M3,VIII,105.3689)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 6 BED, 8 VAG
+*/
+( (1 IP-MAT (2 CONJ and)
+	    (4 NP-SBJ *con*)
+	    (6 BED was)
+	    (8 VAG assentynge)
+	    (10 PP (11 P to)
+		   (13 NP (14 NPR Iohn)))
+	    (16 PP (17 PP (18 P for)
+			  (20 NP (21 NS +giftes)))
+		   (23 CONJP (24 CONJ o+ter)
+			     (26 PP (27 P $for)
+				    (29 NP (30 ADJ faire) (32 NS byhestes)))))
+	    (34 . .))
+  (36 ID CMPOLYCH-M3,VIII,105.3689)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmpolych-m3.psd	5/4/3799
+*/
+/*
+HEADER:
+source file:  cmpurvey-m3.psd
+*/
+
+/~*
+and he seide, "The goddis of Sirie helpen hem, whiche goddis I schal plese
+with sacrifices, and thei schulen helpe me," whanne a+genward thei weren
+fallyng to him, and to al Israel.
+(CMPURVEY-M3,I,26.1288)
+*~/
+/*
+83 IP-SUB:  83 IP-SUB, 90 BED, 92 VAG
+*/
+( (83 IP-SUB (84 ADVP (85 ADV+WARD a+genward))
+	     (87 NP-SBJ (88 PRO thei))
+	     (90 BED weren)
+	     (92 VAG fallyng)
+	     (94 PP (95 PP (96 P to)
+			   (98 NP (99 PRO him)))
+		    (101 , ,)
+		    (103 CONJP (104 CONJ and)
+			       (106 PP (107 P to)
+				       (109 NP (110 Q al) (112 NPR Israel))))))
+  (116 ID CMPURVEY-M3,I,26.1288)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmpurvey-m3.psd	1/1/2359
+*/
+/*
+HEADER:
+source file:  cmreynar-m4.psd
+*/
+
+/~*
+he is not lyuyng that coude telle alle that I now leue vntolde <slash>
+(CMREYNAR-M4,7.32)
+*~/
+/*
+1 IP-MAT-SPE:  1 IP-MAT-SPE, 7 BEP, 11 VAG
+*/
+( (1 IP-MAT-SPE (2 NP-SBJ (3 PRO he)
+			  (5 CP-REL *ICH*-1))
+		(7 BEP is)
+		(9 NEG not)
+		(11 VAG lyuyng)
+		(13 CP-REL-SPE-1 (14 WNP-1 0)
+				 (16 C that)
+				 (18 IP-SUB RMV:*T*-1_coude_telle...))
+		(47 . <slash>))
+  (49 ID CMREYNAR-M4,7.32)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmreynar-m4.psd	1/1/739
+*/
+/*
+HEADER:
+source file:  cmreynes-m4.psd
+*/
+
+/~*
+Sanquine men and fleumatyk men owyn to bledyn abowtyn vndern, +tat they ben
+fastyng, and coleryk men fro an our afor vndern tyl noonn.
+(CMREYNES-M4,158.106)
+*~/
+/*
+34 IP-SUB:  34 IP-SUB, 38 BEP, 40 VAG
+*/
+( (34 IP-SUB (35 NP-SBJ (36 PRO they))
+	     (38 BEP ben)
+	     (40 VAG fastyng))
+  (75 ID CMREYNES-M4,158.106)) 
+
+
+/~*
+And sythen, caste it abowte in +te hows $wheras $as dowys ben vsyng etc.
+(CMREYNES-M4,260.439)
+*~/
+/*
+32 IP-SUB:  32 IP-SUB, 38 BEP, 40 VAG
+*/
+( (32 IP-SUB (33 ADVP-LOC *T*-1)
+	     (35 NP-SBJ (36 NS dowys))
+	     (38 BEP ben)
+	     (40 VAG vsyng))
+  (45 ID CMREYNES-M4,260.439)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmreynes-m4.psd	2/2/681
+*/
+/*
+HEADER:
+source file:  cmrollep-m24.psd
+*/
+
+/~*
+bot ay standand, sittand, gangand, or wirkand, es ay his lufe thynkand,
+(CMROLLEP-M24,61.9)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 27 BEP, 37 VAG
+*/
+( (1 IP-MAT (2 CONJ bot)
+	    (4 ADVP-TMP (5 ADV ay))
+	    (7 IP-PPL RMV:standand_,_sittand...)
+	    (25 , ,)
+	    (27 BEP es)
+	    (29 ADVP-TMP (30 ADV ay))
+	    (32 NP-SBJ (33 PRO$ his) (35 N lufe))
+	    (37 VAG thynkand)
+	    (39 . ,))
+  (41 ID CMROLLEP-M24,61.9)) 
+
+
+/~*
+and oftsyth +tarof es dremande.
+(CMROLLEP-M24,61.10)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 12 BEP, 14 VAG
+*/
+( (1 IP-MAT (2 CONJ and)
+	    (4 NP-SBJ *con*)
+	    (6 NP-TMP (7 ADV+N oftsyth))
+	    (9 PP (10 ADV+P +tarof))
+	    (12 BEP es)
+	    (14 VAG dremande)
+	    (16 . .))
+  (18 ID CMROLLEP-M24,61.10)) 
+
+
+/~*
+For ay, whils +ti hert es heldand til lufe any bodely thyng, +tou may not
+perfitely be coupuld with God.
+(CMROLLEP-M24,61.17)
+*~/
+/*
+15 IP-SUB:  15 IP-SUB, 21 BEP, 23 VAG
+*/
+( (15 IP-SUB (16 NP-SBJ (17 PRO$ +ti) (19 N hert))
+	     (21 BEP es)
+	     (23 VAG heldand)
+	     (25 PP (26 P til)
+		    (28 NP (29 N lufe)))
+	     (31 NP-OB1 (32 Q any) (34 ADJ bodely) (36 N thyng)))
+  (62 ID CMROLLEP-M24,61.17)) 
+
+
+/~*
+For if +tow stabil +ti lufe, and be byrnande whils +tou lyfes here, withowten
+dowte +ti settel es ordaynde ful hegh in heven and joyful before Goddes face
+amang his haly aungels.
+(CMROLLEP-M24,62.31)
+*~/
+/*
+27 IP-SUB:  27 IP-SUB, 30 BEP, 32 VAG
+*/
+( (27 IP-SUB (28 NP-SBJ *con*)
+	     (30 BEP be)
+	     (32 VAG byrnande)
+	     (34 PP (35 P whils)
+		    (37 CP-ADV (38 C 0)
+			       (40 IP-SUB RMV:+tou_lyfes_here...))))
+  (105 ID CMROLLEP-M24,62.31)) 
+
+
+/~*
+For al melody and al riches and delites, +tat al men in +tis world ken ordayne
+or thynk, sownes bot noy and anger til a mans hert +tat verraly es byrnand in
++te lufe of God;
+(CMROLLEP-M24,63.37)
+*~/
+/*
+85 IP-SUB:  85 IP-SUB, 91 BEP, 93 VAG
+*/
+( (85 IP-SUB (86 NP-SBJ *T*-2)
+	     (88 ADVP (89 ADV verraly))
+	     (91 BEP es)
+	     (93 VAG byrnand)
+	     (95 PP (96 P in)
+		    (98 NP (99 D +te)
+			   (101 N lufe)
+			   (103 PP (104 P of)
+				   (106 NP (107 NPR God))))))
+  (111 ID CMROLLEP-M24,63.37)) 
+
+
+/~*
+I wil +tat +tow never be ydel, bot ay owther speke of God, or wirke som
+notabil warke, or thynk on hym principaly, +tat +ti thoght be ay havand hym in
+mynde.
+(CMROLLEP-M24,67.117)
+*~/
+/*
+85 IP-SUB:  85 IP-SUB, 91 BEP, 96 HAG
+*/
+( (85 IP-SUB (86 NP-SBJ (87 PRO$ +ti) (89 N thoght))
+	     (91 BEP be)
+	     (93 ADVP-TMP (94 ADV ay))
+	     (96 HAG havand)
+	     (98 NP-OB1 (99 PRO hym))
+	     (101 PP (102 P in)
+		     (104 NP (105 N mynde))))
+  (109 ID CMROLLEP-M24,67.117)) 
+
+
+/~*
+And +tarfore all worldely solace +te behoves forsake, +tat +ti hert be
+heldande til na lufe of any creature, ne til na bysynes in erth, +tat +tou may
+be in sylence, be ay stabilly and stalwortly with +ti hert in Goddes lufe and
+hys drede.
+(CMROLLEP-M24,70.141)
+*~/
+/*
+31 IP-SUB:  31 IP-SUB, 37 BEP, 39 VAG
+*/
+( (31 IP-SUB (32 NP-SBJ (33 PRO$ +ti) (35 N hert))
+	     (37 BEP be)
+	     (39 VAG heldande)
+	     (41 PP (42 PP (43 P til)
+			   (45 NP (46 Q na)
+				  (48 N lufe)
+				  (50 PP (51 P of)
+					 (53 NP (54 Q any) (56 N creature)))))
+		    (58 , ,)
+		    (60 CONJP (61 CONJ ne)
+			      (63 PP (64 P til)
+				     (66 NP (67 Q na)
+					    (69 N bysynes)
+					    (71 PP (72 P in)
+						   (74 NP (75 N erth)))))))
+	     (77 , ,)
+	     (79 CP-ADV (80 C +tat)
+			(82 IP-SUB RMV:+tou_may_be...)))
+  (140 ID CMROLLEP-M24,70.141)) 
+
+
+/~*
+Now I write a sang of lufe, +tat +tou sal delyte in when +tow ert lufand Jhesu
+Criste:
+(CMROLLEP-M24,70.145)
+*~/
+/*
+47 IP-SUB:  47 IP-SUB, 51 BEP, 53 VAG
+*/
+( (47 IP-SUB (48 NP-SBJ (49 PRO +tow))
+	     (51 BEP ert)
+	     (53 VAG lufand)
+	     (55 NP-OB1 (56 NPR Jhesu) (58 NPR Criste)))
+  (62 ID CMROLLEP-M24,70.145)) 
+
+
+/~*
+For lufe es a wilful stiryng of owre thoght intil God, sa +tat it receyve na
+thyng +tat es agaynes +te lufe of Jhesu Crist, and +tarwith +tat it be lastand
+in swetnes of devocion;
+(CMROLLEP-M24,73.155)
+*~/
+/*
+87 IP-SUB:  87 IP-SUB, 93 BEP, 95 VAG
+*/
+( (87 IP-SUB (88 PP *ICH*-2)
+	     (90 NP-SBJ (91 PRO it))
+	     (93 BEP be)
+	     (95 VAG lastand)
+	     (97 PP (98 P in)
+		    (100 NP (101 N swetnes)
+			    (103 PP (104 P of)
+				    (106 NP (107 N devocion))))))
+  (111 ID CMROLLEP-M24,73.155)) 
+
+
+/~*
+And +tat +tou may wynne til +te swetnes of Goddes lufe, I sett here thre
+degree of lufe, in +te whilk +tou be ay waxand.
+(CMROLLEP-M24,74.164)
+*~/
+/*
+65 IP-SUB:  65 IP-SUB, 71 BEP, 76 VAG
+*/
+( (65 IP-SUB (66 PP *T*-1)
+	     (68 NP-SBJ (69 PRO +tou))
+	     (71 BEP be)
+	     (73 ADVP-TMP (74 ADV ay))
+	     (76 VAG waxand))
+  (80 ID CMROLLEP-M24,74.164)) 
+
+
+/~*
+For al erthly lufe es passand,
+(CMROLLEP-M24,75.179)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 11 BEP, 13 VAG
+*/
+( (1 IP-MAT (2 CONJ For)
+	    (4 NP-SBJ (5 Q al) (7 ADJ erthly) (9 N lufe))
+	    (11 BEP es)
+	    (13 VAG passand)
+	    (15 . ,))
+  (17 ID CMROLLEP-M24,75.179)) 
+
+
+/~*
+for it sal be clensed, and made sa fre +tat +te lyst do na thyng bot +tat +tat
+es payng of God.
+(CMROLLEP-M24,75.190)
+*~/
+/*
+60 IP-SUB:  60 IP-SUB, 63 BEP, 65 VAG
+*/
+( (60 IP-SUB (61 NP-SBJ *T*-3)
+	     (63 BEP es)
+	     (65 VAG payng)
+	     (67 PP (68 P of)
+		    (70 NP (71 NPR God))))
+  (75 ID CMROLLEP-M24,75.190)) 
+
+
+/~*
+For he +tat es slaw in Goddes servyce may noght be byrnand in lufe, bot if he
+do al his myght and travell, nyght and day, to fulfill Goddes wille.
+(CMROLLEP-M24,78.241)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 31 BE, 33 VAG
+*/
+( (1 IP-MAT (2 CONJ For)
+	    (4 NP-SBJ (5 PRO he)
+		      (7 CP-REL (8 WNP-1 0)
+				(10 C +tat)
+				(12 IP-SUB RMV:*T*-1_es_slaw...)))
+	    (27 MD may)
+	    (29 NEG noght)
+	    (31 BE be)
+	    (33 VAG byrnand)
+	    (35 PP (36 P in)
+		   (38 NP (39 N lufe)))
+	    (41 , ,)
+	    (43 PP (44 P bot)
+		   (46 PP (47 P if)
+			  (49 CP-ADV (50 C 0)
+				     (52 IP-SUB RMV:he_do_al...))))
+	    (92 . .))
+  (94 ID CMROLLEP-M24,78.241)) 
+
+
+/~*
+bot ay it stirres hym to do some gode +tat myght be lykand til God, as in
+praying, or in wirkyng profitabel thynges, or in spekyng of Cristes passyon;
+and principally in thoght +tat +te mynde of Jhesu Criste passe noght fra his
+thoght.
+(CMROLLEP-M24,78.243)
+*~/
+/*
+30 IP-SUB:  30 IP-SUB, 35 BE, 37 VAG
+*/
+( (30 IP-SUB (31 NP-SBJ *T*-1)
+	     (33 MD myght)
+	     (35 BE be)
+	     (37 VAG lykand)
+	     (39 PP (40 P til)
+		    (42 NP (43 NPR God))))
+  (136 ID CMROLLEP-M24,78.243)) 
+
+
+/~*
++tan es it schame til +te, bot if +tou be als gode, or better, wi+tin in +ti
+sawle, als +tou ert semand at +te syght of men.
+(CMROLLEP-M24,93.493)
+*~/
+/*
+74 IP-SUB:  74 IP-SUB, 80 BEP, 82 VAG
+*/
+( (74 IP-SUB (75 ADJP *T*-2)
+	     (77 NP-SBJ (78 PRO +tou))
+	     (80 BEP ert)
+	     (82 VAG semand)
+	     (84 PP (85 P at)
+		    (87 NP (88 D +te)
+			   (90 N syght)
+			   (92 PP (93 P of)
+				  (95 NP (96 NS men))))))
+  (100 ID CMROLLEP-M24,93.493)) 
+
+
+/~*
+For when +tou ert commen +tartill, +ti joy and desyre will ay be byrnand in
+Criste.
+(CMROLLEP-M24,95.524)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 39 BE, 41 VAG
+*/
+( (1 IP-MAT (2 CONJ For)
+	    (4 PP (5 P when)
+		  (7 CP-ADV (8 C 0)
+			    (10 IP-SUB RMV:+tou_ert_commen...)))
+	    (21 , ,)
+	    (23 NP-SBJ (24 PRO$ +ti)
+		       (26 N joy)
+		       (28 CONJP (29 CONJ and)
+				 (31 NX (32 N desyre))))
+	    (34 MD will)
+	    (36 ADVP-TMP (37 ADV ay))
+	    (39 BE be)
+	    (41 VAG byrnand)
+	    (43 PP (44 P in)
+		   (46 NP (47 NPR Criste)))
+	    (49 . .))
+  (51 ID CMROLLEP-M24,95.524)) 
+
+
+/~*
+$I wyll +tat +tou be ay clymbande tyll Jhesuwarde, and ekand +ti luf and +ti
+servys in hym; noght als foles doos:
+(CMROLLEP-M24,96.542)
+*~/
+/*
+11 IP-SUB-1:  11 IP-SUB-1, 15 BEP, 20 VAG
+*/
+( (11 IP-SUB-1 (12 NP-SBJ (13 PRO +tou))
+	       (15 BEP be)
+	       (17 ADVP-TMP (18 ADV ay))
+	       (20 VAG clymbande)
+	       (22 PP (23 P tyll)
+		      (25 NP (26 NPR+WARD Jhesuwarde))))
+  (78 ID CMROLLEP-M24,96.542)) 
+
+
+/~*
+bot for many +tat was byrnand at +te begynning and abyll til +te luf of Jhesu
+Criste, for owre mykel penans +tai have lettyd +tamself, and made +tam sa
+febel +tat +tai may noght lufe God as +tai sulde. In +te whilk luf +tat +tow
+wax ay mare and mare is my covaytyng and my amonestyng.
+(CMROLLEP-M24,96.546)
+*~/
+/*
+17 IP-SUB-3:  17 IP-SUB-3, 20 BED, 22 VAG
+*/
+( (17 IP-SUB-3 (18 NP-SBJ *T*-2)
+	       (20 BED was)
+	       (22 VAG byrnand)
+	       (24 PP (25 P at)
+		      (27 NP (28 D +te) (30 N begynning))))
+  (185 ID CMROLLEP-M24,96.546)) 
+
+
+/~*
+bot if +tou sett al +ti +toght how +tou may luf +ti spouse Jhesu Criste mare
++tan +tou has done, +tan dar I say +tat +ti mede es waxand and noght wanande.
+Wharfore, +tat +tou be ryght disposed, ba+t for +ti saule and +ti body, +tou
+sall understande fowre +tynges.
+(CMROLLEP-M24,96.548)
+*~/
+/*
+86 IP-SUB:  86 IP-SUB, 92 BEP, 94 VAG
+*/
+( (86 IP-SUB (87 NP-SBJ (88 PRO$ +ti) (90 N mede))
+	     (92 BEP es)
+	     (94 VAG waxand))
+  (172 ID CMROLLEP-M24,96.548)) 
+
+
+/~*
+swa +te joy in +te syght of Jhesu in his godhede es swa mykel +tat +tai mond
+dye for joy, if it ne war his godenes, +tat will +tat his lovers be lyvand ay
+in blys, als his ryghtwysnes wil +tat al +tat lufed hym noght be ay lyvand in
+fyre +tat es horribel till any man at thynk,
+(CMROLLEP-M24,102.617)
+*~/
+/*
+93 IP-SUB:  93 IP-SUB, 99 BEP, 101 VAG
+135 IP-SUB:  135 IP-SUB, 154 BEP, 159 VAG
+*/
+( (93 IP-SUB (94 NP-SBJ (95 PRO$ his) (97 NS lovers))
+	     (99 BEP be)
+	     (101 VAG lyvand)
+	     (103 ADVP-TMP (104 ADV ay))
+	     (106 PP (107 P in)
+		     (109 NP (110 N blys))))
+  (202 ID CMROLLEP-M24,102.617)) 
+
+( (135 IP-SUB (136 NP-SBJ (137 Q al)
+			  (139 CP-REL (140 WNP-4 0)
+				      (142 C +tat)
+				      (144 IP-SUB RMV:*T*-4_lufed_hym...)))
+	      (154 BEP be)
+	      (156 ADVP-TMP (157 ADV ay))
+	      (159 VAG lyvand)
+	      (161 PP (162 P in)
+		      (164 NP (165 N fyre)
+			      (167 CP-REL (168 WNP-5 0)
+					  (170 C +tat)
+					  (172 IP-SUB RMV:*T*-5_es_horribel...)))))
+  (202 ID CMROLLEP-M24,102.617)) 
+
+
+/~*
+If +ti lufe be not byrnand in hym, litel es +ti delyte.
+(CMROLLEP-M24,103.642)
+*~/
+/*
+8 IP-SUB:  8 IP-SUB, 14 BEP, 18 VAG
+*/
+( (8 IP-SUB (9 NP-SBJ (10 PRO$ +ti) (12 N lufe))
+	    (14 BEP be)
+	    (16 NEG not)
+	    (18 VAG byrnand)
+	    (20 PP (21 P in)
+		   (23 NP (24 PRO hym))))
+  (40 ID CMROLLEP-M24,103.642)) 
+
+
+/~*
++Tan +ti sawle es Jhesu lufand, Jhesu thynkand, Jhesu desirand, anly in +te
+covayties of hym anedande, til hym syngand, of hym byrnand, in hym restand.
+(CMROLLEP-M24,105.678)
+*~/
+/*
+2 IP-MAT-1:  2 IP-MAT-1, 11 BEP, 16 VAG
+*/
+( (2 IP-MAT-1 (3 ADVP-TMP (4 ADV +Tan))
+	      (6 NP-SBJ (7 PRO$ +ti) (9 N sawle))
+	      (11 BEP es)
+	      (13 NP-OB1 (14 NPR Jhesu))
+	      (16 VAG lufand))
+  (90 ID CMROLLEP-M24,105.678)) 
+
+
+/~*
+Bot +te sawle +tat es in +te thyrd degre es als byrnand fyre, and as +te
+nyghttyngale, +tat lufes sang and melody and fayles for mykel lufe; swa +tat
++te saule es anely comforted in lovying and lufyng of God, and til +te dede
+com es syngand gastly til Jhesu, and in Jhesu, and Jhesu, noght bodyly cryand
+wyth mouth --
+(CMROLLEP-M24,106.694)
+*~/
+/*
+132 IP-SUB-3:  132 IP-SUB-3, 149 BEP, 151 VAG
+*/
+( (132 IP-SUB-3 (133 NP-SBJ *con*)
+		(135 PP (136 P til)
+			(138 CP-ADV (139 C 0)
+				    (141 IP-SUB RMV:+te_dede_com...)))
+		(149 BEP es)
+		(151 VAG syngand)
+		(153 ADVP (154 ADV gastly))
+		(156 PP (157 PP (158 P til)
+				(160 NP (161 NPR Jhesu)))
+			(163 , ,)
+			(165 CONJP (166 CONJ and)
+				   (168 PP (169 P in)
+					   (171 NP (172 NPR Jhesu))))))
+  (204 ID CMROLLEP-M24,106.694)) 
+
+
+/~*
+it es wirkand som gude evermare.
+(CMROLLEP-M24,111.810)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 5 BEP, 7 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 PRO it))
+	    (5 BEP es)
+	    (7 VAG wirkand)
+	    (9 NP-OB1 (10 Q som) (12 N gude))
+	    (14 ADVP-TMP (15 ADV evermare))
+	    (17 . .))
+  (19 ID CMROLLEP-M24,111.810)) 
+
+
+/~*
+For a grete doctor says +tat +tai er Goddes trone, +tat dwelles still in a
+stede, and er noght abowte rennand, bot in swetnes of Cristes lufe er stabyld.
+(CMROLLEP-M24,116.907)
+*~/
+/*
+60 IP-SUB:  60 IP-SUB, 63 BEP, 69 VAG
+*/
+( (60 IP-SUB (61 NP-SBJ *T*-2)
+	     (63 BEP er)
+	     (65 NEG noght)
+	     (67 RP abowte)
+	     (69 VAG rennand))
+  (99 ID CMROLLEP-M24,116.907)) 
+
+
+/~*
+For sittand am I in maste rest, and my hert maste upwarde.
+(CMROLLEP-M24,116.909)
+*~/
+/*
+2 IP-MAT-1:  2 IP-MAT-1, 7 BEP, 5 VAG
+*/
+( (2 IP-MAT-1 (3 CONJ For)
+	      (5 VAG sittand)
+	      (7 BEP am)
+	      (9 NP-SBJ (10 PRO I))
+	      (12 PP (13 P in)
+		     (15 NP (16 QS maste) (18 N rest))))
+  (38 ID CMROLLEP-M24,116.909)) 
+
+
+/~*
+And if it be swa +tat +tai be noght prayand with +te mowth, bot anely thynkand
+of God and of +te fairehede of aungels and haly sawles. +Tan may I say +tat
+contemplacion es a wonderful joy of Goddes luf, +te whilk joy es lovyng of God,
++tat may noght be talde;
+(CMROLLEP-M24,118.956)
+*~/
+/*
+23 IP-SUB-1:  23 IP-SUB-1, 27 BEP, 31 VAG
+*/
+( (23 IP-SUB-1 (24 NP-SBJ (25 PRO +tai))
+	       (27 BEP be)
+	       (29 NEG noght)
+	       (31 VAG prayand)
+	       (33 PP (34 P with)
+		      (36 NP (37 D +te) (39 N mowth))))
+  (166 ID CMROLLEP-M24,118.956)) 
+
+
+/~*
+Sithen, when +tai have sufferd many temptacions, and foule noyes of thoghtes
++tat er ydel, and of vanitees, +te whilk wil comber +tam, +tat can noght
+destroy +tam, er passand away, he gars +tam geder til +tam +tair hert, and
+fest anely in hym;
+(CMROLLEP-M24,119.964)
+*~/
+/*
+32 IP-SUB:  32 IP-SUB, 110 BEP, 112 VAG
+*/
+( (32 IP-SUB (33 NP-SBJ (34 ADJ foule)
+			(36 NS noyes)
+			(38 PP (39 PP (40 P of)
+				      (42 NP (43 NS thoghtes)
+					     (45 CP-REL (46 WNP-1 0)
+							(48 C +tat)
+							(50 IP-SUB RMV:*T*-1_er_ydel...))))
+			       (58 , ,)
+			       (60 CONJP (61 CONJ and)
+					 (63 PP (64 P of)
+						(66 NP (67 NS vanitees)
+						       (69 , ,)
+						       (71 CP-REL (72 WNP-2 (73 D +te) (75 WPRO whilk))
+								  (77 C 0)
+								  (79 IP-SUB RMV:*T*-2_wil_comber...))
+						       (89 , ,)
+						       (91 CP-REL (92 WNP-3 0)
+								  (94 C +tat)
+								  (96 IP-SUB RMV:*T*-3_can_noght...)))))))
+	     (108 , ,)
+	     (110 BEP er)
+	     (112 VAG passand)
+	     (114 ADVP-DIR (115 ADV away)))
+  (162 ID CMROLLEP-M24,119.964)) 
+
+
+/~*
+Bot +tou sal witt, +tat na man hase perfite syght of heven whils +tai er
+lifand bodili here;
+(CMROLLEP-M24,119.972)
+*~/
+/*
+41 IP-SUB:  41 IP-SUB, 45 BEP, 47 VAG
+*/
+( (41 IP-SUB (42 NP-SBJ (43 PRO +tai))
+	     (45 BEP er)
+	     (47 VAG lifand)
+	     (49 ADVP (50 ADV bodili))
+	     (52 ADVP-LOC (53 ADV here)))
+  (57 ID CMROLLEP-M24,119.972)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmrollep-m24.psd	30/29/985
+*/
+/*
+HEADER:
+source file:  cmrolltr-m24.psd
+*/
+
+/~*
+Aristotill sais +tat +te bees are feghtande agaynes hym +tat will drawe +taire
+hony fra thaym;
+(CMROLLTR-M24,8.237)
+*~/
+/*
+10 IP-SUB:  10 IP-SUB, 16 BEP, 18 VAG
+*/
+( (10 IP-SUB (11 NP-SBJ (12 D +te) (14 NS bees))
+	     (16 BEP are)
+	     (18 VAG feghtande)
+	     (20 PP (21 P agaynes)
+		    (23 NP (24 PRO hym)
+			   (26 CP-REL (27 WNP-1 0)
+				      (29 C +tat)
+				      (31 IP-SUB RMV:*T*-1_will_drawe...)))))
+  (51 ID CMROLLTR-M24,8.237)) 
+
+
+/~*
+bot if +tay be ay criande ef Godd with wordis of +taire mouthe, or elles in
+theire hertis by desyrand wordes, as if +tay said thus: 'A Lorde, brynge me to
+Thi blysse!' 'Lorde make me safe!' or swylke o+ter. The wordis ere gude,
+whe+ter +tay be sownned in +te mouthe, or ells fourmede in +te herte,
+(CMROLLTR-M24,37.768)
+*~/
+/*
+11 IP-SUB-1:  11 IP-SUB-1, 15 BEP, 20 VAG
+*/
+( (11 IP-SUB-1 (12 NP-SBJ (13 PRO +tay))
+	       (15 BEP be)
+	       (17 ADVP-TMP (18 ADV ay))
+	       (20 VAG criande)
+	       (22 PP (23 P ef)
+		      (25 NP (26 NPR Godd)))
+	       (28 PP (29 P with)
+		      (31 NP (32 NS wordis)
+			     (34 PP (35 P of)
+				    (37 NP (38 PRO$ +taire) (40 N mouthe))))))
+  (200 ID CMROLLTR-M24,37.768)) 
+
+
+/~*
+Also the mynd of oure Lady Saynt Marie abowne all o+ter sayntes, for to see by
+gostely eghe +te abowndance of grace in hire haly saule, whene scho was here
+lyffand, +tat owre Lorde gafe hir allane, passande all o+ter creatours;
+(CMROLLTR-M24,39.811)
+*~/
+/*
+80 IP-SUB:  80 IP-SUB, 84 BED, 89 VAG
+*/
+( (80 IP-SUB (81 NP-SBJ (82 PRO scho))
+	     (84 BED was)
+	     (86 ADVP-LOC (87 ADV here))
+	     (89 VAG lyffand))
+  (127 ID CMROLLTR-M24,39.811)) 
+
+
+/~*
+ne suffire noghte thi herte fall fra +te desire as if +tou ware abydande or
+gapand after sum qwyent stirrynge, or sum wondirfull felynge vthire +tan +tou
+hase had.
+(CMROLLTR-M24,43.874)
+*~/
+/*
+33 IP-SUB:  33 IP-SUB, 37 BED, 39 VAG
+*/
+( (33 IP-SUB (34 NP-SBJ (35 PRO +tou))
+	     (37 BED ware)
+	     (39 VAG (40 VAG abydande) (42 CONJ or) (44 VAG gapand))
+	     (46 PP (47 P after)
+		    (49 NP (50 NP (51 Q sum) (53 ADJ qwyent) (55 N stirrynge))
+			   (57 , ,)
+			   (59 CONJP (60 CONJ or)
+				     (62 NP (63 Q sum)
+					    (65 ADJ wondirfull)
+					    (67 N felynge)
+					    (69 ADJP (70 OTHER vthire))
+					    (72 PP (73 P +tan)
+						   (75 CP-CMP (76 WNP-1 0)
+							      (78 C 0)
+							      (80 IP-SUB RMV:*T*-1_+tou_hase...))))))))
+  (92 ID CMROLLTR-M24,43.874)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmrolltr-m24.psd	4/4/950
+*/
+/*
+HEADER:
+source file:  cmroyal-m34.psd
+*/
+
+/~*
+But here what Dauid +te prophete seys, +tat oure seyntes ben goyn avey:
+(CMROYAL-M34,251.184)
+*~/
+/*
+32 IP-SUB:  32 IP-SUB, 38 BEP, 40 VAG
+*/
+( (32 IP-SUB (33 NP-SBJ (34 PRO$ oure) (36 NS seyntes))
+	     (38 BEP ben)
+	     (40 VAG goyn)
+	     (42 ADVP-DIR (43 ADV avey)))
+  (47 ID CMROYAL-M34,251.184)) 
+
+
+/~*
+This veniaunce is perishyng myn herte withowte hope of hele.
+(CMROYAL-M34,254.244)
+*~/
+/*
+1 IP-MAT-SPE:  1 IP-MAT-SPE, 7 BEP, 9 VAG
+*/
+( (1 IP-MAT-SPE (2 NP-SBJ (3 D This) (5 N veniaunce))
+		(7 BEP is)
+		(9 VAG perishyng)
+		(11 NP-OB1 (12 PRO$ myn) (14 N herte))
+		(16 PP (17 P withowte)
+		       (19 NP (20 N hope)
+			      (22 PP (23 P of)
+				     (25 NP (26 N hele)))))
+		(28 . .))
+  (30 ID CMROYAL-M34,254.244)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmroyal-m34.psd	2/2/398
+*/
+/*
+HEADER:
+source file:  cmsawles-m1.psd
+*/
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmsawles-m1.psd	0/0/272
+*/
+/*
+HEADER:
+source file:  cmsiege-m4.psd
+*/
+
+/~*
+But he was so stynkyng in his leppur +tat no man my+gt soffyr +te stynche
+no+tyr abyde in his chambur,
+(CMSIEGE-M4,73.97)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 7 BED, 14 VAG
+*/
+( (1 IP-MAT (2 CONJ But)
+	    (4 NP-SBJ (5 PRO he))
+	    (7 BED was)
+	    (9 ADVP (10 ADVR so)
+		    (12 CP-DEG *ICH*-1))
+	    (14 VAG stynkyng)
+	    (16 PP (17 P in)
+		   (19 NP (20 PRO$ his) (22 N leppur)))
+	    (24 CP-DEG-1 (25 C +tat)
+			 (27 IP-SUB RMV:no_man_my+gt...))
+	    (57 . ,))
+  (59 ID CMSIEGE-M4,73.97)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmsiege-m4.psd	1/1/731
+*/
+/*
+HEADER:
+source file:  cmthorn-mx4.psd
+*/
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmthorn-mx4.psd	0/0/642
+*/
+/*
+HEADER:
+source file:  cmtrinit-mx1.psd
+*/
+
+/~*
+Men +te waren $wunende on elche of +tese +trie times wisten gerne after ure
+lauerd ihesu cristes tocume alse we do+d. +te ben on +tesse +tre wuken; +te
+ben cleped aduent. +tat is seggen on englis ure louerd ihesu cristes tocume.
+(CMTRINIT-MX1,3.13)
+*~/
+/*
+10 IP-SUB:  10 IP-SUB, 13 BED, 15 VAG
+*/
+( (10 IP-SUB (11 NP-SBJ *T*-1)
+	     (13 BED waren)
+	     (15 VAG $wunende)
+	     (17 CODE {TEXT:wunede})
+	     (19 PP (20 P on)
+		    (22 NP (23 Q elche)
+			   (25 PP (26 P of)
+				  (28 NP (29 D +tese) (31 NUM +trie) (33 NS times))))))
+  (147 ID CMTRINIT-MX1,3.13)) 
+
+
+/~*
+and +tus que+d. Uigilate quia nescitis diem neque horam. +tat is be+d wakiende.
+and forlete+d gure synne. +tat ge ne ben ifunden on sunne. and swo forlorene.
+(CMTRINIT-MX1,5.40)
+*~/
+/*
+36 IP-IMP-SPE:  36 IP-IMP-SPE, 37 BEI, 39 VAG
+*/
+( (36 IP-IMP-SPE (37 BEI be+d) (39 VAG wakiende))
+  (89 ID CMTRINIT-MX1,5.40)) 
+
+
+/~*
+On +te niht and on +te time. +te ure lafdi seinte marie kennede of holie
+lichame ure louerd ihesu crist. were herdes wakiende bi side +te buregh and
+wittende here oref.
+(CMTRINIT-MX1,31.434)
+*~/
+/*
+2 IP-MAT-1:  2 IP-MAT-1, 65 BED, 70 VAG
+*/
+( (2 IP-MAT-1 (3 PP (4 PP (5 P On)
+			  (7 NP (8 D +te) (10 N niht)))
+		    (12 CONJP (13 CONJ and)
+			      (15 PP (16 P on)
+				     (18 NP (19 D +te) (21 N time))))
+		    (23 , .)
+		    (25 CP-REL (26 WADVP-2 0)
+			       (28 C +te)
+			       (30 IP-SUB RMV:*T*-2_ure_lafdi...)))
+	      (63 , .)
+	      (65 BED were)
+	      (67 NP-SBJ (68 NS herdes))
+	      (70 VAG wakiende)
+	      (72 PP (73 P (74 P21 bi) (76 P22 side))
+		     (78 NP (79 D +te) (81 N buregh))))
+  (96 ID CMTRINIT-MX1,31.434)) 
+
+
+/~*
+Al mankin was wunende on muchele wowe. sum on +tisse worelde. and sum on helle
+pine. forte +tat ilke time; +tat ure louerd ihesu crist hem +tarof aredde. and
+turnede swo here wowe to wele. and here sor to muchele blisse.
+(CMTRINIT-MX1,33.446)
+*~/
+/*
+1 IP-MAT-1:  1 IP-MAT-1, 7 BED, 9 VAG
+*/
+( (1 IP-MAT-1 (2 NP-SBJ (3 Q Al) (5 N+N mankin))
+	      (7 BED was)
+	      (9 VAG wunende)
+	      (11 PP (12 P on)
+		     (14 NP (15 Q muchele) (17 N wowe)))
+	      (19 , .)
+	      (21 IP-MAT-PRN RMV:sum_on_+tisse...)
+	      (51 , .)
+	      (53 PP (54 P forte)
+		     (56 NP (57 D +tat)
+			    (59 ADJ ilke)
+			    (61 N time)
+			    (63 , ;)
+			    (65 CP-REL (66 WNP-2 0)
+				       (68 C +tat)
+				       (70 IP-SUB RMV:*T*-2_ure_louerd...))))
+	      (136 . .))
+  (138 ID CMTRINIT-MX1,33.446)) 
+
+
+/~*
++tat israelisshe folc was walkende toward ierusalem on swinche. and on drede.
+and on wanrede
+(CMTRINIT-MX1,51.695)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 9 BED, 11 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 D +tat) (5 ADJ israelisshe) (7 N folc))
+	    (9 BED was)
+	    (11 VAG walkende)
+	    (13 PP (14 P toward)
+		   (16 NP (17 NPR ierusalem)))
+	    (19 PP (20 PP (21 P on)
+			  (23 NP (24 N swinche)))
+		   (26 , .)
+		   (28 CONJP (29 CONJ and)
+			     (31 PP (32 P on)
+				    (34 NP (35 N drede))))
+		   (37 , .)
+		   (39 CONJP (40 CONJ and)
+			     (42 PP (43 P on)
+				    (45 NP (46 N wanrede))))))
+  (48 ID CMTRINIT-MX1,51.695)) 
+
+
+/~*
+Ac efter +tan +te hie weren wuniende in ierusalem. and weren hole and sunde.
+and sikere of here giue. and hadden +te fulle of wurldes richeisse. +to hie
+forleten godes lore.
+(CMTRINIT-MX1,51.697)
+*~/
+/*
+13 IP-SUB:  13 IP-SUB, 17 BED, 19 VAG
+*/
+( (13 IP-SUB (14 NP-SBJ (15 PRO hie))
+	     (17 BED weren)
+	     (19 VAG wuniende)
+	     (21 PP (22 P in)
+		    (24 NP (25 NPR ierusalem))))
+  (103 ID CMTRINIT-MX1,51.697)) 
+
+
+/~*
+and weren +terof wallinde on so+dere luue godes and mannen. swo +tat hie
+luueden gode more +tene hem seluen. and ech cristene man alse hem seluen.
+(CMTRINIT-MX1,119.1598)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 6 BED, 11 VAG
+*/
+( (1 IP-MAT (2 CONJ and)
+	    (4 NP-SBJ *con*)
+	    (6 BED weren)
+	    (8 PP (9 ADV+P +terof))
+	    (11 VAG wallinde)
+	    (13 PP (14 P on)
+		   (16 NP (17 ADJR so+dere)
+			  (19 N luue)
+			  (21 NP-COM (22 NPR$ godes) (24 CONJ and) (26 NS$ mannen))))
+	    (28 , .)
+	    (30 PP (31 P swo)
+		   (33 CP-ADV (34 C +tat)
+			      (36 IP-SUB RMV:hie_luueden_gode...)))
+	    (78 . .))
+  (80 ID CMTRINIT-MX1,119.1598)) 
+
+
+/~*
++De man is understondinde +te him seluen cnowe+d and gode leue+d.
+(CMTRINIT-MX1,121.1637)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 9 BEP, 11 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 D +De)
+		      (5 N man)
+		      (7 CP-REL *ICH*-1))
+	    (9 BEP is)
+	    (11 VAG understondinde)
+	    (13 CP-REL-1 (14 WNP-2 0)
+			 (16 C +te)
+			 (18 IP-SUB RMV:*T*-2_him_seluen...))
+	    (40 . .))
+  (42 ID CMTRINIT-MX1,121.1637)) 
+
+
+/~*
+and was +ter-one werchende. and farende. for to +tat he $com to +de ende +tat
+is eche lif.
+(CMTRINIT-MX1,131.1769)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 6 BED, 11 VAG
+*/
+( (1 IP-MAT (2 CONJ and)
+	    (4 NP-SBJ *con*)
+	    (6 BED was)
+	    (8 PP (9 ADV+P +ter-one))
+	    (11 VAG (12 VAG werchende) (14 , .) (16 CONJ and) (18 VAG farende))
+	    (20 , .)
+	    (22 PP (23 P (24 P21 for) (26 P22 to))
+		   (28 CP-ADV (29 C +tat)
+			      (31 IP-SUB RMV:he_$com_to...))
+		   (56 . .)))
+  (58 ID CMTRINIT-MX1,131.1769)) 
+
+
+/~*
+and on +tis reuliche wei hie weren walkinde forte +tat hie comen to +te
+lichamliche dea+de.
+(CMTRINIT-MX1,147.1969)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 17 BED, 19 VAG
+*/
+( (1 IP-MAT (2 CONJ and)
+	    (4 PP (5 P on)
+		  (7 NP (8 D +tis) (10 ADJ reuliche) (12 N wei)))
+	    (14 NP-SBJ (15 PRO hie))
+	    (17 BED weren)
+	    (19 VAG walkinde)
+	    (21 PP (22 P forte)
+		   (24 CP-ADV (25 C +tat)
+			      (27 IP-SUB RMV:hie_comen_to...)))
+	    (43 . .))
+  (45 ID CMTRINIT-MX1,147.1969)) 
+
+
+/~*
++De se is eure wagiende. and +tere fore unstedefast.
+(CMTRINIT-MX1,175.2384)
+*~/
+/*
+2 IP-MAT-1:  2 IP-MAT-1, 8 BEP, 13 VAG
+*/
+( (2 IP-MAT-1 (3 NP-SBJ (4 D +De) (6 N se))
+	      (8 BEP is)
+	      (10 ADVP-TMP (11 ADV eure))
+	      (13 VAG wagiende))
+  (32 ID CMTRINIT-MX1,175.2384)) 
+
+
+/~*
+and bitocne+d +te abroidene bureh +tat is in swo warliche stede; +tat noht ne
+mai +ter inne bileue. +tat muge ani wile ileste. +tat is +tis wrecche woreld.
++tat eure is wagiende noht fro stede to stede; ac fro time to time.
+(CMTRINIT-MX1,175.2385)
+*~/
+/*
+102 IP-SUB:  102 IP-SUB, 108 BEP, 110 VAG
+*/
+( (102 IP-SUB (103 NP-SBJ *T*-5)
+	      (105 ADVP-TMP (106 ADV eure))
+	      (108 BEP is)
+	      (110 VAG wagiende)
+	      (112 PP (113 PP (114 NEG noht)
+			      (116 PP (117 P fro)
+				      (119 NP (120 N stede)))
+			      (122 PP (123 P to)
+				      (125 NP (126 N stede))))
+		      (128 , ;)
+		      (130 CONJP (131 CONJ ac)
+				 (133 PP (134 PP (135 P fro)
+						 (137 NP (138 N time)))
+					 (140 PP (141 P to)
+						 (143 NP (144 N time)))))))
+  (148 ID CMTRINIT-MX1,175.2385)) 
+
+
+/~*
+He is fleonde alse shadewe
+(CMTRINIT-MX1,175.2389)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 5 BEP, 7 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 PRO He))
+	    (5 BEP is)
+	    (7 VAG fleonde)
+	    (9 PP (10 P alse)
+		  (12 NP (13 N shadewe))))
+  (15 ID CMTRINIT-MX1,175.2389)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmtrinit-mx1.psd	13/13/3065
+*/
+/*
+HEADER:
+source file:  cmvices1-m1.psd
+*/
+
+/~*
+To +geu ic clepi+ge iec +de bie+d wuni+gende mid +gemaneliche hlauerde gode,
+$and to ure lafdi sainte Marie.
+(CMVICES1-M1,21.230)
+*~/
+/*
+25 IP-SUB:  25 IP-SUB, 28 BEP, 30 VAG
+*/
+( (25 IP-SUB (26 NP-SBJ *T*-2)
+	     (28 BEP bie+d)
+	     (30 VAG wuni+gende)
+	     (32 PP (33 P mid)
+		    (35 NP (36 ADJ +gemaneliche) (38 NPR hlauerde) (40 NPR gode))))
+  (62 ID CMVICES1-M1,21.230)) 
+
+
+/~*
+To alle +do hal+gen +de hier on liue waren iboren, and nu mid ure lauerde gode
+wuni+gende bie+d, ic clepie and bidde for +do muchele karite+d +de is an +geu,
++dat +gie +denchen an us +de bie+d hier on +dese arme liue, +dar +de wei is
+slider and we lihtliche to f+allen, and fele unwines, teforen and baften and
+on alche side.
+(CMVICES1-M1,21.232)
+*~/
+/*
+39 IP-SUB:  39 IP-SUB, 57 BEP, 55 VAG
+*/
+( (39 IP-SUB (40 NP-SBJ *T*-1)
+	     (42 ADVP-TMP (43 ADV nu))
+	     (45 PP (46 P mid)
+		    (48 NP (49 PRO$ ure) (51 NPR lauerde) (53 NPR gode)))
+	     (55 VAG wuni+gende)
+	     (57 BEP bie+d))
+  (215 ID CMVICES1-M1,21.232)) 
+
+
+/~*
+He wisse+d +des mannes $i+dangc +de he $to $cum+d, o+der +durh hali+ge writes
+o+der +durh hali sermuns, +te he him +durh sume wise manne +de he is inne
+wuniende, sant.
+(CMVICES1-M1,35.420)
+*~/
+/*
+90 IP-SUB:  90 IP-SUB, 94 BEP, 101 VAG
+*/
+( (90 IP-SUB (91 NP-SBJ (92 PRO he))
+	     (94 BEP is)
+	     (96 PP (97 P inne)
+		    (99 NP *T*-4))
+	     (101 VAG wuniende))
+  (109 ID CMVICES1-M1,35.420)) 
+
+
+/~*
++Dus behet Crist +dat +te mann +de him wolde luui+gen and his wordes healden:
++tat he and his fader hine scolden luui+gen and mid him wuniende bien.
+(CMVICES1-M1,37.428)
+*~/
+/*
+74 IP-SUB=3:  74 IP-SUB=3, 83 BE, 81 VAG
+*/
+( (74 IP-SUB=3 (75 PP (76 P mid)
+		      (78 NP (79 PRO him)))
+	       (81 VAG wuniende)
+	       (83 BE bien))
+  (87 ID CMVICES1-M1,37.428)) 
+
+
+/~*
++Gif +du wilt sikerliche wuni+gen on karite and on gode, +tanne do +du alswa
+we hit a boke finden iwriten, +tat is, +dat tu mid rihte +geleaue and mid
+faste hope and mid so+de luue bie werchinde +dat god +de +du iliefst.
+(CMVICES1-M1,39.444)
+*~/
+/*
+88 IP-SUB:  88 IP-SUB, 123 BEP, 125 VAG
+*/
+( (88 IP-SUB (89 NP-SBJ (90 PRO tu))
+	     (92 PP (93 PP (94 P mid)
+			   (96 NP (97 ADJ rihte) (99 N +geleaue)))
+		    (101 CONJP (102 CONJ and)
+			       (104 PP (105 P mid)
+				       (107 NP (108 ADJ faste) (110 N hope))))
+		    (112 CONJP (113 CONJ and)
+			       (115 PP (116 P mid)
+				       (118 NP (119 ADJ so+de) (121 N luue)))))
+	     (123 BEP bie)
+	     (125 VAG werchinde)
+	     (127 NP-OB1 (128 D +dat)
+			 (130 N god)
+			 (132 CP-REL (133 WNP-3 0)
+				     (135 C +de)
+				     (137 IP-SUB RMV:*T*-3_+du_iliefst...))))
+  (147 ID CMVICES1-M1,39.444)) 
+
+
+/~*
+After +dan +de +dat hali writt sei+d: '+Du +de wunest on +d+are woreld, and
+art +dar inne ibunde mid huse and mid weddede wiue and mid childre, swa swa
++du wilt bien +gebore+gen, +du aust te fol+gin +dane $rihtwise and onfald Iob
+', +de was wuni+gende on +dare woreld mid wiue and mid children, and mid
+michelere heihte, +te was +gemanlich alle niedfullen, +de was iec fonded mid
+michele wele, and mid michelere nafte, and mid michel unh+ale, and mid mani+ge
+euele upbreides, ai+der of his a+gene wiue and ec of his auene frienden, of
+sibbe and of framde, and of +de selue dieule;
+(CMVICES1-M1,41.470)
+*~/
+/*
+148 IP-SUB:  148 IP-SUB, 151 BED, 153 VAG
+*/
+( (148 IP-SUB (149 NP-SBJ *T*-3)
+	      (151 BED was)
+	      (153 VAG wuni+gende)
+	      (155 PP (156 P on)
+		      (158 NP (159 D +dare) (161 N woreld)))
+	      (163 PP (164 PP (165 P mid)
+			      (167 NP (168 N wiue)))
+		      (170 CONJP (171 CONJ and)
+				 (173 PP (174 P mid)
+					 (176 NP (177 NS children))))
+		      (179 , ,)
+		      (181 CONJP (182 CONJ and)
+				 (184 PP (185 P mid)
+					 (187 NP (188 Q michelere)
+						 (190 N heihte)
+						 (192 , ,)
+						 (194 CP-REL (195 WNP-4 0)
+							     (197 C +te)
+							     (199 IP-SUB RMV:*T*-4_was_+gemanlich...)))))))
+  (345 ID CMVICES1-M1,41.470)) 
+
+
+/~*
+For +dare hali mihte +de carite+d is icleped, ic +de beseche and bidde +dat tu
++dese halwende lore on write sette, for +dan ic am michel +ten-chinde +dar
+hwile +de ic on +dese wrecche lichame am wuniende, and ofte for+gete +dat me
+god w+are te healden;
+(CMVICES1-M1,47.520)
+*~/
+/*
+78 IP-SUB:  78 IP-SUB, 82 BEP, 87 VAG
+99 IP-SUB:  99 IP-SUB, 115 BEP, 117 VAG
+*/
+( (78 IP-SUB (79 NP-SBJ (80 PRO ic))
+	     (82 BEP am)
+	     (84 NP-MSR (85 Q michel))
+	     (87 VAG +ten-chinde)
+	     (89 NP-MSR (90 D +dar)
+			(92 N hwile)
+			(94 CP-REL (95 WNP-3 0)
+				   (97 C +de)
+				   (99 IP-SUB RMV:*T*-3_ic_on...))))
+  (158 ID CMVICES1-M1,47.520)) 
+
+( (99 IP-SUB (100 NP-MSR *T*-3)
+	     (102 NP-SBJ (103 PRO ic))
+	     (105 PP (106 P on)
+		     (108 NP (109 D +dese) (111 ADJ wrecche) (113 N lichame)))
+	     (115 BEP am)
+	     (117 VAG wuniende))
+  (158 ID CMVICES1-M1,47.520)) 
+
+
+/~*
+and he +de is godes wis-dom, +durh hwam bie+d alle wittes and +alle wisdomes
+and alle tungen spekinde, he lai alswa +dat child +de nan god ne cann, ne
+speken ne mai, ne isien, ne him seluen wealden, +durh hwam alle earen
++gehiere+d, and alle menn hem seluen welden, and alle ei+gene isie+d.
+(CMVICES1-M1,51.551)
+*~/
+/*
+33 IP-SUB:  33 IP-SUB, 36 BEP, 60 VAG
+*/
+( (33 IP-SUB (34 PP *T*-2)
+	     (36 BEP bie+d)
+	     (38 NP-SBJ (39 NP (40 Q alle) (42 NS wittes))
+			(44 CONJP (45 CONJ and)
+				  (47 NP (48 Q +alle) (50 NS wisdomes)))
+			(52 CONJP (53 CONJ and)
+				  (55 NP (56 Q alle) (58 NS tungen))))
+	     (60 VAG spekinde))
+  (194 ID CMVICES1-M1,51.551)) 
+
+
+/~*
+Dies ilke hlauerd Iesus Crist, he was her on +dese liue wuni+gende +trie and
++trihti wintre and an half mang senfulle mannen, so+d godd, +de hie ne mihten
+isien, and so+d mann, +de hie isien mihten,
+(CMVICES1-M1,51.553)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 21 BED, 34 VAG
+*/
+( (1 IP-MAT (2 NP-LFD (3 D Dies)
+		      (5 ADJ ilke)
+		      (7 NPR hlauerd)
+		      (9 NP-PRN (10 NPR Iesus) (12 NPR Crist)))
+	    (14 , ,)
+	    (16 NP-SBJ-RSP (17 PRO he)
+			   (19 NP-PRN *ICH*-2))
+	    (21 BED was)
+	    (23 ADVP-LOC (24 ADV her))
+	    (26 PP (27 P on)
+		   (29 NP (30 D +dese) (32 N liue)))
+	    (34 VAG wuni+gende)
+	    (36 NP-MSR (37 NUMP (38 NUMP (39 NUM +trie) (41 CONJ and) (43 NUM +trihti))
+				(45 CONJP *ICH*-1))
+		       (47 N wintre)
+		       (49 CONJP-1 (50 CONJ and)
+				   (52 NUMP (53 D an) (55 NUM half))))
+	    (57 PP (58 P mang)
+		   (60 NP (61 ADJ senfulle) (63 NS mannen)))
+	    (65 , ,)
+	    (67 NP-PRN-2 (68 NP (69 ADJ so+d)
+				(71 N godd)
+				(73 , ,)
+				(75 CP-REL (76 WNP-3 0)
+					   (78 C +de)
+					   (80 IP-SUB RMV:*T*-3_hie_ne...)))
+			 (92 , ,)
+			 (94 CONJP (95 CONJ and)
+				   (97 NP (98 ADJ so+d)
+					  (100 N mann)
+					  (102 , ,)
+					  (104 CP-REL (105 WNP-4 0)
+						      (107 C +de)
+						      (109 IP-SUB RMV:*T*-4_hie_isien...)))))
+	    (119 . ,))
+  (121 ID CMVICES1-M1,51.553)) 
+
+
+/~*
+On +da time +de hie was hier on liue libbende, hit was iwriten: Maledicta
+sterilis, que non peperit, '
+(CMVICES1-M1,55.594)
+*~/
+/*
+15 IP-SUB:  15 IP-SUB, 25 BED, 36 VAG
+*/
+( (15 IP-SUB (16 PP (17 P (18 CODE {in}))
+		    (20 NP *T*-1))
+	     (22 NP-SBJ (23 PRO hie))
+	     (25 BED was)
+	     (27 ADVP-LOC (28 ADV hier))
+	     (30 PP (31 P on)
+		    (33 NP (34 N liue)))
+	     (36 VAG libbende))
+  (66 ID CMVICES1-M1,55.594)) 
+
+
+/~*
+and mid sume men hie is wunende,
+(CMVICES1-M1,57.614)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 15 BEP, 17 VAG
+*/
+( (1 IP-MAT (2 CONJ and)
+	    (4 PP (5 P mid)
+		  (7 NP (8 Q sume) (10 NS men)))
+	    (12 NP-SBJ (13 PRO hie))
+	    (15 BEP is)
+	    (17 VAG wunende)
+	    (19 . ,))
+  (21 ID CMVICES1-M1,57.614)) 
+
+
+/~*
+and on swi+de feawe menn hie is rixende.
+(CMVICES1-M1,57.615)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 18 BEP, 20 VAG
+*/
+( (1 IP-MAT (2 CONJ and)
+	    (4 PP (5 P on)
+		  (7 NP (8 QP (9 ADV swi+de) (11 Q feawe))
+			(13 NS menn)))
+	    (15 NP-SBJ (16 PRO hie))
+	    (18 BEP is)
+	    (20 VAG rixende)
+	    (22 . .))
+  (24 ID CMVICES1-M1,57.615)) 
+
+
+/~*
+On +da manne +de hie is rixende, +tis $is +de tacne:
+(CMVICES1-M1,57.616)
+*~/
+/*
+15 IP-SUB:  15 IP-SUB, 25 BEP, 27 VAG
+*/
+( (15 IP-SUB (16 PP (17 P (18 CODE {on}))
+		    (20 NP *T*-1))
+	     (22 NP-SBJ (23 PRO hie))
+	     (25 BEP is)
+	     (27 VAG rixende))
+  (43 ID CMVICES1-M1,57.616)) 
+
+
+/~*
+For +dan +de we habbe+d hier te-foren writen +tat godes milsce last +auremo to
+alle +do mannen +de him bie+d dradinde, swa swa sainte Marie hire self ber+d
++gewitnesse, for +di, mid godes grace, ic +de wile seggen of his dr+adnesse,
+after +dan +de hali writes segge+d and us openie+d.
+(CMVICES1-M1,59.637)
+*~/
+/*
+53 IP-SUB:  53 IP-SUB, 59 BEP, 61 VAG
+*/
+( (53 IP-SUB (54 NP-SBJ *T*-1)
+	     (56 NP-OB1 (57 PRO him))
+	     (59 BEP bie+d)
+	     (61 VAG dradinde))
+  (170 ID CMVICES1-M1,59.637)) 
+
+
+/~*
+Hit sei+d on +da hali goddspelle +tat an riche iungman cam to Crist be +do
+dai+gen +de he hier lichamliche was wuniende, and seide: Quid faciam, domine,
+ut habeam vitam eternam?
+(CMVICES1-M1,67.742)
+*~/
+/*
+50 IP-SUB:  50 IP-SUB, 66 BED, 68 VAG
+*/
+( (50 IP-SUB (51 PP (52 P (53 CODE {be}))
+		    (55 NP *T*-1))
+	     (57 NP-SBJ (58 PRO he))
+	     (60 ADVP-LOC (61 ADV hier))
+	     (63 ADVP (64 ADV lichamliche))
+	     (66 BED was)
+	     (68 VAG wuniende))
+  (104 ID CMVICES1-M1,67.742)) 
+
+
+/~*
++Dese twa lif, hermite and ans+ate lif, +de we nu clepe+d anker, hie w+aren
+hwile ferr fram mannen wuniende,
+(CMVICES1-M1,73.830)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 50 BED, 64 VAG
+*/
+( (1 IP-MAT (2 NP-LFD (3 D +Dese)
+		      (5 NUM twa)
+		      (7 NS lif)
+		      (9 , ,)
+		      (11 NP-PRN (12 NP (13 N hermite))
+				 (15 CONJP (16 CONJ and)
+					   (18 NP (19 ADJ ans+ate)
+						  (21 N lif)
+						  (23 , ,)
+						  (25 CP-REL (26 WNP-1 0)
+							     (28 C +de)
+							     (30 IP-SUB RMV:we_nu_clepe+d...))))))
+	    (45 , ,)
+	    (47 NP-SBJ-RSP (48 PRO hie))
+	    (50 BED w+aren)
+	    (52 NP-TMP (53 N hwile))
+	    (55 ADJP-LOC (56 ADJ ferr)
+			 (58 PP (59 P fram)
+				(61 NP (62 NS mannen))))
+	    (64 VAG wuniende)
+	    (66 . ,))
+  (68 ID CMVICES1-M1,73.830)) 
+
+
+/~*
+'+Darhwile +de +du art mid +tine wi+derwine on +da wei+ge, bie him tei+tinde
++dat +de he wile hauen idon, l+aste he +de nime and bet+ache +de +de crauiere,
+and he se+d+den betache +de +de pineres and +de cwelleres!'
+(CMVICES1-M1,75.841)
+*~/
+/*
+1 IP-IMP-SPE:  1 IP-IMP-SPE, 38 BEI, 43 VAG
+*/
+( (1 IP-IMP-SPE (2 ' ')
+		(4 NP-MSR (5 D+N +Darhwile)
+			  (7 CP-REL (8 WNP-1 0)
+				    (10 C +de)
+				    (12 IP-SUB RMV:*T*-1_+du_art...)))
+		(36 , ,)
+		(38 BEI bie)
+		(40 NP-OB2 (41 PRO him))
+		(43 VAG tei+tinde)
+		(45 NP-OB1 (46 D +dat)
+			   (48 CP-REL (49 WNP-2 0)
+				      (51 C +de)
+				      (53 IP-SUB RMV:*T*-2_he_wile...)))
+		(65 , ,)
+		(67 PP (68 P l+aste)
+		       (70 CP-ADV (71 C 0)
+				  (73 IP-SUB RMV:he_+de_nime...)))
+		(131 . !)
+		(133 ' '))
+  (135 ID CMVICES1-M1,75.841)) 
+
+
+/~*
+and wite +du te so+de, bute +du him bie hier tei+dinde hwat swa hit +de ratt
+to donne: +danne +du cumst on +da heigere wei+ge, +danne +du art itwamd fram
++dine lichame, hit te wile betachen +de crauiere, +de +de wile crauen of
+elchere senne, and betellen riht after godes awene worde, +dat tu aust him to
+fol+gin to helle, for+dan +de +du art godd unhersum al swa he.
+(CMVICES1-M1,75.845)
+*~/
+/*
+27 IP-SUB:  27 IP-SUB, 34 BEP, 39 VAG
+*/
+( (27 IP-SUB (28 NP-SBJ (29 PRO +du))
+	     (31 NP-OB2 (32 PRO him))
+	     (34 BEP bie)
+	     (36 ADVP-LOC (37 ADV hier))
+	     (39 VAG tei+dinde)
+	     (41 NP-OB1 (42 CP-FRL (43 WNP-1 (44 WPRO hwat) (46 ADV swa))
+				   (48 C 0)
+				   (50 IP-SUB RMV:hit_+de_ratt...))))
+  (232 ID CMVICES1-M1,75.845)) 
+
+
+/~*
+'Worldes eihte, +gif hie is swi+de rixinde to +deward, ne do +du naht +dine
+herte +derto,
+(CMVICES1-M1,75.848)
+*~/
+/*
+17 IP-SUB:  17 IP-SUB, 21 BEP, 26 VAG
+*/
+( (17 IP-SUB (18 NP-SBJ (19 PRO hie))
+	     (21 BEP is)
+	     (23 ADVP (24 ADV swi+de))
+	     (26 VAG rixinde)
+	     (28 PP (29 P to)
+		    (31 NP (32 PRO+WARD +deward))))
+  (55 ID CMVICES1-M1,75.848)) 
+
+
+/~*
+and beclep+d all +de wouh, and alle +de bie+d in +do hali huse wuniende;
+(CMVICES1-M1,95.1112)
+*~/
+/*
+29 IP-SUB:  29 IP-SUB, 32 BEP, 44 VAG
+*/
+( (29 IP-SUB (30 NP-SBJ *T*-1)
+	     (32 BEP bie+d)
+	     (34 PP (35 P in)
+		    (37 NP (38 D +do) (40 ADJ hali) (42 N huse)))
+	     (44 VAG wuniende))
+  (48 ID CMVICES1-M1,95.1112)) 
+
+
+/~*
+For +di he bitt +dat pais bie ai+der on licame and on saule, and +dat +ties
+hali mihte sibsumnesse bie rix-ende on +geu ba+de;
+(CMVICES1-M1,95.1117)
+*~/
+/*
+49 IP-SUB:  49 IP-SUB, 60 BEP, 62 VAG
+*/
+( (49 IP-SUB (50 NP-SBJ (51 D +ties)
+			(53 ADJ hali)
+			(55 N mihte)
+			(57 NP-PRN (58 N sibsumnesse)))
+	     (60 BEP bie)
+	     (62 VAG rix-ende)
+	     (64 PP (65 P on)
+		    (67 NP (68 PRO +geu)
+			   (70 QP (71 Q ba+de)))))
+  (75 ID CMVICES1-M1,95.1117)) 
+
+
+/~*
+Ic hit wat wel +dat godd ne mai bien wuni+gende on none saule +dat unfri+d is
+of sennes.
+(CMVICES1-M1,97.1147)
+*~/
+/*
+18 IP-SUB:  18 IP-SUB, 26 BE, 28 VAG
+*/
+( (18 IP-SUB (19 NP-SBJ (20 NPR godd))
+	     (22 NEG ne)
+	     (24 MD mai)
+	     (26 BE bien)
+	     (28 VAG wuni+gende)
+	     (30 PP (31 P on)
+		    (33 NP (34 Q none)
+			   (36 N saule)
+			   (38 CP-REL (39 WNP-2 0)
+				      (41 C +dat)
+				      (43 IP-SUB RMV:*T*-2_unfri+d_is...)))))
+  (59 ID CMVICES1-M1,97.1147)) 
+
+
+/~*
++Gif ani cum+t and $bring+t tidinges of idelnesses, and is spekende sotwordes
++de ar+are+d up hleitres, none wunienge ne haue he mid +de, swa se +du luuest
+godd and sibsumnesse.
+(CMVICES1-M1,101.1202)
+*~/
+/*
+37 IP-SUB:  37 IP-SUB, 40 BEP, 42 VAG
+*/
+( (37 IP-SUB (38 NP-SBJ *con*)
+	     (40 BEP is)
+	     (42 VAG spekende)
+	     (44 NP-OB1 (45 ADJ+NS sotwordes)
+			(47 CP-REL (48 WNP-1 0)
+				   (50 C +de)
+				   (52 IP-SUB RMV:*T*-1_ar+are+d_up...))))
+  (107 ID CMVICES1-M1,101.1202)) 
+
+
+/~*
+Ne biest +du naht hier lange wuni+gende;
+(CMVICES1-M1,103.1236)
+*~/
+/*
+1 IP-MAT-SPE:  1 IP-MAT-SPE, 4 BEP, 17 VAG
+*/
+( (1 IP-MAT-SPE (2 NEG Ne)
+		(4 BEP biest)
+		(6 NP-SBJ (7 PRO +du))
+		(9 NEG naht)
+		(11 ADVP-LOC (12 ADV hier))
+		(14 NP-MSR (15 ADJ lange))
+		(17 VAG wuni+gende)
+		(19 . ;))
+  (21 ID CMVICES1-M1,103.1236)) 
+
+
+/~*
+For +di us mene+ge+d allre +tinge arst ure lauerde of +desre eadi mihte, +tat
+we scolden beon rewsende ure sennen, and swa hus lokin mid his fultume, +tat
+we eft ne befallen on senne.
+(CMVICES1-M1,121.1474)
+*~/
+/*
+42 IP-SUB-1:  42 IP-SUB-1, 48 BE, 50 VAG
+*/
+( (42 IP-SUB-1 (43 NP-SBJ (44 PRO we))
+	       (46 MD scolden)
+	       (48 BE beon)
+	       (50 VAG rewsende)
+	       (52 NP-OB1 (53 PRO$ ure) (55 NS sennen)))
+  (105 ID CMVICES1-M1,121.1474)) 
+
+
+/~*
+Mann +de wel wile bien riwsinde, ne rewe him nauht ane hise sennes, ac +get
++dat he for $his +gemelaste ne haf+d god +gedon on +da time +de he naure mo
+eft nacoure+d, and is for+d +gegan.
+(CMVICES1-M1,121.1482)
+*~/
+/*
+11 IP-SUB:  11 IP-SUB, 19 BE, 21 VAG
+*/
+( (11 IP-SUB (12 NP-SBJ *T*-2)
+	     (14 ADVP (15 ADV wel))
+	     (17 MD wile)
+	     (19 BE bien)
+	     (21 VAG riwsinde))
+  (127 ID CMVICES1-M1,121.1482)) 
+
+
+/~*
+and liht his mid +te so+de lihte, +tat ich naure ne bie slapinde on +dare
+saule dea+de, ne +dat +de dieueles mu+gen be+gelpen +tat hie hafden +de
+hei+gere hand ouer me. '
+(CMVICES1-M1,127.1558)
+*~/
+/*
+25 IP-SUB:  25 IP-SUB, 34 BEP, 36 VAG
+*/
+( (25 IP-SUB (26 NP-SBJ (27 PRO ich))
+	     (29 ADVP-TMP (30 ADV naure))
+	     (32 NEG ne)
+	     (34 BEP bie)
+	     (36 VAG slapinde)
+	     (38 PP (39 P on)
+		    (41 NP (42 NP-POS (43 D +dare) (45 N$ saule))
+			   (47 N dea+de))))
+  (93 ID CMVICES1-M1,127.1558)) 
+
+
+/~*
+He is iwis innocens, +tat is, uneilinde, +te nauer+gete him seluen ne eilede
+ne nan o+d+der.
+(CMVICES1-M1,133.1627)
+*~/
+/*
+17 IP-MAT-PRN:  17 IP-MAT-PRN, 21 BEP, 25 VAG
+*/
+( (17 IP-MAT-PRN (18 NP-SBJ (19 D +tat))
+		 (21 BEP is)
+		 (23 , ,)
+		 (25 VAG uneilinde))
+  (62 ID CMVICES1-M1,133.1627)) 
+
+
+/~*
+HONESTAS is cleped an o+der mihte, +de is niedfull alche gode manne. +Tat is,
++dat he wor+dliche him loki mid alle hise lemes of his likame. Hise ei+gene,
++tat hie ne bien to swi+de gawrinde hider and +geond; +to earen, +dat hie
+bli+deliche ne hlesten ydelnesses, and +dare mide benime +dare saule gode
++tohtes of gode wordes to +geheren;
+(CMVICES1-M1,133.1640)
+*~/
+/*
+100 IP-SUB:  100 IP-SUB, 106 BEP, 113 VAG
+*/
+( (100 IP-SUB (101 NP-SBJ (102 PRO hie))
+	      (104 NEG ne)
+	      (106 BEP bien)
+	      (108 ADVP (109 ADVR to) (111 ADV swi+de))
+	      (113 VAG gawrinde)
+	      (115 ADVP-DIR (116 ADV hider) (118 CONJ and) (120 ADV +geond)))
+  (191 ID CMVICES1-M1,133.1640)) 
+
+
+/~*
+Godd is haure fastinde.
+(CMVICES1-M1,137.1678)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 5 BEP, 10 VAG
+*/
+( (1 IP-MAT (2 NP-SBJ (3 NPR Godd))
+	    (5 BEP is)
+	    (7 ADVP-TMP (8 ADV haure))
+	    (10 VAG fastinde)
+	    (12 . .))
+  (14 ID CMVICES1-M1,137.1678)) 
+
+
+/~*
+For +dan +de gode mann is niht and dai+g +teinkinde hu he mu+ge gode icwemen,
+and him betst hersumen; alswa is +dies beswikene mann niht and dai+g
++teinkinde hwu he mu+ge fellen $his un+gesali beli mid swete metes and
+drenches.
+(CMVICES1-M1,137.1689)
+*~/
+/*
+10 IP-SUB:  10 IP-SUB, 18 BEP, 27 VAG
+1 IP-MAT:  1 IP-MAT, 68 BEP, 84 VAG
+*/
+( (1 IP-MAT (2 PP (3 P For)
+		  (5 D +dan)
+		  (7 CP-ADV (8 C 0)
+			    (10 IP-SUB RMV:+de_gode_mann...)))
+	    (63 , ;)
+	    (65 ADVP (66 ADV alswa))
+	    (68 BEP is)
+	    (70 NP-SBJ (71 D +dies) (73 VAN beswikene) (75 N mann))
+	    (77 NP-TMP (78 N niht) (80 CONJ and) (82 N dai+g))
+	    (84 VAG +teinkinde)
+	    (86 CP-QUE-SUB (87 WADVP-3 (88 WADV hwu))
+			   (90 C 0)
+			   (92 IP-SUB RMV:*T*-3_he_mu+ge...))
+	    (123 . .))
+  (125 ID CMVICES1-M1,137.1689)) 
+
+( (10 IP-SUB (11 NP-SBJ (12 D +de) (14 ADJ gode) (16 N mann))
+	     (18 BEP is)
+	     (20 NP-TMP (21 N niht) (23 CONJ and) (25 N dai+g))
+	     (27 VAG +teinkinde)
+	     (29 CP-QUE-SUB (30 WADVP-1 (31 WADV hu))
+			    (33 C 0)
+			    (35 IP-SUB RMV:*T*-1_he_mu+ge...)))
+  (125 ID CMVICES1-M1,137.1689)) 
+
+
+/~*
+and +tench +dat +de fule wombe is crewlinde full of weormes, +te he was bewune
+to fellen mid gode metes and swete drenches,
+(CMVICES1-M1,139.1696)
+*~/
+/*
+9 IP-SUB:  9 IP-SUB, 19 BEP, 21 VAG
+*/
+( (9 IP-SUB (10 NP-SBJ (11 D +de)
+		       (13 ADJ fule)
+		       (15 N wombe)
+		       (17 CP-REL *ICH*-1))
+	    (19 BEP is)
+	    (21 VAG crewlinde)
+	    (23 ADJP-SPR (24 ADJ full)
+			 (26 PP (27 P of)
+				(29 NP (30 NS weormes))))
+	    (32 , ,)
+	    (34 CP-REL-1 (35 WNP-2 0)
+			 (37 C +te)
+			 (39 IP-SUB RMV:he_was_bewune...)))
+  (73 ID CMVICES1-M1,139.1696)) 
+
+
+/~*
+Hit sei+d in Vitas patrum +dat at sume sal waren +de hali faderes to-gedere
+igadered, and waren spekinde betwen hem on hwilliche wise me mihte rihtist and
+sikerest to gode cumen.
+(CMVICES1-M1,149.1842)
+*~/
+/*
+47 IP-SUB:  47 IP-SUB, 50 BED, 52 VAG
+*/
+( (47 IP-SUB (48 NP-SBJ *con*)
+	     (50 BED waren)
+	     (52 VAG spekinde)
+	     (54 PP (55 P betwen)
+		    (57 NP (58 PRO hem)))
+	     (60 CP-QUE-SUB (61 WPP-1 (62 P on)
+				      (64 WNP (65 WD hwilliche) (67 N wise)))
+			    (69 C 0)
+			    (71 IP-SUB RMV:*T*-1_me_mihte...)))
+  (96 ID CMVICES1-M1,149.1842)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmvices1-m1.psd	35/33/1873
+*/
+/*
+HEADER:
+source file:  cmvices4-m34.psd
+*/
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmvices4-m34.psd	0/0/363
+*/
+/*
+HEADER:
+source file:  cmwycser-m3.psd
+*/
+
+/~*
+The story of +tis gospel tellith how publicans and synful men weren comyng to
+Iesu to heren his lore,
+(CMWYCSER-M3,232.153)
+*~/
+/*
+23 IP-SUB:  23 IP-SUB, 38 BED, 40 VAG
+*/
+( (23 IP-SUB (24 ADVP *T*-1)
+	     (26 NP-SBJ (27 NP (28 NS publicans))
+			(30 CONJP (31 CONJ and)
+				  (33 NP (34 ADJ synful) (36 NS men))))
+	     (38 BED weren)
+	     (40 VAG comyng)
+	     (42 PP (43 P to)
+		    (45 NP (46 NPR Iesu)))
+	     (48 IP-INF-PRP RMV:to_heren_his...))
+  (60 ID CMWYCSER-M3,232.153)) 
+
+
+/~*
++Tese prelatys wolden fayn +tat al Godys lawe were hangyng on hem, for to
+spuyle +te peple;
+(CMWYCSER-M3,233.170)
+*~/
+/*
+14 IP-SUB:  14 IP-SUB, 22 BED, 24 VAG
+*/
+( (14 IP-SUB (15 NP-SBJ (16 Q al) (18 NPR$ Godys) (20 N lawe))
+	     (22 BED were)
+	     (24 VAG hangyng)
+	     (26 PP (27 P on)
+		    (29 NP (30 PRO hem)))
+	     (32 , ,)
+	     (34 IP-INF-PRP RMV:for_to_spuyle...))
+  (48 ID CMWYCSER-M3,233.170)) 
+
+
+/~*
+And Iesus seyde to Symont 'Fro +tis tyme $schalt $tow be takyng men';
+(CMWYCSER-M3,240.324)
+*~/
+/*
+17 IP-MAT-SPE:  17 IP-MAT-SPE, 33 BE, 35 VAG
+*/
+( (17 IP-MAT-SPE (18 PP (19 P Fro)
+			(21 NP (22 D +tis) (24 N tyme)))
+		 (26 MD $schalt)
+		 (28 NP-SBJ (29 PRO $tow))
+		 (31 CODE {TEXT:schaltow})
+		 (33 BE be)
+		 (35 VAG takyng)
+		 (37 NP-OB1 (38 NS men)))
+  (44 ID CMWYCSER-M3,240.324)) 
+
+
+/~*
+And for a long tyme aftur he was eche day techyng in +te temple.
+(CMWYCSER-M3,261.649)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 20 BED, 27 VAG
+*/
+( (1 IP-MAT (2 CONJ And)
+	    (4 PP (5 P for)
+		  (7 NP (8 D a)
+			(10 ADJ long)
+			(12 N tyme)
+			(14 ADVP-TMP (15 ADV aftur))))
+	    (17 NP-SBJ (18 PRO he))
+	    (20 BED was)
+	    (22 NP-TMP (23 Q eche) (25 N day))
+	    (27 VAG techyng)
+	    (29 PP (30 P in)
+		   (32 NP (33 D +te) (35 N temple)))
+	    (37 . .))
+  (39 ID CMWYCSER-M3,261.649)) 
+
+
+/~*
+To +te wit of allegoric bytokne+t +tis dede of Crist how he was wendyng to
+heuene, +tat ys clepyd Ierusaleem.
+(CMWYCSER-M3,275.901)
+*~/
+/*
+35 IP-SUB:  35 IP-SUB, 41 BED, 43 VAG
+*/
+( (35 IP-SUB (36 ADVP *T*-1)
+	     (38 NP-SBJ (39 PRO he))
+	     (41 BED was)
+	     (43 VAG wendyng)
+	     (45 PP (46 P to)
+		    (48 NP (49 NPR heuene)
+			   (51 , ,)
+			   (53 CP-REL (54 WNP-2 0)
+				      (56 C +tat)
+				      (58 IP-SUB RMV:*T*-2_ys_clepyd...)))))
+  (73 ID CMWYCSER-M3,275.901)) 
+
+
+/~*
++Te story seith how in Galilee was dwellyng a lytyl kyng in +te citee of
+Capharnaum +tat hadde a sone ful syk of feuerys.
+(CMWYCSER-M3,305.1395)
+*~/
+/*
+15 IP-SUB:  15 IP-SUB, 24 BED, 26 VAG
+*/
+( (15 IP-SUB (16 ADVP *T*-1)
+	     (18 PP (19 P in)
+		    (21 NP (22 NPR Galilee)))
+	     (24 BED was)
+	     (26 VAG dwellyng)
+	     (28 NP-SBJ (29 D a)
+			(31 ADJ lytyl)
+			(33 N kyng)
+			(35 CP-REL *ICH*-2))
+	     (37 PP (38 P in)
+		    (40 NP (41 D +te)
+			   (43 N citee)
+			   (45 PP (46 P of)
+				  (48 NP (49 NPR Capharnaum)))))
+	     (51 CP-REL-2 (52 WNP-3 0)
+			  (54 C +tat)
+			  (56 IP-SUB RMV:*T*-3_hadde_a...)))
+  (79 ID CMWYCSER-M3,305.1395)) 
+
+
+/~*
+And so +tis man trowe+t in God bo+te wi+t vndurstondyng and wylle wi+t alle
++te meyne of his hows, whanne alle hise wyttes and hise streng+tes ben
+obeschynge to resoun when +tis feuere is +tus passyd.
+(CMWYCSER-M3,308.1450)
+*~/
+/*
+60 IP-SUB:  60 IP-SUB, 76 BEP, 78 VAG
+*/
+( (60 IP-SUB (61 NP-SBJ (62 Q alle)
+			(64 PRO$ hise)
+			(66 NS wyttes)
+			(68 CONJP (69 CONJ and)
+				  (71 NX (72 PRO$ hise) (74 NS streng+tes))))
+	     (76 BEP ben)
+	     (78 VAG obeschynge)
+	     (80 PP (81 P to)
+		    (83 NP (84 N resoun)))
+	     (86 PP (87 P when)
+		    (89 CP-ADV (90 C 0)
+			       (92 IP-SUB RMV:+tis_feuere_is...))))
+  (107 ID CMWYCSER-M3,308.1450)) 
+
+
+/~*
+And, al +gif Iohn myhte haue seyd +tat he was cryinge, ne+teles he ches to
+speke more mekely,
+(CMWYCSER-M3,342.2061)
+*~/
+/*
+27 IP-SUB:  27 IP-SUB, 31 BED, 33 VAG
+*/
+( (27 IP-SUB (28 NP-SBJ (29 PRO he))
+	     (31 BED was)
+	     (33 VAG cryinge))
+  (57 ID CMWYCSER-M3,342.2061)) 
+
+
+/~*
+And so, al +gif prestis han power to relese synne as Cristes vikeres,
+ner+teles +tei han +tis power in as myche as +tei acorden wi+t Crist; so +tat,
++gif +teir keyes and Cristes wille be discordynge atwynne, +tei feynen hem
+falsely to assoylen and +tanne +tei nei+tur lowsen ne bynden, so +tat in eche
+sich worchyng +te godhede of Crist mut furst worche.
+(CMWYCSER-M3,346.2121)
+*~/
+/*
+101 IP-SUB:  101 IP-SUB, 116 BEP, 118 VAG
+*/
+( (101 IP-SUB (102 NP-SBJ (103 NP (104 PRO$ +teir) (106 NS keyes))
+			  (108 CONJP (109 CONJ and)
+				     (111 NP (112 NPR$ Cristes) (114 N wille))))
+	      (116 BEP be)
+	      (118 VAG discordynge)
+	      (120 PP (121 P+NUM atwynne)))
+  (199 ID CMWYCSER-M3,346.2121)) 
+
+
+/~*
+but hit seme+t +tat we may graunte +tat +tis dowue was +te Holy Gost, as we
+graunte +tat +tis persone was comynge down in +tis dowue.
+(CMWYCSER-M3,347.2148)
+*~/
+/*
+59 IP-SUB:  59 IP-SUB, 65 BED, 67 VAG
+*/
+( (59 IP-SUB (60 NP-SBJ (61 D +tis) (63 N persone))
+	     (65 BED was)
+	     (67 VAG comynge)
+	     (69 RP down)
+	     (71 PP (72 P in)
+		    (74 NP (75 D +tis) (77 N dowue))))
+  (81 ID CMWYCSER-M3,347.2148)) 
+
+
+/~*
+And so was hit syttyng Crist to teche +tis mekenesse.
+(CMWYCSER-M3,350.2200)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 7 BED, 12 VAG
+*/
+( (1 IP-MAT (2 CONJ And)
+	    (4 ADVP (5 ADV so))
+	    (7 BED was)
+	    (9 NP-SBJ-1 (10 PRO hit))
+	    (12 VAG syttyng)
+	    (14 IP-INF-1 RMV:Crist_to_teche...)
+	    (27 . .))
+  (29 ID CMWYCSER-M3,350.2200)) 
+
+
+/~*
+And, as men seyn comunly, +te feend bar hym ouer Ierusaleem, as Crist were
+fleyng in +te eyr,
+(CMWYCSER-M3,397.3090)
+*~/
+/*
+51 IP-SUB:  51 IP-SUB, 55 BED, 57 VAG
+*/
+( (51 IP-SUB (52 NP-SBJ (53 NPR Crist))
+	     (55 BED were)
+	     (57 VAG fleyng)
+	     (59 PP (60 P in)
+		    (62 NP (63 D +te) (65 N eyr))))
+  (69 ID CMWYCSER-M3,397.3090)) 
+
+
+/~*
++Te story tellu+t how Iesu was castyng owt a feend of a man,
+(CMWYCSER-M3,407.3246)
+*~/
+/*
+15 IP-SUB:  15 IP-SUB, 21 BED, 23 VAG
+*/
+( (15 IP-SUB (16 ADVP *T*-1)
+	     (18 NP-SBJ (19 NPR Iesu))
+	     (21 BED was)
+	     (23 VAG castyng)
+	     (25 RP owt)
+	     (27 NP-OB1 (28 D a) (30 N feend))
+	     (32 PP (33 P of)
+		    (35 NP (36 D a) (38 N man))))
+  (42 ID CMWYCSER-M3,407.3246)) 
+
+
+/~*
+Bre+tren, we schulen be wytynge +tat our is now us to ryse fro sleepe,
+(CMWYCSER-M3,476.3594)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 14 BE, 16 VAG
+*/
+( (1 IP-MAT (2 NP-VOC (3 NS Bre+tren))
+	    (5 , ,)
+	    (7 CODE <font>)
+	    (9 NP-SBJ (10 PRO we))
+	    (12 MD schulen)
+	    (14 BE be)
+	    (16 VAG wytynge)
+	    (18 CP-THT (19 C 0)
+		       (21 IP-SUB RMV:+tat_our_*ICH*-1...))
+	    (50 . ,))
+  (52 ID CMWYCSER-M3,476.3594)) 
+
+
+/~*
++Gif Petre in his lif was passynge o+tre apostlis, +tat weron his felowis in
+pouerte and mekenesse and in trauele for +te chyrche, +tanne he mut haue a
+successour contrarye to hym in alle +tes +tre.
+(CMWYCSER-M3,524.3747)
+*~/
+/*
+8 IP-SUB:  8 IP-SUB, 20 BED, 22 VAG
+*/
+( (8 IP-SUB (9 NP-SBJ (10 NPR Petre))
+	    (12 PP (13 P in)
+		   (15 NP (16 PRO$ his) (18 N lif)))
+	    (20 BED was)
+	    (22 VAG passynge)
+	    (24 NP-OB1 (25 OTHER o+tre)
+		       (27 NS apostlis)
+		       (29 , ,)
+		       (31 CP-REL (32 WNP-1 0)
+				  (34 C +tat)
+				  (36 IP-SUB RMV:*T*-1_weron_his...))))
+  (112 ID CMWYCSER-M3,524.3747)) 
+
+
+/~*
+For alle +tes foure newe ordris moten be lernyng al +ter lif of +te rewle +tat
++tei han foundon, bysyde +te rewle +tat Crist +gaf;
+(CMWYCSER-M3,588.3768)
+*~/
+/*
+1 IP-MAT:  1 IP-MAT, 17 BE, 19 VAG
+*/
+( (1 IP-MAT (2 CONJ For)
+	    (4 NP-SBJ (5 Q alle) (7 D +tes) (9 NUM foure) (11 ADJ newe) (13 NS ordris))
+	    (15 MD moten)
+	    (17 BE be)
+	    (19 VAG lernyng)
+	    (21 NP-TMP (22 Q al) (24 PRO$ +ter) (26 N lif))
+	    (28 PP (29 P of)
+		   (31 NP (32 D +te)
+			  (34 N rewle)
+			  (36 CP-REL (37 WNP-1 0)
+				     (39 C +tat)
+				     (41 IP-SUB RMV:*T*-1_+tei_han...))))
+	    (51 , ,)
+	    (53 PP (54 P bysyde)
+		   (56 NP (57 D +te)
+			  (59 N rewle)
+			  (61 CP-REL (62 WNP-2 0)
+				     (64 C +tat)
+				     (66 IP-SUB RMV:*T*-2_Crist_+gaf...))))
+	    (74 . ;))
+  (76 ID CMWYCSER-M3,588.3768)) 
+
+
+/~*
+And Poul sei+t to Tymothe of +tes veyne newe ordris +tat +tei ben euermore
+lernyng, and neuere comynge to fruyt +terof.
+(CMWYCSER-M3,588.3771)
+*~/
+/*
+31 IP-SUB-1:  31 IP-SUB-1, 35 BEP, 40 VAG
+*/
+( (31 IP-SUB-1 (32 NP-SBJ (33 PRO +tei))
+	       (35 BEP ben)
+	       (37 ADVP-TMP (38 ADV euermore))
+	       (40 VAG lernyng))
+  (64 ID CMWYCSER-M3,588.3771)) 
+
+/*
+FOOTER
+  source file, hits/tokens/total
+  cmwycser-m3.psd	17/17/3905
+*/
+/*
+SUMMARY:  
+source files, hits/tokens/total
+  cmaelr3-m23.psd	7/7/1049
+  cmaelr4-m4.psd	0/0/768
+  cmancriw-1-m1.psd	8/8/3558
+  cmancriw-2-m1.psd	4/4/1163
+  cmastro-m3.psd	2/2/404
+  cmayenbi-m2.psd	8/8/2755
+  cmbenrul-m3.psd	2/2/1454
+  cmboeth-m3.psd	3/3/564
+  cmbrut3-m3.psd	16/16/4117
+  cmcapchr-m4.psd	6/6/4176
+  cmcapser-m4.psd	0/0/91
+  cmcloud-m3.psd	7/7/814
+  cmctmeli-m3.psd	0/0/861
+  cmctpars-m3.psd	1/1/1667
+  cmearlps-m2.psd	46/46/7869
+  cmedmund-m4.psd	0/0/299
+  cmedthor-m34.psd	5/4/792
+  cmedvern-m3.psd	2/2/930
+  cmequato-m3.psd	0/0/341
+  cmfitzja-m4.psd	0/0/225
+  cmgaytry-m34.psd	1/1/199
+  cmgregor-m4.psd	14/14/2632
+  cmhali-m1.psd		0/0/501
+  cmhilton-m34.psd	1/1/215
+  cmhorses-m3.psd	2/2/420
+  cminnoce-m4.psd	0/0/209
+  cmjulia-m1.psd	2/2/566
+  cmjulnor-m34.psd	4/4/336
+  cmkathe-m1.psd	2/2/538
+  cmkempe-m4.psd	16/16/3835
+  cmkentho-m1.psd	1/1/298
+  cmkentse-m2.psd	0/0/226
+  cmlamb1-m1.psd	0/0/522
+  cmlambx1-mx1.psd	10/10/1407
+  cmmalory-m4.psd	15/15/4971
+  cmmandev-m3.psd	10/10/3316
+  cmmarga-m1.psd	1/1/627
+  cmmirk-m34.psd	8/8/3685
+  cmntest-m3.psd	6/6/1149
+  cmorm-m1.psd		0/0/2637
+  cmotest-m3.psd	0/0/809
+  cmpeterb-m1.psd	1/1/647
+  cmpolych-m3.psd	5/4/3799
+  cmpurvey-m3.psd	1/1/2359
+  cmreynar-m4.psd	1/1/739
+  cmreynes-m4.psd	2/2/681
+  cmrollep-m24.psd	30/29/985
+  cmrolltr-m24.psd	4/4/950
+  cmroyal-m34.psd	2/2/398
+  cmsawles-m1.psd	0/0/272
+  cmsiege-m4.psd	1/1/731
+  cmthorn-mx4.psd	0/0/642
+  cmtrinit-mx1.psd	13/13/3065
+  cmvices1-m1.psd	35/33/1873
+  cmvices4-m34.psd	0/0/363
+  cmwycser-m3.psd	17/17/3905
+whole search, hits/tokens/total
+		322/317/84404
+*/
